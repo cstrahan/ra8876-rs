@@ -1,0 +1,3570 @@
+<?xml version="1.0"?>
+<device xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.1" xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+  <name>STM32L4x2</name>
+  <version>1.6</version>
+  <description>STM32L4x2</description>
+  <cpu>
+    <name>CM4</name>
+    <revision>r1p0</revision>
+    <endian>little</endian>
+    <mpuPresent>false</mpuPresent>
+    <fpuPresent>false</fpuPresent>
+    <nvicPrioBits>3</nvicPrioBits>
+    <vendorSystickConfig>false</vendorSystickConfig>
+  </cpu>
+  <addressUnitBits>8</addressUnitBits>
+  <width>8</width>
+  <size>0x08</size>
+  <resetValue>0x00</resetValue>
+  <resetMask>0xFF</resetMask>
+  <peripherals>
+    <peripheral>
+      <name>FAKE_PERIPHERAL</name>
+      <description>Fake Peripheral</description>
+      <groupName>FAKE</groupName>
+      <baseAddress>0</baseAddress>
+      <registers>
+        <register>
+          <name>SRR</name>
+          <description>Software Reset Register</description>
+          <addressOffset>0</addressOffset>
+          <access>read-write</access>
+          <resetValue>214</resetValue>
+          <fields>
+            <field>
+              <name>NA2</name>
+              <description>NA</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>NA1</name>
+              <description>NA</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SOFTWARE_RESET</name>
+              <description>Software Reset</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>WARNING_CONDITION_FLAG</name>
+              <description>Warning condition flag</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CCR</name>
+          <description>Chip Configuration Register</description>
+          <addressOffset>1</addressOffset>
+          <access>read-write</access>
+          <resetValue>136</resetValue>
+          <fields>
+            <field>
+              <name>RECONFIGURE_PLL_FREQUENCY</name>
+              <description>Reconfigure PLL frequency</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>RECONFIGURE_PLL_FREQUENCYR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>UNCONFIGURED</name>
+                  <description>PLL clock NOT configured/ready</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CONFIGURED</name>
+                  <description>PLL clock configured/ready</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>RECONFIGURE_PLL_FREQUENCYW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>DISABLED</name>
+                  <description>PLL (re)configure NOT requested</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ENABLED</name>
+                  <description>PLL (re)configure requested</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>MASK_XNWAIT_ON_XNCS_DEASSERT</name>
+              <description>Mask XnWAIT on XnCS deassert</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>MASK_XNWAIT_ON_XNCS_DEASSERT</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>DISABLED</name>
+                  <description>No mask</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ENABLED</name>
+                  <description>Mask</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>KEY_SCAN_ENABLE</name>
+              <description>Key-Scan Enable</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>KEY_SCAN_ENABLE</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>DISABLED</name>
+                  <description>Disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ENABLED</name>
+                  <description>Enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>TFT_PANEL_IF_OUTPUT_PIN_SETTING</name>
+              <description>TFT Panel I/F Output pin Setting</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>TFT_PANEL_IF_OUTPUT_PIN_SETTING</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>OUTPUT_24_BIT_ENABLED</name>
+                  <description>24-bits TFT output</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT_18_BIT_ENABLED</name>
+                  <description>18-bits TFT output</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT_16_BIT_ENABLED</name>
+                  <description>16-bits TFT output</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT_DISABLED</name>
+                  <description>Without TFT output</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>I2C_MASTER_INTERFACE_ENABLE</name>
+              <description>I2C master Interface Enable</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>I2C_MASTER_INTERFACE_ENABLE</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>DISABLED</name>
+                  <description>Disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ENABLED</name>
+                  <description>Enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>SERIAL_FLASH_OR_SPI_INTERFACE_ENABLE</name>
+              <description>Serial Flash or SPI Interface Enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>SERIAL_FLASH_OR_SPI_INTERFACE_ENABLE</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>DISABLED</name>
+                  <description>Disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ENABLED</name>
+                  <description>Enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>HOST_DATA_BUS_WIDTH_SELECTION</name>
+              <description>Host Data Bus Width Selection</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>HOST_DATA_BUS_WIDTH_SELECTION</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>HOST_DATA_BUS_8_BIT_ENABLED</name>
+                  <description>8-bit Host Data Bus</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HOST_DATA_BUS_16_BIT_ENABLED</name>
+                  <description>16-bit Host Data Bus</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MACR</name>
+          <description>Memory Access Control Register</description>
+          <addressOffset>2</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>HOST_READ_WRITE_IMAGE_DATA_FORMAT</name>
+              <description>Host Read/Write image Data Format</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>HOST_READ_WRITE_IMAGE_DATA_FORMAT</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>DIRECT_WRITE</name>
+                  <description>Direct write (for all 8 bits MPU I/F, 16 bits MPU I/F with 8bpp data mode 1 &amp; 2, 16 bits MPU I/F with 16/24-bpp data mode 1 &amp; serial host interface)</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MASK_HIGH_BYTE_EACH</name>
+                  <description>Mask high byte of each data (ex. 16 bit MPU I/F with 8-bpp data mode 1)</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MASK_HIGH_BYTE_EVEN</name>
+                  <description>Mask high byte of even data (ex. 16 bit MPU I/F with 24-bpp data mode 2)</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>HOST_READ_MEMORY_DIRECTION</name>
+              <description>Host Read Memory Direction</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>HOST_READ_MEMORY_DIRECTION</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>LEFT_RIGHT_TOP_BOTTOM</name>
+                  <description>Left&#x2192;Right then Top&#x2192;Bottom (Original)</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>RIGHT_LEFT_TOP_BOTTOM</name>
+                  <description>Right&#x2192;Left then Top&#x2192;Bottom (Horizontal flip)</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TOP_BOTTOM_LEFT_RIGHT</name>
+                  <description>Top&#x2192;Bottom then Left&#x2192;Right (Rotate right 90&#xB0; and horizontal flip)</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>BOTTOM_TOP_LEFT_RIGHT</name>
+                  <description>Bottom&#x2192;Top then Left&#x2192;Right (Rotate left 90&#xB0;)</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>NA1</name>
+              <description>NA</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>HOST_WRITE_MEMORY_DIRECTION</name>
+              <description>Host Write Memory Direction</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>HOST_WRITE_MEMORY_DIRECTION</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>LEFT_RIGHT_TOP_BOTTOM</name>
+                  <description>Left&#x2192;Right then Top&#x2192;Bottom (Original)</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>RIGHT_LEFT_TOP_BOTTOM</name>
+                  <description>Right&#x2192;Left then Top&#x2192;Bottom (Horizontal flip)</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TOP_BOTTOM_LEFT_RIGHT</name>
+                  <description>Top&#x2192;Bottom then Left&#x2192;Right (Rotate right 90&#xB0; and horizontal flip)</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>BOTTOM_TOP_LEFT_RIGHT</name>
+                  <description>Bottom&#x2192;Top then Left&#x2192;Right (Rotate left 90&#xB0;)</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>NA0</name>
+              <description>NA (must keep it as 0)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ICR</name>
+          <description>Input Control Register</description>
+          <addressOffset>3</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>OUTPUT_TO_MPU_INTERRUPT_PIN_ACTIVE_LEVEL</name>
+              <description>Output to MPU Interrupt pin's active level</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>OUTPUT_TO_MPU_INTERRUPT_PIN_ACTIVE_LEVEL</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>ACTIVE_LOW</name>
+                  <description>Active low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ACTIVE_HIGH</name>
+                  <description>Active high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>EXTERNAL_INTERRUPT_INPUT_DEBOUNCE</name>
+              <description>External interrupt input (XPS[0] pin) de-bounce</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>EXTERNAL_INTERRUPT_INPUT_DEBOUNCE</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>DISABLED</name>
+                  <description>De-bounce disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ENABLED</name>
+                  <description>De-bounce enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>EXTERNAL_INTERRUPT_INPUT_TRIGGER_TYPE</name>
+              <description>External interrupt input (XPS[0] pin) trigger type</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>EXTERNAL_INTERRUPT_INPUT_TRIGGER_TYPE</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>LOW_LEVEL_TRIGGERED</name>
+                  <description>Low level triggered</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>FALLING_EDGE_TRIGGERED</name>
+                  <description>Falling edge triggered</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HIGH_LEVEL_TRIGGERED</name>
+                  <description>High level triggered</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>RISING_EDGE_TRIGGERED</name>
+                  <description>Rising edge triggered</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TEXT_MODE_ENABLE</name>
+              <description>Text Mode enable</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>TEXT_MODE_ENABLE</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>DISABLED</name>
+                  <description>Disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ENABLED</name>
+                  <description>Enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>MEMORY_PORT_READ_WRITE_DESTINATION</name>
+              <description>Text Mode enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>MEMORY_PORT_READ_WRITE_DESTINATION</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>IMAGE_BUFFER</name>
+                  <description>Image buffer (SDRAM) for image data/pattern/user-characters</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>GAMMA_TABLE</name>
+                  <description>Gamma table for color Red/Green/Blue</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>GRAPHIC_CURSOR_RAM</name>
+                  <description>Graphic cursor RAM</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>COLOR_PALETTE_RAM</name>
+                  <description>Color palette RAM</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MRWDP</name>
+          <description>Memory Data Read/Write Port</description>
+          <addressOffset>4</addressOffset>
+          <access>read-write</access>
+        </register>
+        <register>
+          <name>PPLLC1</name>
+          <description>SCLK PLL Control Register 1</description>
+          <addressOffset>5</addressOffset>
+          <access>read-write</access>
+          <resetValue>4</resetValue>
+          <fields>
+            <field>
+              <name>RESERVED0</name>
+              <description>RESERVED</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SCLK_EXTRA_DIVIDER</name>
+              <description>SCLK extra divider</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SCLK_PLLDIVK</name>
+              <description>SCLK PLL Output divider</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SCLK_PLLDIVM</name>
+              <description>SCLK PLL Pre-driver parameter</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PPLLC2</name>
+          <description>SCLK PLL Control Register 2</description>
+          <addressOffset>6</addressOffset>
+          <access>read-write</access>
+          <resetValue>23</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SCLK_PLLDIVN</name>
+              <description>SCLK PLL Output divider</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+              <writeConstraint>
+                <range>
+                  <minimum>1</minimum>
+                  <maximum>63</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MPLLC1</name>
+          <description>MCLK PLL Control Register 1</description>
+          <addressOffset>7</addressOffset>
+          <access>read-write</access>
+          <resetValue>2</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>MCLK_PLLDIVK</name>
+              <description>PCLK PLL Output divider</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCLK_PLLDIVM</name>
+              <description>MCLK PLL Pre-driver parameter</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MPLLC2</name>
+          <description>MCLK PLL Control Register 2</description>
+          <addressOffset>8</addressOffset>
+          <access>read-write</access>
+          <resetValue>29</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>MCLK_PLLDIVN</name>
+              <description>MCLK PLL input parameter</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+              <writeConstraint>
+                <range>
+                  <minimum>1</minimum>
+                  <maximum>63</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SPLLC1</name>
+          <description>CCLK PLL Control Register 1</description>
+          <addressOffset>9</addressOffset>
+          <access>read-write</access>
+          <resetValue>4</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CCLK_PLLDIVK</name>
+              <description>CCLK PLL Output divider</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CCLK_PLLDIVM</name>
+              <description>CCLK PLL Pre-driver parameter</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SPLLC2</name>
+          <description>CCLK PLL Control Register 2</description>
+          <addressOffset>10</addressOffset>
+          <access>read-write</access>
+          <resetValue>42</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CCLK_PLLDIVN</name>
+              <description>CCLK PLL input parameter</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+              <writeConstraint>
+                <range>
+                  <minimum>1</minimum>
+                  <maximum>63</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>INTEN</name>
+          <description>Interrupt Enable Register</description>
+          <addressOffset>11</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>WAKEUP_RESUME_INTERRUPT_ENABLE</name>
+              <description>Wakeup/resume Interrupt Enable</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EXTERNAL_INTERRUPT_INPUT_ENABLE</name>
+              <description>External Interrupt input (XPS[0] pin) Enable</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_MASTER_INTERRUPT_ENABLE</name>
+              <description>I2C Master Interrupt Enable</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>VSYNC_TIME_BASE_INTERRUPT_ENABLE</name>
+              <description>Vsync time base interrupt Enable</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>KEY_SCAN_INTERRUPT_ENABLE</name>
+              <description>Key Scan Interrupt Enable</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CORE_TASK_COMPLETED_INTERRUPT_ENABLE</name>
+              <description>Serial flash DMA Complete | Draw task finished | BTE Process Complete etc. Interrupt Enable</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PWM_TIMER_1_INTERRUPT_ENABLE</name>
+              <description>PWM timer 1 Interrupt Enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PWM_TIMER_0_INTERRUPT_ENABLE</name>
+              <description>PWM timer 0 Interrupt Enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>INTF</name>
+          <description>Interrupt Event Flag Register</description>
+          <addressOffset>12</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>WAKEUP_RESUME_INTERRUPT_FLAG</name>
+              <description>Wakeup/resume Interrupt Flag</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EXTERNAL_INTERRUPT_INPUT_FLAG</name>
+              <description>External Interrupt input (XPS[0] pin) Flag</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_MASTER_INTERRUPT_FLAG</name>
+              <description>I2C Master Interrupt Flag</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>VSYNC_TIME_BASE_INTERRUPT_FLAG</name>
+              <description>Vsync Time Base Interrupt Flag</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>KEY_SCAN_INTERRUPT_FLAG</name>
+              <description>Key Scan Interrupt Flag</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CORE_TASK_COMPLETED_INTERRUPT_FLAG</name>
+              <description>Serial flash DMA Complete | Draw task finished | BTE Process Complete etc. Interrupt Flag</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PWM_TIMER_1_INTERRUPT_FLAG</name>
+              <description>PWM Timer 1 Interrupt Flag</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PWM_TIMER_0_INTERRUPT_FLAG</name>
+              <description>PWM Timer 0 Interrupt Flag</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MINTFR</name>
+          <description>Mask Interrupt Flag Register</description>
+          <addressOffset>13</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>MASK_WAKEUP_RESUME_INTERRUPT_FLAG</name>
+              <description>Mask Wakeup/resume Interrupt Flag</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MASK_EXTERNAL_INTERRUPT_INPUT_FLAG</name>
+              <description>Mask External Interrupt input (XPS[0] pin) Flag</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MASK_I2C_MASTER_INTERRUPT_FLAG</name>
+              <description>Mask I2C Master Interrupt Flag</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MASK_VSYNC_TIME_BASE_INTERRUPT_FLAG</name>
+              <description>Mask Vsync Time Base Interrupt Flag</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MASK_KEY_SCAN_INTERRUPT_FLAG</name>
+              <description>Mask Key Scan Interrupt Flag</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MASK_CORE_TASK_COMPLETED_INTERRUPT_FLAG</name>
+              <description>Mask Serial flash DMA Complete | Draw task finished | BTE Process Complete etc. Interrupt Flag</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MASK_PWM_TIMER_1_INTERRUPT_FLAG</name>
+              <description>Mask PWM Timer 1 Interrupt Flag</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MASK_PWM_TIMER_0_INTERRUPT_FLAG</name>
+              <description>Mask PWM Timer 0 Interrupt Flag</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PUENR</name>
+          <description>Pull-high control Register</description>
+          <addressOffset>14</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>GPIO_F_PULL_HIGH_ENABLE</name>
+              <description>GPIO-F[7:0] Pull-high Enable (XPDAT[23:19, 15:13])</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>GPIO_E_PULL_HIGH_ENABLE</name>
+              <description>GPIO-E[7:0] Pull-high Enable (XPDAT[12:10, 7:3])</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>GPIO_D_PULL_HIGH_ENABLE</name>
+              <description>GPIO-D[7:0] Pull-high Enable (XPDAT[18, 2, 17, 16, 9, 8, 1,0])</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>GPIO_C_PULL_HIGH_ENABLE</name>
+              <description>GPIO-C[4:0] Pull-high Enable (XnSFCS1, XnSFCS0, XMISO, XMOSI , XSCK)</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>XDB_MSB_PULL_HIGH_ENABLE</name>
+              <description>XDB[15:8] Pull-high Enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>XDB_LSB_PULL_HIGH_ENABLE</name>
+              <description>XDB[7:0] Pull-high Enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PSFSR</name>
+          <description>PDAT for PIO/Key Function Select Register</description>
+          <addressOffset>15</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>XPDAT18_FUNCTION_SELECT</name>
+              <description>XPDAT[18] - GPIO or Key function select</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>XPDAT18_FUNCTION_SELECT</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>GPIO</name>
+                  <description>GPIO-D7</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>XKOUT</name>
+                  <description>XKOUT[4]</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>XPDAT17_FUNCTION_SELECT</name>
+              <description>XPDAT[17] - GPIO or Key function select</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>XPDAT17_FUNCTION_SELECT</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>GPIO</name>
+                  <description>GPIO-D5</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>XKOUT</name>
+                  <description>XKOUT[2]</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>XPDAT16_FUNCTION_SELECT</name>
+              <description>XPDAT[16] - GPIO or Key function select</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>XPDAT16_FUNCTION_SELECT</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>GPIO</name>
+                  <description>GPIO-D4</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>XKOUT</name>
+                  <description>XKOUT[1]</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>XPDAT9_FUNCTION_SELECT</name>
+              <description>XPDAT[9] - GPIO or Key function select</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>XPDAT9_FUNCTION_SELECT</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>GPIO</name>
+                  <description>GPIO-D3</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>XKOUT</name>
+                  <description>XKOUT[3]</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>XPDAT8_FUNCTION_SELECT</name>
+              <description>XPDAT[8] - GPIO or Key function select</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>XPDAT8_FUNCTION_SELECT</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>GPIO</name>
+                  <description>GPIO-D2</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>XKIN</name>
+                  <description>XKIN[3]</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>XPDAT2_FUNCTION_SELECT</name>
+              <description>XPDAT[2] - GPIO or Key function select</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>XPDAT2_FUNCTION_SELECT</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>GPIO</name>
+                  <description>GPIO-D6</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>XKIN</name>
+                  <description>XKIN[4]</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>XPDAT1_FUNCTION_SELECT</name>
+              <description>XPDAT[1] - GPIO or Key function select</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>XPDAT1_FUNCTION_SELECT</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>GPIO</name>
+                  <description>GPIO-D1</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>XKIN</name>
+                  <description>XKIN[2]</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>XPDAT0_FUNCTION_SELECT</name>
+              <description>XPDAT[0] - GPIO or Key function select</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>XPDAT0_FUNCTION_SELECT</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>GPIO</name>
+                  <description>GPIO-D0</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>XKIN</name>
+                  <description>XKIN[1]</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MPWCTR</name>
+          <description>Main/PIP Window Control Register</description>
+          <addressOffset>16</addressOffset>
+          <access>read-write</access>
+          <resetValue>4</resetValue>
+          <fields>
+            <field>
+              <name>PIP1_WINDOW_ENABLE</name>
+              <description>PIP 1 window Enable/Disable</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PIP2_WINDOW_ENABLE</name>
+              <description>PIP 2 window Enable/Disable</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>NA1</name>
+              <description>NA</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>PIP_CONFIGURE_SELECTION</name>
+              <description>Select Configure PIP 1 or 2 Window's parameters</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>PIP_CONFIGURE_SELECTION</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>PIP1</name>
+                  <description>Configure PIP 1's parameters</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>PIP2</name>
+                  <description>Configure PIP 2's parameters</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>MAIN_IMAGE_COLOR_DEPTH</name>
+              <description>Main Image Color Depth Setting</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>MAIN_IMAGE_COLOR_DEPTH</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>DEPTH_8BPP</name>
+                  <description>8-bpp generic TFT (256 colors)</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DEPTH_16BPP</name>
+                  <description>16-bpp generic TFT (65K colors)</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DEPTH_24BPP</name>
+                  <description>24-bpp generic TFT (1.67M colors)</description>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PANEL_SYNC_SIGNAL_MODE</name>
+              <description>To Control panel's synchronous signals</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>PANEL_SYNC_SIGNAL_MODE</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>SYNC_MODE</name>
+                  <description>Sync Mode: Enable XVSYNC, XHSYNC, XDE</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DE_MODE</name>
+                  <description>DE Mode: Only XDE enable, XVSYNC &amp; XHSYNC in idle state</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PIPCDEP</name>
+          <description>PIP Window Color Depth Setting</description>
+          <addressOffset>17</addressOffset>
+          <access>read-write</access>
+          <resetValue>3</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>PIP1_WINDOW_COLOR_DEPTH_SETTING</name>
+              <description>PIP 1 window Enable/Disable</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>PIP1_WINDOW_COLOR_DEPTH_SETTING</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>DEPTH_8BPP</name>
+                  <description>8-bpp generic TFT (256 colors)</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DEPTH_16BPP</name>
+                  <description>16-bpp generic TFT (65K colors)</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DEPTH_24BPP</name>
+                  <description>24-bpp generic TFT (1.67M colors)</description>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>PIP2_WINDOW_COLOR_DEPTH_SETTING</name>
+              <description>PIP 1 window Enable/Disable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>PIP2_WINDOW_COLOR_DEPTH_SETTING</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>DEPTH_8BPP</name>
+                  <description>8-bpp generic TFT (256 colors)</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DEPTH_16BPP</name>
+                  <description>16-bpp generic TFT (65K colors)</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DEPTH_24BPP</name>
+                  <description>24-bpp generic TFT (1.67M colors)</description>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DPCR</name>
+          <description>Display Configuration Register</description>
+          <addressOffset>18</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>PCLK_INVERSION</name>
+              <description>NA</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>PCLK_INVERSION</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>RISING</name>
+                  <description>Panel fetches XPDAT at XPCLK rising edge</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>FALLING</name>
+                  <description>Panel fetches XPDAT at XPCLK falling edge</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DISPLAY_ENABLE</name>
+              <description>Display ON/OFF</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DISPLAY_TEST_COLOR_BAR_ENABLE</name>
+              <description>Display Test Color Bar</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>NA0</name>
+              <description>This bit must be set 0</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>VDIR</name>
+              <description>Vertical Scan direction</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>VDIR</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>TOP_TO_BOTTOM</name>
+                  <description>From Top to Bottom</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>BOTTOM_TO_TOP</name>
+                  <description>From Bottom to Top</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>OUTPUT_SEQUENCE</name>
+              <description>Parallel XPDAT[23:0] Output Sequence / LVDS Color Serial Data Output Sequence</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>OUTPUT_SEQUENCE</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>RGB</name>
+                  <description>RGB</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>RBG</name>
+                  <description>RBG</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>GRB</name>
+                  <description>GRB</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>GBR</name>
+                  <description>GBR</description>
+                  <value>3</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>BRG</name>
+                  <description>BRG</description>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>BGR</name>
+                  <description>BGR</description>
+                  <value>5</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>GRAY</name>
+                  <description>Gray</description>
+                  <value>6</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>IDLE</name>
+                  <description>Send out idle state (all 0 or 1, black or white color)</description>
+                  <value>7</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PCSR</name>
+          <description>Panel scan Clock and Data Setting Register</description>
+          <addressOffset>19</addressOffset>
+          <access>read-write</access>
+          <resetValue>3</resetValue>
+          <fields>
+            <field>
+              <name>HSYNC_POLARITY</name>
+              <description>HSYNC Polarity</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>HSYNC_POLARITY</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>ACTIVE_LOW</name>
+                  <description>Active-low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ACTIVE_HIGH</name>
+                  <description>Active-high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>VSYNC_POLARITY</name>
+              <description>VSYNC Polarity</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>VSYNC_POLARITY</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>ACTIVE_LOW</name>
+                  <description>Active-low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ACTIVE_HIGH</name>
+                  <description>Active-high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DE_POLARITY</name>
+              <description>DE Polarity</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>DE_POLARITY</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>ACTIVE_LOW</name>
+                  <description>Active-low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ACTIVE_HIGH</name>
+                  <description>Active-high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DE_IDLE_STATE</name>
+              <description>DE IDLE STATE (in power saving mode or DISPLAY OFF)</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>DE_IDLE_STATE</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>OUTPUT_LOW</name>
+                  <description>Pin DE output is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT_HIGH</name>
+                  <description>Pin DE output is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>PCLK_IDLE_STATE</name>
+              <description>PCLK IDLE STATE (in power saving mode or DISPLAY OFF)</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>PCLK_IDLE_STATE</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>OUTPUT_LOW</name>
+                  <description>Pin PCLK output is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT_HIGH</name>
+                  <description>Pin PCLK output is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>PDAT_IDLE_STATE</name>
+              <description>PDAT IDLE STATE (in power saving mode or DISPLAY OFF)</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>PDAT_IDLE_STATE</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>OUTPUT_LOW</name>
+                  <description>Pin PDAT output is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT_HIGH</name>
+                  <description>Pin PDAT output is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>HSYNC_IDLE_STATE</name>
+              <description>HSYNC IDLE STATE (in power saving mode or DISPLAY OFF)</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>HSYNC_IDLE_STATE</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>OUTPUT_LOW</name>
+                  <description>Pin HSYNC output is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT_HIGH</name>
+                  <description>Pin HSYNC output is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>VSYNC_IDLE_STATE</name>
+              <description>VSYNC IDLE STATE (in power saving mode or DISPLAY OFF)</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>VSYNC_IDLE_STATE</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>OUTPUT_LOW</name>
+                  <description>Pin VSYNC output is low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OUTPUT_HIGH</name>
+                  <description>Pin VSYNC output is high</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HDWR</name>
+          <description>Horizontal Display Width Register</description>
+          <addressOffset>20</addressOffset>
+          <access>read-write</access>
+          <resetValue>79</resetValue>
+          <fields>
+            <field>
+              <name>HORIZONTAL_DISPLAY_WIDTH</name>
+              <description>Horizontal Display Width (pixels) = (HDWR + 1) * 8 + HDWFTR</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HDWFTR</name>
+          <description>Horizontal Display Width Fine Tune Register</description>
+          <addressOffset>21</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>HORIZONTAL_DISPLAY_WIDTH_FINE_TUNING</name>
+              <description>Horizontal Display Width (pixels) = (HDWR + 1) * 8 + HDWFTR</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HNDR</name>
+          <description>Horizontal Non-Display Period Register</description>
+          <addressOffset>22</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>HORIZONTAL_NON_DISPLAY_PERIOD</name>
+              <description>Horizontal non-display period or Back porch (pixels) = (HNDR + 1) * 8 + HNDFTR</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HNDFTR</name>
+          <description>Horizontal Non-Display Period Fine Tune Register</description>
+          <addressOffset>23</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>HORIZONTAL_NON_DISPLAY_PERIOD_FINE_TUNING</name>
+              <description>Horizontal non-display period or Back porch (pixels) = (HNDR + 1) * 8 + HNDFTR</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HSTR</name>
+          <description>HSYNC Start Position Register</description>
+          <addressOffset>24</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>HSYNC_START_POSITION</name>
+              <description>The starting position from the end of display area to the beginning of HSYNC. HSYNC Start Position or Front porch (pixels) = (HSTR + 1) * 8</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HPWR</name>
+          <description>HSYNC Pulse Width Register</description>
+          <addressOffset>25</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>HSYNC_PULSE_WIDTH</name>
+              <description>HSYNC Pulse Width (pixels) = (HPW + 1) * 8</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>VDHR0</name>
+          <description>Vertical Display Height Register 0</description>
+          <addressOffset>26</addressOffset>
+          <access>read-write</access>
+          <resetValue>79</resetValue>
+          <fields>
+            <field>
+              <name>VERTICAL_DISPLAY_HEIGHT</name>
+              <description>VDHR[7:0] | Vertical Display Height (Line) = VDHR + 1</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>7</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>VDHR1</name>
+          <description>Vertical Display Height Register 1</description>
+          <addressOffset>27</addressOffset>
+          <access>read-write</access>
+          <resetValue>79</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>7</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>VERTICAL_DISPLAY_HEIGHT</name>
+              <description>VDHR[10:8] | Vertical Display Height (Line) = VDHR + 1</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>VNDR0</name>
+          <description>Vertical Non-Display Period Register 0</description>
+          <addressOffset>28</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>VERTICAL_DISPLAY_HEIGHT</name>
+              <description>VNDR[7:0] | Vertical Non-Display Period (Line) = VNDR + 1</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>7</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>VNDR1</name>
+          <description>Vertical Non-Display Period Register 1</description>
+          <addressOffset>29</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>7</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>VERTICAL_DISPLAY_HEIGHT</name>
+              <description>VNDR[9:8] | Vertical Non-Display Period (Line) = VNDR + 1</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>VSTR</name>
+          <description>VSYNC Start Position Register</description>
+          <addressOffset>30</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>VSYNC_START_POSITION</name>
+              <description>The starting position from the end of display area to the beginning of VSYNC. VSYNC Start Position(Line) = VSTR + 1</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>7</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>VPWR</name>
+          <description>VSYNC Pulse Width Register</description>
+          <addressOffset>31</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>VSYNC_PULSE_WIDTH</name>
+              <description>VSYNC Pulse Width (pixels) = (HPW + 1) * 8</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MISA0</name>
+          <description>Main Image Start Address 0</description>
+          <addressOffset>32</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>MAIN_IMAGE_START_ADDRESS</name>
+              <description>MISA[7:0] | Main Image Start Address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MISA1</name>
+          <description>Main Image Start Address 1</description>
+          <addressOffset>33</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>MAIN_IMAGE_START_ADDRESS</name>
+              <description>MISA[15:8] | Main Image Start Address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MISA2</name>
+          <description>Main Image Start Address 2</description>
+          <addressOffset>34</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>MAIN_IMAGE_START_ADDRESS</name>
+              <description>MISA[23:16] | Main Image Start Address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MISA3</name>
+          <description>Main Image Start Address 3</description>
+          <addressOffset>35</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>MAIN_IMAGE_START_ADDRESS</name>
+              <description>MISA[31:24] | Main Image Start Address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MIW0</name>
+          <description>Main Image Width 0</description>
+          <addressOffset>36</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>MAIN_IMAGE_WIDTH</name>
+              <description>MIW[7:0] | Main Image Width</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MIW1</name>
+          <description>Main Image Width 1</description>
+          <addressOffset>37</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>MAIN_IMAGE_WIDTH</name>
+              <description>MIW[12:8] | Main Image Width</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MWULX0</name>
+          <description>Main Window Upper-Left corner X-coordinates 0</description>
+          <addressOffset>38</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>MAIN_WINDOW_UPPER_LEFT_X</name>
+              <description>MWULX[7:0] | Main Window Upper-Left corner X-coordinates</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MWULX1</name>
+          <description>Main Window Upper-Left corner X-coordinates 1</description>
+          <addressOffset>39</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>MAIN_WINDOW_UPPER_LEFT_X</name>
+              <description>MWULX[12:8] | Main Window Upper-Left corner X-coordinates</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MWULY0</name>
+          <description>Main Window Upper-Left corner Y-coordinates 0</description>
+          <addressOffset>40</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>MAIN_WINDOW_UPPER_LEFT_Y</name>
+              <description>MWULY[7:0] | Main Window Upper-Left corner Y-coordinates</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MWULY1</name>
+          <description>Main Window Upper-Left corner Y-coordinates 1</description>
+          <addressOffset>41</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>MAIN_WINDOW_UPPER_LEFT_Y</name>
+              <description>MWULY[12:8] | Main Window Upper-Left corner Y-coordinates</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PWDULX0</name>
+          <description>PIP 1 or 2 Window Display Upper-Left corner X-coordinates 0</description>
+          <addressOffset>42</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>PIP_WINDOW_DISPLAY_UPPER_LEFT_X</name>
+              <description>PWDULX[7:0] | PIP Window Display Upper-Left corner X-coordinates</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PWDULX1</name>
+          <description>PIP 1 or 2 Window Display Upper-Left corner X-coordinates 1</description>
+          <addressOffset>43</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>PIP_WINDOW_DISPLAY_UPPER_LEFT_X</name>
+              <description>PWDULX[12:8] | PIP Window Display Upper-Left corner X-coordinates</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PWDULY0</name>
+          <description>PIP 1 or 2 Window Display Upper-Left corner Y-coordinates 0</description>
+          <addressOffset>44</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>PIP_WINDOW_DISPLAY_UPPER_LEFT_Y</name>
+              <description>PWDULY[7:0] | PIP Window Display Upper-Left corner Y-coordinates</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PWDULY1</name>
+          <description>PIP 1 or 2 Window Display Upper-Left corner Y-coordinates 1</description>
+          <addressOffset>45</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>PIP_WINDOW_DISPLAY_UPPER_LEFT_Y</name>
+              <description>PWDULY[12:8] | PIP Window Display Upper-Left corner Y-coordinates</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PISA0</name>
+          <description>PIP 1 or 2 Image Start Address 0</description>
+          <addressOffset>46</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>PIP_IMAGE_START_ADDRESS</name>
+              <description>PISA[7:0] | PIP Image Start Address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PISA1</name>
+          <description>PIP 1 or 2 Image Start Address 1</description>
+          <addressOffset>47</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>PIP_IMAGE_START_ADDRESS</name>
+              <description>PISA[15:8] | PIP Image Start Address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PISA2</name>
+          <description>PIP 1 or 2 Image Start Address 2</description>
+          <addressOffset>48</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>PIP_IMAGE_START_ADDRESS</name>
+              <description>PISA[23:16] | PIP Image Start Address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PISA3</name>
+          <description>PIP 1 or 2 Image Start Address 3</description>
+          <addressOffset>49</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>PIP_IMAGE_START_ADDRESS</name>
+              <description>PISA[31:24] | PIP Image Start Address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PIW0</name>
+          <description>PIP Image Width 0</description>
+          <addressOffset>50</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>PIP_IMAGE_WIDTH</name>
+              <description>PIW[7:0] | PIP Image Width</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PIW1</name>
+          <description>PIP Image Width 1</description>
+          <addressOffset>51</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>PIP_IMAGE_WIDTH</name>
+              <description>PIW[12:8] | PIP Image Width</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PWIULX0</name>
+          <description>PIP 1 or 2 Window Image Upper-Left corner X-coordinates 0</description>
+          <addressOffset>52</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>PIP_WINDOW_IMAGE_UPPER_LEFT_X</name>
+              <description>PWIULX[7:0] | PIP Window Image Upper-Left corner X-coordinates</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PWIULX1</name>
+          <description>PIP 1 or 2 Window Image Upper-Left corner X-coordinates 1</description>
+          <addressOffset>53</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>PIP_WINDOW_IMAGE_UPPER_LEFT_X</name>
+              <description>PWIULX[12:8] | PIP Window Image Upper-Left corner X-coordinates</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PWIULY0</name>
+          <description>PIP 1 or 2 Window Image Upper-Left corner Y-coordinates 0</description>
+          <addressOffset>54</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>PIP_WINDOW_IMAGE_UPPER_LEFT_Y</name>
+              <description>PWIULY[7:0] | PIP Window Image Upper-Left corner Y-coordinates</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PWIULY1</name>
+          <description>PIP 1 or 2 Window Image Upper-Left corner Y-coordinates 1</description>
+          <addressOffset>55</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>PIP_WINDOW_IMAGE_UPPER_LEFT_Y</name>
+              <description>PWIULY[12:8] | PIP Window Image Upper-Left corner Y-coordinates</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PWW0</name>
+          <description>PIP Window Width 0</description>
+          <addressOffset>56</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>PIP_WINDOW_WIDTH</name>
+              <description>PWW[7:0] | PIP Image Width</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PWW1</name>
+          <description>PIP Window Width 1</description>
+          <addressOffset>57</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>PIP_WINDOW_WIDTH</name>
+              <description>PWW[10:8] | PIP Image Width</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PWH0</name>
+          <description>PIP Window Height 0</description>
+          <addressOffset>58</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>PIP_WINDOW_HEIGHT</name>
+              <description>PWH[7:0] | PIP Image Width</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PWH1</name>
+          <description>PIP Window Height 1</description>
+          <addressOffset>59</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>PIP_WINDOW_HEIGHT</name>
+              <description>PWH[10:8] | PIP Image Width</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GTCCR</name>
+          <description>Graphic / Text Cursor Control Register</description>
+          <addressOffset>60</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>GAMMA_CORRECTION_ENABLE</name>
+              <description>Gamma correction Enable</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>GAMMA_TABLE_SELECT_FOR_MPU_WRITE_GAMMA_DATA</name>
+              <description>Gamma table select for MPU write gamma data</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>GAMMA_TABLE_SELECT_FOR_MPU_WRITE_GAMMA_DATA</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>BLUE</name>
+                  <description>Gamma table for Blue</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>GREEN</name>
+                  <description>Gamma table for Green</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>RED</name>
+                  <description>Gamma table for Red</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>NA</name>
+                  <description>Gamma table for Red</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>GRAPHIC_CURSOR_ENABLE</name>
+              <description>Graphic Cursor Enable</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>GRAPHIC_CURSOR_SELECTION</name>
+              <description>Graphic Cursor Selection</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>GRAPHIC_CURSOR_SELECTION</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>GRAPHIC_CURSOR_SET_1</name>
+                  <description>Graphic Cursor Set 1</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>GRAPHIC_CURSOR_SET_2</name>
+                  <description>Graphic Cursor Set 2</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>GRAPHIC_CURSOR_SET_3</name>
+                  <description>Graphic Cursor Set 3</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>GRAPHIC_CURSOR_SET_4</name>
+                  <description>Graphic Cursor Set 4</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>TEXT_CURSOR_ENABLE</name>
+              <description>Text Cursor Enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TEXT_CURSOR_BLINKING_ENABLE</name>
+              <description>Text Cursor Blinking Enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BTCR</name>
+          <description>Blink Time Control Register</description>
+          <addressOffset>61</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>TEXT_CURSOR_BLINK_TIME</name>
+              <description>Text Cursor Blink Time Setting (Unit: Frame)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CURHS</name>
+          <description>Text Cursor Horizontal Size Register Register</description>
+          <addressOffset>62</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TEXT_CURSOR_HORIZONTAL_SIZE</name>
+              <description>Text Cursor Horizontal Size Setting</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CURVS</name>
+          <description>Text Cursor Vertical Size Register Register</description>
+          <addressOffset>63</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TEXT_CURSOR_VERTICAL_SIZE</name>
+              <description>Text Cursor Vertical Size Setting</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GCHP0</name>
+          <description>Graphic Cursor Horizontal Position Register 0</description>
+          <addressOffset>64</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>GRAPHIC_CURSOR_HORIZONTAL_LOCATION</name>
+              <description>GCHP[7:0] | Graphic Cursor Horizontal Location</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GCHP1</name>
+          <description>Graphic Cursor Horizontal Position Register 1</description>
+          <addressOffset>65</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>GRAPHIC_CURSOR_HORIZONTAL_LOCATION</name>
+              <description>GCHP[12:8] | Graphic Cursor Horizontal Location</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GCVP0</name>
+          <description>Graphic Cursor Vertical Position Register 0</description>
+          <addressOffset>66</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>GRAPHIC_CURSOR_VERTICAL_LOCATION</name>
+              <description>GCVP[7:0] | Graphic Cursor Vertical Location</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GCVP1</name>
+          <description>Graphic Cursor Vertical Position Register 1</description>
+          <addressOffset>67</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>GRAPHIC_CURSOR_VERTICAL_LOCATION</name>
+              <description>GCVP[12:8] | Graphic Cursor Vertical Location</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GCC0</name>
+          <description>Graphic Cursor Color 0</description>
+          <addressOffset>68</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <description>Graphic Cursor Color 0 | RGB Format [7:0] = RRRGGGBB</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GCC1</name>
+          <description>Graphic Cursor Color 1</description>
+          <addressOffset>69</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <description>Graphic Cursor Color 1 | RGB Format [7:0] = RRRGGGBB</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CVSSA0</name>
+          <description>Canvas Start address 0</description>
+          <addressOffset>80</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <description>CVSSA[7:0] | Start address of Canvas</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CVSSA1</name>
+          <description>Canvas Start address 1</description>
+          <addressOffset>81</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <description>CVSSA[15:8] | Start address of Canvas</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CVSSA2</name>
+          <description>Canvas Start address 2</description>
+          <addressOffset>82</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <description>CVSSA[23:16] | Start address of Canvas</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CVSSA3</name>
+          <description>Canvas Start address 3</description>
+          <addressOffset>83</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <description>CVSSA[31:24] | Start address of Canvas</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CVS_IMWTH0</name>
+          <description>Canvas image width 0</description>
+          <addressOffset>84</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <description>CVS_IMWTH[7:0] | Canvas image width</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CVS_IMWTH1</name>
+          <description>Canvas image width 1</description>
+          <addressOffset>85</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <description>CVS_IMWTH[12:8] | Canvas image width</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>AWUL_X0</name>
+          <description>Active Window Upper-Left corner X-coordinates 0</description>
+          <addressOffset>86</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <description>AWUL_X[7:0] | Active Window Upper-Left corner X-coordinates</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>AWUL_X1</name>
+          <description>Active Window Upper-Left corner X-coordinates 1</description>
+          <addressOffset>87</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <description>AWUL_X[12:8] | Active Window Upper-Left corner X-coordinates</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>AWUL_Y0</name>
+          <description>Active Window Upper-Left corner Y-coordinates 0</description>
+          <addressOffset>88</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <description>AWUL_Y[7:0] | Active Window Upper-Left corner Y-coordinates</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>AWUL_Y1</name>
+          <description>Active Window Upper-Left corner Y-coordinates 1</description>
+          <addressOffset>89</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <description>AWUL_Y[12:8] | Active Window Upper-Left corner Y-coordinates</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>AW_WTH0</name>
+          <description>Active Window Width 0</description>
+          <addressOffset>90</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <description>AW_WTH[7:0] | Active Window Width</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>AW_WTH1</name>
+          <description>Active Window Width 1</description>
+          <addressOffset>91</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <description>AW_WTH[12:8] | Active Window Width</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>AW_HT0</name>
+          <description>Active Window Height 0</description>
+          <addressOffset>92</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <description>AW_HT[7:0] | Active Window Height</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>AW_HT1</name>
+          <description>Active Window Height 1</description>
+          <addressOffset>93</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>NA0</name>
+              <description>NA</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <description>AW_HT[12:8] | Active Window Height</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>AW_COLOR</name>
+          <description>Color Depth of Canvas &amp; Active Window</description>
+          <addressOffset>94</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>CANVAS_ADDRESSING_MODE</name>
+              <description>Canvas addressing mode</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CANVAS_IMAGE_BLOCK_MODE_COLOR_DEPTH</name>
+              <description>Canvas image color depth in Block Mode</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>CANVAS_IMAGE_BLOCK_MODE_COLOR_DEPTH</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>DEPTH_8BPP</name>
+                  <description>8bpp</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DEPTH_16BPP</name>
+                  <description>16bpp</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DEPTH_24BPP</name>
+                  <description>24bpp</description>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>CANVAS_IMAGE_LINEAR_MODE_DATA_WIDTH</name>
+              <description>Canvas memory R/W data width in Linear Mode</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>CANVAS_IMAGE_LINEAR_MODE_DATA_WIDTH</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>WIDTH_8BIT</name>
+                  <description>8-bits memory data read/write</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>WIDTH_16BIT</name>
+                  <description>16-bits memory data read/write</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CURH0</name>
+          <description>Graphic Read/Write position Horizontal Position Register 0</description>
+          <addressOffset>95</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>MEMORY_READ_WRITE_ADDRESS</name>
+              <description>CURH[7:0] | Graphic Read/Write Linear mode address [7:0]</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>GRAPHIC_READ_WRITE_HORIZONTAL_POSITION</name>
+              <description>CURH[7:0] | Graphic Read/Write Block mode horizontal position</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CURH1</name>
+          <description>Graphic Read/Write position Horizontal Position Register 1</description>
+          <addressOffset>96</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>MEMORY_READ_WRITE_ADDRESS</name>
+              <description>CURH[15:8] | Graphic Read/Write Linear mode address [15:8]</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>GRAPHIC_READ_WRITE_HORIZONTAL_POSITION</name>
+              <description>CURH[12:8] | Graphic Read/Write Block mode horizontal position</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CURV0</name>
+          <description>Graphic Read/Write position Vertical Position Register 0</description>
+          <addressOffset>97</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>MEMORY_READ_WRITE_ADDRESS</name>
+              <description>CURV[7:0] | Graphic Read/Write Linear mode address [23:16]</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>GRAPHIC_READ_WRITE_VERTICAL_POSITION</name>
+              <description>CURV[7:0] | Graphic Read/Write Block mode vertical position</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CURV1</name>
+          <description>Graphic Read/Write position Vertical Position Register 1</description>
+          <addressOffset>98</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>MEMORY_READ_WRITE_ADDRESS</name>
+              <description>CURV[15:8] | Graphic Read/Write Linear mode address [31:24]</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>GRAPHIC_READ_WRITE_VERTICAL_POSITION</name>
+              <description>CURV[12:8] | Graphic Read/Write Block mode vertical position</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>F_CURX0</name>
+          <description>Text Write X-coordinates Register 0</description>
+          <addressOffset>99</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>TEXT_WRITE_X</name>
+              <description>F_CURX[7:0] | Text Write X-coordinates</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>F_CURX1</name>
+          <description>Text Write X-coordinates Register 1</description>
+          <addressOffset>100</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>TEXT_WRITE_X</name>
+              <description>F_CURX[12:8] | Text Write X-coordinates</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>F_CURY0</name>
+          <description>Text Write Y-coordinates Register 0</description>
+          <addressOffset>101</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>TEXT_WRITE_Y</name>
+              <description>F_CURY[7:0] | Text Write Y-coordinates</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>F_CURY1</name>
+          <description>Text Write Y-coordinates Register 1</description>
+          <addressOffset>102</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>TEXT_WRITE_Y</name>
+              <description>F_CURY[12:8] | Text Write Y-coordinates</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DCR0</name>
+          <description>Draw Line / Triangle Control Register 0</description>
+          <addressOffset>103</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DRAW_START</name>
+              <description>Draw Line / Triangle Start Signal</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILL_ENABLE</name>
+              <description>Fill function for Triangle Signal</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SHAPE_SELECTION</name>
+              <description>Draw Triangle or Line Select Signal</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>SHAPE_SELECTION</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>LINE</name>
+                  <description>Draw Line</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TRIANGLE</name>
+                  <description>Draw Triangle</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DLHSR0</name>
+          <description>Draw Line/Square/Triangle Point 1 X-coordinates Register 0</description>
+          <addressOffset>104</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DRAW_POINT_1_X</name>
+              <description>DLHSR[7:0] | Draw Point 1 X-coordinate</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DLHSR1</name>
+          <description>Draw Line/Square/Triangle Point 1 X-coordinates Register 1</description>
+          <addressOffset>105</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DRAW_POINT_1_X</name>
+              <description>DLHSR[12:8] | Draw Point 1 X-coordinate</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DLVSR0</name>
+          <description>Draw Line/Square/Triangle Point 1 Y-coordinates Register 0</description>
+          <addressOffset>106</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DRAW_POINT_1_Y</name>
+              <description>DLVSR[7:0] | Draw Point 1 Y-coordinate</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DLVSR1</name>
+          <description>Draw Line/Square/Triangle Point 1 Y-coordinates Register 1</description>
+          <addressOffset>107</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DRAW_POINT_1_Y</name>
+              <description>DLVSR[12:8] | Draw Point 1 Y-coordinate</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DLHER0</name>
+          <description>Draw Line/Square/Triangle Point 2 X-coordinates Register 0</description>
+          <addressOffset>108</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DRAW_POINT_2_X</name>
+              <description>DLHER[7:0] | Draw Point 2 X-coordinate</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DLHER1</name>
+          <description>Draw Line/Square/Triangle Point 2 X-coordinates Register 0</description>
+          <addressOffset>109</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DRAW_POINT_2_X</name>
+              <description>DLHER[12:8] | Draw Point 2 X-coordinate</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DLVER0</name>
+          <description>Draw Line/Square/Triangle Point 2 Y-coordinates Register 0</description>
+          <addressOffset>110</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DRAW_POINT_2_Y</name>
+              <description>DLVER[7:0] | Draw Point 2 Y-coordinate</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DLVER1</name>
+          <description>Draw Line/Square/Triangle Point 2 Y-coordinates Register 0</description>
+          <addressOffset>111</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DRAW_POINT_2_Y</name>
+              <description>DLVER[12:8] | Draw Point 2 Y-coordinate</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DTPH0</name>
+          <description>Draw Triangle Point 3 X-coordinates Register 0</description>
+          <addressOffset>112</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DRAW_POINT_3_X</name>
+              <description>DTPH[7:0] | Draw Triangle Point 3 X-coordinate</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DTPH1</name>
+          <description>Draw Triangle Point 3 X-coordinates Register 1</description>
+          <addressOffset>113</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DRAW_POINT_3_X</name>
+              <description>DTPH[12:8] | Draw Triangle Point 3 X-coordinate</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DTPV0</name>
+          <description>Draw Triangle Point 3 Y-coordinates Register 0</description>
+          <addressOffset>114</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DRAW_POINT_3_Y</name>
+              <description>DTPV[7:0] | Draw Triangle Point 3 Y-coordinate</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DTPV1</name>
+          <description>Draw Triangle Point 3 Y-coordinates Register 1</description>
+          <addressOffset>115</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DRAW_POINT_3_Y</name>
+              <description>DTPV[12:8] | Draw Triangle Point 3 Y-coordinate</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DCR1</name>
+          <description>Draw Circle/Ellipse/Ellipse Curve/Circle Square Control Register 1</description>
+          <addressOffset>118</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DRAW_START</name>
+              <description>Draw Circle / Ellipse / Square /Circle Square Start Signal</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILL_ENABLE</name>
+              <description>Fill the Circle / Ellipse / Square / Circle Square Signal</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SHAPE_SELECTION</name>
+              <description>Draw Circle / Ellipse / Square / Ellipse Curve / Circle Square Select</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>SHAPE_SELECTION</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>CIRCLE_ELLIPSE</name>
+                  <description>Draw Circle / Ellipse</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CIRCLE_ELLIPSE_CURVE</name>
+                  <description>Draw Circle / Ellipse Curve</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>SQUARE</name>
+                  <description>Draw Square</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CIRCLE_SQUARE</name>
+                  <description>Draw Circle Square</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>CIRCLE_ELLIPSE_CURVE_PART_SELECTION</name>
+              <description>Draw Circle / Ellipse Curve Part Select(DECP)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>CIRCLE_ELLIPSE_CURVE_PART_SELECTION</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>BOTTOM_LEFT</name>
+                  <description>Bottom-left Ellipse Curve</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>UPPER_LEFT</name>
+                  <description>Upper-left Ellipse Curve</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>UPPER_RIGHT</name>
+                  <description>Upper-right Ellipse Curve</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>BOTTOM_RIGHT</name>
+                  <description>Bottom-right Ellipse Curve</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ELL_A0</name>
+          <description>Draw Circle/Ellipse/Circle Square Major radius Setting Register 0</description>
+          <addressOffset>119</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>MAJOR_RADIUS</name>
+              <description>ELL_A[7:0] | Draw Circle/Ellipse/Circle Square Major radius</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ELL_A1</name>
+          <description>Draw Circle/Ellipse/Circle Square Major radius Setting Register 1</description>
+          <addressOffset>120</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>MAJOR_RADIUS</name>
+              <description>ELL_A[12:8] | Draw Circle/Ellipse/Circle Square Major radius</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ELL_B0</name>
+          <description>Draw Circle/Ellipse/Circle Square Minor radius Setting Register 0</description>
+          <addressOffset>121</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>MINOR_RADIUS</name>
+              <description>ELL_B[7:0] | Draw Circle/Ellipse/Circle Square Minor radius</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ELL_B1</name>
+          <description>Draw Circle/Ellipse/Circle Square Minor radius Setting Register 1</description>
+          <addressOffset>122</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>MINOR_RADIUS</name>
+              <description>ELL_B[12:8] | Draw Circle/Ellipse/Circle Square Minor radius</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DEHR0</name>
+          <description>Draw Circle/Ellipse/Circle Square Center X-coordinates Register 0</description>
+          <addressOffset>123</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>CENTER_X</name>
+              <description>DEHR[7:0] | Draw Circle/Ellipse/Circle Square Minor radius</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DEHR1</name>
+          <description>Draw Circle/Ellipse/Circle Square Center X-coordinates Register 1</description>
+          <addressOffset>124</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>CENTER_X</name>
+              <description>DEHR[12:8] | Draw Circle/Ellipse/Circle Square Minor radius</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DEVR0</name>
+          <description>Draw Circle/Ellipse/Circle Square Center Y-coordinates Register 0</description>
+          <addressOffset>125</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>CENTER_Y</name>
+              <description>DEHR[7:0] | Draw Circle/Ellipse/Circle Square Minor radius</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DEVR1</name>
+          <description>Draw Circle/Ellipse/Circle Square Center Y-coordinates Register 1</description>
+          <addressOffset>126</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>CENTER_Y</name>
+              <description>DEHR[12:8] | Draw Circle/Ellipse/Circle Square Minor radius</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+  </peripherals>
+</device>

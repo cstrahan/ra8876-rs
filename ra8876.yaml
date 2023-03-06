@@ -1,0 +1,2158 @@
+_svd: "ra8876.svd"
+
+_add:
+    FAKE_PERIPHERAL:
+        description: Fake Peripheral
+        groupName: FAKE
+        baseAddress: 0x00
+        registers:
+            SRR:
+                description: Software Reset Register
+                addressOffset: 0x00
+                access: read-write
+                resetValue: 0b11010110
+                fields:
+                    NA2:
+                        description: NA
+                        bitOffset: 5
+                        bitWidth: 3
+                        access: read-only
+                    NA1:
+                        description: NA
+                        bitOffset: 2
+                        bitWidth: 3
+                        access: read-only
+                    NA0:
+                        description: NA
+                        bitOffset: 1
+                        bitWidth: 1
+                        access: read-only
+                    SOFTWARE_RESET:
+                        description: Software Reset
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: write-only
+                    WARNING_CONDITION_FLAG:
+                        description: Warning condition flag
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-only
+            CCR:
+                description: Chip Configuration Register
+                addressOffset: 0x01
+                access: read-write
+                resetValue: 0b10001000
+                fields:
+                    RECONFIGURE_PLL_FREQUENCY:
+                        description: Reconfigure PLL frequency
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    MASK_XNWAIT_ON_XNCS_DEASSERT:
+                        description: Mask XnWAIT on XnCS deassert
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    KEY_SCAN_ENABLE:
+                        description: Key-Scan Enable
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-write
+                    TFT_PANEL_IF_OUTPUT_PIN_SETTING:
+                        description: TFT Panel I/F Output pin Setting
+                        bitOffset: 3
+                        bitWidth: 2
+                        access: read-write
+                    I2C_MASTER_INTERFACE_ENABLE:
+                        description: I2C master Interface Enable
+                        bitOffset: 2
+                        bitWidth: 1
+                        access: read-write
+                    SERIAL_FLASH_OR_SPI_INTERFACE_ENABLE:
+                        description: Serial Flash or SPI Interface Enable
+                        bitOffset: 1
+                        bitWidth: 1
+                        access: read-write
+                    HOST_DATA_BUS_WIDTH_SELECTION:
+                        description: Host Data Bus Width Selection
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
+            MACR:
+                description: Memory Access Control Register
+                addressOffset: 0x02
+                access: read-write
+                resetValue: 0b00000000
+                fields:
+                    HOST_READ_WRITE_IMAGE_DATA_FORMAT:
+                        description: Host Read/Write image Data Format
+                        bitOffset: 6
+                        bitWidth: 2
+                        access: read-write
+                    HOST_READ_MEMORY_DIRECTION:
+                        description: Host Read Memory Direction
+                        bitOffset: 4
+                        bitWidth: 2
+                        access: read-write
+                    NA1:
+                        description: NA
+                        bitOffset: 3
+                        bitWidth: 1
+                        access: read-only
+                    HOST_WRITE_MEMORY_DIRECTION:
+                        description: Host Write Memory Direction
+                        bitOffset: 1
+                        bitWidth: 2
+                        access: read-write
+                    NA0:
+                        description: NA (must keep it as 0)
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-only
+            ICR:
+                description: Input Control Register
+                addressOffset: 0x03
+                access: read-write
+                resetValue: 0b00000000
+                fields:
+                    OUTPUT_TO_MPU_INTERRUPT_PIN_ACTIVE_LEVEL:
+                        description: Output to MPU Interrupt pin's active level
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    EXTERNAL_INTERRUPT_INPUT_DEBOUNCE:
+                        description: External interrupt input (XPS[0] pin) de-bounce
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    EXTERNAL_INTERRUPT_INPUT_TRIGGER_TYPE:
+                        description: External interrupt input (XPS[0] pin) trigger type
+                        bitOffset: 4
+                        bitWidth: 2
+                        access: read-write
+                    NA0:
+                        description: NA
+                        bitOffset: 3
+                        bitWidth: 1
+                        access: read-write
+                    TEXT_MODE_ENABLE:
+                        description: Text Mode enable
+                        bitOffset: 2
+                        bitWidth: 1
+                        access: read-write
+                    MEMORY_PORT_READ_WRITE_DESTINATION:
+                        description: Text Mode enable
+                        bitOffset: 0
+                        bitWidth: 2
+                        access: read-write
+            MRWDP:
+                description: Memory Data Read/Write Port
+                addressOffset: 0x04
+                access: read-write
+            PPLLC1:
+                description: SCLK PLL Control Register 1
+                addressOffset: 0x05
+                access: read-write
+                resetValue: 0b00000100
+                fields:
+                    RESERVED0:
+                        description: RESERVED
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    NA0:
+                        description: NA
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-only
+                    SCLK_EXTRA_DIVIDER:
+                        description: SCLK extra divider
+                        bitOffset: 3
+                        bitWidth: 3
+                        access: read-write
+                    SCLK_PLLDIVK:
+                        description: SCLK PLL Output divider
+                        bitOffset: 1
+                        bitWidth: 2
+                        access: read-write
+                    SCLK_PLLDIVM:
+                        description: SCLK PLL Pre-driver parameter
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
+            PPLLC2:
+                description: SCLK PLL Control Register 2
+                addressOffset: 0x06
+                access: read-write
+                resetValue: 0x17
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 6
+                        bitWidth: 2
+                        access: read-only
+                    SCLK_PLLDIVN:
+                        description: SCLK PLL Output divider
+                        bitOffset: 0
+                        bitWidth: 6
+                        access: read-write
+            MPLLC1:
+                description: MCLK PLL Control Register 1
+                addressOffset: 0x07
+                access: read-write
+                resetValue: 0b00000010
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 3
+                        bitWidth: 5
+                        access: read-only
+                    MCLK_PLLDIVK:
+                        description: PCLK PLL Output divider
+                        bitOffset: 1
+                        bitWidth: 2
+                        access: read-write
+                    MCLK_PLLDIVM:
+                        description: MCLK PLL Pre-driver parameter
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
+            MPLLC2:
+                description: MCLK PLL Control Register 2
+                addressOffset: 0x08
+                access: read-write
+                resetValue: 0x1D
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 6
+                        bitWidth: 2
+                        access: read-only
+                    MCLK_PLLDIVN:
+                        description: MCLK PLL input parameter
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            SPLLC1:
+                description: CCLK PLL Control Register 1
+                addressOffset: 0x09
+                access: read-write
+                resetValue: 0b00000100
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 3
+                        bitWidth: 5
+                        access: read-only
+                    CCLK_PLLDIVK:
+                        description: CCLK PLL Output divider
+                        bitOffset: 1
+                        bitWidth: 2
+                        access: read-write
+                    CCLK_PLLDIVM:
+                        description: CCLK PLL Pre-driver parameter
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
+            SPLLC2:
+                description: CCLK PLL Control Register 2
+                addressOffset: 0x0A
+                access: read-write
+                resetValue: 0x2A
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 6
+                        bitWidth: 2
+                        access: read-only
+                    CCLK_PLLDIVN:
+                        description: CCLK PLL input parameter
+                        bitOffset: 0
+                        bitWidth: 6
+                        access: read-write
+            INTEN:
+                description: Interrupt Enable Register
+                addressOffset: 0x0B
+                access: read-write
+                resetValue: 0x00
+                fields:
+                    WAKEUP_RESUME_INTERRUPT_ENABLE:
+                        description: Wakeup/resume Interrupt Enable
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    EXTERNAL_INTERRUPT_INPUT_ENABLE:
+                        description: External Interrupt input (XPS[0] pin) Enable
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    I2C_MASTER_INTERRUPT_ENABLE:
+                        description: I2C Master Interrupt Enable
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-write
+                    VSYNC_TIME_BASE_INTERRUPT_ENABLE:
+                        description: Vsync time base interrupt Enable
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-write
+                    KEY_SCAN_INTERRUPT_ENABLE:
+                        description: Key Scan Interrupt Enable
+                        bitOffset: 3
+                        bitWidth: 1
+                        access: read-write
+                    CORE_TASK_COMPLETED_INTERRUPT_ENABLE:
+                        description: Serial flash DMA Complete | Draw task finished | BTE Process Complete etc. Interrupt Enable
+                        bitOffset: 2
+                        bitWidth: 1
+                        access: read-write
+                    PWM_TIMER_1_INTERRUPT_ENABLE:
+                        description: PWM timer 1 Interrupt Enable
+                        bitOffset: 1
+                        bitWidth: 1
+                        access: read-write
+                    PWM_TIMER_0_INTERRUPT_ENABLE:
+                        description: PWM timer 0 Interrupt Enable
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
+            INTF:
+                description: Interrupt Event Flag Register
+                addressOffset: 0x0C
+                access: read-write
+                resetValue: 0x00
+                fields:
+                    WAKEUP_RESUME_INTERRUPT_FLAG:
+                        description: Wakeup/resume Interrupt Flag
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    EXTERNAL_INTERRUPT_INPUT_FLAG:
+                        description: External Interrupt input (XPS[0] pin) Flag
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    I2C_MASTER_INTERRUPT_FLAG:
+                        description: I2C Master Interrupt Flag
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-write
+                    VSYNC_TIME_BASE_INTERRUPT_FLAG:
+                        description: Vsync Time Base Interrupt Flag
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-write
+                    KEY_SCAN_INTERRUPT_FLAG:
+                        description: Key Scan Interrupt Flag
+                        bitOffset: 3
+                        bitWidth: 1
+                        access: read-write
+                    CORE_TASK_COMPLETED_INTERRUPT_FLAG:
+                        description: Serial flash DMA Complete | Draw task finished | BTE Process Complete etc. Interrupt Flag
+                        bitOffset: 2
+                        bitWidth: 1
+                        access: read-write
+                    PWM_TIMER_1_INTERRUPT_FLAG:
+                        description: PWM Timer 1 Interrupt Flag
+                        bitOffset: 1
+                        bitWidth: 1
+                        access: read-write
+                    PWM_TIMER_0_INTERRUPT_FLAG:
+                        description: PWM Timer 0 Interrupt Flag
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
+            MINTFR:
+                description: Mask Interrupt Flag Register
+                addressOffset: 0x0D
+                access: read-write
+                resetValue: 0x00
+                fields:
+                    MASK_WAKEUP_RESUME_INTERRUPT_FLAG:
+                        description: Mask Wakeup/resume Interrupt Flag
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    MASK_EXTERNAL_INTERRUPT_INPUT_FLAG:
+                        description: Mask External Interrupt input (XPS[0] pin) Flag
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    MASK_I2C_MASTER_INTERRUPT_FLAG:
+                        description: Mask I2C Master Interrupt Flag
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-write
+                    MASK_VSYNC_TIME_BASE_INTERRUPT_FLAG:
+                        description: Mask Vsync Time Base Interrupt Flag
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-write
+                    MASK_KEY_SCAN_INTERRUPT_FLAG:
+                        description: Mask Key Scan Interrupt Flag
+                        bitOffset: 3
+                        bitWidth: 1
+                        access: read-write
+                    MASK_CORE_TASK_COMPLETED_INTERRUPT_FLAG:
+                        description: Mask Serial flash DMA Complete | Draw task finished | BTE Process Complete etc. Interrupt Flag
+                        bitOffset: 2
+                        bitWidth: 1
+                        access: read-write
+                    MASK_PWM_TIMER_1_INTERRUPT_FLAG:
+                        description: Mask PWM Timer 1 Interrupt Flag
+                        bitOffset: 1
+                        bitWidth: 1
+                        access: read-write
+                    MASK_PWM_TIMER_0_INTERRUPT_FLAG:
+                        description: Mask PWM Timer 0 Interrupt Flag
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
+            PUENR:
+                description: Pull-high control Register
+                addressOffset: 0x0E
+                access: read-write
+                resetValue: 0x00
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 6
+                        bitWidth: 2
+                        access: read-only
+                    GPIO_F_PULL_HIGH_ENABLE:
+                        description: GPIO-F[7:0] Pull-high Enable (XPDAT[23:19, 15:13])
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-write
+                    GPIO_E_PULL_HIGH_ENABLE:
+                        description: GPIO-E[7:0] Pull-high Enable (XPDAT[12:10, 7:3])
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-write
+                    GPIO_D_PULL_HIGH_ENABLE:
+                        description: GPIO-D[7:0] Pull-high Enable (XPDAT[18, 2, 17, 16, 9, 8, 1,0])
+                        bitOffset: 3
+                        bitWidth: 1
+                        access: read-write
+                    GPIO_C_PULL_HIGH_ENABLE:
+                        description: GPIO-C[4:0] Pull-high Enable (XnSFCS1, XnSFCS0, XMISO, XMOSI , XSCK)
+                        bitOffset: 2
+                        bitWidth: 1
+                        access: read-write
+                    XDB_MSB_PULL_HIGH_ENABLE:
+                        description: XDB[15:8] Pull-high Enable
+                        bitOffset: 1
+                        bitWidth: 1
+                        access: read-write
+                    XDB_LSB_PULL_HIGH_ENABLE:
+                        description: XDB[7:0] Pull-high Enable
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
+            PSFSR:
+                description: PDAT for PIO/Key Function Select Register
+                addressOffset: 0x0F
+                access: read-write
+                resetValue: 0x00
+                fields:
+                    XPDAT18_FUNCTION_SELECT:
+                        description: XPDAT[18] - GPIO or Key function select
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    XPDAT17_FUNCTION_SELECT:
+                        description: XPDAT[17] - GPIO or Key function select
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    XPDAT16_FUNCTION_SELECT:
+                        description: XPDAT[16] - GPIO or Key function select
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-write
+                    XPDAT9_FUNCTION_SELECT:
+                        description: XPDAT[9] - GPIO or Key function select
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-write
+                    XPDAT8_FUNCTION_SELECT:
+                        description: XPDAT[8] - GPIO or Key function select
+                        bitOffset: 3
+                        bitWidth: 1
+                        access: read-write
+                    XPDAT2_FUNCTION_SELECT:
+                        description: XPDAT[2] - GPIO or Key function select
+                        bitOffset: 2
+                        bitWidth: 1
+                        access: read-write
+                    XPDAT1_FUNCTION_SELECT:
+                        description: XPDAT[1] - GPIO or Key function select
+                        bitOffset: 1
+                        bitWidth: 1
+                        access: read-write
+                    XPDAT0_FUNCTION_SELECT:
+                        description: XPDAT[0] - GPIO or Key function select
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
+            MPWCTR:
+                description: Main/PIP Window Control Register
+                addressOffset: 0x10
+                access: read-write
+                resetValue: 0b00000100
+                fields:
+                    PIP1_WINDOW_ENABLE:
+                        description: PIP 1 window Enable/Disable
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    PIP2_WINDOW_ENABLE:
+                        description: PIP 2 window Enable/Disable
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    NA1:
+                        description: NA
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-only
+                    PIP_CONFIGURE_SELECTION:
+                        description: Select Configure PIP 1 or 2 Window's parameters
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-write
+                    MAIN_IMAGE_COLOR_DEPTH:
+                        description: Main Image Color Depth Setting
+                        bitOffset: 2
+                        bitWidth: 2
+                        access: read-write
+                    NA0:
+                        description: NA
+                        bitOffset: 1
+                        bitWidth: 1
+                        access: read-write
+                    PANEL_SYNC_SIGNAL_MODE:
+                        description: To Control panel's synchronous signals
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
+            PIPCDEP:
+                description: PIP Window Color Depth Setting
+                addressOffset: 0x11
+                access: read-write
+                resetValue: 0b00000011
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 4
+                        bitWidth: 4
+                        access: read-only
+                    PIP1_WINDOW_COLOR_DEPTH_SETTING:
+                        description: PIP 1 window Enable/Disable
+                        bitOffset: 2
+                        bitWidth: 2
+                        access: read-write
+                    PIP2_WINDOW_COLOR_DEPTH_SETTING:
+                        description: PIP 1 window Enable/Disable
+                        bitOffset: 0
+                        bitWidth: 2
+                        access: read-write
+            DPCR:
+                description: Display Configuration Register
+                addressOffset: 0x12
+                access: read-write
+                resetValue: 0
+                fields:
+                    PCLK_INVERSION:
+                        description: NA
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    DISPLAY_ENABLE:
+                        description: Display ON/OFF
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    DISPLAY_TEST_COLOR_BAR_ENABLE:
+                        description: Display Test Color Bar
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-write
+                    NA0:
+                        description: This bit must be set 0
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-only
+                    VDIR:
+                        description: Vertical Scan direction
+                        bitOffset: 3
+                        bitWidth: 1
+                        access: read-write
+                    OUTPUT_SEQUENCE:
+                        description: Parallel XPDAT[23:0] Output Sequence / LVDS Color Serial Data Output Sequence
+                        bitOffset: 0
+                        bitWidth: 3
+                        access: read-write
+            PCSR:
+                description: Panel scan Clock and Data Setting Register
+                addressOffset: 0x13
+                access: read-write
+                resetValue: 0b00000011
+                fields:
+                    HSYNC_POLARITY:
+                        description: HSYNC Polarity
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    VSYNC_POLARITY:
+                        description: VSYNC Polarity
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    DE_POLARITY:
+                        description: DE Polarity
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-write
+                    DE_IDLE_STATE:
+                        description: DE IDLE STATE (in power saving mode or DISPLAY OFF)
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-write
+                    PCLK_IDLE_STATE:
+                        description: PCLK IDLE STATE (in power saving mode or DISPLAY OFF)
+                        bitOffset: 3
+                        bitWidth: 1
+                        access: read-write
+                    PDAT_IDLE_STATE:
+                        description: PDAT IDLE STATE (in power saving mode or DISPLAY OFF)
+                        bitOffset: 2
+                        bitWidth: 1
+                        access: read-write
+                    HSYNC_IDLE_STATE:
+                        description: HSYNC IDLE STATE (in power saving mode or DISPLAY OFF)
+                        bitOffset: 1
+                        bitWidth: 1
+                        access: read-write
+                    VSYNC_IDLE_STATE:
+                        description: VSYNC IDLE STATE (in power saving mode or DISPLAY OFF)
+                        bitOffset: 1
+                        bitWidth: 1
+                        access: read-write
+            HDWR:
+                description: Horizontal Display Width Register
+                addressOffset: 0x14
+                access: read-write
+                resetValue: 0x4F
+                fields:
+                    HORIZONTAL_DISPLAY_WIDTH:
+                        description: Horizontal Display Width (pixels) = (HDWR + 1) * 8 + HDWFTR
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            HDWFTR:
+                description: Horizontal Display Width Fine Tune Register
+                addressOffset: 0x15
+                access: read-write
+                resetValue: 0
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 4
+                        bitWidth: 4
+                        access: read-only
+                    HORIZONTAL_DISPLAY_WIDTH_FINE_TUNING:
+                        description: Horizontal Display Width (pixels) = (HDWR + 1) * 8 + HDWFTR
+                        bitOffset: 0
+                        bitWidth: 4
+                        access: read-write
+            HNDR:
+                description: Horizontal Non-Display Period Register
+                addressOffset: 0x16
+                access: read-write
+                resetValue: 0
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 5
+                        bitWidth: 3
+                        access: read-only
+                    HORIZONTAL_NON_DISPLAY_PERIOD:
+                        description: Horizontal non-display period or Back porch (pixels) = (HNDR + 1) * 8 + HNDFTR
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            HNDFTR:
+                description: Horizontal Non-Display Period Fine Tune Register
+                addressOffset: 0x17
+                access: read-write
+                resetValue: 0
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 4
+                        bitWidth: 4
+                        access: read-only
+                    HORIZONTAL_NON_DISPLAY_PERIOD_FINE_TUNING:
+                        description: Horizontal non-display period or Back porch (pixels) = (HNDR + 1) * 8 + HNDFTR
+                        bitOffset: 0
+                        bitWidth: 4
+                        access: read-write
+            HSTR:
+                description: HSYNC Start Position Register
+                addressOffset: 0x18
+                access: read-write
+                resetValue: 0
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 5
+                        bitWidth: 3
+                        access: read-only
+                    HSYNC_START_POSITION:
+                        description: The starting position from the end of display area to the beginning of HSYNC. HSYNC Start Position or Front porch (pixels) = (HSTR + 1) * 8
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            HPWR:
+                description: HSYNC Pulse Width Register
+                addressOffset: 0x19
+                access: read-write
+                resetValue: 0
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 5
+                        bitWidth: 3
+                        access: read-only
+                    HSYNC_PULSE_WIDTH:
+                        description: HSYNC Pulse Width (pixels) = (HPW + 1) * 8
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            VDHR0:
+                description: Vertical Display Height Register 0
+                addressOffset: 0x1A
+                access: read-write
+                resetValue: 0x4F
+                fields:
+                    VERTICAL_DISPLAY_HEIGHT:
+                        description: VDHR[7:0] | Vertical Display Height (Line) = VDHR + 1
+                        bitOffset: 0
+                        bitWidth: 7
+                        access: read-write
+            VDHR1:
+                description: Vertical Display Height Register 1
+                addressOffset: 0x1B
+                access: read-write
+                resetValue: 0x4F
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 3
+                        bitWidth: 7
+                        access: read-only
+                    VERTICAL_DISPLAY_HEIGHT:
+                        description: VDHR[10:8] | Vertical Display Height (Line) = VDHR + 1
+                        bitOffset: 0
+                        bitWidth: 3
+                        access: read-write
+            VNDR0:
+                description: Vertical Non-Display Period Register 0
+                addressOffset: 0x1C
+                access: read-write
+                resetValue: 0
+                fields:
+                    VERTICAL_DISPLAY_HEIGHT:
+                        description: VNDR[7:0] | Vertical Non-Display Period (Line) = VNDR + 1
+                        bitOffset: 0
+                        bitWidth: 7
+                        access: read-write
+            VNDR1:
+                description: Vertical Non-Display Period Register 1
+                addressOffset: 0x1D
+                access: read-write
+                resetValue: 0
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 2
+                        bitWidth: 7
+                        access: read-only
+                    VERTICAL_DISPLAY_HEIGHT:
+                        description: VNDR[9:8] | Vertical Non-Display Period (Line) = VNDR + 1
+                        bitOffset: 0
+                        bitWidth: 2
+                        access: read-write
+            VSTR:
+                description: VSYNC Start Position Register
+                addressOffset: 0x1E
+                access: read-write
+                resetValue: 0
+                fields:
+                    VSYNC_START_POSITION:
+                        description: The starting position from the end of display area to the beginning of VSYNC. VSYNC Start Position(Line) = VSTR + 1
+                        bitOffset: 0
+                        bitWidth: 7
+                        access: read-write
+            VPWR:
+                description: VSYNC Pulse Width Register
+                addressOffset: 0x1F
+                access: read-write
+                resetValue: 0
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 6
+                        bitWidth: 2
+                        access: read-only
+                    VSYNC_PULSE_WIDTH:
+                        description: VSYNC Pulse Width (pixels) = (HPW + 1) * 8
+                        bitOffset: 0
+                        bitWidth: 6
+                        access: read-write
+            MISA0:
+                description: Main Image Start Address 0
+                addressOffset: 0x20
+                access: read-write
+                resetValue: 0
+                fields:
+                    MAIN_IMAGE_START_ADDRESS:
+                        description: MISA[7:0] | Main Image Start Address
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            MISA1:
+                description: Main Image Start Address 1
+                addressOffset: 0x21
+                access: read-write
+                resetValue: 0
+                fields:
+                    MAIN_IMAGE_START_ADDRESS:
+                        description: MISA[15:8] | Main Image Start Address
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            MISA2:
+                description: Main Image Start Address 2
+                addressOffset: 0x22
+                access: read-write
+                resetValue: 0
+                fields:
+                    MAIN_IMAGE_START_ADDRESS:
+                        description: MISA[23:16] | Main Image Start Address
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            MISA3:
+                description: Main Image Start Address 3
+                addressOffset: 0x23
+                access: read-write
+                resetValue: 0
+                fields:
+                    MAIN_IMAGE_START_ADDRESS:
+                        description: MISA[31:24] | Main Image Start Address
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            MIW0:
+                description: Main Image Width 0
+                addressOffset: 0x24
+                access: read-write
+                resetValue: 0
+                fields:
+                    MAIN_IMAGE_WIDTH:
+                        description: MIW[7:0] | Main Image Width
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            MIW1:
+                description: Main Image Width 1
+                addressOffset: 0x25
+                access: read-write
+                resetValue: 0
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 5
+                        bitWidth: 3
+                        access: read-only
+                    MAIN_IMAGE_WIDTH:
+                        description: MIW[12:8] | Main Image Width
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            MWULX0:
+                description: Main Window Upper-Left corner X-coordinates 0
+                addressOffset: 0x26
+                access: read-write
+                resetValue: 0
+                fields:
+                    MAIN_WINDOW_UPPER_LEFT_X:
+                        description: MWULX[7:0] | Main Window Upper-Left corner X-coordinates
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            MWULX1:
+                description: Main Window Upper-Left corner X-coordinates 1
+                addressOffset: 0x27
+                access: read-write
+                resetValue: 0
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 5
+                        bitWidth: 3
+                        access: read-only
+                    MAIN_WINDOW_UPPER_LEFT_X:
+                        description: MWULX[12:8] | Main Window Upper-Left corner X-coordinates
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            MWULY0:
+                description: Main Window Upper-Left corner Y-coordinates 0
+                addressOffset: 0x28
+                access: read-write
+                resetValue: 0
+                fields:
+                    MAIN_WINDOW_UPPER_LEFT_Y:
+                        description: MWULY[7:0] | Main Window Upper-Left corner Y-coordinates
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            MWULY1:
+                description: Main Window Upper-Left corner Y-coordinates 1
+                addressOffset: 0x29
+                access: read-write
+                resetValue: 0
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 5
+                        bitWidth: 3
+                        access: read-only
+                    MAIN_WINDOW_UPPER_LEFT_Y:
+                        description: MWULY[12:8] | Main Window Upper-Left corner Y-coordinates
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+########
+            PWDULX0:
+                description: PIP 1 or 2 Window Display Upper-Left corner X-coordinates 0
+                addressOffset: 0x2A
+                access: read-write
+                resetValue: 0
+                fields:
+                    PIP_WINDOW_DISPLAY_UPPER_LEFT_X:
+                        description: PWDULX[7:0] | PIP Window Display Upper-Left corner X-coordinates
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            PWDULX1:
+                description: PIP 1 or 2 Window Display Upper-Left corner X-coordinates 1
+                addressOffset: 0x2B
+                access: read-write
+                resetValue: 0
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 5
+                        bitWidth: 3
+                        access: read-only
+                    PIP_WINDOW_DISPLAY_UPPER_LEFT_X:
+                        description: PWDULX[12:8] | PIP Window Display Upper-Left corner X-coordinates
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            PWDULY0:
+                description: PIP 1 or 2 Window Display Upper-Left corner Y-coordinates 0
+                addressOffset: 0x2C
+                access: read-write
+                resetValue: 0
+                fields:
+                    PIP_WINDOW_DISPLAY_UPPER_LEFT_Y:
+                        description: PWDULY[7:0] | PIP Window Display Upper-Left corner Y-coordinates
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            PWDULY1:
+                description: PIP 1 or 2 Window Display Upper-Left corner Y-coordinates 1
+                addressOffset: 0x2D
+                access: read-write
+                resetValue: 0
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 5
+                        bitWidth: 3
+                        access: read-only
+                    PIP_WINDOW_DISPLAY_UPPER_LEFT_Y:
+                        description: PWDULY[12:8] | PIP Window Display Upper-Left corner Y-coordinates
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+######
+            PISA0:
+                description: PIP 1 or 2 Image Start Address 0
+                addressOffset: 0x2E
+                access: read-write
+                resetValue: 0
+                fields:
+                    PIP_IMAGE_START_ADDRESS:
+                        description: PISA[7:0] | PIP Image Start Address
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            PISA1:
+                description: PIP 1 or 2 Image Start Address 1
+                addressOffset: 0x2F
+                access: read-write
+                resetValue: 0
+                fields:
+                    PIP_IMAGE_START_ADDRESS:
+                        description: PISA[15:8] | PIP Image Start Address
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            PISA2:
+                description: PIP 1 or 2 Image Start Address 2
+                addressOffset: 0x30
+                access: read-write
+                resetValue: 0
+                fields:
+                    PIP_IMAGE_START_ADDRESS:
+                        description: PISA[23:16] | PIP Image Start Address
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            PISA3:
+                description: PIP 1 or 2 Image Start Address 3
+                addressOffset: 0x31
+                access: read-write
+                resetValue: 0
+                fields:
+                    PIP_IMAGE_START_ADDRESS:
+                        description: PISA[31:24] | PIP Image Start Address
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            PIW0:
+                description: PIP Image Width 0
+                addressOffset: 0x32
+                access: read-write
+                resetValue: 0
+                fields:
+                    PIP_IMAGE_WIDTH:
+                        description: PIW[7:0] | PIP Image Width
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            PIW1:
+                description: PIP Image Width 1
+                addressOffset: 0x33
+                access: read-write
+                resetValue: 0
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 5
+                        bitWidth: 3
+                        access: read-only
+                    PIP_IMAGE_WIDTH:
+                        description: PIW[12:8] | PIP Image Width
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+######
+            PWIULX0:
+                description: PIP 1 or 2 Window Image Upper-Left corner X-coordinates 0
+                addressOffset: 0x34
+                access: read-write
+                resetValue: 0
+                fields:
+                    PIP_WINDOW_IMAGE_UPPER_LEFT_X:
+                        description: PWIULX[7:0] | PIP Window Image Upper-Left corner X-coordinates
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            PWIULX1:
+                description: PIP 1 or 2 Window Image Upper-Left corner X-coordinates 1
+                addressOffset: 0x35
+                access: read-write
+                resetValue: 0
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 5
+                        bitWidth: 3
+                        access: read-only
+                    PIP_WINDOW_IMAGE_UPPER_LEFT_X:
+                        description: PWIULX[12:8] | PIP Window Image Upper-Left corner X-coordinates
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            PWIULY0:
+                description: PIP 1 or 2 Window Image Upper-Left corner Y-coordinates 0
+                addressOffset: 0x36
+                access: read-write
+                resetValue: 0
+                fields:
+                    PIP_WINDOW_IMAGE_UPPER_LEFT_Y:
+                        description: PWIULY[7:0] | PIP Window Image Upper-Left corner Y-coordinates
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            PWIULY1:
+                description: PIP 1 or 2 Window Image Upper-Left corner Y-coordinates 1
+                addressOffset: 0x37
+                access: read-write
+                resetValue: 0
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 5
+                        bitWidth: 3
+                        access: read-only
+                    PIP_WINDOW_IMAGE_UPPER_LEFT_Y:
+                        description: PWIULY[12:8] | PIP Window Image Upper-Left corner Y-coordinates
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            PWW0:
+                description: PIP Window Width 0
+                addressOffset: 0x38
+                access: read-write
+                resetValue: 0
+                fields:
+                    PIP_WINDOW_WIDTH:
+                        description: PWW[7:0] | PIP Image Width
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            PWW1:
+                description: PIP Window Width 1
+                addressOffset: 0x39
+                access: read-write
+                resetValue: 0
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 3
+                        bitWidth: 5
+                        access: read-only
+                    PIP_WINDOW_WIDTH:
+                        description: PWW[10:8] | PIP Image Width
+                        bitOffset: 0
+                        bitWidth: 3
+                        access: read-write
+            PWH0:
+                description: PIP Window Height 0
+                addressOffset: 0x3A
+                access: read-write
+                resetValue: 0
+                fields:
+                    PIP_WINDOW_HEIGHT:
+                        description: PWH[7:0] | PIP Image Width
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            PWH1:
+                description: PIP Window Height 1
+                addressOffset: 0x3B
+                access: read-write
+                resetValue: 0
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 3
+                        bitWidth: 5
+                        access: read-only
+                    PIP_WINDOW_HEIGHT:
+                        description: PWH[10:8] | PIP Image Width
+                        bitOffset: 0
+                        bitWidth: 3
+                        access: read-write
+            GTCCR:
+                description: Graphic / Text Cursor Control Register
+                addressOffset: 0x3C
+                access: read-write
+                resetValue: 0
+                fields:
+                    GAMMA_CORRECTION_ENABLE:
+                        description: Gamma correction Enable
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    GAMMA_TABLE_SELECT_FOR_MPU_WRITE_GAMMA_DATA:
+                        description: Gamma table select for MPU write gamma data
+                        bitOffset: 5
+                        bitWidth: 2
+                        access: read-write
+                    GRAPHIC_CURSOR_ENABLE:
+                        description: Graphic Cursor Enable
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-write
+                    GRAPHIC_CURSOR_SELECTION:
+                        description: Graphic Cursor Selection
+                        bitOffset: 2
+                        bitWidth: 2
+                        access: read-write
+                    TEXT_CURSOR_ENABLE:
+                        description: Text Cursor Enable
+                        bitOffset: 1
+                        bitWidth: 1
+                        access: read-write
+                    TEXT_CURSOR_BLINKING_ENABLE:
+                        description: Text Cursor Blinking Enable
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
+            BTCR:
+                description: Blink Time Control Register
+                addressOffset: 0x3D
+                access: read-write
+                resetValue: 0
+                fields:
+                    TEXT_CURSOR_BLINK_TIME:
+                        description: "Text Cursor Blink Time Setting (Unit: Frame)"
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            CURHS:
+                description: Text Cursor Horizontal Size Register Register
+                addressOffset: 0x3E
+                access: read-write
+                resetValue: 0
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 5
+                        bitWidth: 3
+                        access: read-write
+                    TEXT_CURSOR_HORIZONTAL_SIZE:
+                        description: Text Cursor Horizontal Size Setting
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            CURVS:
+                description: Text Cursor Vertical Size Register Register
+                addressOffset: 0x3F
+                access: read-write
+                resetValue: 0
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 5
+                        bitWidth: 3
+                        access: read-write
+                    TEXT_CURSOR_VERTICAL_SIZE:
+                        description: Text Cursor Vertical Size Setting
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            GCHP0:
+                description: Graphic Cursor Horizontal Position Register 0
+                addressOffset: 0x40
+                access: read-write
+                resetValue: 0
+                fields:
+                    GRAPHIC_CURSOR_HORIZONTAL_LOCATION:
+                        description: GCHP[7:0] | Graphic Cursor Horizontal Location
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            GCHP1:
+                description: Graphic Cursor Horizontal Position Register 1
+                addressOffset: 0x41
+                access: read-write
+                resetValue: 0
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 5
+                        bitWidth: 3
+                        access: read-write
+                    GRAPHIC_CURSOR_HORIZONTAL_LOCATION:
+                        description: GCHP[12:8] | Graphic Cursor Horizontal Location
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            GCVP0:
+                description: Graphic Cursor Vertical Position Register 0
+                addressOffset: 0x42
+                access: read-write
+                resetValue: 0
+                fields:
+                    GRAPHIC_CURSOR_VERTICAL_LOCATION:
+                        description: GCVP[7:0] | Graphic Cursor Vertical Location
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            GCVP1:
+                description: Graphic Cursor Vertical Position Register 1
+                addressOffset: 0x43
+                access: read-write
+                resetValue: 0
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 5
+                        bitWidth: 3
+                        access: read-write
+                    GRAPHIC_CURSOR_VERTICAL_LOCATION:
+                        description: GCVP[12:8] | Graphic Cursor Vertical Location
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            GCC0:
+                description: Graphic Cursor Color 0
+                addressOffset: 0x44
+                access: read-write
+                resetValue: 0
+                fields:
+                    GRAPHIC_CURSOR_COLOR_0:
+                        description: Graphic Cursor Color 0 | RGB Format [7:0] = RRRGGGBB
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            GCC1:
+                description: Graphic Cursor Color 1
+                addressOffset: 0x45
+                access: read-write
+                resetValue: 0
+                fields:
+                    GRAPHIC_CURSOR_COLOR_0:
+                        description: Graphic Cursor Color 1 | RGB Format [7:0] = RRRGGGBB
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            CVSSA0:
+                description: Canvas Start address 0
+                addressOffset: 0x50
+                access: read-write
+                resetValue: 0
+                fields:
+                    GRAPHIC_CURSOR_COLOR_0:
+                        description: CVSSA[7:0] | Start address of Canvas
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+                    # TODO: per the manual, this is how it should be specified:
+                    # GRAPHIC_CURSOR_COLOR_0:
+                    #     description: CVSSA[7:2] | Start address of Canvas
+                    #     bitOffset: 2
+                    #     bitWidth: 6
+                    #     access: read-write
+                    # NA0:
+                    #     description: Fix at 0
+                    #     bitOffset: 0
+                    #     bitWidth: 2
+                    #     access: read-only
+                    # .... but then that means the user will probably need to shift the value right twice.
+            CVSSA1:
+                description: Canvas Start address 1
+                addressOffset: 0x51
+                access: read-write
+                resetValue: 0
+                fields:
+                    GRAPHIC_CURSOR_COLOR_0:
+                        description: CVSSA[15:8] | Start address of Canvas
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            CVSSA2:
+                description: Canvas Start address 2
+                addressOffset: 0x52
+                access: read-write
+                resetValue: 0
+                fields:
+                    GRAPHIC_CURSOR_COLOR_0:
+                        description: CVSSA[23:16] | Start address of Canvas
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            CVSSA3:
+                description: Canvas Start address 3
+                addressOffset: 0x53
+                access: read-write
+                resetValue: 0
+                fields:
+                    GRAPHIC_CURSOR_COLOR_0:
+                        description: CVSSA[31:24] | Start address of Canvas
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            CVS_IMWTH0:
+                description: Canvas image width 0
+                addressOffset: 0x54
+                access: read-write
+                resetValue: 0
+                fields:
+                    GRAPHIC_CURSOR_COLOR_0:
+                        description: CVS_IMWTH[7:0] | Canvas image width
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            CVS_IMWTH1:
+                description: Canvas image width 1
+                addressOffset: 0x55
+                access: read-write
+                resetValue: 0
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 5
+                        bitWidth: 3
+                        access: read-only
+                    GRAPHIC_CURSOR_COLOR_0:
+                        description: CVS_IMWTH[12:8] | Canvas image width
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            AWUL_X0:
+                description: Active Window Upper-Left corner X-coordinates 0
+                addressOffset: 0x56
+                access: read-write
+                resetValue: 0
+                fields:
+                    GRAPHIC_CURSOR_COLOR_0:
+                        description: AWUL_X[7:0] | Active Window Upper-Left corner X-coordinates
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            AWUL_X1:
+                description: Active Window Upper-Left corner X-coordinates 1
+                addressOffset: 0x57
+                access: read-write
+                resetValue: 0
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 5
+                        bitWidth: 3
+                        access: read-only
+                    GRAPHIC_CURSOR_COLOR_0:
+                        description: AWUL_X[12:8] | Active Window Upper-Left corner X-coordinates
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            AWUL_Y0:
+                description: Active Window Upper-Left corner Y-coordinates 0
+                addressOffset: 0x58
+                access: read-write
+                resetValue: 0
+                fields:
+                    GRAPHIC_CURSOR_COLOR_0:
+                        description: AWUL_Y[7:0] | Active Window Upper-Left corner Y-coordinates
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            AWUL_Y1:
+                description: Active Window Upper-Left corner Y-coordinates 1
+                addressOffset: 0x59
+                access: read-write
+                resetValue: 0
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 5
+                        bitWidth: 3
+                        access: read-only
+                    GRAPHIC_CURSOR_COLOR_0:
+                        description: AWUL_Y[12:8] | Active Window Upper-Left corner Y-coordinates
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            AW_WTH0:
+                description: Active Window Width 0
+                addressOffset: 0x5A
+                access: read-write
+                resetValue: 0
+                fields:
+                    GRAPHIC_CURSOR_COLOR_0:
+                        description: AW_WTH[7:0] | Active Window Width
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            AW_WTH1:
+                description: Active Window Width 1
+                addressOffset: 0x5B
+                access: read-write
+                resetValue: 0
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 5
+                        bitWidth: 3
+                        access: read-only
+                    GRAPHIC_CURSOR_COLOR_0:
+                        description: AW_WTH[12:8] | Active Window Width
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            AW_HT0:
+                description: Active Window Height 0
+                addressOffset: 0x5C
+                access: read-write
+                resetValue: 0
+                fields:
+                    GRAPHIC_CURSOR_COLOR_0:
+                        description: AW_HT[7:0] | Active Window Height
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            AW_HT1:
+                description: Active Window Height 1
+                addressOffset: 0x5D
+                access: read-write
+                resetValue: 0
+                fields:
+                    NA0:
+                        description: NA
+                        bitOffset: 5
+                        bitWidth: 3
+                        access: read-only
+                    GRAPHIC_CURSOR_COLOR_0:
+                        description: AW_HT[12:8] | Active Window Height
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            AW_COLOR:
+                description: Color Depth of Canvas & Active Window
+                addressOffset: 0x5E
+                access: read-write
+                resetValue: 0
+                fields:
+                    CANVAS_ADDRESSING_MODE:
+                        description: Canvas addressing mode 
+                        bitOffset: 2
+                        bitWidth: 1
+                        access: read-write
+                    CANVAS_IMAGE_BLOCK_MODE_COLOR_DEPTH:
+                        description: Canvas image color depth in Block Mode
+                        bitOffset: 0
+                        bitWidth: 2
+                        access: read-write
+                    CANVAS_IMAGE_LINEAR_MODE_DATA_WIDTH:
+                        description: Canvas memory R/W data width in Linear Mode
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
+            CURH0:
+                description: Graphic Read/Write position Horizontal Position Register 0
+                addressOffset: 0x5F
+                access: read-write
+                resetValue: 0
+                fields:
+                    MEMORY_READ_WRITE_ADDRESS:
+                        description: CURH[7:0] | Graphic Read/Write Linear mode address [7:0]
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+                    GRAPHIC_READ_WRITE_HORIZONTAL_POSITION:
+                        description: CURH[7:0] | Graphic Read/Write Block mode horizontal position
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            CURH1:
+                description: Graphic Read/Write position Horizontal Position Register 1
+                addressOffset: 0x60
+                access: read-write
+                resetValue: 0
+                fields:
+                    MEMORY_READ_WRITE_ADDRESS:
+                        description: CURH[15:8] | Graphic Read/Write Linear mode address [15:8]
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+                    GRAPHIC_READ_WRITE_HORIZONTAL_POSITION:
+                        description: CURH[12:8] | Graphic Read/Write Block mode horizontal position
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            CURV0:
+                description: Graphic Read/Write position Vertical Position Register 0
+                addressOffset: 0x61
+                access: read-write
+                resetValue: 0
+                fields:
+                    MEMORY_READ_WRITE_ADDRESS:
+                        description: CURV[7:0] | Graphic Read/Write Linear mode address [23:16]
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+                    GRAPHIC_READ_WRITE_VERTICAL_POSITION:
+                        description: CURV[7:0] | Graphic Read/Write Block mode vertical position
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            CURV1:
+                description: Graphic Read/Write position Vertical Position Register 1
+                addressOffset: 0x62
+                access: read-write
+                resetValue: 0
+                fields:
+                    MEMORY_READ_WRITE_ADDRESS:
+                        description: CURV[15:8] | Graphic Read/Write Linear mode address [31:24]
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+                    GRAPHIC_READ_WRITE_VERTICAL_POSITION:
+                        description: CURV[12:8] | Graphic Read/Write Block mode vertical position
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            F_CURX0:
+                description: Text Write X-coordinates Register 0
+                addressOffset: 0x63
+                access: read-write
+                resetValue: 0
+                fields:
+                    TEXT_WRITE_X:
+                        description: F_CURX[7:0] | Text Write X-coordinates
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            F_CURX1:
+                description: Text Write X-coordinates Register 1
+                addressOffset: 0x64
+                access: read-write
+                resetValue: 0
+                fields:
+                    TEXT_WRITE_X:
+                        description: F_CURX[12:8] | Text Write X-coordinates
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            F_CURY0:
+                description: Text Write Y-coordinates Register 0
+                addressOffset: 0x65
+                access: read-write
+                resetValue: 0
+                fields:
+                    TEXT_WRITE_Y:
+                        description: F_CURY[7:0] | Text Write Y-coordinates
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            F_CURY1:
+                description: Text Write Y-coordinates Register 1
+                addressOffset: 0x66
+                access: read-write
+                resetValue: 0
+                fields:
+                    TEXT_WRITE_Y:
+                        description: F_CURY[12:8] | Text Write Y-coordinates
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            DCR0:
+                description: Draw Line / Triangle Control Register 0
+                addressOffset: 0x67
+                access: read-write
+                resetValue: 0
+                fields:
+                    DRAW_START:
+                        description: Draw Line / Triangle Start Signal
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    FILL_ENABLE:
+                        description: Fill function for Triangle Signal
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-write
+                    SHAPE_SELECTION:
+                        description: Draw Triangle or Line Select Signal
+                        bitOffset: 1
+                        bitWidth: 1
+                        access: read-write
+            DLHSR0:
+                description: Draw Line/Square/Triangle Point 1 X-coordinates Register 0
+                addressOffset: 0x68
+                access: read-write
+                resetValue: 0
+                fields:
+                    DRAW_POINT_1_X:
+                        description: DLHSR[7:0] | Draw Point 1 X-coordinate
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DLHSR1:
+                description: Draw Line/Square/Triangle Point 1 X-coordinates Register 1
+                addressOffset: 0x69
+                access: read-write
+                resetValue: 0
+                fields:
+                    DRAW_POINT_1_X:
+                        description: DLHSR[12:8] | Draw Point 1 X-coordinate
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            DLVSR0:
+                description: Draw Line/Square/Triangle Point 1 Y-coordinates Register 0
+                addressOffset: 0x6A
+                access: read-write
+                resetValue: 0
+                fields:
+                    DRAW_POINT_1_Y:
+                        description: DLVSR[7:0] | Draw Point 1 Y-coordinate
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DLVSR1:
+                description: Draw Line/Square/Triangle Point 1 Y-coordinates Register 1
+                addressOffset: 0x6B
+                access: read-write
+                resetValue: 0
+                fields:
+                    DRAW_POINT_1_Y:
+                        description: DLVSR[12:8] | Draw Point 1 Y-coordinate
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+#########
+            DLHER0:
+                description: Draw Line/Square/Triangle Point 2 X-coordinates Register 0
+                addressOffset: 0x6C
+                access: read-write
+                resetValue: 0
+                fields:
+                    DRAW_POINT_2_X:
+                        description: DLHER[7:0] | Draw Point 2 X-coordinate
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DLHER1:
+                description: Draw Line/Square/Triangle Point 2 X-coordinates Register 0
+                addressOffset: 0x6D
+                access: read-write
+                resetValue: 0
+                fields:
+                    DRAW_POINT_2_X:
+                        description: DLHER[12:8] | Draw Point 2 X-coordinate
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            DLVER0:
+                description: Draw Line/Square/Triangle Point 2 Y-coordinates Register 0
+                addressOffset: 0x6E
+                access: read-write
+                resetValue: 0
+                fields:
+                    DRAW_POINT_2_Y:
+                        description: DLVER[7:0] | Draw Point 2 Y-coordinate
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DLVER1:
+                description: Draw Line/Square/Triangle Point 2 Y-coordinates Register 0
+                addressOffset: 0x6F
+                access: read-write
+                resetValue: 0
+                fields:
+                    DRAW_POINT_2_Y:
+                        description: DLVER[12:8] | Draw Point 2 Y-coordinate
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+#####
+            DTPH0:
+                description: Draw Triangle Point 3 X-coordinates Register 0
+                addressOffset: 0x70
+                access: read-write
+                resetValue: 0
+                fields:
+                    DRAW_POINT_3_X:
+                        description: DTPH[7:0] | Draw Triangle Point 3 X-coordinate
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DTPH1:
+                description: Draw Triangle Point 3 X-coordinates Register 1
+                addressOffset: 0x71
+                access: read-write
+                resetValue: 0
+                fields:
+                    DRAW_POINT_3_X:
+                        description: DTPH[12:8] | Draw Triangle Point 3 X-coordinate
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            DTPV0:
+                description: Draw Triangle Point 3 Y-coordinates Register 0
+                addressOffset: 0x72
+                access: read-write
+                resetValue: 0
+                fields:
+                    DRAW_POINT_3_Y:
+                        description: DTPV[7:0] | Draw Triangle Point 3 Y-coordinate
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DTPV1:
+                description: Draw Triangle Point 3 Y-coordinates Register 1
+                addressOffset: 0x73
+                access: read-write
+                resetValue: 0
+                fields:
+                    DRAW_POINT_3_Y:
+                        description: DTPV[12:8] | Draw Triangle Point 3 Y-coordinate
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            DCR1:
+                description: Draw Circle/Ellipse/Ellipse Curve/Circle Square Control Register 1
+                addressOffset: 0x76
+                access: read-write
+                resetValue: 0
+                fields:
+                    DRAW_START:
+                        description: Draw Circle / Ellipse / Square /Circle Square Start Signal
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    FILL_ENABLE:
+                        description: Fill the Circle / Ellipse / Square / Circle Square Signal
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    SHAPE_SELECTION:
+                        description: Draw Circle / Ellipse / Square / Ellipse Curve / Circle Square Select
+                        bitOffset: 4
+                        bitWidth: 2
+                        access: read-write
+                    CIRCLE_ELLIPSE_CURVE_PART_SELECTION:
+                        description: Draw Circle / Ellipse Curve Part Select(DECP)
+                        bitOffset: 0
+                        bitWidth: 2
+                        access: read-write
+            ELL_A0:
+                description: Draw Circle/Ellipse/Circle Square Major radius Setting Register 0
+                addressOffset: 0x77
+                access: read-write
+                resetValue: 0
+                fields:
+                    MAJOR_RADIUS:
+                        description: ELL_A[7:0] | Draw Circle/Ellipse/Circle Square Major radius
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            ELL_A1:
+                description: Draw Circle/Ellipse/Circle Square Major radius Setting Register 1
+                addressOffset: 0x78
+                access: read-write
+                resetValue: 0
+                fields:
+                    MAJOR_RADIUS:
+                        description: ELL_A[12:8] | Draw Circle/Ellipse/Circle Square Major radius
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            ELL_B0:
+                description: Draw Circle/Ellipse/Circle Square Minor radius Setting Register 0
+                addressOffset: 0x79
+                access: read-write
+                resetValue: 0
+                fields:
+                    MINOR_RADIUS:
+                        description: ELL_B[7:0] | Draw Circle/Ellipse/Circle Square Minor radius
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            ELL_B1:
+                description: Draw Circle/Ellipse/Circle Square Minor radius Setting Register 1
+                addressOffset: 0x7A
+                access: read-write
+                resetValue: 0
+                fields:
+                    MINOR_RADIUS:
+                        description: ELL_B[12:8] | Draw Circle/Ellipse/Circle Square Minor radius
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            DEHR0:
+                description: Draw Circle/Ellipse/Circle Square Center X-coordinates Register 0
+                addressOffset: 0x7B
+                access: read-write
+                resetValue: 0
+                fields:
+                    CENTER_X:
+                        description: DEHR[7:0] | Draw Circle/Ellipse/Circle Square Minor radius
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DEHR1:
+                description: Draw Circle/Ellipse/Circle Square Center X-coordinates Register 1
+                addressOffset: 0x7C
+                access: read-write
+                resetValue: 0
+                fields:
+                    CENTER_X:
+                        description: DEHR[12:8] | Draw Circle/Ellipse/Circle Square Minor radius
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            DEVR0:
+                description: Draw Circle/Ellipse/Circle Square Center Y-coordinates Register 0
+                addressOffset: 0x7D
+                access: read-write
+                resetValue: 0
+                fields:
+                    CENTER_Y:
+                        description: DEHR[7:0] | Draw Circle/Ellipse/Circle Square Minor radius
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DEVR1:
+                description: Draw Circle/Ellipse/Circle Square Center Y-coordinates Register 1
+                addressOffset: 0x7E
+                access: read-write
+                resetValue: 0
+                fields:
+                    CENTER_Y:
+                        description: DEHR[12:8] | Draw Circle/Ellipse/Circle Square Minor radius
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+
+FAKE_PERIPHERAL:
+    CCR:
+        RECONFIGURE_PLL_FREQUENCY:
+            _write_constraint: "enum"
+            _read:
+                UNCONFIGURED: [0, "PLL clock NOT configured/ready"]
+                CONFIGURED: [1, "PLL clock configured/ready"]
+            _write:
+                DISABLED: [0, "PLL (re)configure NOT requested"]
+                ENABLED: [1, "PLL (re)configure requested"]
+        MASK_XNWAIT_ON_XNCS_DEASSERT:
+            _write_constraint: "enum"
+            DISABLED: [0, "No mask"]
+            ENABLED: [1, "Mask"]
+        KEY_SCAN_ENABLE:
+            _write_constraint: "enum"
+            DISABLED: [0, "Disabled"]
+            ENABLED: [1, "Enabled"]
+        TFT_PANEL_IF_OUTPUT_PIN_SETTING:
+            _write_constraint: "enum"
+            OUTPUT_24_BIT_ENABLED: [0, "24-bits TFT output"]
+            OUTPUT_18_BIT_ENABLED: [1, "18-bits TFT output"]
+            OUTPUT_16_BIT_ENABLED: [2, "16-bits TFT output"]
+            OUTPUT_DISABLED: [3, "Without TFT output"]
+        I2C_MASTER_INTERFACE_ENABLE:
+            _write_constraint: "enum"
+            DISABLED: [0, "Disabled"]
+            ENABLED: [1, "Enabled"]
+        SERIAL_FLASH_OR_SPI_INTERFACE_ENABLE:
+            _write_constraint: "enum"
+            DISABLED: [0, "Disabled"]
+            ENABLED: [1, "Enabled"]
+        HOST_DATA_BUS_WIDTH_SELECTION:
+            _write_constraint: "enum"
+            HOST_DATA_BUS_8_BIT_ENABLED: [0, "8-bit Host Data Bus"]
+            HOST_DATA_BUS_16_BIT_ENABLED: [1, "16-bit Host Data Bus"]
+    MACR:
+        HOST_READ_WRITE_IMAGE_DATA_FORMAT:
+            _write_constraint: "enum"
+            DIRECT_WRITE: [0b00, "Direct write (for all 8 bits MPU I/F, 16 bits MPU I/F with 8bpp data mode 1 & 2, 16 bits MPU I/F with 16/24-bpp data mode 1 & serial host interface)"]
+            # TODO: 0b01 ^^^
+            MASK_HIGH_BYTE_EACH: [0b10, "Mask high byte of each data (ex. 16 bit MPU I/F with 8-bpp data mode 1)"]
+            MASK_HIGH_BYTE_EVEN: [0b11, "Mask high byte of even data (ex. 16 bit MPU I/F with 24-bpp data mode 2)"]
+        HOST_READ_MEMORY_DIRECTION:
+            _write_constraint: "enum"
+            LEFT_RIGHT_TOP_BOTTOM: [0b00, "Left→Right then Top→Bottom (Original)"]
+            RIGHT_LEFT_TOP_BOTTOM: [0b01, "Right→Left then Top→Bottom (Horizontal flip)"]
+            TOP_BOTTOM_LEFT_RIGHT: [0b10, "Top→Bottom then Left→Right (Rotate right 90° and horizontal flip)"]
+            BOTTOM_TOP_LEFT_RIGHT: [0b11, "Bottom→Top then Left→Right (Rotate left 90°)"]
+        HOST_WRITE_MEMORY_DIRECTION:
+            _write_constraint: "enum"
+            LEFT_RIGHT_TOP_BOTTOM: [0b00, "Left→Right then Top→Bottom (Original)"]
+            RIGHT_LEFT_TOP_BOTTOM: [0b01, "Right→Left then Top→Bottom (Horizontal flip)"]
+            TOP_BOTTOM_LEFT_RIGHT: [0b10, "Top→Bottom then Left→Right (Rotate right 90° and horizontal flip)"]
+            BOTTOM_TOP_LEFT_RIGHT: [0b11, "Bottom→Top then Left→Right (Rotate left 90°)"]
+    ICR:
+        OUTPUT_TO_MPU_INTERRUPT_PIN_ACTIVE_LEVEL:
+            _write_constraint: "enum"
+            ACTIVE_LOW: [0b0, "Active low"]
+            ACTIVE_HIGH: [0b1, "Active high"]
+        EXTERNAL_INTERRUPT_INPUT_DEBOUNCE:
+            _write_constraint: "enum"
+            DISABLED: [0b0, "De-bounce disabled"]
+            ENABLED: [0b1, "De-bounce enabled"]
+        EXTERNAL_INTERRUPT_INPUT_TRIGGER_TYPE:
+            _write_constraint: "enum"
+            LOW_LEVEL_TRIGGERED: [0b00, "Low level triggered"]
+            FALLING_EDGE_TRIGGERED: [0b01, "Falling edge triggered"]
+            HIGH_LEVEL_TRIGGERED: [0b10, "High level triggered"]
+            RISING_EDGE_TRIGGERED: [0b11, "Rising edge triggered"]
+        TEXT_MODE_ENABLE:
+            _write_constraint: "enum"
+            DISABLED: [0b0, "Disabled"]
+            ENABLED: [0b1, "Enabled"]
+        MEMORY_PORT_READ_WRITE_DESTINATION:
+            _write_constraint: "enum"
+            IMAGE_BUFFER: [0b00, "Image buffer (SDRAM) for image data/pattern/user-characters"]
+            GAMMA_TABLE: [0b01, "Gamma table for color Red/Green/Blue"]
+            GRAPHIC_CURSOR_RAM: [0b10, "Graphic cursor RAM"]
+            COLOR_PALETTE_RAM: [0b11, "Color palette RAM"]
+    PPLLC2:
+        SCLK_PLLDIVN: [1, 63]
+    MPLLC2:
+        MCLK_PLLDIVN: [1, 63]
+    SPLLC2:
+        CCLK_PLLDIVN: [1, 63]
+    PSFSR:
+        XPDAT18_FUNCTION_SELECT:
+            _write_constraint: "enum"
+            GPIO: [0b0, "GPIO-D7"]
+            XKOUT: [0b1, "XKOUT[4]"]
+        XPDAT17_FUNCTION_SELECT:
+            _write_constraint: "enum"
+            GPIO: [0b0, "GPIO-D5"]
+            XKOUT: [0b1, "XKOUT[2]"]
+        XPDAT16_FUNCTION_SELECT:
+            _write_constraint: "enum"
+            GPIO: [0b0, "GPIO-D4"]
+            XKOUT: [0b1, "XKOUT[1]"]
+        XPDAT9_FUNCTION_SELECT:
+            _write_constraint: "enum"
+            GPIO: [0b0, "GPIO-D3"]
+            XKOUT: [0b1, "XKOUT[3]"]
+        XPDAT8_FUNCTION_SELECT:
+            _write_constraint: "enum"
+            GPIO: [0b0, "GPIO-D2"]
+            XKIN: [0b1, "XKIN[3]"]
+        XPDAT2_FUNCTION_SELECT:
+            _write_constraint: "enum"
+            GPIO: [0b0, "GPIO-D6"]
+            XKIN: [0b1, "XKIN[4]"]
+        XPDAT1_FUNCTION_SELECT:
+            _write_constraint: "enum"
+            GPIO: [0b0, "GPIO-D1"]
+            XKIN: [0b1, "XKIN[2]"]
+        XPDAT0_FUNCTION_SELECT:
+            _write_constraint: "enum"
+            GPIO: [0b0, "GPIO-D0"]
+            XKIN: [0b1, "XKIN[1]"]
+    MPWCTR:
+        PIP_CONFIGURE_SELECTION:
+            _write_constraint: "enum"
+            PIP1: [0b0, "Configure PIP 1's parameters"]
+            PIP2: [0b1, "Configure PIP 2's parameters"]
+        MAIN_IMAGE_COLOR_DEPTH:
+            _write_constraint: "enum"
+            DEPTH_8BPP: [0b00, "8-bpp generic TFT (256 colors)"]
+            DEPTH_16BPP: [0b01, "16-bpp generic TFT (65K colors)"]
+            DEPTH_24BPP: [0b10, "24-bpp generic TFT (1.67M colors)"]
+            #TODO:        0b1x  ^^^^^
+        PANEL_SYNC_SIGNAL_MODE:
+            _write_constraint: "enum"
+            SYNC_MODE: [0b0, "Sync Mode: Enable XVSYNC, XHSYNC, XDE"]
+            DE_MODE: [0b1, "DE Mode: Only XDE enable, XVSYNC & XHSYNC in idle state"]
+    PIPCDEP:
+        PIP1_WINDOW_COLOR_DEPTH_SETTING:
+            _write_constraint: "enum"
+            DEPTH_8BPP: [0b00, "8-bpp generic TFT (256 colors)"]
+            DEPTH_16BPP: [0b01, "16-bpp generic TFT (65K colors)"]
+            DEPTH_24BPP: [0b10, "24-bpp generic TFT (1.67M colors)"]
+            #TODO:        0b1x ^^^^
+        PIP2_WINDOW_COLOR_DEPTH_SETTING:
+            _write_constraint: "enum"
+            DEPTH_8BPP: [0b00, "8-bpp generic TFT (256 colors)"]
+            DEPTH_16BPP: [0b01, "16-bpp generic TFT (65K colors)"]
+            DEPTH_24BPP: [0b10, "24-bpp generic TFT (1.67M colors)"]
+            #TODO:        0b1x ^^^^
+    DPCR:
+        PCLK_INVERSION:
+            _write_constraint: "enum"
+            RISING: [0b0, "Panel fetches XPDAT at XPCLK rising edge"]
+            FALLING: [0b1, "Panel fetches XPDAT at XPCLK falling edge"]
+        VDIR:
+            _write_constraint: "enum"
+            TOP_TO_BOTTOM: [0b0, "From Top to Bottom"]
+            BOTTOM_TO_TOP: [0b1, "From Bottom to Top"]
+        OUTPUT_SEQUENCE:
+            RGB: [0b000, "RGB"]
+            RBG: [0b001, "RBG"]
+            GRB: [0b010, "GRB"]
+            GBR: [0b011, "GBR"]
+            BRG: [0b100, "BRG"]
+            BGR: [0b101, "BGR"]
+            GRAY: [0b110, "Gray"]
+            IDLE: [0b111, "Send out idle state (all 0 or 1, black or white color)"]
+    PCSR:
+        HSYNC_POLARITY:
+            _write_constraint: "enum"
+            ACTIVE_LOW: [0b0, "Active-low"]
+            ACTIVE_HIGH: [0b1, "Active-high"]
+        VSYNC_POLARITY:
+            _write_constraint: "enum"
+            ACTIVE_LOW: [0b0, "Active-low"]
+            ACTIVE_HIGH: [0b1, "Active-high"]
+        DE_POLARITY:
+            _write_constraint: "enum"
+            ACTIVE_LOW: [0b0, "Active-low"]
+            ACTIVE_HIGH: [0b1, "Active-high"]
+        DE_IDLE_STATE:
+            _write_constraint: "enum"
+            OUTPUT_LOW: [0b0, "Pin DE output is low"]
+            OUTPUT_HIGH: [0b1, "Pin DE output is high"]
+        PCLK_IDLE_STATE:
+            _write_constraint: "enum"
+            OUTPUT_LOW: [0b0, "Pin PCLK output is low"]
+            OUTPUT_HIGH: [0b1, "Pin PCLK output is high"]
+        PDAT_IDLE_STATE:
+            _write_constraint: "enum"
+            OUTPUT_LOW: [0b0, "Pin PDAT output is low"]
+            OUTPUT_HIGH: [0b1, "Pin PDAT output is high"]
+        HSYNC_IDLE_STATE:
+            _write_constraint: "enum"
+            OUTPUT_LOW: [0b0, "Pin HSYNC output is low"]
+            OUTPUT_HIGH: [0b1, "Pin HSYNC output is high"]
+        VSYNC_IDLE_STATE:
+            _write_constraint: "enum"
+            OUTPUT_LOW: [0b0, "Pin VSYNC output is low"]
+            OUTPUT_HIGH: [0b1, "Pin VSYNC output is high"]
+    GTCCR:
+        GAMMA_TABLE_SELECT_FOR_MPU_WRITE_GAMMA_DATA:
+            _write_constraint: "enum"
+            BLUE: [0b00, "Gamma table for Blue"]
+            GREEN: [0b01, "Gamma table for Green"]
+            RED: [0b10, "Gamma table for Red"]
+            NA: [0b11, "Gamma table for Red"]
+        GRAPHIC_CURSOR_SELECTION:
+            _write_constraint: "enum"
+            GRAPHIC_CURSOR_SET_1: [0b00, "Graphic Cursor Set 1"]
+            GRAPHIC_CURSOR_SET_2: [0b01, "Graphic Cursor Set 2"]
+            GRAPHIC_CURSOR_SET_3: [0b10, "Graphic Cursor Set 3"]
+            GRAPHIC_CURSOR_SET_4: [0b11, "Graphic Cursor Set 4"]
+    AW_COLOR:
+        CANVAS_IMAGE_BLOCK_MODE_COLOR_DEPTH:
+            _write_constraint: "enum"
+            DEPTH_8BPP: [0b00, "8bpp"]
+            DEPTH_16BPP: [0b01, "16bpp"]
+            DEPTH_24BPP: [0b10, "24bpp"]
+            #TODO:        0b1x ^^^^^^
+        CANVAS_IMAGE_LINEAR_MODE_DATA_WIDTH:
+            _write_constraint: "enum"
+            WIDTH_8BIT: [0b0, "8-bits memory data read/write"]
+            WIDTH_16BIT: [0b1, "16-bits memory data read/write"]
+    DCR0:
+        SHAPE_SELECTION:
+            _write_constraint: "enum"
+            LINE: [0b0, "Draw Line"]
+            TRIANGLE: [0b1, "Draw Triangle"]
+    DCR1:
+        SHAPE_SELECTION:
+            _write_constraint: "enum"
+            CIRCLE_ELLIPSE: [0b00, "Draw Circle / Ellipse"]
+            CIRCLE_ELLIPSE_CURVE: [0b01, "Draw Circle / Ellipse Curve"]
+            SQUARE: [0b10, "Draw Square"]
+            CIRCLE_SQUARE: [0b11, "Draw Circle Square"]
+        CIRCLE_ELLIPSE_CURVE_PART_SELECTION:
+            BOTTOM_LEFT: [0b00, "Bottom-left Ellipse Curve"]
+            UPPER_LEFT: [0b01, "Upper-left Ellipse Curve"]
+            UPPER_RIGHT: [0b10, "Upper-right Ellipse Curve"]
+            BOTTOM_RIGHT: [0b11, "Bottom-right Ellipse Curve"]
