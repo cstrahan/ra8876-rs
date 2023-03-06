@@ -111,13 +111,13 @@
               </enumeratedValues>
             </field>
             <field>
-              <name>MASK_XNWAIT_ON_XNCS_DEASSERT</name>
+              <name>MASK_WAIT_ON_CS_DEASSERT</name>
               <description>Mask XnWAIT on XnCS deassert</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
-                <name>MASK_XNWAIT_ON_XNCS_DEASSERT</name>
+                <name>MASK_WAIT_ON_CS_DEASSERT</name>
                 <usage>read-write</usage>
                 <enumeratedValue>
                   <name>DISABLED</name>
@@ -2406,7 +2406,7 @@
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>NA</name>
-                  <description>Gamma table for Red</description>
+                  <description>NA</description>
                   <value>3</value>
                 </enumeratedValue>
               </enumeratedValues>
@@ -2424,30 +2424,6 @@
               <bitOffset>2</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
-              <enumeratedValues>
-                <name>GRAPHIC_CURSOR_SELECTION</name>
-                <usage>read-write</usage>
-                <enumeratedValue>
-                  <name>GRAPHIC_CURSOR_SET_1</name>
-                  <description>Graphic Cursor Set 1</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>GRAPHIC_CURSOR_SET_2</name>
-                  <description>Graphic Cursor Set 2</description>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>GRAPHIC_CURSOR_SET_3</name>
-                  <description>Graphic Cursor Set 3</description>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>GRAPHIC_CURSOR_SET_4</name>
-                  <description>Graphic Cursor Set 4</description>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
             </field>
             <field>
               <name>TEXT_CURSOR_ENABLE</name>
@@ -2645,7 +2621,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <name>CANVAS_START_ADDRESS</name>
               <description>CVSSA[7:0] | Start address of Canvas</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -2661,7 +2637,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <name>CANVAS_START_ADDRESS</name>
               <description>CVSSA[15:8] | Start address of Canvas</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -2677,7 +2653,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <name>CANVAS_START_ADDRESS</name>
               <description>CVSSA[23:16] | Start address of Canvas</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -2693,7 +2669,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <name>CANVAS_START_ADDRESS</name>
               <description>CVSSA[31:24] | Start address of Canvas</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -2709,7 +2685,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <name>CANVAS_IMAGE_WIDTH</name>
               <description>CVS_IMWTH[7:0] | Canvas image width</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -2732,7 +2708,7 @@
               <access>read-only</access>
             </field>
             <field>
-              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <name>CANVAS_IMAGE_WIDTH</name>
               <description>CVS_IMWTH[12:8] | Canvas image width</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -2748,7 +2724,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <name>ACTIVE_WINDOW_X</name>
               <description>AWUL_X[7:0] | Active Window Upper-Left corner X-coordinates</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -2771,7 +2747,7 @@
               <access>read-only</access>
             </field>
             <field>
-              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <name>ACTIVE_WINDOW_X</name>
               <description>AWUL_X[12:8] | Active Window Upper-Left corner X-coordinates</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -2787,7 +2763,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <name>ACTIVE_WINDOW_Y</name>
               <description>AWUL_Y[7:0] | Active Window Upper-Left corner Y-coordinates</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -2810,7 +2786,7 @@
               <access>read-only</access>
             </field>
             <field>
-              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <name>ACTIVE_WINDOW_Y</name>
               <description>AWUL_Y[12:8] | Active Window Upper-Left corner Y-coordinates</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -2826,7 +2802,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <name>ACTIVE_WINDOW_WIDTH</name>
               <description>AW_WTH[7:0] | Active Window Width</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -2849,7 +2825,7 @@
               <access>read-only</access>
             </field>
             <field>
-              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <name>ACTIVE_WINDOW_WIDTH</name>
               <description>AW_WTH[12:8] | Active Window Width</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -2865,7 +2841,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <name>ACTIVE_WINDOW_HEIGHT</name>
               <description>AW_HT[7:0] | Active Window Height</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -2888,7 +2864,7 @@
               <access>read-only</access>
             </field>
             <field>
-              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <name>ACTIVE_WINDOW_HEIGHT</name>
               <description>AW_HT[12:8] | Active Window Height</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -3509,7 +3485,7 @@
           <fields>
             <field>
               <name>CENTER_X</name>
-              <description>DEHR[7:0] | Draw Circle/Ellipse/Circle Square Minor radius</description>
+              <description>DEHR[7:0] | Draw Circle/Ellipse/Circle Square Center X-coordinate</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -3525,7 +3501,7 @@
           <fields>
             <field>
               <name>CENTER_X</name>
-              <description>DEHR[12:8] | Draw Circle/Ellipse/Circle Square Minor radius</description>
+              <description>DEHR[12:8] | Draw Circle/Ellipse/Circle Square Center X-coordinate</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
@@ -3541,7 +3517,7 @@
           <fields>
             <field>
               <name>CENTER_Y</name>
-              <description>DEHR[7:0] | Draw Circle/Ellipse/Circle Square Minor radius</description>
+              <description>DEVR[7:0] | Draw Circle/Ellipse/Circle Square Center Y-coordinate</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -3557,9 +3533,1019 @@
           <fields>
             <field>
               <name>CENTER_Y</name>
-              <description>DEHR[12:8] | Draw Circle/Ellipse/Circle Square Minor radius</description>
+              <description>DEVR[12:8] | Draw Circle/Ellipse/Circle Square Center Y-coordinate</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>FGCR</name>
+          <description>Foreground Color Register - Red</description>
+          <addressOffset>210</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>FOREGROUND_COLOR_RED_8BPP</name>
+              <description>FGCR[7:5] | Foreground Color Red Component (3 bits)</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FOREGROUND_COLOR_RED_16BPP</name>
+              <description>FGCR[7:3] | Foreground Color Red Component (5 bits)</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FOREGROUND_COLOR_RED_24BPP</name>
+              <description>FGCR[7:0] | Foreground Color Red Component (8 bits)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>FGCG</name>
+          <description>Foreground Color Register - Green</description>
+          <addressOffset>211</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>FOREGROUND_COLOR_GREEN_8BPP</name>
+              <description>FGCG[7:5] | Foreground Color Green Component (3 bits)</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FOREGROUND_COLOR_GREEN_16BPP</name>
+              <description>FGCG[7:2] | Foreground Color Green Component (6 bits)</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FOREGROUND_COLOR_GREEN_24BPP</name>
+              <description>FGCG[7:0] | Foreground Color Green Component (8 bits)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>FGCB</name>
+          <description>Foreground Color Register - Blue</description>
+          <addressOffset>212</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>FOREGROUND_COLOR_BLUE_8BPP</name>
+              <description>FGCB[7:6] | Foreground Color Blue Component (2 bits)</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FOREGROUND_COLOR_BLUE_16BPP</name>
+              <description>FGCB[7:3] | Foreground Color Blue Component (5 bits)</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FOREGROUND_COLOR_BLUE_24BPP</name>
+              <description>FGCB[7:0] | Foreground Color Blue Component (8 bits)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BTE_CTRL0</name>
+          <description>BTE Function Control Register 0</description>
+          <addressOffset>144</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>BTE_FUNCTION_ENABLE</name>
+              <description>BTE Function Enable / Status</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PATTERN_FORMAT</name>
+              <description>PATTERN Format</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>PATTERN_FORMAT</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>FORMAT_8X8</name>
+                  <description>8x8</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>FORMAT_16X16</name>
+                  <description>16x16</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BTE_CTRL1</name>
+          <description>BTE Function Control Register 1</description>
+          <addressOffset>145</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>BTE_ROP_CODE</name>
+              <description>BTE ROP Code or Color expansion starting bit</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BTE_OPERATION_CODE</name>
+              <description>BTE Operation Code</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>BTE_OPERATION_CODE</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>MPU_WRITE_WITH_ROP</name>
+                  <description>MPU Write with ROP</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>RESERVED1</name>
+                  <description>Reserved</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MEMORY_COPY_WITH_ROP</name>
+                  <description>Memory Copy with ROP</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>RESERVED3</name>
+                  <description>Reserved</description>
+                  <value>3</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MPU_WRITE_WITH_CHROMA</name>
+                  <description>MPU Write with chroma keying (without ROP)</description>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MEMORY_COPY_WITH_CHROMA</name>
+                  <description>Memory Copy (move) with chroma keying (without ROP)</description>
+                  <value>5</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>PATTERN_FILL_WITH_ROP</name>
+                  <description>Pattern Fill with ROP</description>
+                  <value>6</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>PATTERN_FILL_WITH_CHROMA</name>
+                  <description>Pattern Fill with chroma keying</description>
+                  <value>7</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MPU_WRITE_COLOR_EXPANSION</name>
+                  <description>MPU Write with Color Expansion</description>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MPU_WRITE_COLOR_EXPANSION_WITH_CHROMA</name>
+                  <description>MPU Write with Color Expansion and chroma keying</description>
+                  <value>9</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MEMORY_COPY_WITH_OPACITY</name>
+                  <description>Memory Copy with opacity</description>
+                  <value>10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MPU_WRITE_WITH_OPACITY</name>
+                  <description>MPU Write with opacity</description>
+                  <value>11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>SOLID_FILL</name>
+                  <description>Solid Fill</description>
+                  <value>12</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>RESERVED13</name>
+                  <description>Reserved</description>
+                  <value>13</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MEMORY_COPY_WITH_COLOR_EXPANSION</name>
+                  <description>Memory Copy with Color Expansion</description>
+                  <value>14</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MEMORY_COPY_WITH_COLOR_EXPANSION_CHROMA</name>
+                  <description>Memory Copy with Color Expansion and chroma keying</description>
+                  <value>15</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BTE_COLR</name>
+          <description>Source 0/1 &amp; Destination Color Depth</description>
+          <addressOffset>146</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>S0_COLOR_DEPTH</name>
+              <description>S0 Color Depth</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>S0_COLOR_DEPTH</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>DEPTH_8BPP</name>
+                  <description>256 Color</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DEPTH_16BPP</name>
+                  <description>64k Color</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DEPTH_24BPP</name>
+                  <description>16M Color</description>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>S1_COLOR_DEPTH</name>
+              <description>S1 Color Depth</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>S1_COLOR_DEPTH</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>DEPTH_8BPP</name>
+                  <description>256 Color</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DEPTH_16BPP</name>
+                  <description>64k Color</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DEPTH_24BPP</name>
+                  <description>16M Color</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CONSTANT_COLOR</name>
+                  <description>Constant color (S1 address is interpreted as 24BPP RGB color)</description>
+                  <value>3</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ALPHA_BLEND_8BPP</name>
+                  <description>8 bit pixel alpha blending</description>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ALPHA_BLEND_16BPP</name>
+                  <description>16 bit pixel alpha blending</description>
+                  <value>5</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>RESERVED6</name>
+                  <description>Reserved</description>
+                  <value>6</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>RESERVED7</name>
+                  <description>Reserved</description>
+                  <value>7</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>DESTINATION_COLOR_DEPTH</name>
+              <description>Destination Color Depth</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>DESTINATION_COLOR_DEPTH</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>DEPTH_8BPP</name>
+                  <description>256 Color</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DEPTH_16BPP</name>
+                  <description>64k Color</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DEPTH_24BPP</name>
+                  <description>16M Color</description>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>S0_STR0</name>
+          <description>Source 0 memory start address 0</description>
+          <addressOffset>147</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>S0_START_ADDRESS</name>
+              <description>S0_STR[7:0] | Source 0 memory start address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>S0_STR1</name>
+          <description>Source 0 memory start address 1</description>
+          <addressOffset>148</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>S0_START_ADDRESS</name>
+              <description>S0_STR[15:8] | Source 0 memory start address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>S0_STR2</name>
+          <description>Source 0 memory start address 2</description>
+          <addressOffset>149</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>S0_START_ADDRESS</name>
+              <description>S0_STR[23:16] | Source 0 memory start address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>S0_STR3</name>
+          <description>Source 0 memory start address 3</description>
+          <addressOffset>150</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>S0_START_ADDRESS</name>
+              <description>S0_STR[31:24] | Source 0 memory start address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>S0_WTH0</name>
+          <description>Source 0 image width 0</description>
+          <addressOffset>151</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>S0_IMAGE_WIDTH</name>
+              <description>S0_WTH[7:0] | Source 0 image width</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>S0_WTH1</name>
+          <description>Source 0 image width 1</description>
+          <addressOffset>152</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>S0_IMAGE_WIDTH</name>
+              <description>S0_WTH[12:8] | Source 0 image width</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>S0_X0</name>
+          <description>Source 0 Window Upper-Left corner X-coordinates 0</description>
+          <addressOffset>153</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>S0_IMAGE_WIDTH</name>
+              <description>S0_X[7:0] | Source 0 Window Upper-Left corner X-coordinate</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>S0_X1</name>
+          <description>Source 0 Window Upper-Left corner X-coordinates 1</description>
+          <addressOffset>154</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>S0_IMAGE_WIDTH</name>
+              <description>S0_X[12:8] | Source 0 Window Upper-Left corner X-coordinate</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>S0_Y0</name>
+          <description>Source 0 Window Upper-Left corner Y-coordinates 0</description>
+          <addressOffset>155</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>S0_IMAGE_WIDTH</name>
+              <description>S0_Y[7:0] | Source 0 Window Upper-Left corner Y-coordinate</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>S0_Y1</name>
+          <description>Source 0 Window Upper-Left corner Y-coordinates 1</description>
+          <addressOffset>156</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>S0_IMAGE_WIDTH</name>
+              <description>S0_Y[12:8] | Source 0 Window Upper-Left corner Y-coordinate</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>S1_STR0</name>
+          <description>Source 1 memory start address 0</description>
+          <addressOffset>157</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>S1_START_ADDRESS</name>
+              <description>S1_STR[7:0] | Source 1 memory start address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>S1_STR1</name>
+          <description>Source 1 memory start address 1</description>
+          <addressOffset>158</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>S1_START_ADDRESS</name>
+              <description>S1_STR[15:8] | Source 1 memory start address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>S1_STR2</name>
+          <description>Source 1 memory start address 2</description>
+          <addressOffset>159</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>S1_START_ADDRESS</name>
+              <description>S1_STR[23:16] | Source 1 memory start address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>S1_STR3</name>
+          <description>Source 1 memory start address 3</description>
+          <addressOffset>160</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>S1_START_ADDRESS</name>
+              <description>S1_STR[31:24] | Source 1 memory start address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>S1_WTH0</name>
+          <description>Source 1 image width 0</description>
+          <addressOffset>161</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>S1_IMAGE_WIDTH</name>
+              <description>S1_WTH[7:0] | Source 1 image width</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>S1_WTH1</name>
+          <description>Source 1 image width 1</description>
+          <addressOffset>162</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>S1_IMAGE_WIDTH</name>
+              <description>S1_WTH[12:8] | Source 1 image width</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>S1_X0</name>
+          <description>Source 1 Window Upper-Left corner X-coordinates 0</description>
+          <addressOffset>163</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>S1_IMAGE_WIDTH</name>
+              <description>S1_X[7:0] | Source 1 Window Upper-Left corner X-coordinate</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>S1_X1</name>
+          <description>Source 1 Window Upper-Left corner X-coordinates 1</description>
+          <addressOffset>164</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>S1_IMAGE_WIDTH</name>
+              <description>S1_X[12:8] | Source 1 Window Upper-Left corner X-coordinate</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>S1_Y0</name>
+          <description>Source 1 Window Upper-Left corner Y-coordinates 0</description>
+          <addressOffset>165</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>S1_IMAGE_WIDTH</name>
+              <description>S1_Y[7:0] | Source 1 Window Upper-Left corner Y-coordinate</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>S1_Y1</name>
+          <description>Source 1 Window Upper-Left corner Y-coordinates 1</description>
+          <addressOffset>166</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>S1_IMAGE_WIDTH</name>
+              <description>S1_Y[12:8] | Source 1 Window Upper-Left corner Y-coordinate</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DT_STR0</name>
+          <description>Destination memory start address 0</description>
+          <addressOffset>167</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DESTINATION_START_ADDRESS</name>
+              <description>DT_STR[7:0] | Destination memory start address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DT_STR1</name>
+          <description>Destination memory start address 1</description>
+          <addressOffset>168</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DESTINATION_START_ADDRESS</name>
+              <description>DT_STR[15:8] | Destination memory start address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DT_STR2</name>
+          <description>Destination memory start address 2</description>
+          <addressOffset>169</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DESTINATION_START_ADDRESS</name>
+              <description>DT_STR[23:16] | Destination memory start address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DT_STR3</name>
+          <description>Destination memory start address 3</description>
+          <addressOffset>170</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DESTINATION_START_ADDRESS</name>
+              <description>DT_STR[31:24] | Destination memory start address</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DT_WTH0</name>
+          <description>Destination image width 0</description>
+          <addressOffset>171</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DESTINATION_IMAGE_WIDTH</name>
+              <description>DT_WTH[7:0] | Destination image width</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DT_WTH1</name>
+          <description>Destination image width 1</description>
+          <addressOffset>172</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DESTINATION_IMAGE_WIDTH</name>
+              <description>DT_WTH[12:8] | Destination image width</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DT_X0</name>
+          <description>Destination Window Upper-Left corner X-coordinates 0</description>
+          <addressOffset>173</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DESTINATION_IMAGE_WIDTH</name>
+              <description>DT_X[7:0] | Destination Window Upper-Left corner X-coordinate</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DT_X1</name>
+          <description>Destination Window Upper-Left corner X-coordinates 1</description>
+          <addressOffset>174</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DESTINATION_IMAGE_WIDTH</name>
+              <description>DT_X[12:8] | Destination Window Upper-Left corner X-coordinate</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DT_Y0</name>
+          <description>Destination Window Upper-Left corner Y-coordinates 0</description>
+          <addressOffset>175</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DESTINATION_IMAGE_WIDTH</name>
+              <description>DT_Y[7:0] | Destination Window Upper-Left corner Y-coordinate</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DT_Y1</name>
+          <description>Destination Window Upper-Left corner Y-coordinates 1</description>
+          <addressOffset>176</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DESTINATION_IMAGE_WIDTH</name>
+              <description>DT_Y[12:8] | Destination Window Upper-Left corner Y-coordinate</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BTE_WTH0</name>
+          <description>BTE Window Width Setting 0</description>
+          <addressOffset>177</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>BTE_WINDOW_WIDTH</name>
+              <description>BTE_WTH[7:0] | BTE Window Width Setting</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BTE_WTH1</name>
+          <description>BTE Window Width Setting 1</description>
+          <addressOffset>178</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>BTE_WINDOW_WIDTH</name>
+              <description>BTE_WTH[12:8] | BTE Window Width Setting</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BTE_HIG0</name>
+          <description>BTE Window Height Setting 0</description>
+          <addressOffset>179</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>BTE_WINDOW_WIDTH</name>
+              <description>BTE_WTH[7:0] | BTE Window Height Setting</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BTE_HIG1</name>
+          <description>BTE Window Height Setting 1</description>
+          <addressOffset>180</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>BTE_WINDOW_WIDTH</name>
+              <description>BTE_WTH[12:8] | BTE Window Height Setting</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>APB_CTRL</name>
+          <description>Alpha Blending</description>
+          <addressOffset>181</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>ALPHA_BLENDING</name>
+              <description>Window Alpha Blending effect for S0 &amp; S1 | Alpha = APB_CTRL/32 | Output Effect = (S0 image x (1 - alpha setting value)) + (S1 image x alpha setting value)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DMA_CTRL</name>
+          <description>Serial flash DMA Controller REG</description>
+          <addressOffset>182</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DMA_ENABLE</name>
+              <description>DMA Start Bit (write) or DMA Busy Check Bit (read)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SFL_CTRL</name>
+          <description>Serial Flash/ROM Controller Register</description>
+          <addressOffset>183</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>SERIAL_FLASH_ROM_INTERFACE_NUMBER</name>
+              <description>Serial Flash/ROM Interface \# Select</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SERIAL_FLASH_ROM_ACCESS_MODE</name>
+              <description>Serial Flash/ROM Access Mode</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>SERIAL_FLASH_ROM_ACCESS_MODE</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>FONT</name>
+                  <description>Font mode (for external CGROM)</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DMA</name>
+                  <description>DMA mode (for CGRAM, pattern, boot start image or OSD)</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>SERIAL_FLASH_ROM_ADDRESS_MODE</name>
+              <description>Serial Flash/ROM Address Mode</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>SERIAL_FLASH_ROM_ADDRESS_MODE</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>ADDRESS_24BIT</name>
+                  <description>24 bits address mode</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ADDRESS_32BIT</name>
+                  <description>32 bits address mode</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>RA8875_COMPATIBLE_ENABLE</name>
+              <description>RA8875 compatible mode</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>READ_COMMAND_CODE_AND_BEHAVIOR</name>
+              <description>Read Command code &amp; behavior selection</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SPIDR</name>
+          <description>SPI master Tx/Rx FIFO Data Register</description>
+          <addressOffset>184</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>SPI_MASTER_FIFO</name>
+              <description>SPI master Tx/Rx FIFO Data</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
           </fields>

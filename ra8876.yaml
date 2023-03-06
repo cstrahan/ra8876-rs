@@ -48,7 +48,7 @@ _add:
                         bitOffset: 7
                         bitWidth: 1
                         access: read-write
-                    MASK_XNWAIT_ON_XNCS_DEASSERT:
+                    MASK_WAIT_ON_CS_DEASSERT:
                         description: Mask XnWAIT on XnCS deassert
                         bitOffset: 6
                         bitWidth: 1
@@ -936,7 +936,6 @@ _add:
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
-########
             PWDULX0:
                 description: PIP 1 or 2 Window Display Upper-Left corner X-coordinates 0
                 addressOffset: 0x2A
@@ -991,7 +990,6 @@ _add:
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
-######
             PISA0:
                 description: PIP 1 or 2 Image Start Address 0
                 addressOffset: 0x2E
@@ -1063,7 +1061,6 @@ _add:
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
-######
             PWIULX0:
                 description: PIP 1 or 2 Window Image Upper-Left corner X-coordinates 0
                 addressOffset: 0x34
@@ -1183,6 +1180,7 @@ _add:
                         bitOffset: 7
                         bitWidth: 1
                         access: read-write
+                    # TODO: maybe shorten this field name vvvvv
                     GAMMA_TABLE_SELECT_FOR_MPU_WRITE_GAMMA_DATA:
                         description: Gamma table select for MPU write gamma data
                         bitOffset: 5
@@ -1333,7 +1331,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    GRAPHIC_CURSOR_COLOR_0:
+                    CANVAS_START_ADDRESS:
                         description: CVSSA[7:0] | Start address of Canvas
                         bitOffset: 0
                         bitWidth: 8
@@ -1356,7 +1354,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    GRAPHIC_CURSOR_COLOR_0:
+                    CANVAS_START_ADDRESS:
                         description: CVSSA[15:8] | Start address of Canvas
                         bitOffset: 0
                         bitWidth: 8
@@ -1367,7 +1365,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    GRAPHIC_CURSOR_COLOR_0:
+                    CANVAS_START_ADDRESS:
                         description: CVSSA[23:16] | Start address of Canvas
                         bitOffset: 0
                         bitWidth: 8
@@ -1378,7 +1376,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    GRAPHIC_CURSOR_COLOR_0:
+                    CANVAS_START_ADDRESS:
                         description: CVSSA[31:24] | Start address of Canvas
                         bitOffset: 0
                         bitWidth: 8
@@ -1389,7 +1387,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    GRAPHIC_CURSOR_COLOR_0:
+                    CANVAS_IMAGE_WIDTH:
                         description: CVS_IMWTH[7:0] | Canvas image width
                         bitOffset: 0
                         bitWidth: 8
@@ -1405,7 +1403,7 @@ _add:
                         bitOffset: 5
                         bitWidth: 3
                         access: read-only
-                    GRAPHIC_CURSOR_COLOR_0:
+                    CANVAS_IMAGE_WIDTH:
                         description: CVS_IMWTH[12:8] | Canvas image width
                         bitOffset: 0
                         bitWidth: 5
@@ -1416,7 +1414,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    GRAPHIC_CURSOR_COLOR_0:
+                    ACTIVE_WINDOW_X:
                         description: AWUL_X[7:0] | Active Window Upper-Left corner X-coordinates
                         bitOffset: 0
                         bitWidth: 8
@@ -1432,7 +1430,7 @@ _add:
                         bitOffset: 5
                         bitWidth: 3
                         access: read-only
-                    GRAPHIC_CURSOR_COLOR_0:
+                    ACTIVE_WINDOW_X:
                         description: AWUL_X[12:8] | Active Window Upper-Left corner X-coordinates
                         bitOffset: 0
                         bitWidth: 5
@@ -1443,7 +1441,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    GRAPHIC_CURSOR_COLOR_0:
+                    ACTIVE_WINDOW_Y:
                         description: AWUL_Y[7:0] | Active Window Upper-Left corner Y-coordinates
                         bitOffset: 0
                         bitWidth: 8
@@ -1459,7 +1457,7 @@ _add:
                         bitOffset: 5
                         bitWidth: 3
                         access: read-only
-                    GRAPHIC_CURSOR_COLOR_0:
+                    ACTIVE_WINDOW_Y:
                         description: AWUL_Y[12:8] | Active Window Upper-Left corner Y-coordinates
                         bitOffset: 0
                         bitWidth: 5
@@ -1470,7 +1468,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    GRAPHIC_CURSOR_COLOR_0:
+                    ACTIVE_WINDOW_WIDTH:
                         description: AW_WTH[7:0] | Active Window Width
                         bitOffset: 0
                         bitWidth: 8
@@ -1486,7 +1484,7 @@ _add:
                         bitOffset: 5
                         bitWidth: 3
                         access: read-only
-                    GRAPHIC_CURSOR_COLOR_0:
+                    ACTIVE_WINDOW_WIDTH:
                         description: AW_WTH[12:8] | Active Window Width
                         bitOffset: 0
                         bitWidth: 5
@@ -1497,7 +1495,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    GRAPHIC_CURSOR_COLOR_0:
+                    ACTIVE_WINDOW_HEIGHT:
                         description: AW_HT[7:0] | Active Window Height
                         bitOffset: 0
                         bitWidth: 8
@@ -1513,7 +1511,7 @@ _add:
                         bitOffset: 5
                         bitWidth: 3
                         access: read-only
-                    GRAPHIC_CURSOR_COLOR_0:
+                    ACTIVE_WINDOW_HEIGHT:
                         description: AW_HT[12:8] | Active Window Height
                         bitOffset: 0
                         bitWidth: 5
@@ -1712,7 +1710,6 @@ _add:
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
-#########
             DLHER0:
                 description: Draw Line/Square/Triangle Point 2 X-coordinates Register 0
                 addressOffset: 0x6C
@@ -1757,7 +1754,6 @@ _add:
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
-#####
             DTPH0:
                 description: Draw Triangle Point 3 X-coordinates Register 0
                 addressOffset: 0x70
@@ -1879,7 +1875,7 @@ _add:
                 resetValue: 0
                 fields:
                     CENTER_X:
-                        description: DEHR[7:0] | Draw Circle/Ellipse/Circle Square Minor radius
+                        description: DEHR[7:0] | Draw Circle/Ellipse/Circle Square Center X-coordinate
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1890,7 +1886,7 @@ _add:
                 resetValue: 0
                 fields:
                     CENTER_X:
-                        description: DEHR[12:8] | Draw Circle/Ellipse/Circle Square Minor radius
+                        description: DEHR[12:8] | Draw Circle/Ellipse/Circle Square Center X-coordinate
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -1901,7 +1897,7 @@ _add:
                 resetValue: 0
                 fields:
                     CENTER_Y:
-                        description: DEHR[7:0] | Draw Circle/Ellipse/Circle Square Minor radius
+                        description: DEVR[7:0] | Draw Circle/Ellipse/Circle Square Center Y-coordinate
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1912,10 +1908,568 @@ _add:
                 resetValue: 0
                 fields:
                     CENTER_Y:
-                        description: DEHR[12:8] | Draw Circle/Ellipse/Circle Square Minor radius
+                        description: DEVR[12:8] | Draw Circle/Ellipse/Circle Square Center Y-coordinate
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
+            FGCR:
+                description: Foreground Color Register - Red
+                addressOffset: 0xD2
+                access: read-write
+                resetValue: 0
+                fields:
+                    FOREGROUND_COLOR_RED_8BPP:
+                        description: FGCR[7:5] | Foreground Color Red Component (3 bits)
+                        bitOffset: 5
+                        bitWidth: 3
+                        access: read-write
+                    FOREGROUND_COLOR_RED_16BPP:
+                        description: FGCR[7:3] | Foreground Color Red Component (5 bits)
+                        bitOffset: 3
+                        bitWidth: 5
+                        access: read-write
+                    FOREGROUND_COLOR_RED_24BPP:
+                        description: FGCR[7:0] | Foreground Color Red Component (8 bits)
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            FGCG:
+                description: Foreground Color Register - Green
+                addressOffset: 0xD3
+                access: read-write
+                resetValue: 0
+                fields:
+                    FOREGROUND_COLOR_GREEN_8BPP:
+                        description: FGCG[7:5] | Foreground Color Green Component (3 bits)
+                        bitOffset: 5
+                        bitWidth: 3
+                        access: read-write
+                    FOREGROUND_COLOR_GREEN_16BPP:
+                        description: FGCG[7:2] | Foreground Color Green Component (6 bits)
+                        bitOffset: 2
+                        bitWidth: 6
+                        access: read-write
+                    FOREGROUND_COLOR_GREEN_24BPP:
+                        description: FGCG[7:0] | Foreground Color Green Component (8 bits)
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            FGCB:
+                description: Foreground Color Register - Blue
+                addressOffset: 0xD4
+                access: read-write
+                resetValue: 0
+                fields:
+                    FOREGROUND_COLOR_BLUE_8BPP:
+                        description: FGCB[7:6] | Foreground Color Blue Component (2 bits)
+                        bitOffset: 6
+                        bitWidth: 2
+                        access: read-write
+                    FOREGROUND_COLOR_BLUE_16BPP:
+                        description: FGCB[7:3] | Foreground Color Blue Component (5 bits)
+                        bitOffset: 3
+                        bitWidth: 5
+                        access: read-write
+                    FOREGROUND_COLOR_BLUE_24BPP:
+                        description: FGCB[7:0] | Foreground Color Blue Component (8 bits)
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            # TODO: 19.7 PWM Timer Control Registers
+            BTE_CTRL0:
+                description: BTE Function Control Register 0
+                addressOffset: 0x90
+                access: read-write
+                resetValue: 0
+                fields:
+                    BTE_FUNCTION_ENABLE:
+                        description: BTE Function Enable / Status
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-write
+                    PATTERN_FORMAT:
+                        description: PATTERN Format
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
+            BTE_CTRL1:
+                description: BTE Function Control Register 1
+                addressOffset: 0x91
+                access: read-write
+                resetValue: 0
+                fields:
+                    BTE_ROP_CODE:
+                        description: BTE ROP Code or Color expansion starting bit
+                        bitOffset: 4
+                        bitWidth: 4
+                        access: read-write
+                    BTE_OPERATION_CODE:
+                        description: BTE Operation Code
+                        bitOffset: 0
+                        bitWidth: 4
+                        access: read-write
+            BTE_COLR:
+                description: Source 0/1 & Destination Color Depth
+                addressOffset: 0x92
+                access: read-write
+                resetValue: 0
+                fields:
+                    S0_COLOR_DEPTH:
+                        description: S0 Color Depth
+                        bitOffset: 5
+                        bitWidth: 2
+                        access: read-write
+                    S1_COLOR_DEPTH:
+                        description: S1 Color Depth
+                        bitOffset: 2
+                        bitWidth: 3
+                        access: read-write
+                    DESTINATION_COLOR_DEPTH:
+                        description: Destination Color Depth
+                        bitOffset: 0
+                        bitWidth: 2
+                        access: read-write
+            S0_STR0:
+                description: Source 0 memory start address 0
+                addressOffset: 0x93
+                access: read-write
+                resetValue: 0
+                fields:
+                    S0_START_ADDRESS:
+                        description: S0_STR[7:0] | Source 0 memory start address
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            S0_STR1:
+                description: Source 0 memory start address 1
+                addressOffset: 0x94
+                access: read-write
+                resetValue: 0
+                fields:
+                    S0_START_ADDRESS:
+                        description: S0_STR[15:8] | Source 0 memory start address
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            S0_STR2:
+                description: Source 0 memory start address 2
+                addressOffset: 0x95
+                access: read-write
+                resetValue: 0
+                fields:
+                    S0_START_ADDRESS:
+                        description: S0_STR[23:16] | Source 0 memory start address
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            S0_STR3:
+                description: Source 0 memory start address 3
+                addressOffset: 0x96
+                access: read-write
+                resetValue: 0
+                fields:
+                    S0_START_ADDRESS:
+                        description: S0_STR[31:24] | Source 0 memory start address
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            S0_WTH0:
+                description: Source 0 image width 0
+                addressOffset: 0x97
+                access: read-write
+                resetValue: 0
+                fields:
+                    S0_IMAGE_WIDTH:
+                        description: S0_WTH[7:0] | Source 0 image width
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            S0_WTH1:
+                description: Source 0 image width 1
+                addressOffset: 0x98
+                access: read-write
+                resetValue: 0
+                fields:
+                    S0_IMAGE_WIDTH:
+                        description: S0_WTH[12:8] | Source 0 image width
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            S0_X0:
+                description: Source 0 Window Upper-Left corner X-coordinates 0
+                addressOffset: 0x99
+                access: read-write
+                resetValue: 0
+                fields:
+                    S0_IMAGE_WIDTH:
+                        description: S0_X[7:0] | Source 0 Window Upper-Left corner X-coordinate
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            S0_X1:
+                description: Source 0 Window Upper-Left corner X-coordinates 1
+                addressOffset: 0x9A
+                access: read-write
+                resetValue: 0
+                fields:
+                    S0_IMAGE_WIDTH:
+                        description: S0_X[12:8] | Source 0 Window Upper-Left corner X-coordinate
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            S0_Y0:
+                description: Source 0 Window Upper-Left corner Y-coordinates 0
+                addressOffset: 0x9B
+                access: read-write
+                resetValue: 0
+                fields:
+                    S0_IMAGE_WIDTH:
+                        description: S0_Y[7:0] | Source 0 Window Upper-Left corner Y-coordinate
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            S0_Y1:
+                description: Source 0 Window Upper-Left corner Y-coordinates 1
+                addressOffset: 0x9C
+                access: read-write
+                resetValue: 0
+                fields:
+                    S0_IMAGE_WIDTH:
+                        description: S0_Y[12:8] | Source 0 Window Upper-Left corner Y-coordinate
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            S1_STR0:
+                description: Source 1 memory start address 0
+                addressOffset: 0x9D
+                access: read-write
+                resetValue: 0
+                fields:
+                    S1_START_ADDRESS:
+                        description: S1_STR[7:0] | Source 1 memory start address
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            S1_STR1:
+                description: Source 1 memory start address 1
+                addressOffset: 0x9E
+                access: read-write
+                resetValue: 0
+                fields:
+                    S1_START_ADDRESS:
+                        description: S1_STR[15:8] | Source 1 memory start address
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            S1_STR2:
+                description: Source 1 memory start address 2
+                addressOffset: 0x9F
+                access: read-write
+                resetValue: 0
+                fields:
+                    S1_START_ADDRESS:
+                        description: S1_STR[23:16] | Source 1 memory start address
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            S1_STR3:
+                description: Source 1 memory start address 3
+                addressOffset: 0xA0
+                access: read-write
+                resetValue: 0
+                fields:
+                    S1_START_ADDRESS:
+                        description: S1_STR[31:24] | Source 1 memory start address
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            S1_WTH0:
+                description: Source 1 image width 0
+                addressOffset: 0xA1
+                access: read-write
+                resetValue: 0
+                fields:
+                    S1_IMAGE_WIDTH:
+                        description: S1_WTH[7:0] | Source 1 image width
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            S1_WTH1:
+                description: Source 1 image width 1
+                addressOffset: 0xA2
+                access: read-write
+                resetValue: 0
+                fields:
+                    S1_IMAGE_WIDTH:
+                        description: S1_WTH[12:8] | Source 1 image width
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            S1_X0:
+                description: Source 1 Window Upper-Left corner X-coordinates 0
+                addressOffset: 0xA3
+                access: read-write
+                resetValue: 0
+                fields:
+                    S1_IMAGE_WIDTH:
+                        description: S1_X[7:0] | Source 1 Window Upper-Left corner X-coordinate
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            S1_X1:
+                description: Source 1 Window Upper-Left corner X-coordinates 1
+                addressOffset: 0xA4
+                access: read-write
+                resetValue: 0
+                fields:
+                    S1_IMAGE_WIDTH:
+                        description: S1_X[12:8] | Source 1 Window Upper-Left corner X-coordinate
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            S1_Y0:
+                description: Source 1 Window Upper-Left corner Y-coordinates 0
+                addressOffset: 0xA5
+                access: read-write
+                resetValue: 0
+                fields:
+                    S1_IMAGE_WIDTH:
+                        description: S1_Y[7:0] | Source 1 Window Upper-Left corner Y-coordinate
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            S1_Y1:
+                description: Source 1 Window Upper-Left corner Y-coordinates 1
+                addressOffset: 0xA6
+                access: read-write
+                resetValue: 0
+                fields:
+                    S1_IMAGE_WIDTH:
+                        description: S1_Y[12:8] | Source 1 Window Upper-Left corner Y-coordinate
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            DT_STR0:
+                description: Destination memory start address 0
+                addressOffset: 0xA7
+                access: read-write
+                resetValue: 0
+                fields:
+                    DESTINATION_START_ADDRESS:
+                        description: DT_STR[7:0] | Destination memory start address
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DT_STR1:
+                description: Destination memory start address 1
+                addressOffset: 0xA8
+                access: read-write
+                resetValue: 0
+                fields:
+                    DESTINATION_START_ADDRESS:
+                        description: DT_STR[15:8] | Destination memory start address
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DT_STR2:
+                description: Destination memory start address 2
+                addressOffset: 0xA9
+                access: read-write
+                resetValue: 0
+                fields:
+                    DESTINATION_START_ADDRESS:
+                        description: DT_STR[23:16] | Destination memory start address
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DT_STR3:
+                description: Destination memory start address 3
+                addressOffset: 0xAA
+                access: read-write
+                resetValue: 0
+                fields:
+                    DESTINATION_START_ADDRESS:
+                        description: DT_STR[31:24] | Destination memory start address
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DT_WTH0:
+                description: Destination image width 0
+                addressOffset: 0xAB
+                access: read-write
+                resetValue: 0
+                fields:
+                    DESTINATION_IMAGE_WIDTH:
+                        description: DT_WTH[7:0] | Destination image width
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DT_WTH1:
+                description: Destination image width 1
+                addressOffset: 0xAC
+                access: read-write
+                resetValue: 0
+                fields:
+                    DESTINATION_IMAGE_WIDTH:
+                        description: DT_WTH[12:8] | Destination image width
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            DT_X0:
+                description: Destination Window Upper-Left corner X-coordinates 0
+                addressOffset: 0xAD
+                access: read-write
+                resetValue: 0
+                fields:
+                    DESTINATION_IMAGE_WIDTH:
+                        description: DT_X[7:0] | Destination Window Upper-Left corner X-coordinate
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DT_X1:
+                description: Destination Window Upper-Left corner X-coordinates 1
+                addressOffset: 0xAE
+                access: read-write
+                resetValue: 0
+                fields:
+                    DESTINATION_IMAGE_WIDTH:
+                        description: DT_X[12:8] | Destination Window Upper-Left corner X-coordinate
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            DT_Y0:
+                description: Destination Window Upper-Left corner Y-coordinates 0
+                addressOffset: 0xAF
+                access: read-write
+                resetValue: 0
+                fields:
+                    DESTINATION_IMAGE_WIDTH:
+                        description: DT_Y[7:0] | Destination Window Upper-Left corner Y-coordinate
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DT_Y1:
+                description: Destination Window Upper-Left corner Y-coordinates 1
+                addressOffset: 0xB0
+                access: read-write
+                resetValue: 0
+                fields:
+                    DESTINATION_IMAGE_WIDTH:
+                        description: DT_Y[12:8] | Destination Window Upper-Left corner Y-coordinate
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            BTE_WTH0:
+                description: BTE Window Width Setting 0
+                addressOffset: 0xB1
+                access: read-write
+                resetValue: 0
+                fields:
+                    BTE_WINDOW_WIDTH:
+                        description: BTE_WTH[7:0] | BTE Window Width Setting
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            BTE_WTH1:
+                description: BTE Window Width Setting 1
+                addressOffset: 0xB2
+                access: read-write
+                resetValue: 0
+                fields:
+                    BTE_WINDOW_WIDTH:
+                        description: BTE_WTH[12:8] | BTE Window Width Setting
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            BTE_HIG0:
+                description: BTE Window Height Setting 0
+                addressOffset: 0xB3
+                access: read-write
+                resetValue: 0
+                fields:
+                    BTE_WINDOW_WIDTH:
+                        description: BTE_WTH[7:0] | BTE Window Height Setting
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            BTE_HIG1:
+                description: BTE Window Height Setting 1
+                addressOffset: 0xB4
+                access: read-write
+                resetValue: 0
+                fields:
+                    BTE_WINDOW_WIDTH:
+                        description: BTE_WTH[12:8] | BTE Window Height Setting
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            APB_CTRL:
+                description: Alpha Blending
+                addressOffset: 0xB5
+                access: read-write
+                resetValue: 0
+                fields:
+                    ALPHA_BLENDING:
+                        description: Window Alpha Blending effect for S0 & S1 | Alpha = APB_CTRL/32 | Output Effect = (S0 image x (1 - alpha setting value)) + (S1 image x alpha setting value)
+                        bitOffset: 0
+                        bitWidth: 6
+                        access: read-write
+            DMA_CTRL:
+                description: Serial flash DMA Controller REG
+                addressOffset: 0xB6
+                access: read-write
+                resetValue: 0
+                fields:
+                    DMA_ENABLE:
+                        description: DMA Start Bit (write) or DMA Busy Check Bit (read)
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
+            SFL_CTRL:
+                description: Serial Flash/ROM Controller Register
+                addressOffset: 0xB7
+                access: read-write
+                resetValue: 0
+                fields:
+                    SERIAL_FLASH_ROM_INTERFACE_NUMBER:
+                        description: Serial Flash/ROM Interface \# Select
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    SERIAL_FLASH_ROM_ACCESS_MODE:
+                        description: Serial Flash/ROM Access Mode
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    SERIAL_FLASH_ROM_ADDRESS_MODE:
+                        description: Serial Flash/ROM Address Mode
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-write
+                    RA8875_COMPATIBLE_ENABLE:
+                        description: RA8875 compatible mode
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-write
+                    READ_COMMAND_CODE_AND_BEHAVIOR:
+                        description: Read Command code & behavior selection
+                        bitOffset: 0
+                        bitWidth: 4
+                        access: read-write
+            SPIDR:
+                description: SPI master Tx/Rx FIFO Data Register
+                addressOffset: 0xB8
+                access: read-write
+                resetValue: 0
+                fields:
+                    SPI_MASTER_FIFO:
+                        description: SPI master Tx/Rx FIFO Data
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+
+
+
 
 FAKE_PERIPHERAL:
     CCR:
@@ -1927,7 +2481,7 @@ FAKE_PERIPHERAL:
             _write:
                 DISABLED: [0, "PLL (re)configure NOT requested"]
                 ENABLED: [1, "PLL (re)configure requested"]
-        MASK_XNWAIT_ON_XNCS_DEASSERT:
+        MASK_WAIT_ON_CS_DEASSERT:
             _write_constraint: "enum"
             DISABLED: [0, "No mask"]
             ENABLED: [1, "Mask"]
@@ -2121,13 +2675,7 @@ FAKE_PERIPHERAL:
             BLUE: [0b00, "Gamma table for Blue"]
             GREEN: [0b01, "Gamma table for Green"]
             RED: [0b10, "Gamma table for Red"]
-            NA: [0b11, "Gamma table for Red"]
-        GRAPHIC_CURSOR_SELECTION:
-            _write_constraint: "enum"
-            GRAPHIC_CURSOR_SET_1: [0b00, "Graphic Cursor Set 1"]
-            GRAPHIC_CURSOR_SET_2: [0b01, "Graphic Cursor Set 2"]
-            GRAPHIC_CURSOR_SET_3: [0b10, "Graphic Cursor Set 3"]
-            GRAPHIC_CURSOR_SET_4: [0b11, "Graphic Cursor Set 4"]
+            NA: [0b11, "NA"]
     AW_COLOR:
         CANVAS_IMAGE_BLOCK_MODE_COLOR_DEPTH:
             _write_constraint: "enum"
@@ -2156,3 +2704,53 @@ FAKE_PERIPHERAL:
             UPPER_LEFT: [0b01, "Upper-left Ellipse Curve"]
             UPPER_RIGHT: [0b10, "Upper-right Ellipse Curve"]
             BOTTOM_RIGHT: [0b11, "Bottom-right Ellipse Curve"]
+    BTE_CTRL0:
+        PATTERN_FORMAT:
+            FORMAT_8X8: [0b0, "8x8"]
+            FORMAT_16X16: [0b1, "16x16"]
+    BTE_CTRL1:
+        BTE_OPERATION_CODE:
+            MPU_WRITE_WITH_ROP: [0b0000, "MPU Write with ROP"]
+            RESERVED1: [0b0001, "Reserved"]
+            MEMORY_COPY_WITH_ROP: [0b0010, "Memory Copy with ROP"]
+            RESERVED3: [0b0011, "Reserved"]
+            #MEMORY_COPY_BACKWARDS_WITH_ROP: [0b0011, "Memory Copy Backwards with ROP"]
+            MPU_WRITE_WITH_CHROMA: [0b0100, "MPU Write with chroma keying (without ROP)"]
+            MEMORY_COPY_WITH_CHROMA: [0b0101, "Memory Copy (move) with chroma keying (without ROP)"]
+            PATTERN_FILL_WITH_ROP: [0b0110, "Pattern Fill with ROP"]
+            PATTERN_FILL_WITH_CHROMA: [0b0111, "Pattern Fill with chroma keying"]
+            MPU_WRITE_COLOR_EXPANSION: [0b1000, "MPU Write with Color Expansion"]
+            MPU_WRITE_COLOR_EXPANSION_WITH_CHROMA: [0b1001, "MPU Write with Color Expansion and chroma keying"]
+            MEMORY_COPY_WITH_OPACITY: [0b1010, "Memory Copy with opacity"]
+            MPU_WRITE_WITH_OPACITY: [0b1011, "MPU Write with opacity"]
+            SOLID_FILL: [0b1100, "Solid Fill"]
+            RESERVED13: [0b1101, "Reserved"]
+            MEMORY_COPY_WITH_COLOR_EXPANSION: [0b1110, "Memory Copy with Color Expansion"]
+            MEMORY_COPY_WITH_COLOR_EXPANSION_CHROMA: [0b1111, "Memory Copy with Color Expansion and chroma keying"]
+    BTE_COLR:
+        S0_COLOR_DEPTH:
+            DEPTH_8BPP: [0b00, "256 Color"]
+            DEPTH_16BPP: [0b01, "64k Color"]
+            DEPTH_24BPP: [0b10, "16M Color"]
+            #TODO:        0b1x  ^^^^^^
+        S1_COLOR_DEPTH:
+            DEPTH_8BPP: [0b000, "256 Color"]
+            DEPTH_16BPP: [0b001, "64k Color"]
+            DEPTH_24BPP: [0b010, "16M Color"]
+            CONSTANT_COLOR: [0b011, "Constant color (S1 address is interpreted as 24BPP RGB color)"]
+            ALPHA_BLEND_8BPP: [0b100, "8 bit pixel alpha blending"]
+            ALPHA_BLEND_16BPP: [0b101, "16 bit pixel alpha blending"]
+            RESERVED6: [0b110, "Reserved"]
+            RESERVED7: [0b111, "Reserved"]
+        DESTINATION_COLOR_DEPTH:
+            DEPTH_8BPP: [0b00, "256 Color"]
+            DEPTH_16BPP: [0b01, "64k Color"]
+            DEPTH_24BPP: [0b10, "16M Color"]
+            #TODO:        0b1x  ^^^^^^
+    SFL_CTRL:
+        SERIAL_FLASH_ROM_ACCESS_MODE:
+            FONT: [0b0, "Font mode (for external CGROM)"]
+            DMA: [0b1, "DMA mode (for CGRAM, pattern, boot start image or OSD)"]
+        SERIAL_FLASH_ROM_ADDRESS_MODE:
+            ADDRESS_24BIT: [0b0, "24 bits address mode"]
+            ADDRESS_32BIT: [0b1, "32 bits address mode"]
