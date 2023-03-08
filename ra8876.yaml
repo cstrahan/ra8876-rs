@@ -3174,12 +3174,506 @@ _add:
                         bitOffset: 0
                         bitWidth: 1
                         access: read-only
+            GPIOAD:
+                description: GPIO-A direction
+                addressOffset: 0xF0
+                access: read-write
+                resetValue: 0
+                fields:
+                    P7:
+                        description: Direction for GPIO-A[7]
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    P6:
+                        description: Direction for GPIO-A[6]
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    P5:
+                        description: Direction for GPIO-A[5]
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-write
+                    P4:
+                        description: Direction for GPIO-A[4]
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-write
+                    P3:
+                        description: Direction for GPIO-A[3]
+                        bitOffset: 3
+                        bitWidth: 1
+                        access: read-write
+                    P2:
+                        description: Direction for GPIO-A[2]
+                        bitOffset: 2
+                        bitWidth: 1
+                        access: read-write
+                    P1:
+                        description: Direction for GPIO-A[1]
+                        bitOffset: 1
+                        bitWidth: 1
+                        access: read-write
+                    P0:
+                        description: Direction for GPIO-A[0]
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
+            GPIOA:
+                description: GPIO-A
+                addressOffset: 0xF1
+                access: read-write
+                resetValue: 0
+                fields:
+                    P7:
+                        description: GPIO-A[7]
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    P6:
+                        description: GPIO-A[6]
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    P5:
+                        description: GPIO-A[5]
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-write
+                    P4:
+                        description: GPIO-A[4]
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-write
+                    P3:
+                        description: GPIO-A[3]
+                        bitOffset: 3
+                        bitWidth: 1
+                        access: read-write
+                    P2:
+                        description: GPIO-A[2]
+                        bitOffset: 2
+                        bitWidth: 1
+                        access: read-write
+                    P1:
+                        description: GPIO-A[1]
+                        bitOffset: 1
+                        bitWidth: 1
+                        access: read-write
+                    P0:
+                        description: GPIO-A[0]
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
+            GPIOB:
+                description: GPIO-B
+                addressOffset: 0xF2
+                access: read-write
+                resetValue: 0
+                fields:
+                    P4:
+                        description: "GPIO-B[4] (write: KOUT, read: KIN)"
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-write
+                    P3:
+                        description: "GPIO-B[3] (A0)"
+                        bitOffset: 3
+                        bitWidth: 1
+                        access: read-only
+                    P2:
+                        description: "GPIO-B[2] (WR)"
+                        bitOffset: 2
+                        bitWidth: 1
+                        access: read-only
+                    P1:
+                        description: "GPIO-B[1] (RD)"
+                        bitOffset: 1
+                        bitWidth: 1
+                        access: read-only
+                    P0:
+                        description: "GPIO-B[0] (CS)"
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-only
+            GPIOCD:
+                description: GPIO-C direction
+                addressOffset: 0xF3
+                access: read-write
+                resetValue: 0
+                fields:
+                    P7:
+                        description: Direction for GPIO-C[7]
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    P6:
+                        description: Direction for GPIO-C[6]
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    P5:
+                        description: Direction for GPIO-C[5]
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-write
+                    P4:
+                        description: Direction for GPIO-C[4]
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-write
+                    P3:
+                        description: Direction for GPIO-C[3]
+                        bitOffset: 3
+                        bitWidth: 1
+                        access: read-write
+                    P2:
+                        description: Direction for GPIO-C[2]
+                        bitOffset: 2
+                        bitWidth: 1
+                        access: read-write
+                    P1:
+                        description: Direction for GPIO-C[1]
+                        bitOffset: 1
+                        bitWidth: 1
+                        access: read-write
+                    P0:
+                        description: Direction for GPIO-C[0]
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
+            GPIOC:
+                description: GPIO-C
+                addressOffset: 0xF4
+                access: read-write
+                resetValue: 0
+                fields:
+                    P7:
+                        description: GPIO-C[7]
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    P6:
+                        description: GPIO-C[6]
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    P5:
+                        description: GPIO-C[5]
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-write
+                    P4:
+                        description: GPIO-C[4]
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-write
+                    P3:
+                        description: GPIO-C[3]
+                        bitOffset: 3
+                        bitWidth: 1
+                        access: read-write
+                    P2:
+                        description: GPIO-C[2]
+                        bitOffset: 2
+                        bitWidth: 1
+                        access: read-write
+                    P1:
+                        description: GPIO-C[1]
+                        bitOffset: 1
+                        bitWidth: 1
+                        access: read-write
+                    P0:
+                        description: GPIO-C[0]
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
+            GPIODD:
+                description: GPIO-D direction
+                addressOffset: 0xF5
+                access: read-write
+                resetValue: 0
+                fields:
+                    P7:
+                        description: Direction for GPIO-D[7]
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    P6:
+                        description: Direction for GPIO-D[6]
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    P5:
+                        description: Direction for GPIO-D[5]
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-write
+                    P4:
+                        description: Direction for GPIO-D[4]
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-write
+                    P3:
+                        description: Direction for GPIO-D[3]
+                        bitOffset: 3
+                        bitWidth: 1
+                        access: read-write
+                    P2:
+                        description: Direction for GPIO-D[2]
+                        bitOffset: 2
+                        bitWidth: 1
+                        access: read-write
+                    P1:
+                        description: Direction for GPIO-D[1]
+                        bitOffset: 1
+                        bitWidth: 1
+                        access: read-write
+                    P0:
+                        description: Direction for GPIO-D[0]
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
+            GPIOD:
+                description: GPIO-D
+                addressOffset: 0xF6
+                access: read-write
+                resetValue: 0
+                fields:
+                    P7:
+                        description: GPIO-D[7]
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    P6:
+                        description: GPIO-D[6]
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    P5:
+                        description: GPIO-D[5]
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-write
+                    P4:
+                        description: GPIO-D[4]
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-write
+                    P3:
+                        description: GPIO-D[3]
+                        bitOffset: 3
+                        bitWidth: 1
+                        access: read-write
+                    P2:
+                        description: GPIO-D[2]
+                        bitOffset: 2
+                        bitWidth: 1
+                        access: read-write
+                    P1:
+                        description: GPIO-D[1]
+                        bitOffset: 1
+                        bitWidth: 1
+                        access: read-write
+                    P0:
+                        description: GPIO-D[0]
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
+            GPIOED:
+                description: GPIO-E direction
+                addressOffset: 0xF7
+                access: read-write
+                resetValue: 0
+                fields:
+                    P7:
+                        description: Direction for GPIO-E[7]
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    P6:
+                        description: Direction for GPIO-E[6]
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    P5:
+                        description: Direction for GPIO-E[5]
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-write
+                    P4:
+                        description: Direction for GPIO-E[4]
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-write
+                    P3:
+                        description: Direction for GPIO-E[3]
+                        bitOffset: 3
+                        bitWidth: 1
+                        access: read-write
+                    P2:
+                        description: Direction for GPIO-E[2]
+                        bitOffset: 2
+                        bitWidth: 1
+                        access: read-write
+                    P1:
+                        description: Direction for GPIO-E[1]
+                        bitOffset: 1
+                        bitWidth: 1
+                        access: read-write
+                    P0:
+                        description: Direction for GPIO-E[0]
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
+            GPIOE:
+                description: GPIO-E
+                addressOffset: 0xF8
+                access: read-write
+                resetValue: 0
+                fields:
+                    P7:
+                        description: GPIO-E[7]
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    P6:
+                        description: GPIO-E[6]
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    P5:
+                        description: GPIO-E[5]
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-write
+                    P4:
+                        description: GPIO-E[4]
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-write
+                    P3:
+                        description: GPIO-E[3]
+                        bitOffset: 3
+                        bitWidth: 1
+                        access: read-write
+                    P2:
+                        description: GPIO-E[2]
+                        bitOffset: 2
+                        bitWidth: 1
+                        access: read-write
+                    P1:
+                        description: GPIO-E[1]
+                        bitOffset: 1
+                        bitWidth: 1
+                        access: read-write
+                    P0:
+                        description: GPIO-E[0]
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
+            GPIOFD:
+                description: GPIO-F direction
+                addressOffset: 0xF9
+                access: read-write
+                resetValue: 0
+                fields:
+                    P7:
+                        description: Direction for GPIO-F[7]
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    P6:
+                        description: Direction for GPIO-F[6]
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    P5:
+                        description: Direction for GPIO-F[5]
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-write
+                    P4:
+                        description: Direction for GPIO-F[4]
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-write
+                    P3:
+                        description: Direction for GPIO-F[3]
+                        bitOffset: 3
+                        bitWidth: 1
+                        access: read-write
+                    P2:
+                        description: Direction for GPIO-F[2]
+                        bitOffset: 2
+                        bitWidth: 1
+                        access: read-write
+                    P1:
+                        description: Direction for GPIO-F[1]
+                        bitOffset: 1
+                        bitWidth: 1
+                        access: read-write
+                    P0:
+                        description: Direction for GPIO-F[0]
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
+            GPIOF:
+                description: GPIO-F
+                addressOffset: 0xFA
+                access: read-write
+                resetValue: 0
+                fields:
+                    P7:
+                        description: GPIO-F[7]
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    P6:
+                        description: GPIO-F[6]
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    P5:
+                        description: GPIO-F[5]
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-write
+                    P4:
+                        description: GPIO-F[4]
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-write
+                    P3:
+                        description: GPIO-F[3]
+                        bitOffset: 3
+                        bitWidth: 1
+                        access: read-write
+                    P2:
+                        description: GPIO-F[2]
+                        bitOffset: 2
+                        bitWidth: 1
+                        access: read-write
+                    P1:
+                        description: GPIO-F[1]
+                        bitOffset: 1
+                        bitWidth: 1
+                        access: read-write
+                    P0:
+                        description: GPIO-F[0]
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
 
 
-#GRAPHIC_READ_WRITE_VERTICAL_POSITION:
-#_SELECTION
-#_SELECT
-#_ENABLE
+
+
+# XA0 GPI-B3
+# WnWR  GPI-B2
+# XnRD GPI-B1
+# XnCS GPI-B0
+
 
 FAKE_PERIPHERAL:
     CCR:
@@ -3557,3 +4051,269 @@ FAKE_PERIPHERAL:
     #     ACKNOWLEDGE:
     #         ACK: [0b0, "Send ACK"]
     #         NACK: [0b1, "Send NACK"]
+    GPIOAD:
+        P7:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P6:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P5:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P4:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P3:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P2:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P1:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P0:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+    GPIOA:
+        P7:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P6:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P5:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P4:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P3:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P2:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P1:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P0:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+    GPIOB:
+        P4:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P3:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P2:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P1:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P0:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+    GPIOCD:
+        P7:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P6:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P5:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P4:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P3:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P2:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P1:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P0:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+    GPIOC:
+        P7:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P6:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P5:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P4:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P3:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P2:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P1:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P0:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+    GPIODD:
+        P7:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P6:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P5:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P4:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P3:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P2:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P1:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P0:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+    GPIOD:
+        P7:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P6:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P5:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P4:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P3:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P2:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P1:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P0:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+    GPIOED:
+        P7:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P6:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P5:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P4:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P3:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P2:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P1:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P0:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+    GPIOE:
+        P7:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P6:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P5:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P4:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P3:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P2:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P1:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P0:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+    GPIOFD:
+        P7:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P6:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P5:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P4:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P3:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P2:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P1:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+        P0:
+            OUTPUT: [0b0, "Output"]
+            INPUT: [0b1, "Input"]
+    GPIOF:
+        P7:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P6:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P5:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P4:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P3:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P2:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P1:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
+        P0:
+            LOW: [0b0, "Low"]
+            HIGH: [0b1, "High"]
