@@ -94,21 +94,21 @@ _add:
                         bitOffset: 4
                         bitWidth: 2
                         access: read-write
-                    NA1:
-                        description: NA
-                        bitOffset: 3
-                        bitWidth: 1
-                        access: read-only
+                    # NA1:
+                    #     description: NA
+                    #     bitOffset: 3
+                    #     bitWidth: 1
+                    #     access: read-only
                     HOST_WRITE_MEMORY_DIRECTION:
                         description: Host Write Memory Direction
                         bitOffset: 1
                         bitWidth: 2
                         access: read-write
-                    NA0:
-                        description: NA (must keep it as 0)
-                        bitOffset: 0
-                        bitWidth: 1
-                        access: read-only
+                    # NA0:
+                    #     description: NA (must keep it as 0)
+                    #     bitOffset: 0
+                    #     bitWidth: 1
+                    #     access: read-only
             ICR:
                 description: Input Control Register
                 addressOffset: 0x03
@@ -130,11 +130,11 @@ _add:
                         bitOffset: 4
                         bitWidth: 2
                         access: read-write
-                    NA0:
-                        description: NA
-                        bitOffset: 3
-                        bitWidth: 1
-                        access: read-write
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 3
+                    #     bitWidth: 1
+                    #     access: read-write
                     TEXT_MODE_ENABLE:
                         description: Text Mode enable
                         bitOffset: 2
@@ -160,11 +160,11 @@ _add:
                         bitOffset: 7
                         bitWidth: 1
                         access: read-write
-                    NA0:
-                        description: NA
-                        bitOffset: 6
-                        bitWidth: 1
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 6
+                    #     bitWidth: 1
+                    #     access: read-only
                     SCLK_EXTRA_DIVIDER:
                         description: SCLK extra divider
                         bitOffset: 3
@@ -186,11 +186,11 @@ _add:
                 access: read-write
                 resetValue: 0x17
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 6
-                        bitWidth: 2
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 6
+                    #     bitWidth: 2
+                    #     access: read-only
                     SCLK_PLLDIVN:
                         description: SCLK PLL Output divider
                         bitOffset: 0
@@ -202,11 +202,11 @@ _add:
                 access: read-write
                 resetValue: 0b00000010
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 3
-                        bitWidth: 5
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 3
+                    #     bitWidth: 5
+                    #     access: read-only
                     MCLK_PLLDIVK:
                         description: PCLK PLL Output divider
                         bitOffset: 1
@@ -223,11 +223,11 @@ _add:
                 access: read-write
                 resetValue: 0x1D
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 6
-                        bitWidth: 2
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 6
+                    #     bitWidth: 2
+                    #     access: read-only
                     MCLK_PLLDIVN:
                         description: MCLK PLL input parameter
                         bitOffset: 0
@@ -239,11 +239,11 @@ _add:
                 access: read-write
                 resetValue: 0b00000100
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 3
-                        bitWidth: 5
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 3
+                    #     bitWidth: 5
+                    #     access: read-only
                     CCLK_PLLDIVK:
                         description: CCLK PLL Output divider
                         bitOffset: 1
@@ -260,11 +260,11 @@ _add:
                 access: read-write
                 resetValue: 0x2A
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 6
-                        bitWidth: 2
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 6
+                    #     bitWidth: 2
+                    #     access: read-only
                     CCLK_PLLDIVN:
                         description: CCLK PLL input parameter
                         bitOffset: 0
@@ -414,11 +414,11 @@ _add:
                 access: read-write
                 resetValue: 0x00
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 6
-                        bitWidth: 2
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 6
+                    #     bitWidth: 2
+                    #     access: read-only
                     GPIO_F_PULL_HIGH_ENABLE:
                         description: GPIO-F[7:0] Pull-high Enable (XPDAT[23:19, 15:13])
                         bitOffset: 5
@@ -511,11 +511,11 @@ _add:
                         bitOffset: 6
                         bitWidth: 1
                         access: read-write
-                    NA1:
-                        description: NA
-                        bitOffset: 5
-                        bitWidth: 1
-                        access: read-only
+                    # NA1:
+                    #     description: NA
+                    #     bitOffset: 5
+                    #     bitWidth: 1
+                    #     access: read-only
                     PIP_CONFIGURE_SELECTION:
                         description: Select Configure PIP 1 or 2 Window's parameters
                         bitOffset: 4
@@ -526,11 +526,11 @@ _add:
                         bitOffset: 2
                         bitWidth: 2
                         access: read-write
-                    NA0:
-                        description: NA
-                        bitOffset: 1
-                        bitWidth: 1
-                        access: read-write
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 1
+                    #     bitWidth: 1
+                    #     access: read-write
                     PANEL_SYNC_SIGNAL_MODE:
                         description: To Control panel's synchronous signals
                         bitOffset: 0
@@ -542,11 +542,11 @@ _add:
                 access: read-write
                 resetValue: 0b00000011
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 4
-                        bitWidth: 4
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 4
+                    #     bitWidth: 4
+                    #     access: read-only
                     PIP1_WINDOW_COLOR_DEPTH_SETTING:
                         description: PIP 1 window Enable/Disable
                         bitOffset: 2
@@ -578,11 +578,11 @@ _add:
                         bitOffset: 5
                         bitWidth: 1
                         access: read-write
-                    NA0:
-                        description: This bit must be set 0
-                        bitOffset: 4
-                        bitWidth: 1
-                        access: read-only
+                    # NA0:
+                    #     description: This bit must be set 0
+                    #     bitOffset: 4
+                    #     bitWidth: 1
+                    #     access: read-only
                     VDIR:
                         description: Vertical Scan direction
                         bitOffset: 3
@@ -656,11 +656,11 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 4
-                        bitWidth: 4
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 4
+                    #     bitWidth: 4
+                    #     access: read-only
                     HORIZONTAL_DISPLAY_WIDTH_FINE_TUNING:
                         description: Horizontal Display Width (pixels) = (HDWR + 1) * 8 + HDWFTR
                         bitOffset: 0
@@ -672,11 +672,11 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 5
-                        bitWidth: 3
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 5
+                    #     bitWidth: 3
+                    #     access: read-only
                     HORIZONTAL_NON_DISPLAY_PERIOD:
                         description: Horizontal non-display period or Back porch (pixels) = (HNDR + 1) * 8 + HNDFTR
                         bitOffset: 0
@@ -688,11 +688,11 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 4
-                        bitWidth: 4
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 4
+                    #     bitWidth: 4
+                    #     access: read-only
                     HORIZONTAL_NON_DISPLAY_PERIOD_FINE_TUNING:
                         description: Horizontal non-display period or Back porch (pixels) = (HNDR + 1) * 8 + HNDFTR
                         bitOffset: 0
@@ -704,11 +704,11 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 5
-                        bitWidth: 3
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 5
+                    #     bitWidth: 3
+                    #     access: read-only
                     HSYNC_START_POSITION:
                         description: The starting position from the end of display area to the beginning of HSYNC. HSYNC Start Position or Front porch (pixels) = (HSTR + 1) * 8
                         bitOffset: 0
@@ -720,11 +720,11 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 5
-                        bitWidth: 3
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 5
+                    #     bitWidth: 3
+                    #     access: read-only
                     HSYNC_PULSE_WIDTH:
                         description: HSYNC Pulse Width (pixels) = (HPW + 1) * 8
                         bitOffset: 0
@@ -747,11 +747,11 @@ _add:
                 access: read-write
                 resetValue: 0x4F
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 3
-                        bitWidth: 7
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 3
+                    #     bitWidth: 7
+                    #     access: read-only
                     VERTICAL_DISPLAY_HEIGHT:
                         description: VDHR[10:8] | Vertical Display Height (Line) = VDHR + 1
                         bitOffset: 0
@@ -774,11 +774,11 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 2
-                        bitWidth: 7
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 2
+                    #     bitWidth: 7
+                    #     access: read-only
                     VERTICAL_DISPLAY_HEIGHT:
                         description: VNDR[9:8] | Vertical Non-Display Period (Line) = VNDR + 1
                         bitOffset: 0
@@ -801,11 +801,11 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 6
-                        bitWidth: 2
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 6
+                    #     bitWidth: 2
+                    #     access: read-only
                     VSYNC_PULSE_WIDTH:
                         description: VSYNC Pulse Width (pixels) = (HPW + 1) * 8
                         bitOffset: 0
@@ -872,11 +872,11 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 5
-                        bitWidth: 3
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 5
+                    #     bitWidth: 3
+                    #     access: read-only
                     MAIN_IMAGE_WIDTH:
                         description: MIW[12:8] | Main Image Width
                         bitOffset: 0
@@ -899,11 +899,11 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 5
-                        bitWidth: 3
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 5
+                    #     bitWidth: 3
+                    #     access: read-only
                     MAIN_WINDOW_UPPER_LEFT_X:
                         description: MWULX[12:8] | Main Window Upper-Left corner X-coordinates
                         bitOffset: 0
@@ -926,11 +926,11 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 5
-                        bitWidth: 3
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 5
+                    #     bitWidth: 3
+                    #     access: read-only
                     MAIN_WINDOW_UPPER_LEFT_Y:
                         description: MWULY[12:8] | Main Window Upper-Left corner Y-coordinates
                         bitOffset: 0
@@ -953,11 +953,11 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 5
-                        bitWidth: 3
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 5
+                    #     bitWidth: 3
+                    #     access: read-only
                     PIP_WINDOW_DISPLAY_UPPER_LEFT_X:
                         description: PWDULX[12:8] | PIP Window Display Upper-Left corner X-coordinates
                         bitOffset: 0
@@ -980,11 +980,11 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 5
-                        bitWidth: 3
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 5
+                    #     bitWidth: 3
+                    #     access: read-only
                     PIP_WINDOW_DISPLAY_UPPER_LEFT_Y:
                         description: PWDULY[12:8] | PIP Window Display Upper-Left corner Y-coordinates
                         bitOffset: 0
@@ -1051,11 +1051,11 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 5
-                        bitWidth: 3
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 5
+                    #     bitWidth: 3
+                    #     access: read-only
                     PIP_IMAGE_WIDTH:
                         description: PIW[12:8] | PIP Image Width
                         bitOffset: 0
@@ -1078,11 +1078,11 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 5
-                        bitWidth: 3
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 5
+                    #     bitWidth: 3
+                    #     access: read-only
                     PIP_WINDOW_IMAGE_UPPER_LEFT_X:
                         description: PWIULX[12:8] | PIP Window Image Upper-Left corner X-coordinates
                         bitOffset: 0
@@ -1105,11 +1105,11 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 5
-                        bitWidth: 3
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 5
+                    #     bitWidth: 3
+                    #     access: read-only
                     PIP_WINDOW_IMAGE_UPPER_LEFT_Y:
                         description: PWIULY[12:8] | PIP Window Image Upper-Left corner Y-coordinates
                         bitOffset: 0
@@ -1132,11 +1132,11 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 3
-                        bitWidth: 5
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 3
+                    #     bitWidth: 5
+                    #     access: read-only
                     PIP_WINDOW_WIDTH:
                         description: PWW[10:8] | PIP Image Width
                         bitOffset: 0
@@ -1159,11 +1159,11 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 3
-                        bitWidth: 5
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 3
+                    #     bitWidth: 5
+                    #     access: read-only
                     PIP_WINDOW_HEIGHT:
                         description: PWH[10:8] | PIP Image Width
                         bitOffset: 0
@@ -1223,11 +1223,11 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 5
-                        bitWidth: 3
-                        access: read-write
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 5
+                    #     bitWidth: 3
+                    #     access: read-write
                     TEXT_CURSOR_HORIZONTAL_SIZE:
                         description: Text Cursor Horizontal Size Setting
                         bitOffset: 0
@@ -1239,11 +1239,11 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 5
-                        bitWidth: 3
-                        access: read-write
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 5
+                    #     bitWidth: 3
+                    #     access: read-write
                     TEXT_CURSOR_VERTICAL_SIZE:
                         description: Text Cursor Vertical Size Setting
                         bitOffset: 0
@@ -1266,11 +1266,11 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 5
-                        bitWidth: 3
-                        access: read-write
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 5
+                    #     bitWidth: 3
+                    #     access: read-write
                     GRAPHIC_CURSOR_HORIZONTAL_LOCATION:
                         description: GCHP[12:8] | Graphic Cursor Horizontal Location
                         bitOffset: 0
@@ -1293,11 +1293,11 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 5
-                        bitWidth: 3
-                        access: read-write
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 5
+                    #     bitWidth: 3
+                    #     access: read-write
                     GRAPHIC_CURSOR_VERTICAL_LOCATION:
                         description: GCVP[12:8] | Graphic Cursor Vertical Location
                         bitOffset: 0
@@ -1398,11 +1398,11 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 5
-                        bitWidth: 3
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 5
+                    #     bitWidth: 3
+                    #     access: read-only
                     CANVAS_IMAGE_WIDTH:
                         description: CVS_IMWTH[12:8] | Canvas image width
                         bitOffset: 0
@@ -1425,11 +1425,11 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 5
-                        bitWidth: 3
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 5
+                    #     bitWidth: 3
+                    #     access: read-only
                     ACTIVE_WINDOW_X:
                         description: AWUL_X[12:8] | Active Window Upper-Left corner X-coordinates
                         bitOffset: 0
@@ -1452,11 +1452,11 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 5
-                        bitWidth: 3
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 5
+                    #     bitWidth: 3
+                    #     access: read-only
                     ACTIVE_WINDOW_Y:
                         description: AWUL_Y[12:8] | Active Window Upper-Left corner Y-coordinates
                         bitOffset: 0
@@ -1479,11 +1479,11 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 5
-                        bitWidth: 3
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 5
+                    #     bitWidth: 3
+                    #     access: read-only
                     ACTIVE_WINDOW_WIDTH:
                         description: AW_WTH[12:8] | Active Window Width
                         bitOffset: 0
@@ -1506,11 +1506,11 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    NA0:
-                        description: NA
-                        bitOffset: 5
-                        bitWidth: 3
-                        access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 5
+                    #     bitWidth: 3
+                    #     access: read-only
                     ACTIVE_WINDOW_HEIGHT:
                         description: AW_HT[12:8] | Active Window Height
                         bitOffset: 0
@@ -4135,7 +4135,7 @@ FAKE_PERIPHERAL:
             BLUE: [0b00, "Gamma table for Blue"]
             GREEN: [0b01, "Gamma table for Green"]
             RED: [0b10, "Gamma table for Red"]
-            NA: [0b11, "NA"]
+            NA4: [0b11, "NA"]
     AW_COLOR:
         CANVAS_IMAGE_BLOCK_MODE_COLOR_DEPTH:
             _write_constraint: "enum"

@@ -292,13 +292,6 @@
               </enumeratedValues>
             </field>
             <field>
-              <name>NA1</name>
-              <description>NA</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
               <name>HOST_WRITE_MEMORY_DIRECTION</name>
               <description>Host Write Memory Direction</description>
               <bitOffset>1</bitOffset>
@@ -328,13 +321,6 @@
                   <value>3</value>
                 </enumeratedValue>
               </enumeratedValues>
-            </field>
-            <field>
-              <name>NA0</name>
-              <description>NA (must keep it as 0)</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
             </field>
           </fields>
         </register>
@@ -419,13 +405,6 @@
               </enumeratedValues>
             </field>
             <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
               <name>TEXT_MODE_ENABLE</name>
               <description>Text Mode enable</description>
               <bitOffset>2</bitOffset>
@@ -500,13 +479,6 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
               <name>SCLK_EXTRA_DIVIDER</name>
               <description>SCLK extra divider</description>
               <bitOffset>3</bitOffset>
@@ -537,13 +509,6 @@
           <resetValue>23</resetValue>
           <fields>
             <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
               <name>SCLK_PLLDIVN</name>
               <description>SCLK PLL Output divider</description>
               <bitOffset>0</bitOffset>
@@ -565,13 +530,6 @@
           <access>read-write</access>
           <resetValue>2</resetValue>
           <fields>
-            <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>5</bitWidth>
-              <access>read-only</access>
-            </field>
             <field>
               <name>MCLK_PLLDIVK</name>
               <description>PCLK PLL Output divider</description>
@@ -596,13 +554,6 @@
           <resetValue>29</resetValue>
           <fields>
             <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
               <name>MCLK_PLLDIVN</name>
               <description>MCLK PLL input parameter</description>
               <bitOffset>0</bitOffset>
@@ -624,13 +575,6 @@
           <access>read-write</access>
           <resetValue>4</resetValue>
           <fields>
-            <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>5</bitWidth>
-              <access>read-only</access>
-            </field>
             <field>
               <name>CCLK_PLLDIVK</name>
               <description>CCLK PLL Output divider</description>
@@ -654,13 +598,6 @@
           <access>read-write</access>
           <resetValue>42</resetValue>
           <fields>
-            <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-only</access>
-            </field>
             <field>
               <name>CCLK_PLLDIVN</name>
               <description>CCLK PLL input parameter</description>
@@ -878,13 +815,6 @@
           <access>read-write</access>
           <resetValue>0</resetValue>
           <fields>
-            <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-only</access>
-            </field>
             <field>
               <name>GPIO_F_PULL_HIGH_ENABLE</name>
               <description>GPIO-F[7:0] Pull-high Enable (XPDAT[23:19, 15:13])</description>
@@ -1128,13 +1058,6 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>NA1</name>
-              <description>NA</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
               <name>PIP_CONFIGURE_SELECTION</name>
               <description>Select Configure PIP 1 or 2 Window's parameters</description>
               <bitOffset>4</bitOffset>
@@ -1182,13 +1105,6 @@
               </enumeratedValues>
             </field>
             <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
               <name>PANEL_SYNC_SIGNAL_MODE</name>
               <description>To Control panel's synchronous signals</description>
               <bitOffset>0</bitOffset>
@@ -1218,13 +1134,6 @@
           <access>read-write</access>
           <resetValue>3</resetValue>
           <fields>
-            <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>4</bitWidth>
-              <access>read-only</access>
-            </field>
             <field>
               <name>PIP1_WINDOW_COLOR_DEPTH_SETTING</name>
               <description>PIP 1 window Enable/Disable</description>
@@ -1320,13 +1229,6 @@
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
-            </field>
-            <field>
-              <name>NA0</name>
-              <description>This bit must be set 0</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
             </field>
             <field>
               <name>VDIR</name>
@@ -1603,13 +1505,6 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>4</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
               <name>HORIZONTAL_DISPLAY_WIDTH_FINE_TUNING</name>
               <description>Horizontal Display Width (pixels) = (HDWR + 1) * 8 + HDWFTR</description>
               <bitOffset>0</bitOffset>
@@ -1625,13 +1520,6 @@
           <access>read-write</access>
           <resetValue>0</resetValue>
           <fields>
-            <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
             <field>
               <name>HORIZONTAL_NON_DISPLAY_PERIOD</name>
               <description>Horizontal non-display period or Back porch (pixels) = (HNDR + 1) * 8 + HNDFTR</description>
@@ -1649,13 +1537,6 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>4</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
               <name>HORIZONTAL_NON_DISPLAY_PERIOD_FINE_TUNING</name>
               <description>Horizontal non-display period or Back porch (pixels) = (HNDR + 1) * 8 + HNDFTR</description>
               <bitOffset>0</bitOffset>
@@ -1672,13 +1553,6 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
               <name>HSYNC_START_POSITION</name>
               <description>The starting position from the end of display area to the beginning of HSYNC. HSYNC Start Position or Front porch (pixels) = (HSTR + 1) * 8</description>
               <bitOffset>0</bitOffset>
@@ -1694,13 +1568,6 @@
           <access>read-write</access>
           <resetValue>0</resetValue>
           <fields>
-            <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
             <field>
               <name>HSYNC_PULSE_WIDTH</name>
               <description>HSYNC Pulse Width (pixels) = (HPW + 1) * 8</description>
@@ -1734,13 +1601,6 @@
           <resetValue>79</resetValue>
           <fields>
             <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>7</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
               <name>VERTICAL_DISPLAY_HEIGHT</name>
               <description>VDHR[10:8] | Vertical Display Height (Line) = VDHR + 1</description>
               <bitOffset>0</bitOffset>
@@ -1773,13 +1633,6 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>7</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
               <name>VERTICAL_DISPLAY_HEIGHT</name>
               <description>VNDR[9:8] | Vertical Non-Display Period (Line) = VNDR + 1</description>
               <bitOffset>0</bitOffset>
@@ -1811,13 +1664,6 @@
           <access>read-write</access>
           <resetValue>0</resetValue>
           <fields>
-            <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-only</access>
-            </field>
             <field>
               <name>VSYNC_PULSE_WIDTH</name>
               <description>VSYNC Pulse Width (pixels) = (HPW + 1) * 8</description>
@@ -1915,13 +1761,6 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
               <name>MAIN_IMAGE_WIDTH</name>
               <description>MIW[12:8] | Main Image Width</description>
               <bitOffset>0</bitOffset>
@@ -1953,13 +1792,6 @@
           <access>read-write</access>
           <resetValue>0</resetValue>
           <fields>
-            <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
             <field>
               <name>MAIN_WINDOW_UPPER_LEFT_X</name>
               <description>MWULX[12:8] | Main Window Upper-Left corner X-coordinates</description>
@@ -1993,13 +1825,6 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
               <name>MAIN_WINDOW_UPPER_LEFT_Y</name>
               <description>MWULY[12:8] | Main Window Upper-Left corner Y-coordinates</description>
               <bitOffset>0</bitOffset>
@@ -2032,13 +1857,6 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
               <name>PIP_WINDOW_DISPLAY_UPPER_LEFT_X</name>
               <description>PWDULX[12:8] | PIP Window Display Upper-Left corner X-coordinates</description>
               <bitOffset>0</bitOffset>
@@ -2070,13 +1888,6 @@
           <access>read-write</access>
           <resetValue>0</resetValue>
           <fields>
-            <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
             <field>
               <name>PIP_WINDOW_DISPLAY_UPPER_LEFT_Y</name>
               <description>PWDULY[12:8] | PIP Window Display Upper-Left corner Y-coordinates</description>
@@ -2174,13 +1985,6 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
               <name>PIP_IMAGE_WIDTH</name>
               <description>PIW[12:8] | PIP Image Width</description>
               <bitOffset>0</bitOffset>
@@ -2212,13 +2016,6 @@
           <access>read-write</access>
           <resetValue>0</resetValue>
           <fields>
-            <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
             <field>
               <name>PIP_WINDOW_IMAGE_UPPER_LEFT_X</name>
               <description>PWIULX[12:8] | PIP Window Image Upper-Left corner X-coordinates</description>
@@ -2252,13 +2049,6 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
               <name>PIP_WINDOW_IMAGE_UPPER_LEFT_Y</name>
               <description>PWIULY[12:8] | PIP Window Image Upper-Left corner Y-coordinates</description>
               <bitOffset>0</bitOffset>
@@ -2291,13 +2081,6 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>5</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
               <name>PIP_WINDOW_WIDTH</name>
               <description>PWW[10:8] | PIP Image Width</description>
               <bitOffset>0</bitOffset>
@@ -2329,13 +2112,6 @@
           <access>read-write</access>
           <resetValue>0</resetValue>
           <fields>
-            <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>5</bitWidth>
-              <access>read-only</access>
-            </field>
             <field>
               <name>PIP_WINDOW_HEIGHT</name>
               <description>PWH[10:8] | PIP Image Width</description>
@@ -2384,7 +2160,7 @@
                   <value>2</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>NA</name>
+                  <name>NA4</name>
                   <description>NA</description>
                   <value>3</value>
                 </enumeratedValue>
@@ -2444,13 +2220,6 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
               <name>TEXT_CURSOR_HORIZONTAL_SIZE</name>
               <description>Text Cursor Horizontal Size Setting</description>
               <bitOffset>0</bitOffset>
@@ -2466,13 +2235,6 @@
           <access>read-write</access>
           <resetValue>0</resetValue>
           <fields>
-            <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
             <field>
               <name>TEXT_CURSOR_VERTICAL_SIZE</name>
               <description>Text Cursor Vertical Size Setting</description>
@@ -2506,13 +2268,6 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
               <name>GRAPHIC_CURSOR_HORIZONTAL_LOCATION</name>
               <description>GCHP[12:8] | Graphic Cursor Horizontal Location</description>
               <bitOffset>0</bitOffset>
@@ -2544,13 +2299,6 @@
           <access>read-write</access>
           <resetValue>0</resetValue>
           <fields>
-            <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
             <field>
               <name>GRAPHIC_CURSOR_VERTICAL_LOCATION</name>
               <description>GCVP[12:8] | Graphic Cursor Vertical Location</description>
@@ -2680,13 +2428,6 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
               <name>CANVAS_IMAGE_WIDTH</name>
               <description>CVS_IMWTH[12:8] | Canvas image width</description>
               <bitOffset>0</bitOffset>
@@ -2718,13 +2459,6 @@
           <access>read-write</access>
           <resetValue>0</resetValue>
           <fields>
-            <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
             <field>
               <name>ACTIVE_WINDOW_X</name>
               <description>AWUL_X[12:8] | Active Window Upper-Left corner X-coordinates</description>
@@ -2758,13 +2492,6 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
               <name>ACTIVE_WINDOW_Y</name>
               <description>AWUL_Y[12:8] | Active Window Upper-Left corner Y-coordinates</description>
               <bitOffset>0</bitOffset>
@@ -2797,13 +2524,6 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
               <name>ACTIVE_WINDOW_WIDTH</name>
               <description>AW_WTH[12:8] | Active Window Width</description>
               <bitOffset>0</bitOffset>
@@ -2835,13 +2555,6 @@
           <access>read-write</access>
           <resetValue>0</resetValue>
           <fields>
-            <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
             <field>
               <name>ACTIVE_WINDOW_HEIGHT</name>
               <description>AW_HT[12:8] | Active Window Height</description>
