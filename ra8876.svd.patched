@@ -162,17 +162,17 @@
                 <name>TFT_PANEL_IF_OUTPUT_PIN_SETTING</name>
                 <usage>read-write</usage>
                 <enumeratedValue>
-                  <name>OUTPUT_24_BIT_ENABLED</name>
+                  <name>OUTPUT_24BIT</name>
                   <description>24-bits TFT output</description>
                   <value>0</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>OUTPUT_18_BIT_ENABLED</name>
+                  <name>OUTPUT_18BIT</name>
                   <description>18-bits TFT output</description>
                   <value>1</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>OUTPUT_16_BIT_ENABLED</name>
+                  <name>OUTPUT_16BIT</name>
                   <description>16-bits TFT output</description>
                   <value>2</value>
                 </enumeratedValue>
@@ -226,21 +226,21 @@
               </enumeratedValues>
             </field>
             <field>
-              <name>HOST_DATA_BUS_WIDTH_SELECTION</name>
+              <name>HOST_DATA_BUS_WIDTH</name>
               <description>Host Data Bus Width Selection</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
-                <name>HOST_DATA_BUS_WIDTH_SELECTION</name>
+                <name>HOST_DATA_BUS_WIDTH</name>
                 <usage>read-write</usage>
                 <enumeratedValue>
-                  <name>HOST_DATA_BUS_8_BIT_ENABLED</name>
+                  <name>WIDTH_8BIT</name>
                   <description>8-bit Host Data Bus</description>
                   <value>0</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>HOST_DATA_BUS_16_BIT_ENABLED</name>
+                  <name>WIDTH_16BIT</name>
                   <description>16-bit Host Data Bus</description>
                   <value>1</value>
                 </enumeratedValue>
@@ -7679,6 +7679,128 @@
                   <value>1</value>
                 </enumeratedValue>
               </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>KSCR1</name>
+          <description>Key-Scan Control Register 1</description>
+          <addressOffset>251</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>LONG_KEY_ENABLE</name>
+              <description>Long Key Enable Bit</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SHORT_KEY_DEBOUNCE_TIMES</name>
+              <description>Short Key de-bounce Times</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REPEATABLE_KEY_ENABLE</name>
+              <description>Repeatable Key enable</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ROW_SCAN_TIME</name>
+              <description>Row Scan Time</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>KSCR2</name>
+          <description>Key-Scan Control Register 2</description>
+          <addressOffset>252</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>KEY_SCAN_WAKEUP_FUNCTION_ENABLE</name>
+              <description>Key-Scan Wakeup Function Enable Bit</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>KEY_RELEASED_INTERRUPT_ENABLE</name>
+              <description>Key released interrupt enable</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>LONG_KEY_RECOGNITION_FACTOR</name>
+              <description>Long Key Recognition Factor</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>KEYS_PRESSED</name>
+              <description>Numbers of Key Hit</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>KSDR0</name>
+          <description>Key-Scan Data Register</description>
+          <addressOffset>253</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>KEY_STROBE_DATA</name>
+              <description>Key Strobe Data0</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>KSDR1</name>
+          <description>Key-Scan Data Register</description>
+          <addressOffset>254</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>KEY_STROBE_DATA</name>
+              <description>Key Strobe Data1</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>KSDR2</name>
+          <description>Key-Scan Data Register</description>
+          <addressOffset>255</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>KEY_STROBE_DATA</name>
+              <description>Key Strobe Data2</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
             </field>
           </fields>
         </register>

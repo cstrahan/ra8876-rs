@@ -73,7 +73,7 @@ _add:
                         bitOffset: 1
                         bitWidth: 1
                         access: read-write
-                    HOST_DATA_BUS_WIDTH_SELECTION:
+                    HOST_DATA_BUS_WIDTH:
                         description: Host Data Bus Width Selection
                         bitOffset: 0
                         bitWidth: 1
@@ -3665,15 +3665,95 @@ _add:
                         bitOffset: 0
                         bitWidth: 1
                         access: read-write
+            KSCR1:
+                description: Key-Scan Control Register 1
+                addressOffset: 0xFB
+                access: read-write
+                resetValue: 0
+                fields:
+                    LONG_KEY_ENABLE:
+                        description: Long Key Enable Bit
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    SHORT_KEY_DEBOUNCE_TIMES:
+                        description: Short Key de-bounce Times
+                        bitOffset: 4
+                        bitWidth: 2
+                        access: read-write
+                    REPEATABLE_KEY_ENABLE:
+                        description: Repeatable Key enable
+                        bitOffset: 3
+                        bitWidth: 2
+                        access: read-write
+                    ROW_SCAN_TIME:
+                        description: Row Scan Time
+                        bitOffset: 0
+                        bitWidth: 3
+                        access: read-write
+            KSCR2:
+                description: Key-Scan Control Register 2
+                addressOffset: 0xFC
+                access: read-write
+                resetValue: 0
+                fields:
+                    KEY_SCAN_WAKEUP_FUNCTION_ENABLE:
+                        description: Key-Scan Wakeup Function Enable Bit
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    KEY_RELEASED_INTERRUPT_ENABLE:
+                        description: Key released interrupt enable
+                        bitOffset: 6
+                        bitWidth: 2
+                        access: read-write
+                    LONG_KEY_RECOGNITION_FACTOR:
+                        description: Long Key Recognition Factor
+                        bitOffset: 2
+                        bitWidth: 3
+                        access: read-write
+                    KEYS_PRESSED:
+                        description: Numbers of Key Hit
+                        bitOffset: 0
+                        bitWidth: 2
+                        access: read-only
+            KSDR0:
+                description: Key-Scan Data Register
+                addressOffset: 0xFD
+                access: read-write
+                resetValue: 0
+                fields:
+                    KEY_STROBE_DATA:
+                        description: Key Strobe Data0
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-only
+            KSDR1:
+                description: Key-Scan Data Register
+                addressOffset: 0xFE
+                access: read-write
+                resetValue: 0
+                fields:
+                    KEY_STROBE_DATA:
+                        description: Key Strobe Data1
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-only
+            KSDR2:
+                description: Key-Scan Data Register
+                addressOffset: 0xFF
+                access: read-write
+                resetValue: 0
+                fields:
+                    KEY_STROBE_DATA:
+                        description: Key Strobe Data2
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-only
 
 
-
-
-# XA0 GPI-B3
-# WnWR  GPI-B2
-# XnRD GPI-B1
-# XnCS GPI-B0
-
+#########
+ 
 
 FAKE_PERIPHERAL:
     CCR:
@@ -3695,9 +3775,9 @@ FAKE_PERIPHERAL:
             ENABLED: [1, "Enabled"]
         TFT_PANEL_IF_OUTPUT_PIN_SETTING:
             _write_constraint: "enum"
-            OUTPUT_24_BIT_ENABLED: [0, "24-bits TFT output"]
-            OUTPUT_18_BIT_ENABLED: [1, "18-bits TFT output"]
-            OUTPUT_16_BIT_ENABLED: [2, "16-bits TFT output"]
+            OUTPUT_24BIT: [0, "24-bits TFT output"]
+            OUTPUT_18BIT: [1, "18-bits TFT output"]
+            OUTPUT_16BIT: [2, "16-bits TFT output"]
             OUTPUT_DISABLED: [3, "Without TFT output"]
         I2C_MASTER_INTERFACE_ENABLE:
             _write_constraint: "enum"
@@ -3707,10 +3787,10 @@ FAKE_PERIPHERAL:
             _write_constraint: "enum"
             DISABLED: [0, "Disabled"]
             ENABLED: [1, "Enabled"]
-        HOST_DATA_BUS_WIDTH_SELECTION:
+        HOST_DATA_BUS_WIDTH:
             _write_constraint: "enum"
-            HOST_DATA_BUS_8_BIT_ENABLED: [0, "8-bit Host Data Bus"]
-            HOST_DATA_BUS_16_BIT_ENABLED: [1, "16-bit Host Data Bus"]
+            WIDTH_8BIT: [0, "8-bit Host Data Bus"]
+            WIDTH_16BIT: [1, "16-bit Host Data Bus"]
     MACR:
         HOST_READ_WRITE_IMAGE_DATA_FORMAT:
             _write_constraint: "enum"
