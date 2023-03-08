@@ -32,27 +32,6 @@
           <resetValue>214</resetValue>
           <fields>
             <field>
-              <name>NA2</name>
-              <description>NA</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>NA1</name>
-              <description>NA</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>NA0</name>
-              <description>NA</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-            <field>
               <name>SOFTWARE_RESET</name>
               <description>Software Reset</description>
               <bitOffset>0</bitOffset>
@@ -3624,6 +3603,261 @@
             <field>
               <name>FOREGROUND_COLOR_BLUE_24BPP</name>
               <description>FGCB[7:0] | Foreground Color Blue Component (8 bits)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PSCLR</name>
+          <description>PWM Prescaler Register</description>
+          <addressOffset>132</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>PWM_PRESCALER</name>
+              <description>PWM Prescaler Register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PMUXR</name>
+          <description>PWM clock Mux Register</description>
+          <addressOffset>133</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>PWM_TIMER1_CLOCK_DIVIDER</name>
+              <description>Select 2 clock divider's MUX input for PWM Timer 1</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PWM_TIMER0_CLOCK_DIVIDER</name>
+              <description>Select 2 clock divider's MUX input for PWM Timer 0</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PWM1_PIN_FUNCTION</name>
+              <description>XPWM[1] pin function control</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PWM0_PIN_FUNCTION</name>
+              <description>XPWM[0] pin function control</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PCFGR</name>
+          <description>PWM Configuration Register</description>
+          <addressOffset>134</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>PWM_TIMER1_OUTPUT_INVERTER_ENABLE</name>
+              <description>PWM Timer 1 output inverter on/off</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PWM_TIMER1_AUTO_RELOAD_ENABLE</name>
+              <description>PWM Timer 1 auto reload on/off</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PWM_TIMER1_ENABLE</name>
+              <description>PWM Timer 1 start/stop</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PWM_TIMER0_DEAD_ZONE_ENABLE</name>
+              <description>PWM Timer 0 Dead zone enable</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PWM_TIMER0_OUTPUT_INVERTER_ENABLE</name>
+              <description>PWM Timer 0 output inverter on/off</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PWM_TIMER0_AUTO_RELOAD_ENABLE</name>
+              <description>PWM Timer 0 auto reload on/off</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PWM_TIMER0_ENABLE</name>
+              <description>PWM Timer 0 start/stop</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DZ_LENGTH</name>
+          <description>Timer 0 Dead zone length register</description>
+          <addressOffset>135</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>TIMER0_DEAD_ZONE_LENGTH</name>
+              <description>Timer 0 Dead zone length register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TCMPB0L</name>
+          <description>Timer 0 compare buffer register</description>
+          <addressOffset>136</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>TIMER0_COMPARE_BUFFER</name>
+              <description>Timer 0 compare buffer register --- Low Byte</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TCMPB0H</name>
+          <description>Timer 0 compare buffer register</description>
+          <addressOffset>137</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>TIMER0_COMPARE_BUFFER</name>
+              <description>Timer 0 compare buffer register --- High Byte</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TCNTB0L</name>
+          <description>Timer 0 count buffer register</description>
+          <addressOffset>138</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>TIMER0_COUNT_BUFFER</name>
+              <description>Timer 0 count buffer register --- Low Byte</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TCNTB0H</name>
+          <description>Timer 0 count buffer register</description>
+          <addressOffset>139</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>TIMER0_COUNT_BUFFER</name>
+              <description>Timer 0 count buffer register --- High Byte</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TCMPB1L</name>
+          <description>Timer 1 compare buffer register</description>
+          <addressOffset>140</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>TIMER1_COMPARE_BUFFER</name>
+              <description>Timer 1 compare buffer register --- Low Byte</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TCMPB1H</name>
+          <description>Timer 1 compare buffer register</description>
+          <addressOffset>141</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>TIMER1_COMPARE_BUFFER</name>
+              <description>Timer 1 compare buffer register --- High Byte</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TCNTB1L</name>
+          <description>Timer 1 count buffer register</description>
+          <addressOffset>142</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>TIMER1_COUNT_BUFFER</name>
+              <description>Timer 1 count buffer register --- Low Byte</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TCNTB1H</name>
+          <description>Timer 1 count buffer register</description>
+          <addressOffset>143</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>TIMER1_COUNT_BUFFER</name>
+              <description>Timer 1 count buffer register --- High Byte</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>

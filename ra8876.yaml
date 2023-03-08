@@ -12,21 +12,21 @@ _add:
                 access: read-write
                 resetValue: 0b11010110
                 fields:
-                    NA2:
-                        description: NA
-                        bitOffset: 5
-                        bitWidth: 3
-                        access: read-only
-                    NA1:
-                        description: NA
-                        bitOffset: 2
-                        bitWidth: 3
-                        access: read-only
-                    NA0:
-                        description: NA
-                        bitOffset: 1
-                        bitWidth: 1
-                        access: read-only
+                    # NA2:
+                    #     description: NA
+                    #     bitOffset: 5
+                    #     bitWidth: 3
+                    #     access: read-only
+                    # NA1:
+                    #     description: NA
+                    #     bitOffset: 2
+                    #     bitWidth: 3
+                    #     access: read-only
+                    # NA0:
+                    #     description: NA
+                    #     bitOffset: 1
+                    #     bitWidth: 1
+                    #     access: read-only
                     SOFTWARE_RESET:
                         description: Software Reset
                         bitOffset: 0
@@ -1975,7 +1975,183 @@ _add:
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
-            # TODO: 19.7 PWM Timer Control Registers
+            PSCLR:
+                description: PWM Prescaler Register
+                addressOffset: 0x84
+                access: read-write
+                resetValue: 0
+                fields:
+                    PWM_PRESCALER:
+                        description: PWM Prescaler Register
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            PMUXR:
+                description: PWM clock Mux Register
+                addressOffset: 0x85
+                access: read-write
+                resetValue: 0
+                fields:
+                    PWM_TIMER1_CLOCK_DIVIDER:
+                        description: Select 2 clock divider's MUX input for PWM Timer 1
+                        bitOffset: 6
+                        bitWidth: 2
+                        access: read-write
+                    PWM_TIMER0_CLOCK_DIVIDER:
+                        description: Select 2 clock divider's MUX input for PWM Timer 0
+                        bitOffset: 4
+                        bitWidth: 2
+                        access: read-write
+                    PWM1_PIN_FUNCTION:
+                        description: XPWM[1] pin function control
+                        bitOffset: 2
+                        bitWidth: 2
+                        access: read-write
+                    PWM0_PIN_FUNCTION:
+                        description: XPWM[0] pin function control
+                        bitOffset: 0
+                        bitWidth: 2
+                        access: read-write
+            PCFGR:
+                description: PWM Configuration Register
+                addressOffset: 0x86
+                access: read-write
+                resetValue: 0
+                fields:
+                    PWM_TIMER1_OUTPUT_INVERTER_ENABLE:
+                        description: PWM Timer 1 output inverter on/off
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    PWM_TIMER1_AUTO_RELOAD_ENABLE:
+                        description: PWM Timer 1 auto reload on/off
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-write
+                    PWM_TIMER1_ENABLE:
+                        description: PWM Timer 1 start/stop
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-write
+                    PWM_TIMER0_DEAD_ZONE_ENABLE:
+                        description: PWM Timer 0 Dead zone enable
+                        bitOffset: 3
+                        bitWidth: 1
+                        access: read-write
+                    PWM_TIMER0_OUTPUT_INVERTER_ENABLE:
+                        description: PWM Timer 0 output inverter on/off
+                        bitOffset: 2
+                        bitWidth: 1
+                        access: read-write
+                    PWM_TIMER0_AUTO_RELOAD_ENABLE:
+                        description: PWM Timer 0 auto reload on/off
+                        bitOffset: 1
+                        bitWidth: 1
+                        access: read-write
+                    PWM_TIMER0_ENABLE:
+                        description: PWM Timer 0 start/stop
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
+            DZ_LENGTH:
+                description: Timer 0 Dead zone length register
+                addressOffset: 0x87
+                access: read-write
+                resetValue: 0
+                fields:
+                    TIMER0_DEAD_ZONE_LENGTH:
+                        description: Timer 0 Dead zone length register
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            TCMPB0L:
+                description: Timer 0 compare buffer register
+                addressOffset: 0x88
+                access: read-write
+                resetValue: 0
+                fields:
+                    TIMER0_COMPARE_BUFFER:
+                        description: Timer 0 compare buffer register --- Low Byte
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            TCMPB0H:
+                description: Timer 0 compare buffer register
+                addressOffset: 0x89
+                access: read-write
+                resetValue: 0
+                fields:
+                    TIMER0_COMPARE_BUFFER:
+                        description: Timer 0 compare buffer register --- High Byte
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            TCNTB0L:
+                description: Timer 0 count buffer register
+                addressOffset: 0x8A
+                access: read-write
+                resetValue: 0
+                fields:
+                    TIMER0_COUNT_BUFFER:
+                        description: Timer 0 count buffer register --- Low Byte
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            TCNTB0H:
+                description: Timer 0 count buffer register
+                addressOffset: 0x8B
+                access: read-write
+                resetValue: 0
+                fields:
+                    TIMER0_COUNT_BUFFER:
+                        description: Timer 0 count buffer register --- High Byte
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            TCMPB1L:
+                description: Timer 1 compare buffer register
+                addressOffset: 0x8C
+                access: read-write
+                resetValue: 0
+                fields:
+                    TIMER1_COMPARE_BUFFER:
+                        description: Timer 1 compare buffer register --- Low Byte
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            TCMPB1H:
+                description: Timer 1 compare buffer register
+                addressOffset: 0x8D
+                access: read-write
+                resetValue: 0
+                fields:
+                    TIMER1_COMPARE_BUFFER:
+                        description: Timer 1 compare buffer register --- High Byte
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            TCNTB1L:
+                description: Timer 1 count buffer register
+                addressOffset: 0x8E
+                access: read-write
+                resetValue: 0
+                fields:
+                    TIMER1_COUNT_BUFFER:
+                        description: Timer 1 count buffer register --- Low Byte
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            TCNTB1H:
+                description: Timer 1 count buffer register
+                addressOffset: 0x8F
+                access: read-write
+                resetValue: 0
+                fields:
+                    TIMER1_COUNT_BUFFER:
+                        description: Timer 1 count buffer register --- High Byte
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
             BTE_CTRL0:
                 description: BTE Function Control Register 0
                 addressOffset: 0x90
