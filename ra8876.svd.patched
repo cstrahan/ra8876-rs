@@ -4542,11 +4542,1259 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>SPI_MASTER_FIFO</name>
+              <name>FIFO</name>
               <description>SPI master Tx/Rx FIFO Data</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SPIMCR2</name>
+          <description>SPI master Control Register</description>
+          <addressOffset>185</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>MASTER_INTERRUPT_ENABLE</name>
+              <description>SPI Master Interrupt enable</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLAVE_SELECT_PORT</name>
+              <description>Control Slave Select drive on which xnsfcs</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLAVE_SELECT_ACTIVE_ENABLE</name>
+              <description>Slave Select signal active</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FIFO_OVERFLOW_INTERRUPT_MASK_ENABLE</name>
+              <description>Mask interrupt for FIFO overflow error</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TX_FIFO_EMPTY_AND_SPI_ENGINE_IDLE_INTERRUPT_MASK_ENABLE</name>
+              <description>Mask interrupt for while Tx FIFO empty &amp; SPI engine/FSM idle</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MODE</name>
+              <description>SPI operation mode</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SPIMSR</name>
+          <description>SPI master Status Register</description>
+          <addressOffset>186</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>TX_FIFO_EMPTY_FLAG</name>
+              <description>Tx FIFO empty flag</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TX_FIFO_FULL_FLAG</name>
+              <description>Tx FIFO full flag</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RX_FIFO_EMPTY_FLAG</name>
+              <description>Rx FIFO empty flag</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RX_FIFO_FULL_FLAG</name>
+              <description>Rx FIFO full flag</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OVERFLOW_INTERRUPT_FLAG</name>
+              <description>Overflow interrupt flag</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TX_FIFO_EMPTY_AND_SPI_ENGINE_IDLE_INTERRUPT_FLAG</name>
+              <description>Tx FIFO empty &amp; SPI engine/FSM idle interrupt flag</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SPI_DIVSOR</name>
+          <description>SPI Clock period</description>
+          <addressOffset>187</addressOffset>
+          <access>read-write</access>
+          <resetValue>3</resetValue>
+          <fields>
+            <field>
+              <name>SPI_CLOCK_PERIOD</name>
+              <description>Set the SPI Clock period | Fsck = Fcore/((SPI_DIVSOR+1)*2)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DMA_SSTR0</name>
+          <description>Serial flash DMA Source Starting Address 0</description>
+          <addressOffset>188</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>SERIAL_FLASH_DMA_SOURCE_START_ADDRESS</name>
+              <description>Serial flash DMA Source START ADDRESS</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DMA_SSTR1</name>
+          <description>Serial flash DMA Source Starting Address 1</description>
+          <addressOffset>189</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>SERIAL_FLASH_DMA_SOURCE_START_ADDRESS</name>
+              <description>Serial flash DMA Source START ADDRESS</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DMA_SSTR2</name>
+          <description>Serial flash DMA Source Starting Address 2</description>
+          <addressOffset>190</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>SERIAL_FLASH_DMA_SOURCE_START_ADDRESS</name>
+              <description>Serial flash DMA Source START ADDRESS</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DMA_SSTR3</name>
+          <description>Serial flash DMA Source Starting Address 3</description>
+          <addressOffset>191</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>SERIAL_FLASH_DMA_SOURCE_START_ADDRESS</name>
+              <description>Serial flash DMA Source START ADDRESS</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DMA_DX0</name>
+          <description>DMA Destination Window Upper-Left corner X-coordinates 0</description>
+          <addressOffset>192</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DMA_DESTINATION_WINDOW_UPPER_LEFT_X</name>
+              <description>DMA Destination Window Upper-Left corner X-coordinates on Canvas area</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DMA_DESTINATION_ADDRESS</name>
+              <description>Destination address in SDRAM</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DMA_DX1</name>
+          <description>DMA Destination Window Upper-Left corner X-coordinates 1</description>
+          <addressOffset>193</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DMA_DESTINATION_WINDOW_UPPER_LEFT_X</name>
+              <description>DMA Destination Window Upper-Left corner X-coordinates on Canvas area</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DMA_DESTINATION_ADDRESS</name>
+              <description>Destination address in SDRAM</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DMA_DY0</name>
+          <description>DMA Destination Window Upper-Left corner Y-coordinates 0</description>
+          <addressOffset>194</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DMA_DESTINATION_WINDOW_UPPER_LEFT_Y</name>
+              <description>DMA Destination Window Upper-Left corner Y-coordinates on Canvas area</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DMA_DESTINATION_ADDRESS</name>
+              <description>Destination address in SDRAM</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DMA_DY1</name>
+          <description>DMA Destination Window Upper-Left corner Y-coordinates 1</description>
+          <addressOffset>195</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DMA_DESTINATION_WINDOW_UPPER_LEFT_Y</name>
+              <description>DMA Destination Window Upper-Left corner Y-coordinates on Canvas area</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DMA_DESTINATION_ADDRESS</name>
+              <description>Destination address in SDRAM</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DMAW_WTH0</name>
+          <description>DMA Block Width 0</description>
+          <addressOffset>198</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DMA_BLOCK_WIDTH</name>
+              <description>DMA Block Width</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DMA_TRANSFER_NUMBER</name>
+              <description>DMA Transfer Number</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DMAW_WTH1</name>
+          <description>DMA Block Width 1</description>
+          <addressOffset>199</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DMA_BLOCK_WIDTH</name>
+              <description>DMA Block Width</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DMA_TRANSFER_NUMBER</name>
+              <description>DMA Transfer Number</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DMAW_HIGH0</name>
+          <description>DMA Block Height 0</description>
+          <addressOffset>200</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DMA_BLOCK_HEIGHT</name>
+              <description>DMA Block Height</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DMA_TRANSFER_NUMBER</name>
+              <description>DMA Transfer Number</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DMAW_HIGH1</name>
+          <description>DMA Block Height 1</description>
+          <addressOffset>201</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DMA_BLOCK_HEIGHT</name>
+              <description>DMA Block Height</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DMA_TRANSFER_NUMBER</name>
+              <description>DMA Transfer Number</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DMA_SWTH0</name>
+          <description>DMA Source Picture Width 0</description>
+          <addressOffset>202</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DMA_SOURCE_PICTURE_WIDTH</name>
+              <description>DMA Source Picture Width</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DMA_SWTH1</name>
+          <description>DMA Source Picture Width 1</description>
+          <addressOffset>203</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DMA_SOURCE_PICTURE_WIDTH</name>
+              <description>DMA Source Picture Width</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CCR0</name>
+          <description>Character Control Register 0</description>
+          <addressOffset>204</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>CHARACTER_SOURCE</name>
+              <description>Character source selection</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>CHARACTER_SOURCE</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>INTERNAL</name>
+                  <description>Internal CGROM Character</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>EXTERNAL</name>
+                  <description>External CGROM Character (e.g. Genitop serial flash)</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>USER_DEFINED</name>
+                  <description>External CGROM Character (e.g. Genitop serial flash)</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>NA4</name>
+                  <description>NA</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>CHARACTER_HEIGHT</name>
+              <description>Character Height Setting</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>CHARACTER_HEIGHT</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>HEIGHT_16</name>
+                  <description>16 (ex. 8x16 / 16x16 / variable character width x 16)</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HEIGHT_24</name>
+                  <description>24 (ex. 12x24 / 24x24 / variable character width x 24)</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>HEIGHT_32</name>
+                  <description>32 (ex. 16x32 / 32x32 / variable character width x 32)</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>NA4</name>
+                  <description>NA</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>INTERNAL_CHARACTER_SET</name>
+              <description>Character Selection for internal CGROM</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>INTERNAL_CHARACTER_SET</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>ISO_8859_1</name>
+                  <description>ISO-8859-1</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ISO_8859_2</name>
+                  <description>ISO-8859-2</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ISO_8859_4</name>
+                  <description>ISO-8859-4</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ISO_8859_5</name>
+                  <description>ISO-8859-5</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CCR1</name>
+          <description>Character Control Register 1</description>
+          <addressOffset>205</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>FULL_ALIGNMENT_ENABLE</name>
+              <description>Full Alignment Selection Bit</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CHROMA_KEY_ENABLE</name>
+              <description>Chroma keying enable on Text input</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CHARACTER_ROTATION</name>
+              <description>Character Rotation</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>CHARACTER_ROTATION</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>NORMAL</name>
+                  <description>Text direction from left to right then from top to bottom</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TOP_BOTTOM_LEFT_RIGHT</name>
+                  <description>Top&#x2192;Bottom then Left&#x2192;Right (Rotate right 90&#xB0; and horizontal flip)</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>CHARACTER_WIDTH_SCALE</name>
+              <description>Character width enlargement factor</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>CHARACTER_WIDTH_SCALE</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>X1</name>
+                  <description>X1 scale</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>X2</name>
+                  <description>X2 scale</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>X3</name>
+                  <description>X3 scale</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>X4</name>
+                  <description>X4 scale</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>CHARACTER_HEIGHT_SCALE</name>
+              <description>Character height enlargement factor</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>CHARACTER_HEIGHT_SCALE</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>X1</name>
+                  <description>X1 scale</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>X2</name>
+                  <description>X2 scale</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>X3</name>
+                  <description>X3 scale</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>X4</name>
+                  <description>X4 scale</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GTFNT_SEL</name>
+          <description>GT Character ROM Select</description>
+          <addressOffset>206</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>GT_SERIAL_CHARACTER_ROM</name>
+              <description>GT Serial Character ROM Select</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>GT_SERIAL_CHARACTER_ROM</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>GT21L16T1W</name>
+                  <description>GT21L16T1W</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>GT30L16U2W</name>
+                  <description>GT30L16U2W</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>GT30L24T3Y</name>
+                  <description>GT30L24T3Y</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>GT30L24M1Z</name>
+                  <description>GT30L24M1Z</description>
+                  <value>3</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>GT30L32S4W</name>
+                  <description>GT30L32S4W</description>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>GT20L24F6Y</name>
+                  <description>GT20L24F6Y</description>
+                  <value>5</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>GT21L24S1W</name>
+                  <description>GT21L24S1W</description>
+                  <value>6</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>NA7</name>
+                  <description>NA</description>
+                  <value>7</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GTFNT_CR</name>
+          <description>GT Character ROM Control register</description>
+          <addressOffset>207</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>GT_CHARACTER_SET</name>
+              <description>Character set</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>GT_CHARACTER_WIDTH</name>
+              <description>GT Character width setting</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>FLDR</name>
+          <description>GT Character ROM Control register</description>
+          <addressOffset>208</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>CHARACTER_LINE_GAP</name>
+              <description>Character Line gap Setting</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>F2FSSR</name>
+          <description>Character to Character Space Setting Register</description>
+          <addressOffset>209</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>CHARACTER_TO_CHARACTER_SPACING</name>
+              <description>Character to Character Space Setting</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BGCR</name>
+          <description>Background Color Register - Red</description>
+          <addressOffset>210</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>BACKGROUND_COLOR_RED_8BPP</name>
+              <description>BGCR[7:5] | Background Color Red Component (3 bits)</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BACKGROUND_COLOR_RED_16BPP</name>
+              <description>BGCR[7:3] | Background Color Red Component (5 bits)</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BACKGROUND_COLOR_RED_24BPP</name>
+              <description>BGCR[7:0] | Background Color Red Component (8 bits)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BGCG</name>
+          <description>Background Color Register - Green</description>
+          <addressOffset>211</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>BACKGROUND_COLOR_GREEN_8BPP</name>
+              <description>BGCG[7:5] | Background Color Green Component (3 bits)</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BACKGROUND_COLOR_GREEN_16BPP</name>
+              <description>BGCG[7:2] | Background Color Green Component (6 bits)</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BACKGROUND_COLOR_GREEN_24BPP</name>
+              <description>BGCG[7:0] | Background Color Green Component (8 bits)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BGCB</name>
+          <description>Background Color Register - Blue</description>
+          <addressOffset>212</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>BACKGROUND_COLOR_BLUE_8BPP</name>
+              <description>BGCB[7:6] | Background Color Blue Component (2 bits)</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BACKGROUND_COLOR_BLUE_16BPP</name>
+              <description>BGCB[7:3] | Background Color Blue Component (5 bits)</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BACKGROUND_COLOR_BLUE_24BPP</name>
+              <description>BGCB[7:0] | Background Color Blue Component (8 bits)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CGRAM_STR0</name>
+          <description>CGRAM Start Address 0</description>
+          <addressOffset>219</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>CGRAM_START_ADDRESS</name>
+              <description>CGRAM START ADDRESS</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CGRAM_STR1</name>
+          <description>CGRAM Start Address 1</description>
+          <addressOffset>220</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>CGRAM_START_ADDRESS</name>
+              <description>CGRAM START ADDRESS</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CGRAM_STR2</name>
+          <description>CGRAM Start Address 2</description>
+          <addressOffset>221</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>CGRAM_START_ADDRESS</name>
+              <description>CGRAM START ADDRESS</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CGRAM_STR3</name>
+          <description>CGRAM Start Address 3</description>
+          <addressOffset>221</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>CGRAM_START_ADDRESS</name>
+              <description>CGRAM START ADDRESS</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PMU</name>
+          <description>Power Management register</description>
+          <addressOffset>223</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>POWER_SAVING_ENABLE</name>
+              <description>Enter Power saving state</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>POWER_SAVING_MODE</name>
+              <description>Power saving Mode</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>POWER_SAVING_MODE</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>NA</name>
+                  <description>NA</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>STANDBY</name>
+                  <description>CCLK &amp; PCLK will stop, MCLK keep MPLL clock</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>SUSPEND</name>
+                  <description>CCLK &amp; PCLK will stop, MCLK switch to OSC clock</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>SLEEP</name>
+                  <description>All clock &amp; PLL will stop</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SDRAR</name>
+          <description>SDRAM attribute register</description>
+          <addressOffset>224</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>SDRAM_POWER_SAVING_TYPE</name>
+              <description>SDRAM Power Saving type</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>SDRAM_POWER_SAVING_TYPE</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>POWER_DOWN</name>
+                  <description>Execute power down command to enter power saving mode</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>SELF_REFRESH</name>
+                  <description>Execute self refresh command to enter power saving mode</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>SDRAM_MEMORY_TYPE</name>
+              <description>SDRAM memory type</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>SDRAM_MEMORY_TYPE</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>SDR_SDRAM</name>
+                  <description>SDR SDRAM</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>MOBILE_SDR_SDRAM</name>
+                  <description>Mobile SDR SDRAM</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>SDRAM_BANK_NUMBER</name>
+              <description>SDRAM Bank number</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SDRAM_ROW_ADDRESSING</name>
+              <description>SDRAM Bank number</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SDRAM_COLUMN_ADDRESSING</name>
+              <description>SDRAM Bank number</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SDRMD</name>
+          <description>SDRAM mode register &amp; extended mode register</description>
+          <addressOffset>225</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>PARTIAL_ARRAY_SELF_REFRESH</name>
+              <description>Partial-Array Self Refresh</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DQ_DRIVE_STRENGTH</name>
+              <description>Partial-Array Self Refresh</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SDRAM_CAS_LATENCY</name>
+              <description>SDRAM CAS latency</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SDR_REF_ITVL0</name>
+          <description>SDRAM auto refresh interval 0</description>
+          <addressOffset>226</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>REFRESH_INTERVAL</name>
+              <description>Refresh interval</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SDR_REF_ITVL1</name>
+          <description>SDRAM auto refresh interval 1</description>
+          <addressOffset>227</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>REFRESH_INTERVAL</name>
+              <description>Refresh interval</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SDRCR</name>
+          <description>SDRAM Control register</description>
+          <addressOffset>228</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>LENGTH_TO_BREAK_BURST_TRANSFER</name>
+              <description>Refresh interval</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SDRAM_BUS_WIDTH</name>
+              <description>SDRAM bus width select</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <name>SDRAM_BUS_WIDTH</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>WIDTH_16BIT</name>
+                  <description>SDR SDRAM 16bits bus</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>WIDTH_32BIT</name>
+                  <description>SDR SDRAM 32bits bus</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>MCKE_PIN_STATE</name>
+              <description>Current MCKE pin state</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>REPORT_WARNING_CONDITION</name>
+              <description>Report warning condition</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SDRAM_TIMING_PARAMETER_REGISTER_ENABLE</name>
+              <description>SDRAM timing parameter register enable</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SDRAM_POWER_SAVING_ENABLE</name>
+              <description>SDRAM enter power saving mode</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SDRAM_INIT_ENABLE</name>
+              <description>Start SDRAM initialization procedure</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2CMTXR</name>
+          <description>I2C Master Transmit Register</description>
+          <addressOffset>231</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>I2C_MASTER_TX</name>
+              <description>I2C Master Transmit</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2CMRXR</name>
+          <description>I2C Master Receiver Register</description>
+          <addressOffset>232</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>I2C_MASTER_RX</name>
+              <description>I2C Master Receiver</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2CMCMDR</name>
+          <description>I2C Master Command Register</description>
+          <addressOffset>233</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>START</name>
+              <description>START - Generate (repeated) start condition and be cleared by hardware automatically</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>STOP</name>
+              <description>STOP - Generate stop condition and be cleared by hardware automatically</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>READ</name>
+              <description>READ - Read from slave and be cleared by hardware automatically</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WRITE</name>
+              <description>WRITE - Write to slave and be cleared by hardware automatically</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ACKNOWLEDGE</name>
+              <description>ACKNOWLEDGE</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>NOISE_FILTER_ENABLE</name>
+              <description>Noise Filter</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2CMSTUR</name>
+          <description>I2C Master Status Register</description>
+          <addressOffset>234</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>ACKNOWLEDGE</name>
+              <description>Received acknowledge from slave</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_BUS_BUSY</name>
+              <description>I2C Bus is Busy</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TRANSFER_IN_PROGRESS</name>
+              <description>Transfer in progress</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ARBITRATION_LOST</name>
+              <description>This bit is set when the core lost arbitration</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
             </field>
           </fields>
         </register>

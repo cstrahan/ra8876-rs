@@ -2462,14 +2462,724 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    SPI_MASTER_FIFO:
+                    FIFO:
                         description: SPI master Tx/Rx FIFO Data
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
+            SPIMCR2:
+                description: SPI master Control Register
+                addressOffset: 0xB9
+                access: read-write
+                resetValue: 0
+                fields:
+                    MASTER_INTERRUPT_ENABLE:
+                        description: SPI Master Interrupt enable
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    SLAVE_SELECT_PORT:
+                        description: Control Slave Select drive on which xnsfcs
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-write
+                    SLAVE_SELECT_ACTIVE_ENABLE:
+                        description: Slave Select signal active
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-write
+                    FIFO_OVERFLOW_INTERRUPT_MASK_ENABLE:
+                        description: Mask interrupt for FIFO overflow error
+                        bitOffset: 3
+                        bitWidth: 1
+                        access: read-write
+                    TX_FIFO_EMPTY_AND_SPI_ENGINE_IDLE_INTERRUPT_MASK_ENABLE:
+                        description: Mask interrupt for while Tx FIFO empty & SPI engine/FSM idle
+                        bitOffset: 2
+                        bitWidth: 1
+                        access: read-write
+                    MODE:
+                        description: SPI operation mode
+                        bitOffset: 0
+                        bitWidth: 2
+                        access: read-write
+            SPIMSR:
+                description: SPI master Status Register
+                addressOffset: 0xBA
+                access: read-write
+                resetValue: 0
+                fields:
+                    TX_FIFO_EMPTY_FLAG:
+                        description: Tx FIFO empty flag
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    TX_FIFO_FULL_FLAG:
+                        description: Tx FIFO full flag
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    RX_FIFO_EMPTY_FLAG:
+                        description: Rx FIFO empty flag
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-write
+                    RX_FIFO_FULL_FLAG:
+                        description: Rx FIFO full flag
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-write
+                    OVERFLOW_INTERRUPT_FLAG:
+                        description: Overflow interrupt flag
+                        bitOffset: 3
+                        bitWidth: 1
+                        access: read-write
+                    TX_FIFO_EMPTY_AND_SPI_ENGINE_IDLE_INTERRUPT_FLAG:
+                        description: Tx FIFO empty & SPI engine/FSM idle interrupt flag
+                        bitOffset: 2
+                        bitWidth: 1
+                        access: read-write
+            SPI_DIVSOR:
+                description: SPI Clock period
+                addressOffset: 0xBB
+                access: read-write
+                resetValue: 3
+                fields:
+                    SPI_CLOCK_PERIOD:
+                        description: Set the SPI Clock period | Fsck = Fcore/((SPI_DIVSOR+1)*2)
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DMA_SSTR0:
+                description: Serial flash DMA Source Starting Address 0
+                addressOffset: 0xBC
+                access: read-write
+                resetValue: 0
+                fields:
+                    SERIAL_FLASH_DMA_SOURCE_START_ADDRESS:
+                        description: Serial flash DMA Source START ADDRESS
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DMA_SSTR1:
+                description: Serial flash DMA Source Starting Address 1
+                addressOffset: 0xBD
+                access: read-write
+                resetValue: 0
+                fields:
+                    SERIAL_FLASH_DMA_SOURCE_START_ADDRESS:
+                        description: Serial flash DMA Source START ADDRESS
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DMA_SSTR2:
+                description: Serial flash DMA Source Starting Address 2
+                addressOffset: 0xBE
+                access: read-write
+                resetValue: 0
+                fields:
+                    SERIAL_FLASH_DMA_SOURCE_START_ADDRESS:
+                        description: Serial flash DMA Source START ADDRESS
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DMA_SSTR3:
+                description: Serial flash DMA Source Starting Address 3
+                addressOffset: 0xBF
+                access: read-write
+                resetValue: 0
+                fields:
+                    SERIAL_FLASH_DMA_SOURCE_START_ADDRESS:
+                        description: Serial flash DMA Source START ADDRESS
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DMA_DX0:
+                description: DMA Destination Window Upper-Left corner X-coordinates 0
+                addressOffset: 0xC0
+                access: read-write
+                resetValue: 0
+                fields:                    
+                    DMA_DESTINATION_WINDOW_UPPER_LEFT_X:
+                        description: DMA Destination Window Upper-Left corner X-coordinates on Canvas area
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+                    DMA_DESTINATION_ADDRESS:
+                        description: Destination address in SDRAM
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DMA_DX1:
+                description: DMA Destination Window Upper-Left corner X-coordinates 1
+                addressOffset: 0xC1
+                access: read-write
+                resetValue: 0
+                fields:
+                    DMA_DESTINATION_WINDOW_UPPER_LEFT_X:
+                        description: DMA Destination Window Upper-Left corner X-coordinates on Canvas area
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+                    DMA_DESTINATION_ADDRESS:
+                        description: Destination address in SDRAM
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DMA_DY0:
+                description: DMA Destination Window Upper-Left corner Y-coordinates 0
+                addressOffset: 0xC2
+                access: read-write
+                resetValue: 0
+                fields:                    
+                    DMA_DESTINATION_WINDOW_UPPER_LEFT_Y:
+                        description: DMA Destination Window Upper-Left corner Y-coordinates on Canvas area
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+                    DMA_DESTINATION_ADDRESS:
+                        description: Destination address in SDRAM
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DMA_DY1:
+                description: DMA Destination Window Upper-Left corner Y-coordinates 1
+                addressOffset: 0xC3
+                access: read-write
+                resetValue: 0
+                fields:
+                    DMA_DESTINATION_WINDOW_UPPER_LEFT_Y:
+                        description: DMA Destination Window Upper-Left corner Y-coordinates on Canvas area
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+                    DMA_DESTINATION_ADDRESS:
+                        description: Destination address in SDRAM
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DMAW_WTH0:
+                description: DMA Block Width 0
+                addressOffset: 0xC6
+                access: read-write
+                resetValue: 0
+                fields:
+                    DMA_BLOCK_WIDTH:
+                        description: DMA Block Width
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+                    DMA_TRANSFER_NUMBER:
+                        description: DMA Transfer Number
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DMAW_WTH1:
+                description: DMA Block Width 1
+                addressOffset: 0xC7
+                access: read-write
+                resetValue: 0
+                fields:
+                    DMA_BLOCK_WIDTH:
+                        description: DMA Block Width
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+                    DMA_TRANSFER_NUMBER:
+                        description: DMA Transfer Number
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DMAW_HIGH0:
+                description: DMA Block Height 0
+                addressOffset: 0xC8
+                access: read-write
+                resetValue: 0
+                fields:
+                    DMA_BLOCK_HEIGHT:
+                        description: DMA Block Height
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+                    DMA_TRANSFER_NUMBER:
+                        description: DMA Transfer Number
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DMAW_HIGH1:
+                description: DMA Block Height 1
+                addressOffset: 0xC9
+                access: read-write
+                resetValue: 0
+                fields:
+                    DMA_BLOCK_HEIGHT:
+                        description: DMA Block Height
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+                    DMA_TRANSFER_NUMBER:
+                        description: DMA Transfer Number
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DMA_SWTH0:
+                description: DMA Source Picture Width 0
+                addressOffset: 0xCA
+                access: read-write
+                resetValue: 0
+                fields:
+                    DMA_SOURCE_PICTURE_WIDTH:
+                        description: DMA Source Picture Width
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            DMA_SWTH1:
+                description: DMA Source Picture Width 1
+                addressOffset: 0xCB
+                access: read-write
+                resetValue: 0
+                fields:
+                    DMA_SOURCE_PICTURE_WIDTH:
+                        description: DMA Source Picture Width
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            CCR0:
+                description: Character Control Register 0
+                addressOffset: 0xCC
+                access: read-write
+                resetValue: 0
+                fields:
+                    CHARACTER_SOURCE:
+                        description: Character source selection
+                        bitOffset: 6
+                        bitWidth: 2
+                        access: read-write
+                    CHARACTER_HEIGHT:
+                        description: Character Height Setting
+                        bitOffset: 4
+                        bitWidth: 2
+                        access: read-write
+                    INTERNAL_CHARACTER_SET:
+                        description: Character Selection for internal CGROM
+                        bitOffset: 0
+                        bitWidth: 2
+                        access: read-write
+            CCR1:
+                description: Character Control Register 1
+                addressOffset: 0xCD
+                access: read-write
+                resetValue: 0
+                fields:
+                    FULL_ALIGNMENT_ENABLE:
+                        description: Full Alignment Selection Bit
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    CHROMA_KEY_ENABLE:
+                        description: Chroma keying enable on Text input
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    CHARACTER_ROTATION:
+                        description: Character Rotation
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-write
+                    CHARACTER_WIDTH_SCALE:
+                        description: Character width enlargement factor
+                        bitOffset: 2
+                        bitWidth: 2
+                        access: read-write
+                    CHARACTER_HEIGHT_SCALE:
+                        description: Character height enlargement factor
+                        bitOffset: 0
+                        bitWidth: 2
+                        access: read-write
+            GTFNT_SEL:
+                description: GT Character ROM Select
+                addressOffset: 0xCE
+                access: read-write
+                resetValue: 0
+                fields:
+                    GT_SERIAL_CHARACTER_ROM:
+                        description: GT Serial Character ROM Select
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            GTFNT_CR:
+                description: GT Character ROM Control register
+                addressOffset: 0xCF
+                access: read-write
+                resetValue: 0
+                fields:
+                    #TODO: for now I'm not specifying enumeratedValues for this,
+                    # as most 5bit values are *not* valid choices, so it's not
+                    # practical right now.
+                    # Maybe tweak codegen to allow for a "catchall" constructor (maybe UNKNOWN(u8)).
+                    GT_CHARACTER_SET:
+                        description: Character set
+                        bitOffset: 3
+                        bitWidth: 5
+                        access: read-write
+                    GT_CHARACTER_WIDTH:
+                        description: GT Character width setting
+                        bitOffset: 0
+                        bitWidth: 2
+                        access: read-write
+            FLDR:
+                description: GT Character ROM Control register
+                addressOffset: 0xD0
+                access: read-write
+                resetValue: 0
+                fields:
+                    CHARACTER_LINE_GAP:
+                        description: Character Line gap Setting
+                        bitOffset: 0
+                        bitWidth: 5
+                        access: read-write
+            F2FSSR:
+                description: Character to Character Space Setting Register
+                addressOffset: 0xD1
+                access: read-write
+                resetValue: 0
+                fields:
+                    CHARACTER_TO_CHARACTER_SPACING:
+                        description: Character to Character Space Setting
+                        bitOffset: 0
+                        bitWidth: 6
+                        access: read-write
+            # FGCR/FGCG/FGCB are repeated at this point in the PDF
+            BGCR:
+                description: Background Color Register - Red
+                addressOffset: 0xD2
+                access: read-write
+                resetValue: 0
+                fields:
+                    BACKGROUND_COLOR_RED_8BPP:
+                        description: BGCR[7:5] | Background Color Red Component (3 bits)
+                        bitOffset: 5
+                        bitWidth: 3
+                        access: read-write
+                    BACKGROUND_COLOR_RED_16BPP:
+                        description: BGCR[7:3] | Background Color Red Component (5 bits)
+                        bitOffset: 3
+                        bitWidth: 5
+                        access: read-write
+                    BACKGROUND_COLOR_RED_24BPP:
+                        description: BGCR[7:0] | Background Color Red Component (8 bits)
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            BGCG:
+                description: Background Color Register - Green
+                addressOffset: 0xD3
+                access: read-write
+                resetValue: 0
+                fields:
+                    BACKGROUND_COLOR_GREEN_8BPP:
+                        description: BGCG[7:5] | Background Color Green Component (3 bits)
+                        bitOffset: 5
+                        bitWidth: 3
+                        access: read-write
+                    BACKGROUND_COLOR_GREEN_16BPP:
+                        description: BGCG[7:2] | Background Color Green Component (6 bits)
+                        bitOffset: 2
+                        bitWidth: 6
+                        access: read-write
+                    BACKGROUND_COLOR_GREEN_24BPP:
+                        description: BGCG[7:0] | Background Color Green Component (8 bits)
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            BGCB:
+                description: Background Color Register - Blue
+                addressOffset: 0xD4
+                access: read-write
+                resetValue: 0
+                fields:
+                    BACKGROUND_COLOR_BLUE_8BPP:
+                        description: BGCB[7:6] | Background Color Blue Component (2 bits)
+                        bitOffset: 6
+                        bitWidth: 2
+                        access: read-write
+                    BACKGROUND_COLOR_BLUE_16BPP:
+                        description: BGCB[7:3] | Background Color Blue Component (5 bits)
+                        bitOffset: 3
+                        bitWidth: 5
+                        access: read-write
+                    BACKGROUND_COLOR_BLUE_24BPP:
+                        description: BGCB[7:0] | Background Color Blue Component (8 bits)
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            CGRAM_STR0:
+                description: CGRAM Start Address 0
+                addressOffset: 0xDB
+                access: read-write
+                resetValue: 0
+                fields:
+                    CGRAM_START_ADDRESS:
+                        description: CGRAM START ADDRESS
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            CGRAM_STR1:
+                description: CGRAM Start Address 1
+                addressOffset: 0xDC
+                access: read-write
+                resetValue: 0
+                fields:
+                    CGRAM_START_ADDRESS:
+                        description: CGRAM START ADDRESS
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            CGRAM_STR2:
+                description: CGRAM Start Address 2
+                addressOffset: 0xDD
+                access: read-write
+                resetValue: 0
+                fields:
+                    CGRAM_START_ADDRESS:
+                        description: CGRAM START ADDRESS
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            CGRAM_STR3:
+                description: CGRAM Start Address 3
+                addressOffset: 0xDD
+                access: read-write
+                resetValue: 0
+                fields:
+                    CGRAM_START_ADDRESS:
+                        description: CGRAM START ADDRESS
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            PMU:
+                description: Power Management register
+                addressOffset: 0xDF
+                access: read-write
+                resetValue: 0
+                fields:
+                    POWER_SAVING_ENABLE:
+                        description: Enter Power saving state
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    POWER_SAVING_MODE:
+                        description: Power saving Mode
+                        bitOffset: 0
+                        bitWidth: 2
+                        access: read-write
+            SDRAR:
+                description: SDRAM attribute register
+                addressOffset: 0xE0
+                access: read-write
+                resetValue: 0
+                fields:
+                    SDRAM_POWER_SAVING_TYPE:
+                        description: SDRAM Power Saving type
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    SDRAM_MEMORY_TYPE:
+                        description: SDRAM memory type
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    SDRAM_BANK_NUMBER:
+                        description: SDRAM Bank number
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-write
+                    SDRAM_ROW_ADDRESSING:
+                        description: SDRAM Bank number
+                        bitOffset: 3
+                        bitWidth: 2
+                        access: read-write
+                    SDRAM_COLUMN_ADDRESSING:
+                        description: SDRAM Bank number
+                        bitOffset: 0
+                        bitWidth: 3
+                        access: read-write
+            SDRMD:
+                description: SDRAM mode register & extended mode register
+                addressOffset: 0xE1
+                access: read-write
+                resetValue: 0
+                fields:
+                    PARTIAL_ARRAY_SELF_REFRESH:
+                        description: Partial-Array Self Refresh
+                        bitOffset: 5
+                        bitWidth: 3
+                        access: read-write
+                    DQ_DRIVE_STRENGTH:
+                        description: Partial-Array Self Refresh
+                        bitOffset: 3
+                        bitWidth: 2
+                        access: read-write
+                    SDRAM_CAS_LATENCY:
+                        description: SDRAM CAS latency
+                        bitOffset: 0
+                        bitWidth: 3
+                        access: read-write
+            SDR_REF_ITVL0:
+                description: SDRAM auto refresh interval 0
+                addressOffset: 0xE2
+                access: read-write
+                resetValue: 0
+                fields:
+                    REFRESH_INTERVAL:
+                        description: Refresh interval
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            SDR_REF_ITVL1:
+                description: SDRAM auto refresh interval 1
+                addressOffset: 0xE3
+                access: read-write
+                resetValue: 0
+                fields:
+                    REFRESH_INTERVAL:
+                        description: Refresh interval
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            SDRCR:
+                description: SDRAM Control register
+                addressOffset: 0xE4
+                access: read-write
+                resetValue: 0
+                fields:
+                    LENGTH_TO_BREAK_BURST_TRANSFER:
+                        description: Refresh interval
+                        bitOffset: 6
+                        bitWidth: 2
+                        access: read-write
+                    SDRAM_BUS_WIDTH:
+                        description: SDRAM bus width select
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-write
+                    MCKE_PIN_STATE:
+                        description: Current MCKE pin state
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-only
+                    REPORT_WARNING_CONDITION:
+                        description: Report warning condition
+                        bitOffset: 3
+                        bitWidth: 1
+                        access: read-write
+                    SDRAM_TIMING_PARAMETER_REGISTER_ENABLE:
+                        description: SDRAM timing parameter register enable
+                        bitOffset: 2
+                        bitWidth: 1
+                        access: read-write
+                    SDRAM_POWER_SAVING_ENABLE:
+                        description: SDRAM enter power saving mode
+                        bitOffset: 1
+                        bitWidth: 1
+                        access: read-write
+                    SDRAM_INIT_ENABLE:
+                        description: Start SDRAM initialization procedure
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
+            # It looks like 0xE0-0xE3 (SDRAR, SDRMD, SDR_REF_ITVL0, SDR_REF_ITVL1) are repurposed if
+            # SDR_PARAMEN is enabled (REG[E4] b2 is set)
+            I2CMTXR:
+                description: I2C Master Transmit Register
+                addressOffset: 0xE7
+                access: read-write
+                resetValue: 0
+                fields:
+                    I2C_MASTER_TX:
+                        description: I2C Master Transmit
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            I2CMRXR:
+                description: I2C Master Receiver Register
+                addressOffset: 0xE8
+                access: read-write
+                resetValue: 0
+                fields:
+                    I2C_MASTER_RX:
+                        description: I2C Master Receiver
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            I2CMCMDR:
+                description: I2C Master Command Register
+                addressOffset: 0xE9
+                access: read-write
+                resetValue: 0
+                fields:
+                    START:
+                        description: START - Generate (repeated) start condition and be cleared by hardware automatically
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-write
+                    STOP:
+                        description: STOP - Generate stop condition and be cleared by hardware automatically
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-write
+                    READ:
+                        description: READ - Read from slave and be cleared by hardware automatically
+                        bitOffset: 5
+                        bitWidth: 1
+                        access: read-write
+                    WRITE:
+                        description: WRITE - Write to slave and be cleared by hardware automatically
+                        bitOffset: 4
+                        bitWidth: 1
+                        access: read-write
+                    ACKNOWLEDGE:
+                        description: ACKNOWLEDGE
+                        bitOffset: 3
+                        bitWidth: 1
+                        access: read-write
+                    NOISE_FILTER_ENABLE:
+                        description: Noise Filter
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-write
+            I2CMSTUR:
+                description: I2C Master Status Register
+                addressOffset: 0xEA
+                access: read-write
+                resetValue: 0
+                fields:
+                    ACKNOWLEDGE:
+                        description: Received acknowledge from slave
+                        bitOffset: 7
+                        bitWidth: 1
+                        access: read-only
+                    I2C_BUS_BUSY:
+                        description: I2C Bus is Busy
+                        bitOffset: 6
+                        bitWidth: 1
+                        access: read-only
+                    TRANSFER_IN_PROGRESS:
+                        description: Transfer in progress
+                        bitOffset: 1
+                        bitWidth: 1
+                        access: read-only
+                    ARBITRATION_LOST:
+                        description: This bit is set when the core lost arbitration
+                        bitOffset: 0
+                        bitWidth: 1
+                        access: read-only
 
 
-
+#GRAPHIC_READ_WRITE_VERTICAL_POSITION:
+#_SELECTION
+#_SELECT
+#_ENABLE
 
 FAKE_PERIPHERAL:
     CCR:
@@ -2754,3 +3464,96 @@ FAKE_PERIPHERAL:
         SERIAL_FLASH_ROM_ADDRESS_MODE:
             ADDRESS_24BIT: [0b0, "24 bits address mode"]
             ADDRESS_32BIT: [0b1, "32 bits address mode"]
+    CCR0:
+        CHARACTER_SOURCE:
+            INTERNAL: [0b00, "Internal CGROM Character"]
+            EXTERNAL: [0b01, "External CGROM Character (e.g. Genitop serial flash)"]
+            USER_DEFINED: [0b10, "External CGROM Character (e.g. Genitop serial flash)"]
+            NA4: [0b11, "NA"]
+        CHARACTER_HEIGHT:
+            HEIGHT_16: [0b00, "16 (ex. 8x16 / 16x16 / variable character width x 16)"]
+            HEIGHT_24: [0b01, "24 (ex. 12x24 / 24x24 / variable character width x 24)"]
+            HEIGHT_32: [0b10, "32 (ex. 16x32 / 32x32 / variable character width x 32)"]
+            NA4: [0b11, "NA"]
+        INTERNAL_CHARACTER_SET:
+            ISO_8859_1: [0b00, "ISO-8859-1"]
+            ISO_8859_2: [0b01, "ISO-8859-2"]
+            ISO_8859_4: [0b10, "ISO-8859-4"]
+            ISO_8859_5: [0b11, "ISO-8859-5"]
+    CCR1:
+        CHARACTER_ROTATION:
+            NORMAL: [0b0, "Text direction from left to right then from top to bottom"]
+            TOP_BOTTOM_LEFT_RIGHT: [0b1, "Top→Bottom then Left→Right (Rotate right 90° and horizontal flip)"]
+        CHARACTER_WIDTH_SCALE:
+            X1: [0b00, "X1 scale"]
+            X2: [0b01, "X2 scale"]
+            X3: [0b10, "X3 scale"]
+            X4: [0b11, "X4 scale"]
+        CHARACTER_HEIGHT_SCALE:
+            X1: [0b00, "X1 scale"]
+            X2: [0b01, "X2 scale"]
+            X3: [0b10, "X3 scale"]
+            X4: [0b11, "X4 scale"]
+    GTFNT_SEL:
+        GT_SERIAL_CHARACTER_ROM:
+            GT21L16T1W: [0b000, "GT21L16T1W"]
+            GT30L16U2W: [0b001, "GT30L16U2W"]
+            GT30L24T3Y: [0b010, "GT30L24T3Y"]
+            GT30L24M1Z: [0b011, "GT30L24M1Z"]
+            GT30L32S4W: [0b100, "GT30L32S4W"]
+            GT20L24F6Y: [0b101, "GT20L24F6Y"]
+            GT21L24S1W: [0b110, "GT21L24S1W"]
+            NA7: [0b111, "NA"]
+    # see earlier note on GTFNT_CR
+    # GTFNT_CR:
+    #     GT_CHARACTER_SET:
+    #         # one-byte char encodings
+    #         ASCII: [0b00100, "ASCII only"]
+    #         ISO_8859_1: [0b10001, "ISO-8859-1 + ASCII code"]
+    #         ISO_8859_2: [0b10010, "ISO-8859-2 + ASCII code"]
+    #         ISO_8859_3: [0b10011, "ISO-8859-3 + ASCII code"]
+    #         ISO_8859_4: [0b10100, "ISO-8859-4 + ASCII code"]
+    #         ISO_8859_5: [0b10101, "ISO-8859-5 + ASCII code"]
+    #         ISO_8859_7: [0b10110, "ISO-8859-7 + ASCII code"]
+    #         ISO_8859_8: [0b10111, "ISO-8859-8 + ASCII code"]
+    #         ISO_8859_9: [0b11000, "ISO-8859-9 + ASCII code"]
+    #         ISO_8859_10: [0b11001, "ISO-8859-10 + ASCII code"]
+    #         ISO_8859_11: [0b11010, "ISO-8859-11 + ASCII code"]
+    #         ISO_8859_13: [0b11011, "ISO-8859-13 + ASCII code"]
+    #         ISO_8859_14: [0b11100, "ISO-8859-14 + ASCII code"]
+    #         ISO_8859_15: [0b11101, "ISO-8859-15 + ASCII code"]
+    #         ISO_8859_16: [0b11110, "ISO-8859-16 + ASCII code"]
+    #         # two-byte char encodings
+    #         GB2312:                                   [0b00000, "GB2312"]
+    #         GB12345_GB18030:                          [0b00001, "GB12345/GB18030"]
+    #         BIG5:                                     [0b00010, "BIG5"]
+    #         UNICODE:                                  [0b00011, "UNICODE"]
+    #         UNI_JAPANESE:                             [0b00101, "UNI-Japanese"]
+    #         JIS0208:                                  [0b00110, "JIS0208"]
+    #         LATIN_GREEK_CYRILLIC_ARABIC_THAI_HEBREW:  [0b00111, "Latin / Greek / Cyrillic / Arabic / Thai / Hebrew"]   
+    PMU:
+        POWER_SAVING_MODE:
+            NA: [0b00, "NA"]
+            STANDBY: [0b01, "CCLK & PCLK will stop, MCLK keep MPLL clock"]
+            SUSPEND: [0b10, "CCLK & PCLK will stop, MCLK switch to OSC clock"]
+            SLEEP: [0b11, "All clock & PLL will stop"]
+    SDRAR:
+        SDRAM_POWER_SAVING_TYPE:
+            POWER_DOWN: [0b0, "Execute power down command to enter power saving mode"]
+            SELF_REFRESH: [0b1, "Execute self refresh command to enter power saving mode"]
+        SDRAM_MEMORY_TYPE:
+            SDR_SDRAM: [0b0, "SDR SDRAM"]
+            MOBILE_SDR_SDRAM: [0b1, "Mobile SDR SDRAM"]
+    # TODO: maybe enums for these
+    # SDRMD:
+    #     PARTIAL_ARRAY_SELF_REFRESH:
+    #     DQ_DRIVE_STRENGTH:
+    SDRCR:
+        # LENGTH_TO_BREAK_BURST_TRANSFER:
+        SDRAM_BUS_WIDTH:
+            WIDTH_16BIT: [0b0, "SDR SDRAM 16bits bus"]
+            WIDTH_32BIT: [0b1, "SDR SDRAM 32bits bus"]
+    # I2CMCMDR:
+    #     ACKNOWLEDGE:
+    #         ACK: [0b0, "Send ACK"]
+    #         NACK: [0b1, "Send NACK"]
