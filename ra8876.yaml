@@ -141,7 +141,7 @@ _add:
                         bitWidth: 1
                         access: read-write
                     MEMORY_PORT_READ_WRITE_DESTINATION:
-                        description: Text Mode enable
+                        description: Memory port Read/Write Destination Selection
                         bitOffset: 0
                         bitWidth: 2
                         access: read-write
@@ -155,11 +155,11 @@ _add:
                 access: read-write
                 resetValue: 0b00000100
                 fields:
-                    RESERVED0:
-                        description: RESERVED
-                        bitOffset: 7
-                        bitWidth: 1
-                        access: read-write
+                    # RESERVED0:
+                    #     description: RESERVED
+                    #     bitOffset: 7
+                    #     bitWidth: 1
+                    #     access: read-write
                     # NA0:
                     #     description: NA
                     #     bitOffset: 6
@@ -192,7 +192,7 @@ _add:
                     #     bitWidth: 2
                     #     access: read-only
                     SCLK_PLLDIVN:
-                        description: SCLK PLL Output divider
+                        description: MCLK PLL input parameter
                         bitOffset: 0
                         bitWidth: 6
                         access: read-write
@@ -439,13 +439,13 @@ _add:
                         bitOffset: 2
                         bitWidth: 1
                         access: read-write
-                    XDB_MSB_PULL_HIGH_ENABLE:
-                        description: XDB[15:8] Pull-high Enable
+                    DB_MSB_PULL_HIGH_ENABLE:
+                        description: XDB[15:8] Pull-high Enable (shared with GPIO-A[7:0])
                         bitOffset: 1
                         bitWidth: 1
                         access: read-write
-                    XDB_LSB_PULL_HIGH_ENABLE:
-                        description: XDB[7:0] Pull-high Enable
+                    DB_LSB_PULL_HIGH_ENABLE:
+                        description: XDB[7:0] Pull-high Enable (multiplexed with serial host signals if serial host mode set)
                         bitOffset: 0
                         bitWidth: 1
                         access: read-write
@@ -455,42 +455,42 @@ _add:
                 access: read-write
                 resetValue: 0x00
                 fields:
-                    XPDAT18_FUNCTION_SELECT:
+                    PDAT18_FUNCTION_SELECT:
                         description: XPDAT[18] - GPIO or Key function select
                         bitOffset: 7
                         bitWidth: 1
                         access: read-write
-                    XPDAT17_FUNCTION_SELECT:
+                    PDAT17_FUNCTION_SELECT:
                         description: XPDAT[17] - GPIO or Key function select
                         bitOffset: 6
                         bitWidth: 1
                         access: read-write
-                    XPDAT16_FUNCTION_SELECT:
+                    PDAT16_FUNCTION_SELECT:
                         description: XPDAT[16] - GPIO or Key function select
                         bitOffset: 5
                         bitWidth: 1
                         access: read-write
-                    XPDAT9_FUNCTION_SELECT:
+                    PDAT9_FUNCTION_SELECT:
                         description: XPDAT[9] - GPIO or Key function select
                         bitOffset: 4
                         bitWidth: 1
                         access: read-write
-                    XPDAT8_FUNCTION_SELECT:
+                    PDAT8_FUNCTION_SELECT:
                         description: XPDAT[8] - GPIO or Key function select
                         bitOffset: 3
                         bitWidth: 1
                         access: read-write
-                    XPDAT2_FUNCTION_SELECT:
+                    PDAT2_FUNCTION_SELECT:
                         description: XPDAT[2] - GPIO or Key function select
                         bitOffset: 2
                         bitWidth: 1
                         access: read-write
-                    XPDAT1_FUNCTION_SELECT:
+                    PDAT1_FUNCTION_SELECT:
                         description: XPDAT[1] - GPIO or Key function select
                         bitOffset: 1
                         bitWidth: 1
                         access: read-write
-                    XPDAT0_FUNCTION_SELECT:
+                    PDAT0_FUNCTION_SELECT:
                         description: XPDAT[0] - GPIO or Key function select
                         bitOffset: 0
                         bitWidth: 1
@@ -547,12 +547,12 @@ _add:
                     #     bitOffset: 4
                     #     bitWidth: 4
                     #     access: read-only
-                    PIP1_WINDOW_COLOR_DEPTH_SETTING:
+                    PIP1_WINDOW_COLOR_DEPTH:
                         description: PIP 1 window Enable/Disable
                         bitOffset: 2
                         bitWidth: 2
                         access: read-write
-                    PIP2_WINDOW_COLOR_DEPTH_SETTING:
+                    PIP2_WINDOW_COLOR_DEPTH:
                         description: PIP 1 window Enable/Disable
                         bitOffset: 0
                         bitWidth: 2
@@ -636,7 +636,7 @@ _add:
                         access: read-write
                     VSYNC_IDLE_STATE:
                         description: VSYNC IDLE STATE (in power saving mode or DISPLAY OFF)
-                        bitOffset: 1
+                        bitOffset: 0
                         bitWidth: 1
                         access: read-write
             HDWR:
@@ -670,7 +670,7 @@ _add:
                 description: Horizontal Non-Display Period Register
                 addressOffset: 0x16
                 access: read-write
-                resetValue: 0
+                resetValue: 0x03
                 fields:
                     # NA0:
                     #     description: NA
@@ -686,7 +686,7 @@ _add:
                 description: Horizontal Non-Display Period Fine Tune Register
                 addressOffset: 0x17
                 access: read-write
-                resetValue: 0
+                resetValue: 0x06
                 fields:
                     # NA0:
                     #     description: NA
@@ -702,7 +702,7 @@ _add:
                 description: HSYNC Start Position Register
                 addressOffset: 0x18
                 access: read-write
-                resetValue: 0
+                resetValue: 0x1F
                 fields:
                     # NA0:
                     #     description: NA
@@ -734,23 +734,23 @@ _add:
                 description: Vertical Display Height Register 0
                 addressOffset: 0x1A
                 access: read-write
-                resetValue: 0x4F
+                resetValue: 0xDF
                 fields:
                     VERTICAL_DISPLAY_HEIGHT:
                         description: VDHR[7:0] | Vertical Display Height (Line) = VDHR + 1
                         bitOffset: 0
-                        bitWidth: 7
+                        bitWidth: 8
                         access: read-write
             VDHR1:
                 description: Vertical Display Height Register 1
                 addressOffset: 0x1B
                 access: read-write
-                resetValue: 0x4F
+                resetValue: 0x01
                 fields:
                     # NA0:
                     #     description: NA
                     #     bitOffset: 3
-                    #     bitWidth: 7
+                    #     bitWidth: 5
                     #     access: read-only
                     VERTICAL_DISPLAY_HEIGHT:
                         description: VDHR[10:8] | Vertical Display Height (Line) = VDHR + 1
@@ -761,12 +761,12 @@ _add:
                 description: Vertical Non-Display Period Register 0
                 addressOffset: 0x1C
                 access: read-write
-                resetValue: 0
+                resetValue: 0x15
                 fields:
                     VERTICAL_DISPLAY_HEIGHT:
                         description: VNDR[7:0] | Vertical Non-Display Period (Line) = VNDR + 1
                         bitOffset: 0
-                        bitWidth: 7
+                        bitWidth: 8
                         access: read-write
             VNDR1:
                 description: Vertical Non-Display Period Register 1
@@ -777,7 +777,7 @@ _add:
                     # NA0:
                     #     description: NA
                     #     bitOffset: 2
-                    #     bitWidth: 7
+                    #     bitWidth: 6
                     #     access: read-only
                     VERTICAL_DISPLAY_HEIGHT:
                         description: VNDR[9:8] | Vertical Non-Display Period (Line) = VNDR + 1
@@ -788,12 +788,12 @@ _add:
                 description: VSYNC Start Position Register
                 addressOffset: 0x1E
                 access: read-write
-                resetValue: 0
+                resetValue: 0x0B
                 fields:
                     VSYNC_START_POSITION:
                         description: The starting position from the end of display area to the beginning of VSYNC. VSYNC Start Position(Line) = VSTR + 1
                         bitOffset: 0
-                        bitWidth: 7
+                        bitWidth: 8
                         access: read-write
             VPWR:
                 description: VSYNC Pulse Width Register
@@ -888,7 +888,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    MAIN_WINDOW_UPPER_LEFT_X:
+                    MAIN_WINDOW_X:
                         description: MWULX[7:0] | Main Window Upper-Left corner X-coordinates
                         bitOffset: 0
                         bitWidth: 8
@@ -904,7 +904,7 @@ _add:
                     #     bitOffset: 5
                     #     bitWidth: 3
                     #     access: read-only
-                    MAIN_WINDOW_UPPER_LEFT_X:
+                    MAIN_WINDOW_X:
                         description: MWULX[12:8] | Main Window Upper-Left corner X-coordinates
                         bitOffset: 0
                         bitWidth: 5
@@ -915,7 +915,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    MAIN_WINDOW_UPPER_LEFT_Y:
+                    MAIN_WINDOW_Y:
                         description: MWULY[7:0] | Main Window Upper-Left corner Y-coordinates
                         bitOffset: 0
                         bitWidth: 8
@@ -931,7 +931,7 @@ _add:
                     #     bitOffset: 5
                     #     bitWidth: 3
                     #     access: read-only
-                    MAIN_WINDOW_UPPER_LEFT_Y:
+                    MAIN_WINDOW_Y:
                         description: MWULY[12:8] | Main Window Upper-Left corner Y-coordinates
                         bitOffset: 0
                         bitWidth: 5
@@ -942,7 +942,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    PIP_WINDOW_DISPLAY_UPPER_LEFT_X:
+                    PIP_WINDOW_DISPLAY_X:
                         description: PWDULX[7:0] | PIP Window Display Upper-Left corner X-coordinates
                         bitOffset: 0
                         bitWidth: 8
@@ -958,7 +958,7 @@ _add:
                     #     bitOffset: 5
                     #     bitWidth: 3
                     #     access: read-only
-                    PIP_WINDOW_DISPLAY_UPPER_LEFT_X:
+                    PIP_WINDOW_DISPLAY_X:
                         description: PWDULX[12:8] | PIP Window Display Upper-Left corner X-coordinates
                         bitOffset: 0
                         bitWidth: 5
@@ -969,7 +969,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    PIP_WINDOW_DISPLAY_UPPER_LEFT_Y:
+                    PIP_WINDOW_DISPLAY_Y:
                         description: PWDULY[7:0] | PIP Window Display Upper-Left corner Y-coordinates
                         bitOffset: 0
                         bitWidth: 8
@@ -985,7 +985,7 @@ _add:
                     #     bitOffset: 5
                     #     bitWidth: 3
                     #     access: read-only
-                    PIP_WINDOW_DISPLAY_UPPER_LEFT_Y:
+                    PIP_WINDOW_DISPLAY_Y:
                         description: PWDULY[12:8] | PIP Window Display Upper-Left corner Y-coordinates
                         bitOffset: 0
                         bitWidth: 5
@@ -1067,7 +1067,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    PIP_WINDOW_IMAGE_UPPER_LEFT_X:
+                    PIP_WINDOW_IMAGE_X:
                         description: PWIULX[7:0] | PIP Window Image Upper-Left corner X-coordinates
                         bitOffset: 0
                         bitWidth: 8
@@ -1083,7 +1083,7 @@ _add:
                     #     bitOffset: 5
                     #     bitWidth: 3
                     #     access: read-only
-                    PIP_WINDOW_IMAGE_UPPER_LEFT_X:
+                    PIP_WINDOW_IMAGE_X:
                         description: PWIULX[12:8] | PIP Window Image Upper-Left corner X-coordinates
                         bitOffset: 0
                         bitWidth: 5
@@ -1094,7 +1094,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    PIP_WINDOW_IMAGE_UPPER_LEFT_Y:
+                    PIP_WINDOW_IMAGE_Y:
                         description: PWIULY[7:0] | PIP Window Image Upper-Left corner Y-coordinates
                         bitOffset: 0
                         bitWidth: 8
@@ -1110,7 +1110,7 @@ _add:
                     #     bitOffset: 5
                     #     bitWidth: 3
                     #     access: read-only
-                    PIP_WINDOW_IMAGE_UPPER_LEFT_Y:
+                    PIP_WINDOW_IMAGE_Y:
                         description: PWIULY[12:8] | PIP Window Image Upper-Left corner Y-coordinates
                         bitOffset: 0
                         bitWidth: 5
@@ -1180,8 +1180,7 @@ _add:
                         bitOffset: 7
                         bitWidth: 1
                         access: read-write
-                    # TODO: maybe shorten this field name vvvvv
-                    GAMMA_TABLE_SELECT_FOR_MPU_WRITE_GAMMA_DATA:
+                    GAMMA_TABLE:
                         description: Gamma table select for MPU write gamma data
                         bitOffset: 5
                         bitWidth: 2
@@ -1191,7 +1190,7 @@ _add:
                         bitOffset: 4
                         bitWidth: 1
                         access: read-write
-                    GRAPHIC_CURSOR_SELECTION:
+                    GRAPHIC_CURSOR:
                         description: Graphic Cursor Selection
                         bitOffset: 2
                         bitWidth: 2
@@ -1221,7 +1220,7 @@ _add:
                 description: Text Cursor Horizontal Size Register Register
                 addressOffset: 0x3E
                 access: read-write
-                resetValue: 0
+                resetValue: 0x07
                 fields:
                     # NA0:
                     #     description: NA
@@ -1320,7 +1319,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    GRAPHIC_CURSOR_COLOR_0:
+                    GRAPHIC_CURSOR_COLOR_1:
                         description: Graphic Cursor Color 1 | RGB Format [7:0] = RRRGGGBB
                         bitOffset: 0
                         bitWidth: 8
@@ -1544,7 +1543,7 @@ _add:
                 resetValue: 0
                 fields:
                     MEMORY_READ_WRITE_ADDRESS:
-                        description: CURH[7:0] | Graphic Read/Write Linear mode address [7:0]
+                        description: CURH[7:0] | Memory Read/Write Linear mode address [7:0]
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1560,7 +1559,7 @@ _add:
                 resetValue: 0
                 fields:
                     MEMORY_READ_WRITE_ADDRESS:
-                        description: CURH[15:8] | Graphic Read/Write Linear mode address [15:8]
+                        description: CURH[15:8] | Memory Read/Write Linear mode address [15:8]
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1576,7 +1575,7 @@ _add:
                 resetValue: 0
                 fields:
                     MEMORY_READ_WRITE_ADDRESS:
-                        description: CURV[7:0] | Graphic Read/Write Linear mode address [23:16]
+                        description: CURV[7:0] | Memory Read/Write Linear mode address [23:16]
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1592,7 +1591,7 @@ _add:
                 resetValue: 0
                 fields:
                     MEMORY_READ_WRITE_ADDRESS:
-                        description: CURV[15:8] | Graphic Read/Write Linear mode address [31:24]
+                        description: CURV[15:8] | Memory Read/Write Linear mode address [31:24]
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1916,20 +1915,10 @@ _add:
                 description: Foreground Color Register - Red
                 addressOffset: 0xD2
                 access: read-write
-                resetValue: 0
+                resetValue: 0xFF
                 fields:
-                    FOREGROUND_COLOR_RED_8BPP:
-                        description: FGCR[7:5] | Foreground Color Red Component (3 bits)
-                        bitOffset: 5
-                        bitWidth: 3
-                        access: read-write
-                    FOREGROUND_COLOR_RED_16BPP:
-                        description: FGCR[7:3] | Foreground Color Red Component (5 bits)
-                        bitOffset: 3
-                        bitWidth: 5
-                        access: read-write
-                    FOREGROUND_COLOR_RED_24BPP:
-                        description: FGCR[7:0] | Foreground Color Red Component (8 bits)
+                    FOREGROUND_COLOR_RED:
+                        description: Foreground Color Red Component
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1937,20 +1926,10 @@ _add:
                 description: Foreground Color Register - Green
                 addressOffset: 0xD3
                 access: read-write
-                resetValue: 0
+                resetValue: 0xFF
                 fields:
                     FOREGROUND_COLOR_GREEN_8BPP:
-                        description: FGCG[7:5] | Foreground Color Green Component (3 bits)
-                        bitOffset: 5
-                        bitWidth: 3
-                        access: read-write
-                    FOREGROUND_COLOR_GREEN_16BPP:
-                        description: FGCG[7:2] | Foreground Color Green Component (6 bits)
-                        bitOffset: 2
-                        bitWidth: 6
-                        access: read-write
-                    FOREGROUND_COLOR_GREEN_24BPP:
-                        description: FGCG[7:0] | Foreground Color Green Component (8 bits)
+                        description: Foreground Color Green Component
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1958,20 +1937,10 @@ _add:
                 description: Foreground Color Register - Blue
                 addressOffset: 0xD4
                 access: read-write
-                resetValue: 0
+                resetValue: 0xFF
                 fields:
                     FOREGROUND_COLOR_BLUE_8BPP:
-                        description: FGCB[7:6] | Foreground Color Blue Component (2 bits)
-                        bitOffset: 6
-                        bitWidth: 2
-                        access: read-write
-                    FOREGROUND_COLOR_BLUE_16BPP:
-                        description: FGCB[7:3] | Foreground Color Blue Component (5 bits)
-                        bitOffset: 3
-                        bitWidth: 5
-                        access: read-write
-                    FOREGROUND_COLOR_BLUE_24BPP:
-                        description: FGCB[7:0] | Foreground Color Blue Component (8 bits)
+                        description: Foreground Color Blue Component
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -2016,7 +1985,7 @@ _add:
                 description: PWM Configuration Register
                 addressOffset: 0x86
                 access: read-write
-                resetValue: 0
+                resetValue: 0b00100010
                 fields:
                     PWM_TIMER1_OUTPUT_INVERTER_ENABLE:
                         description: PWM Timer 1 output inverter on/off
@@ -2190,12 +2159,12 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    S0_COLOR_DEPTH:
+                    SOURCE0_COLOR_DEPTH:
                         description: S0 Color Depth
                         bitOffset: 5
                         bitWidth: 2
                         access: read-write
-                    S1_COLOR_DEPTH:
+                    SOURCE1_COLOR_DEPTH:
                         description: S1 Color Depth
                         bitOffset: 2
                         bitWidth: 3
@@ -2211,7 +2180,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    S0_START_ADDRESS:
+                    SOURCE0_START_ADDRESS:
                         description: S0_STR[7:0] | Source 0 memory start address
                         bitOffset: 0
                         bitWidth: 8
@@ -2222,7 +2191,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    S0_START_ADDRESS:
+                    SOURCE0_START_ADDRESS:
                         description: S0_STR[15:8] | Source 0 memory start address
                         bitOffset: 0
                         bitWidth: 8
@@ -2233,7 +2202,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    S0_START_ADDRESS:
+                    SOURCE0_START_ADDRESS:
                         description: S0_STR[23:16] | Source 0 memory start address
                         bitOffset: 0
                         bitWidth: 8
@@ -2244,7 +2213,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    S0_START_ADDRESS:
+                    SOURCE0_START_ADDRESS:
                         description: S0_STR[31:24] | Source 0 memory start address
                         bitOffset: 0
                         bitWidth: 8
@@ -2255,7 +2224,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    S0_IMAGE_WIDTH:
+                    SOURCE0_IMAGE_WIDTH:
                         description: S0_WTH[7:0] | Source 0 image width
                         bitOffset: 0
                         bitWidth: 8
@@ -2266,7 +2235,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    S0_IMAGE_WIDTH:
+                    SOURCE0_IMAGE_WIDTH:
                         description: S0_WTH[12:8] | Source 0 image width
                         bitOffset: 0
                         bitWidth: 5
@@ -2277,7 +2246,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    S0_IMAGE_WIDTH:
+                    SOURCE0_X:
                         description: S0_X[7:0] | Source 0 Window Upper-Left corner X-coordinate
                         bitOffset: 0
                         bitWidth: 8
@@ -2288,7 +2257,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    S0_IMAGE_WIDTH:
+                    SOURCE0_X:
                         description: S0_X[12:8] | Source 0 Window Upper-Left corner X-coordinate
                         bitOffset: 0
                         bitWidth: 5
@@ -2299,7 +2268,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    S0_IMAGE_WIDTH:
+                    SOURCE0_Y:
                         description: S0_Y[7:0] | Source 0 Window Upper-Left corner Y-coordinate
                         bitOffset: 0
                         bitWidth: 8
@@ -2310,7 +2279,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    S0_IMAGE_WIDTH:
+                    SOURCE0_Y:
                         description: S0_Y[12:8] | Source 0 Window Upper-Left corner Y-coordinate
                         bitOffset: 0
                         bitWidth: 5
@@ -2321,7 +2290,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    S1_START_ADDRESS:
+                    SOURCE1_START_ADDRESS:
                         description: S1_STR[7:0] | Source 1 memory start address
                         bitOffset: 0
                         bitWidth: 8
@@ -2332,7 +2301,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    S1_START_ADDRESS:
+                    SOURCE1_START_ADDRESS:
                         description: S1_STR[15:8] | Source 1 memory start address
                         bitOffset: 0
                         bitWidth: 8
@@ -2343,7 +2312,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    S1_START_ADDRESS:
+                    SOURCE1_START_ADDRESS:
                         description: S1_STR[23:16] | Source 1 memory start address
                         bitOffset: 0
                         bitWidth: 8
@@ -2354,7 +2323,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    S1_START_ADDRESS:
+                    SOURCE1_START_ADDRESS:
                         description: S1_STR[31:24] | Source 1 memory start address
                         bitOffset: 0
                         bitWidth: 8
@@ -2365,7 +2334,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    S1_IMAGE_WIDTH:
+                    SOURCE1_IMAGE_WIDTH:
                         description: S1_WTH[7:0] | Source 1 image width
                         bitOffset: 0
                         bitWidth: 8
@@ -2376,7 +2345,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    S1_IMAGE_WIDTH:
+                    SOURCE1_IMAGE_WIDTH:
                         description: S1_WTH[12:8] | Source 1 image width
                         bitOffset: 0
                         bitWidth: 5
@@ -2387,7 +2356,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    S1_IMAGE_WIDTH:
+                    SOURCE1_X:
                         description: S1_X[7:0] | Source 1 Window Upper-Left corner X-coordinate
                         bitOffset: 0
                         bitWidth: 8
@@ -2398,7 +2367,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    S1_IMAGE_WIDTH:
+                    SOURCE1_X:
                         description: S1_X[12:8] | Source 1 Window Upper-Left corner X-coordinate
                         bitOffset: 0
                         bitWidth: 5
@@ -2409,7 +2378,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    S1_IMAGE_WIDTH:
+                    SOURCE1_Y:
                         description: S1_Y[7:0] | Source 1 Window Upper-Left corner Y-coordinate
                         bitOffset: 0
                         bitWidth: 8
@@ -2420,7 +2389,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    S1_IMAGE_WIDTH:
+                    SOURCE1_Y:
                         description: S1_Y[12:8] | Source 1 Window Upper-Left corner Y-coordinate
                         bitOffset: 0
                         bitWidth: 5
@@ -2497,7 +2466,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    DESTINATION_IMAGE_WIDTH:
+                    DESTINATION_X:
                         description: DT_X[7:0] | Destination Window Upper-Left corner X-coordinate
                         bitOffset: 0
                         bitWidth: 8
@@ -2508,7 +2477,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    DESTINATION_IMAGE_WIDTH:
+                    DESTINATION_X:
                         description: DT_X[12:8] | Destination Window Upper-Left corner X-coordinate
                         bitOffset: 0
                         bitWidth: 5
@@ -2519,7 +2488,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    DESTINATION_IMAGE_WIDTH:
+                    DESTINATION_Y:
                         description: DT_Y[7:0] | Destination Window Upper-Left corner Y-coordinate
                         bitOffset: 0
                         bitWidth: 8
@@ -2530,7 +2499,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    DESTINATION_IMAGE_WIDTH:
+                    DESTINATION_Y:
                         description: DT_Y[12:8] | Destination Window Upper-Left corner Y-coordinate
                         bitOffset: 0
                         bitWidth: 5
@@ -2563,8 +2532,8 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    BTE_WINDOW_WIDTH:
-                        description: BTE_WTH[7:0] | BTE Window Height Setting
+                    BTE_WINDOW_HEIGHT:
+                        description: BTE_HIG[7:0] | BTE Window Height Setting
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -2574,8 +2543,8 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    BTE_WINDOW_WIDTH:
-                        description: BTE_WTH[12:8] | BTE Window Height Setting
+                    BTE_WINDOW_HEIGHT:
+                        description: BTE_HIG[12:8] | BTE Window Height Setting
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -2664,17 +2633,17 @@ _add:
                         bitOffset: 4
                         bitWidth: 1
                         access: read-write
-                    FIFO_OVERFLOW_INTERRUPT_MASK_ENABLE:
+                    MASK_FIFO_OVERFLOW_INTERRUPT:
                         description: Mask interrupt for FIFO overflow error
                         bitOffset: 3
                         bitWidth: 1
                         access: read-write
-                    TX_FIFO_EMPTY_AND_SPI_ENGINE_IDLE_INTERRUPT_MASK_ENABLE:
+                    MASK_TX_FIFO_EMPTY_AND_SPI_ENGINE_IDLE_INTERRUPT:
                         description: Mask interrupt for while Tx FIFO empty & SPI engine/FSM idle
                         bitOffset: 2
                         bitWidth: 1
                         access: read-write
-                    MODE:
+                    SPI_MODE:
                         description: SPI operation mode
                         bitOffset: 0
                         bitWidth: 2
@@ -2689,22 +2658,22 @@ _add:
                         description: Tx FIFO empty flag
                         bitOffset: 7
                         bitWidth: 1
-                        access: read-write
+                        access: read-only
                     TX_FIFO_FULL_FLAG:
                         description: Tx FIFO full flag
                         bitOffset: 6
                         bitWidth: 1
-                        access: read-write
+                        access: read-only
                     RX_FIFO_EMPTY_FLAG:
                         description: Rx FIFO empty flag
                         bitOffset: 5
                         bitWidth: 1
-                        access: read-write
+                        access: read-only
                     RX_FIFO_FULL_FLAG:
                         description: Rx FIFO full flag
                         bitOffset: 4
                         bitWidth: 1
-                        access: read-write
+                        access: read-only
                     OVERFLOW_INTERRUPT_FLAG:
                         description: Overflow interrupt flag
                         bitOffset: 3
@@ -2776,7 +2745,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:                    
-                    DMA_DESTINATION_WINDOW_UPPER_LEFT_X:
+                    DMA_DESTINATION_X:
                         description: DMA Destination Window Upper-Left corner X-coordinates on Canvas area
                         bitOffset: 0
                         bitWidth: 8
@@ -2792,7 +2761,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    DMA_DESTINATION_WINDOW_UPPER_LEFT_X:
+                    DMA_DESTINATION_X:
                         description: DMA Destination Window Upper-Left corner X-coordinates on Canvas area
                         bitOffset: 0
                         bitWidth: 5
@@ -2808,7 +2777,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:                    
-                    DMA_DESTINATION_WINDOW_UPPER_LEFT_Y:
+                    DMA_DESTINATION_Y:
                         description: DMA Destination Window Upper-Left corner Y-coordinates on Canvas area
                         bitOffset: 0
                         bitWidth: 8
@@ -2824,7 +2793,7 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    DMA_DESTINATION_WINDOW_UPPER_LEFT_Y:
+                    DMA_DESTINATION_Y:
                         description: DMA Destination Window Upper-Left corner Y-coordinates on Canvas area
                         bitOffset: 0
                         bitWidth: 5
@@ -2980,8 +2949,8 @@ _add:
                 fields:
                     GT_SERIAL_CHARACTER_ROM:
                         description: GT Serial Character ROM Select
-                        bitOffset: 0
-                        bitWidth: 8
+                        bitOffset: 5
+                        bitWidth: 3
                         access: read-write
             GTFNT_CR:
                 description: GT Character ROM Control register
@@ -3004,7 +2973,7 @@ _add:
                         bitWidth: 2
                         access: read-write
             FLDR:
-                description: GT Character ROM Control register
+                description: Character Line gap Setting Register
                 addressOffset: 0xD0
                 access: read-write
                 resetValue: 0
@@ -3028,64 +2997,34 @@ _add:
             # FGCR/FGCG/FGCB are repeated at this point in the PDF
             BGCR:
                 description: Background Color Register - Red
-                addressOffset: 0xD2
+                addressOffset: 0xD5
                 access: read-write
                 resetValue: 0
                 fields:
-                    BACKGROUND_COLOR_RED_8BPP:
-                        description: BGCR[7:5] | Background Color Red Component (3 bits)
-                        bitOffset: 5
-                        bitWidth: 3
-                        access: read-write
-                    BACKGROUND_COLOR_RED_16BPP:
-                        description: BGCR[7:3] | Background Color Red Component (5 bits)
-                        bitOffset: 3
-                        bitWidth: 5
-                        access: read-write
-                    BACKGROUND_COLOR_RED_24BPP:
-                        description: BGCR[7:0] | Background Color Red Component (8 bits)
+                    BACKGROUND_COLOR_RED:
+                        description: Background Color Red Component
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
             BGCG:
                 description: Background Color Register - Green
-                addressOffset: 0xD3
+                addressOffset: 0xD6
                 access: read-write
                 resetValue: 0
                 fields:
-                    BACKGROUND_COLOR_GREEN_8BPP:
-                        description: BGCG[7:5] | Background Color Green Component (3 bits)
-                        bitOffset: 5
-                        bitWidth: 3
-                        access: read-write
-                    BACKGROUND_COLOR_GREEN_16BPP:
-                        description: BGCG[7:2] | Background Color Green Component (6 bits)
-                        bitOffset: 2
-                        bitWidth: 6
-                        access: read-write
-                    BACKGROUND_COLOR_GREEN_24BPP:
-                        description: BGCG[7:0] | Background Color Green Component (8 bits)
+                    BACKGROUND_COLOR_GREEN:
+                        description: Background Color Green Component
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
             BGCB:
                 description: Background Color Register - Blue
-                addressOffset: 0xD4
+                addressOffset: 0xD7
                 access: read-write
                 resetValue: 0
                 fields:
-                    BACKGROUND_COLOR_BLUE_8BPP:
-                        description: BGCB[7:6] | Background Color Blue Component (2 bits)
-                        bitOffset: 6
-                        bitWidth: 2
-                        access: read-write
-                    BACKGROUND_COLOR_BLUE_16BPP:
-                        description: BGCB[7:3] | Background Color Blue Component (5 bits)
-                        bitOffset: 3
-                        bitWidth: 5
-                        access: read-write
-                    BACKGROUND_COLOR_BLUE_24BPP:
-                        description: BGCB[7:0] | Background Color Blue Component (8 bits)
+                    BACKGROUND_COLOR_BLUE:
+                        description: Background Color Blue Component
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -3137,7 +3076,7 @@ _add:
                 description: Power Management register
                 addressOffset: 0xDF
                 access: read-write
-                resetValue: 0
+                resetValue: 3
                 fields:
                     POWER_SAVING_ENABLE:
                         description: Enter Power saving state
@@ -3153,7 +3092,7 @@ _add:
                 description: SDRAM attribute register
                 addressOffset: 0xE0
                 access: read-write
-                resetValue: 0
+                resetValue: 0b00101000
                 fields:
                     SDRAM_POWER_SAVING_TYPE:
                         description: SDRAM Power Saving type
@@ -3171,12 +3110,12 @@ _add:
                         bitWidth: 1
                         access: read-write
                     SDRAM_ROW_ADDRESSING:
-                        description: SDRAM Bank number
+                        description: SDRAM Row addressing
                         bitOffset: 3
                         bitWidth: 2
                         access: read-write
                     SDRAM_COLUMN_ADDRESSING:
-                        description: SDRAM Bank number
+                        description: SDRAM Column addressing
                         bitOffset: 0
                         bitWidth: 3
                         access: read-write
@@ -3184,7 +3123,7 @@ _add:
                 description: SDRAM mode register & extended mode register
                 addressOffset: 0xE1
                 access: read-write
-                resetValue: 0
+                resetValue: 3
                 fields:
                     PARTIAL_ARRAY_SELF_REFRESH:
                         description: Partial-Array Self Refresh
@@ -3192,7 +3131,7 @@ _add:
                         bitWidth: 3
                         access: read-write
                     DQ_DRIVE_STRENGTH:
-                        description: Partial-Array Self Refresh
+                        description: To select the driver strength of the DQ outputs (sdr_drv)
                         bitOffset: 3
                         bitWidth: 2
                         access: read-write
@@ -3227,10 +3166,10 @@ _add:
                 description: SDRAM Control register
                 addressOffset: 0xE4
                 access: read-write
-                resetValue: 0
+                resetValue: 0b00010000
                 fields:
                     LENGTH_TO_BREAK_BURST_TRANSFER:
-                        description: Refresh interval
+                        description: Length to break a burst transfer
                         bitOffset: 6
                         bitWidth: 2
                         access: read-write
@@ -3266,6 +3205,28 @@ _add:
                         access: read-write
             # It looks like 0xE0-0xE3 (SDRAR, SDRMD, SDR_REF_ITVL0, SDR_REF_ITVL1) are repurposed if
             # SDR_PARAMEN is enabled (REG[E4] b2 is set)
+            I2CMCPR0:
+                description: I2C Master Clock Pre-scale Register 0
+                addressOffset: 0xE5
+                access: read-write
+                resetValue: 0
+                fields:
+                    I2C_MASTER_CLOCK_PRESCALER:
+                        description: I2C Master Clock Pre-scale
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
+            I2CMCPR1:
+                description: I2C Master Clock Pre-scale Register 1
+                addressOffset: 0xE6
+                access: read-write
+                resetValue: 0
+                fields:
+                    I2C_MASTER_CLOCK_PRESCALER:
+                        description: I2C Master Clock Pre-scale
+                        bitOffset: 0
+                        bitWidth: 8
+                        access: read-write
             I2CMTXR:
                 description: I2C Master Transmit Register
                 addressOffset: 0xE7
@@ -3933,36 +3894,12 @@ _add:
 
 FAKE_PERIPHERAL:
     CCR:
-        RECONFIGURE_PLL_FREQUENCY:
-            _write_constraint: "enum"
-            _read:
-                UNCONFIGURED: [0, "PLL clock NOT configured/ready"]
-                CONFIGURED: [1, "PLL clock configured/ready"]
-            _write:
-                DISABLED: [0, "PLL (re)configure NOT requested"]
-                ENABLED: [1, "PLL (re)configure requested"]
-        MASK_WAIT_ON_CS_DEASSERT:
-            _write_constraint: "enum"
-            DISABLED: [0, "No mask"]
-            ENABLED: [1, "Mask"]
-        KEY_SCAN_ENABLE:
-            _write_constraint: "enum"
-            DISABLED: [0, "Disabled"]
-            ENABLED: [1, "Enabled"]
         TFT_PANEL_IF_OUTPUT_PIN_SETTING:
             _write_constraint: "enum"
             OUTPUT_24BIT: [0, "24-bits TFT output"]
             OUTPUT_18BIT: [1, "18-bits TFT output"]
             OUTPUT_16BIT: [2, "16-bits TFT output"]
             OUTPUT_DISABLED: [3, "Without TFT output"]
-        I2C_MASTER_INTERFACE_ENABLE:
-            _write_constraint: "enum"
-            DISABLED: [0, "Disabled"]
-            ENABLED: [1, "Enabled"]
-        SERIAL_FLASH_OR_SPI_INTERFACE_ENABLE:
-            _write_constraint: "enum"
-            DISABLED: [0, "Disabled"]
-            ENABLED: [1, "Enabled"]
         HOST_DATA_BUS_WIDTH:
             _write_constraint: "enum"
             WIDTH_8BIT: [0, "8-bit Host Data Bus"]
@@ -4018,35 +3955,35 @@ FAKE_PERIPHERAL:
     SPLLC2:
         CCLK_PLLDIVN: [1, 63]
     PSFSR:
-        XPDAT18_FUNCTION_SELECT:
+        PDAT18_FUNCTION_SELECT:
             _write_constraint: "enum"
             GPIO: [0b0, "GPIO-D7"]
             XKOUT: [0b1, "XKOUT[4]"]
-        XPDAT17_FUNCTION_SELECT:
+        PDAT17_FUNCTION_SELECT:
             _write_constraint: "enum"
             GPIO: [0b0, "GPIO-D5"]
             XKOUT: [0b1, "XKOUT[2]"]
-        XPDAT16_FUNCTION_SELECT:
+        PDAT16_FUNCTION_SELECT:
             _write_constraint: "enum"
             GPIO: [0b0, "GPIO-D4"]
             XKOUT: [0b1, "XKOUT[1]"]
-        XPDAT9_FUNCTION_SELECT:
+        PDAT9_FUNCTION_SELECT:
             _write_constraint: "enum"
             GPIO: [0b0, "GPIO-D3"]
             XKOUT: [0b1, "XKOUT[3]"]
-        XPDAT8_FUNCTION_SELECT:
+        PDAT8_FUNCTION_SELECT:
             _write_constraint: "enum"
             GPIO: [0b0, "GPIO-D2"]
             XKIN: [0b1, "XKIN[3]"]
-        XPDAT2_FUNCTION_SELECT:
+        PDAT2_FUNCTION_SELECT:
             _write_constraint: "enum"
             GPIO: [0b0, "GPIO-D6"]
             XKIN: [0b1, "XKIN[4]"]
-        XPDAT1_FUNCTION_SELECT:
+        PDAT1_FUNCTION_SELECT:
             _write_constraint: "enum"
             GPIO: [0b0, "GPIO-D1"]
             XKIN: [0b1, "XKIN[2]"]
-        XPDAT0_FUNCTION_SELECT:
+        PDAT0_FUNCTION_SELECT:
             _write_constraint: "enum"
             GPIO: [0b0, "GPIO-D0"]
             XKIN: [0b1, "XKIN[1]"]
@@ -4066,13 +4003,13 @@ FAKE_PERIPHERAL:
             SYNC_MODE: [0b0, "Sync Mode: Enable XVSYNC, XHSYNC, XDE"]
             DE_MODE: [0b1, "DE Mode: Only XDE enable, XVSYNC & XHSYNC in idle state"]
     PIPCDEP:
-        PIP1_WINDOW_COLOR_DEPTH_SETTING:
+        PIP1_WINDOW_COLOR_DEPTH:
             _write_constraint: "enum"
             DEPTH_8BPP: [0b00, "8-bpp generic TFT (256 colors)"]
             DEPTH_16BPP: [0b01, "16-bpp generic TFT (65K colors)"]
             DEPTH_24BPP: [0b10, "24-bpp generic TFT (1.67M colors)"]
             #TODO:        0b1x ^^^^
-        PIP2_WINDOW_COLOR_DEPTH_SETTING:
+        PIP2_WINDOW_COLOR_DEPTH:
             _write_constraint: "enum"
             DEPTH_8BPP: [0b00, "8-bpp generic TFT (256 colors)"]
             DEPTH_16BPP: [0b01, "16-bpp generic TFT (65K colors)"]
@@ -4130,13 +4067,17 @@ FAKE_PERIPHERAL:
             OUTPUT_LOW: [0b0, "Pin VSYNC output is low"]
             OUTPUT_HIGH: [0b1, "Pin VSYNC output is high"]
     GTCCR:
-        GAMMA_TABLE_SELECT_FOR_MPU_WRITE_GAMMA_DATA:
+        GAMMA_TABLE:
             _write_constraint: "enum"
             BLUE: [0b00, "Gamma table for Blue"]
             GREEN: [0b01, "Gamma table for Green"]
             RED: [0b10, "Gamma table for Red"]
             NA4: [0b11, "NA"]
     AW_COLOR:
+        CANVAS_ADDRESSING_MODE:
+            _write_constraint: "enum"
+            BLOCK: [0b0, "Block mode (X/Y coordinate addressing)"]
+            LINEAR: [0b1, "Linear mode"]
         CANVAS_IMAGE_BLOCK_MODE_COLOR_DEPTH:
             _write_constraint: "enum"
             DEPTH_8BPP: [0b00, "8bpp"]
@@ -4188,12 +4129,12 @@ FAKE_PERIPHERAL:
             MEMORY_COPY_WITH_COLOR_EXPANSION: [0b1110, "Memory Copy with Color Expansion"]
             MEMORY_COPY_WITH_COLOR_EXPANSION_CHROMA: [0b1111, "Memory Copy with Color Expansion and chroma keying"]
     BTE_COLR:
-        S0_COLOR_DEPTH:
+        SOURCE0_COLOR_DEPTH:
             DEPTH_8BPP: [0b00, "256 Color"]
             DEPTH_16BPP: [0b01, "64k Color"]
             DEPTH_24BPP: [0b10, "16M Color"]
             #TODO:        0b1x  ^^^^^^
-        S1_COLOR_DEPTH:
+        SOURCE1_COLOR_DEPTH:
             DEPTH_8BPP: [0b000, "256 Color"]
             DEPTH_16BPP: [0b001, "64k Color"]
             DEPTH_24BPP: [0b010, "16M Color"]

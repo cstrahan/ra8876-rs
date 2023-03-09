@@ -427,7 +427,7 @@
             </field>
             <field>
               <name>MEMORY_PORT_READ_WRITE_DESTINATION</name>
-              <description>Text Mode enable</description>
+              <description>Memory port Read/Write Destination Selection</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
@@ -472,13 +472,6 @@
           <resetValue>4</resetValue>
           <fields>
             <field>
-              <name>RESERVED0</name>
-              <description>RESERVED</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
               <name>SCLK_EXTRA_DIVIDER</name>
               <description>SCLK extra divider</description>
               <bitOffset>3</bitOffset>
@@ -510,7 +503,7 @@
           <fields>
             <field>
               <name>SCLK_PLLDIVN</name>
-              <description>SCLK PLL Output divider</description>
+              <description>MCLK PLL input parameter</description>
               <bitOffset>0</bitOffset>
               <bitWidth>6</bitWidth>
               <access>read-write</access>
@@ -844,15 +837,15 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>XDB_MSB_PULL_HIGH_ENABLE</name>
-              <description>XDB[15:8] Pull-high Enable</description>
+              <name>DB_MSB_PULL_HIGH_ENABLE</name>
+              <description>XDB[15:8] Pull-high Enable (shared with GPIO-A[7:0])</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>XDB_LSB_PULL_HIGH_ENABLE</name>
-              <description>XDB[7:0] Pull-high Enable</description>
+              <name>DB_LSB_PULL_HIGH_ENABLE</name>
+              <description>XDB[7:0] Pull-high Enable (multiplexed with serial host signals if serial host mode set)</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -867,13 +860,13 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>XPDAT18_FUNCTION_SELECT</name>
+              <name>PDAT18_FUNCTION_SELECT</name>
               <description>XPDAT[18] - GPIO or Key function select</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
-                <name>XPDAT18_FUNCTION_SELECT</name>
+                <name>PDAT18_FUNCTION_SELECT</name>
                 <usage>read-write</usage>
                 <enumeratedValue>
                   <name>GPIO</name>
@@ -888,13 +881,13 @@
               </enumeratedValues>
             </field>
             <field>
-              <name>XPDAT17_FUNCTION_SELECT</name>
+              <name>PDAT17_FUNCTION_SELECT</name>
               <description>XPDAT[17] - GPIO or Key function select</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
-                <name>XPDAT17_FUNCTION_SELECT</name>
+                <name>PDAT17_FUNCTION_SELECT</name>
                 <usage>read-write</usage>
                 <enumeratedValue>
                   <name>GPIO</name>
@@ -909,13 +902,13 @@
               </enumeratedValues>
             </field>
             <field>
-              <name>XPDAT16_FUNCTION_SELECT</name>
+              <name>PDAT16_FUNCTION_SELECT</name>
               <description>XPDAT[16] - GPIO or Key function select</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
-                <name>XPDAT16_FUNCTION_SELECT</name>
+                <name>PDAT16_FUNCTION_SELECT</name>
                 <usage>read-write</usage>
                 <enumeratedValue>
                   <name>GPIO</name>
@@ -930,13 +923,13 @@
               </enumeratedValues>
             </field>
             <field>
-              <name>XPDAT9_FUNCTION_SELECT</name>
+              <name>PDAT9_FUNCTION_SELECT</name>
               <description>XPDAT[9] - GPIO or Key function select</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
-                <name>XPDAT9_FUNCTION_SELECT</name>
+                <name>PDAT9_FUNCTION_SELECT</name>
                 <usage>read-write</usage>
                 <enumeratedValue>
                   <name>GPIO</name>
@@ -951,13 +944,13 @@
               </enumeratedValues>
             </field>
             <field>
-              <name>XPDAT8_FUNCTION_SELECT</name>
+              <name>PDAT8_FUNCTION_SELECT</name>
               <description>XPDAT[8] - GPIO or Key function select</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
-                <name>XPDAT8_FUNCTION_SELECT</name>
+                <name>PDAT8_FUNCTION_SELECT</name>
                 <usage>read-write</usage>
                 <enumeratedValue>
                   <name>GPIO</name>
@@ -972,13 +965,13 @@
               </enumeratedValues>
             </field>
             <field>
-              <name>XPDAT2_FUNCTION_SELECT</name>
+              <name>PDAT2_FUNCTION_SELECT</name>
               <description>XPDAT[2] - GPIO or Key function select</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
-                <name>XPDAT2_FUNCTION_SELECT</name>
+                <name>PDAT2_FUNCTION_SELECT</name>
                 <usage>read-write</usage>
                 <enumeratedValue>
                   <name>GPIO</name>
@@ -993,13 +986,13 @@
               </enumeratedValues>
             </field>
             <field>
-              <name>XPDAT1_FUNCTION_SELECT</name>
+              <name>PDAT1_FUNCTION_SELECT</name>
               <description>XPDAT[1] - GPIO or Key function select</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
-                <name>XPDAT1_FUNCTION_SELECT</name>
+                <name>PDAT1_FUNCTION_SELECT</name>
                 <usage>read-write</usage>
                 <enumeratedValue>
                   <name>GPIO</name>
@@ -1014,13 +1007,13 @@
               </enumeratedValues>
             </field>
             <field>
-              <name>XPDAT0_FUNCTION_SELECT</name>
+              <name>PDAT0_FUNCTION_SELECT</name>
               <description>XPDAT[0] - GPIO or Key function select</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
-                <name>XPDAT0_FUNCTION_SELECT</name>
+                <name>PDAT0_FUNCTION_SELECT</name>
                 <usage>read-write</usage>
                 <enumeratedValue>
                   <name>GPIO</name>
@@ -1135,13 +1128,13 @@
           <resetValue>3</resetValue>
           <fields>
             <field>
-              <name>PIP1_WINDOW_COLOR_DEPTH_SETTING</name>
+              <name>PIP1_WINDOW_COLOR_DEPTH</name>
               <description>PIP 1 window Enable/Disable</description>
               <bitOffset>2</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
-                <name>PIP1_WINDOW_COLOR_DEPTH_SETTING</name>
+                <name>PIP1_WINDOW_COLOR_DEPTH</name>
                 <usage>read-write</usage>
                 <enumeratedValue>
                   <name>DEPTH_8BPP</name>
@@ -1161,13 +1154,13 @@
               </enumeratedValues>
             </field>
             <field>
-              <name>PIP2_WINDOW_COLOR_DEPTH_SETTING</name>
+              <name>PIP2_WINDOW_COLOR_DEPTH</name>
               <description>PIP 1 window Enable/Disable</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
-                <name>PIP2_WINDOW_COLOR_DEPTH_SETTING</name>
+                <name>PIP2_WINDOW_COLOR_DEPTH</name>
                 <usage>read-write</usage>
                 <enumeratedValue>
                   <name>DEPTH_8BPP</name>
@@ -1461,7 +1454,7 @@
             <field>
               <name>VSYNC_IDLE_STATE</name>
               <description>VSYNC IDLE STATE (in power saving mode or DISPLAY OFF)</description>
-              <bitOffset>1</bitOffset>
+              <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
@@ -1518,7 +1511,7 @@
           <description>Horizontal Non-Display Period Register</description>
           <addressOffset>22</addressOffset>
           <access>read-write</access>
-          <resetValue>0</resetValue>
+          <resetValue>3</resetValue>
           <fields>
             <field>
               <name>HORIZONTAL_NON_DISPLAY_PERIOD</name>
@@ -1534,7 +1527,7 @@
           <description>Horizontal Non-Display Period Fine Tune Register</description>
           <addressOffset>23</addressOffset>
           <access>read-write</access>
-          <resetValue>0</resetValue>
+          <resetValue>6</resetValue>
           <fields>
             <field>
               <name>HORIZONTAL_NON_DISPLAY_PERIOD_FINE_TUNING</name>
@@ -1550,7 +1543,7 @@
           <description>HSYNC Start Position Register</description>
           <addressOffset>24</addressOffset>
           <access>read-write</access>
-          <resetValue>0</resetValue>
+          <resetValue>31</resetValue>
           <fields>
             <field>
               <name>HSYNC_START_POSITION</name>
@@ -1582,13 +1575,13 @@
           <description>Vertical Display Height Register 0</description>
           <addressOffset>26</addressOffset>
           <access>read-write</access>
-          <resetValue>79</resetValue>
+          <resetValue>223</resetValue>
           <fields>
             <field>
               <name>VERTICAL_DISPLAY_HEIGHT</name>
               <description>VDHR[7:0] | Vertical Display Height (Line) = VDHR + 1</description>
               <bitOffset>0</bitOffset>
-              <bitWidth>7</bitWidth>
+              <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
           </fields>
@@ -1598,7 +1591,7 @@
           <description>Vertical Display Height Register 1</description>
           <addressOffset>27</addressOffset>
           <access>read-write</access>
-          <resetValue>79</resetValue>
+          <resetValue>1</resetValue>
           <fields>
             <field>
               <name>VERTICAL_DISPLAY_HEIGHT</name>
@@ -1614,13 +1607,13 @@
           <description>Vertical Non-Display Period Register 0</description>
           <addressOffset>28</addressOffset>
           <access>read-write</access>
-          <resetValue>0</resetValue>
+          <resetValue>21</resetValue>
           <fields>
             <field>
               <name>VERTICAL_DISPLAY_HEIGHT</name>
               <description>VNDR[7:0] | Vertical Non-Display Period (Line) = VNDR + 1</description>
               <bitOffset>0</bitOffset>
-              <bitWidth>7</bitWidth>
+              <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
           </fields>
@@ -1646,13 +1639,13 @@
           <description>VSYNC Start Position Register</description>
           <addressOffset>30</addressOffset>
           <access>read-write</access>
-          <resetValue>0</resetValue>
+          <resetValue>11</resetValue>
           <fields>
             <field>
               <name>VSYNC_START_POSITION</name>
               <description>The starting position from the end of display area to the beginning of VSYNC. VSYNC Start Position(Line) = VSTR + 1</description>
               <bitOffset>0</bitOffset>
-              <bitWidth>7</bitWidth>
+              <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
           </fields>
@@ -1777,7 +1770,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>MAIN_WINDOW_UPPER_LEFT_X</name>
+              <name>MAIN_WINDOW_X</name>
               <description>MWULX[7:0] | Main Window Upper-Left corner X-coordinates</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -1793,7 +1786,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>MAIN_WINDOW_UPPER_LEFT_X</name>
+              <name>MAIN_WINDOW_X</name>
               <description>MWULX[12:8] | Main Window Upper-Left corner X-coordinates</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -1809,7 +1802,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>MAIN_WINDOW_UPPER_LEFT_Y</name>
+              <name>MAIN_WINDOW_Y</name>
               <description>MWULY[7:0] | Main Window Upper-Left corner Y-coordinates</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -1825,7 +1818,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>MAIN_WINDOW_UPPER_LEFT_Y</name>
+              <name>MAIN_WINDOW_Y</name>
               <description>MWULY[12:8] | Main Window Upper-Left corner Y-coordinates</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -1841,7 +1834,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>PIP_WINDOW_DISPLAY_UPPER_LEFT_X</name>
+              <name>PIP_WINDOW_DISPLAY_X</name>
               <description>PWDULX[7:0] | PIP Window Display Upper-Left corner X-coordinates</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -1857,7 +1850,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>PIP_WINDOW_DISPLAY_UPPER_LEFT_X</name>
+              <name>PIP_WINDOW_DISPLAY_X</name>
               <description>PWDULX[12:8] | PIP Window Display Upper-Left corner X-coordinates</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -1873,7 +1866,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>PIP_WINDOW_DISPLAY_UPPER_LEFT_Y</name>
+              <name>PIP_WINDOW_DISPLAY_Y</name>
               <description>PWDULY[7:0] | PIP Window Display Upper-Left corner Y-coordinates</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -1889,7 +1882,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>PIP_WINDOW_DISPLAY_UPPER_LEFT_Y</name>
+              <name>PIP_WINDOW_DISPLAY_Y</name>
               <description>PWDULY[12:8] | PIP Window Display Upper-Left corner Y-coordinates</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -2001,7 +1994,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>PIP_WINDOW_IMAGE_UPPER_LEFT_X</name>
+              <name>PIP_WINDOW_IMAGE_X</name>
               <description>PWIULX[7:0] | PIP Window Image Upper-Left corner X-coordinates</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -2017,7 +2010,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>PIP_WINDOW_IMAGE_UPPER_LEFT_X</name>
+              <name>PIP_WINDOW_IMAGE_X</name>
               <description>PWIULX[12:8] | PIP Window Image Upper-Left corner X-coordinates</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -2033,7 +2026,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>PIP_WINDOW_IMAGE_UPPER_LEFT_Y</name>
+              <name>PIP_WINDOW_IMAGE_Y</name>
               <description>PWIULY[7:0] | PIP Window Image Upper-Left corner Y-coordinates</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -2049,7 +2042,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>PIP_WINDOW_IMAGE_UPPER_LEFT_Y</name>
+              <name>PIP_WINDOW_IMAGE_Y</name>
               <description>PWIULY[12:8] | PIP Window Image Upper-Left corner Y-coordinates</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -2136,13 +2129,13 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>GAMMA_TABLE_SELECT_FOR_MPU_WRITE_GAMMA_DATA</name>
+              <name>GAMMA_TABLE</name>
               <description>Gamma table select for MPU write gamma data</description>
               <bitOffset>5</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
-                <name>GAMMA_TABLE_SELECT_FOR_MPU_WRITE_GAMMA_DATA</name>
+                <name>GAMMA_TABLE</name>
                 <usage>read-write</usage>
                 <enumeratedValue>
                   <name>BLUE</name>
@@ -2174,7 +2167,7 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>GRAPHIC_CURSOR_SELECTION</name>
+              <name>GRAPHIC_CURSOR</name>
               <description>Graphic Cursor Selection</description>
               <bitOffset>2</bitOffset>
               <bitWidth>2</bitWidth>
@@ -2217,7 +2210,7 @@
           <description>Text Cursor Horizontal Size Register Register</description>
           <addressOffset>62</addressOffset>
           <access>read-write</access>
-          <resetValue>0</resetValue>
+          <resetValue>7</resetValue>
           <fields>
             <field>
               <name>TEXT_CURSOR_HORIZONTAL_SIZE</name>
@@ -2332,7 +2325,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>GRAPHIC_CURSOR_COLOR_0</name>
+              <name>GRAPHIC_CURSOR_COLOR_1</name>
               <description>Graphic Cursor Color 1 | RGB Format [7:0] = RRRGGGBB</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -2577,6 +2570,20 @@
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
+              <enumeratedValues>
+                <name>CANVAS_ADDRESSING_MODE</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>BLOCK</name>
+                  <description>Block mode (X/Y coordinate addressing)</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>LINEAR</name>
+                  <description>Linear mode</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>CANVAS_IMAGE_BLOCK_MODE_COLOR_DEPTH</name>
@@ -2636,7 +2643,7 @@
           <fields>
             <field>
               <name>MEMORY_READ_WRITE_ADDRESS</name>
-              <description>CURH[7:0] | Graphic Read/Write Linear mode address [7:0]</description>
+              <description>CURH[7:0] | Memory Read/Write Linear mode address [7:0]</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -2659,7 +2666,7 @@
           <fields>
             <field>
               <name>MEMORY_READ_WRITE_ADDRESS</name>
-              <description>CURH[15:8] | Graphic Read/Write Linear mode address [15:8]</description>
+              <description>CURH[15:8] | Memory Read/Write Linear mode address [15:8]</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -2682,7 +2689,7 @@
           <fields>
             <field>
               <name>MEMORY_READ_WRITE_ADDRESS</name>
-              <description>CURV[7:0] | Graphic Read/Write Linear mode address [23:16]</description>
+              <description>CURV[7:0] | Memory Read/Write Linear mode address [23:16]</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -2705,7 +2712,7 @@
           <fields>
             <field>
               <name>MEMORY_READ_WRITE_ADDRESS</name>
-              <description>CURV[15:8] | Graphic Read/Write Linear mode address [31:24]</description>
+              <description>CURV[15:8] | Memory Read/Write Linear mode address [31:24]</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -3237,7 +3244,7 @@
           <description>Foreground Color Register - Red</description>
           <addressOffset>210</addressOffset>
           <access>read-write</access>
-          <resetValue>0</resetValue>
+          <resetValue>255</resetValue>
           <fields>
             <field>
               <name>FOREGROUND_COLOR_RED_8BPP</name>
@@ -3267,7 +3274,7 @@
           <description>Foreground Color Register - Green</description>
           <addressOffset>211</addressOffset>
           <access>read-write</access>
-          <resetValue>0</resetValue>
+          <resetValue>255</resetValue>
           <fields>
             <field>
               <name>FOREGROUND_COLOR_GREEN_8BPP</name>
@@ -3297,7 +3304,7 @@
           <description>Foreground Color Register - Blue</description>
           <addressOffset>212</addressOffset>
           <access>read-write</access>
-          <resetValue>0</resetValue>
+          <resetValue>255</resetValue>
           <fields>
             <field>
               <name>FOREGROUND_COLOR_BLUE_8BPP</name>
@@ -3380,7 +3387,7 @@
           <description>PWM Configuration Register</description>
           <addressOffset>134</addressOffset>
           <access>read-write</access>
-          <resetValue>0</resetValue>
+          <resetValue>34</resetValue>
           <fields>
             <field>
               <name>PWM_TIMER1_OUTPUT_INVERTER_ENABLE</name>
@@ -3729,13 +3736,13 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>S0_COLOR_DEPTH</name>
+              <name>SOURCE0_COLOR_DEPTH</name>
               <description>S0 Color Depth</description>
               <bitOffset>5</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
-                <name>S0_COLOR_DEPTH</name>
+                <name>SOURCE0_COLOR_DEPTH</name>
                 <usage>read-write</usage>
                 <enumeratedValue>
                   <name>DEPTH_8BPP</name>
@@ -3755,13 +3762,13 @@
               </enumeratedValues>
             </field>
             <field>
-              <name>S1_COLOR_DEPTH</name>
+              <name>SOURCE1_COLOR_DEPTH</name>
               <description>S1 Color Depth</description>
               <bitOffset>2</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
-                <name>S1_COLOR_DEPTH</name>
+                <name>SOURCE1_COLOR_DEPTH</name>
                 <usage>read-write</usage>
                 <enumeratedValue>
                   <name>DEPTH_8BPP</name>
@@ -3841,7 +3848,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>S0_START_ADDRESS</name>
+              <name>SOURCE0_START_ADDRESS</name>
               <description>S0_STR[7:0] | Source 0 memory start address</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -3857,7 +3864,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>S0_START_ADDRESS</name>
+              <name>SOURCE0_START_ADDRESS</name>
               <description>S0_STR[15:8] | Source 0 memory start address</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -3873,7 +3880,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>S0_START_ADDRESS</name>
+              <name>SOURCE0_START_ADDRESS</name>
               <description>S0_STR[23:16] | Source 0 memory start address</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -3889,7 +3896,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>S0_START_ADDRESS</name>
+              <name>SOURCE0_START_ADDRESS</name>
               <description>S0_STR[31:24] | Source 0 memory start address</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -3905,7 +3912,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>S0_IMAGE_WIDTH</name>
+              <name>SOURCE0_IMAGE_WIDTH</name>
               <description>S0_WTH[7:0] | Source 0 image width</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -3921,7 +3928,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>S0_IMAGE_WIDTH</name>
+              <name>SOURCE0_IMAGE_WIDTH</name>
               <description>S0_WTH[12:8] | Source 0 image width</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -3937,7 +3944,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>S0_IMAGE_WIDTH</name>
+              <name>SOURCE0_X</name>
               <description>S0_X[7:0] | Source 0 Window Upper-Left corner X-coordinate</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -3953,7 +3960,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>S0_IMAGE_WIDTH</name>
+              <name>SOURCE0_X</name>
               <description>S0_X[12:8] | Source 0 Window Upper-Left corner X-coordinate</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -3969,7 +3976,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>S0_IMAGE_WIDTH</name>
+              <name>SOURCE0_Y</name>
               <description>S0_Y[7:0] | Source 0 Window Upper-Left corner Y-coordinate</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -3985,7 +3992,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>S0_IMAGE_WIDTH</name>
+              <name>SOURCE0_Y</name>
               <description>S0_Y[12:8] | Source 0 Window Upper-Left corner Y-coordinate</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -4001,7 +4008,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>S1_START_ADDRESS</name>
+              <name>SOURCE1_START_ADDRESS</name>
               <description>S1_STR[7:0] | Source 1 memory start address</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -4017,7 +4024,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>S1_START_ADDRESS</name>
+              <name>SOURCE1_START_ADDRESS</name>
               <description>S1_STR[15:8] | Source 1 memory start address</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -4033,7 +4040,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>S1_START_ADDRESS</name>
+              <name>SOURCE1_START_ADDRESS</name>
               <description>S1_STR[23:16] | Source 1 memory start address</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -4049,7 +4056,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>S1_START_ADDRESS</name>
+              <name>SOURCE1_START_ADDRESS</name>
               <description>S1_STR[31:24] | Source 1 memory start address</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -4065,7 +4072,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>S1_IMAGE_WIDTH</name>
+              <name>SOURCE1_IMAGE_WIDTH</name>
               <description>S1_WTH[7:0] | Source 1 image width</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -4081,7 +4088,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>S1_IMAGE_WIDTH</name>
+              <name>SOURCE1_IMAGE_WIDTH</name>
               <description>S1_WTH[12:8] | Source 1 image width</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -4097,7 +4104,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>S1_IMAGE_WIDTH</name>
+              <name>SOURCE1_X</name>
               <description>S1_X[7:0] | Source 1 Window Upper-Left corner X-coordinate</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -4113,7 +4120,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>S1_IMAGE_WIDTH</name>
+              <name>SOURCE1_X</name>
               <description>S1_X[12:8] | Source 1 Window Upper-Left corner X-coordinate</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -4129,7 +4136,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>S1_IMAGE_WIDTH</name>
+              <name>SOURCE1_Y</name>
               <description>S1_Y[7:0] | Source 1 Window Upper-Left corner Y-coordinate</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -4145,7 +4152,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>S1_IMAGE_WIDTH</name>
+              <name>SOURCE1_Y</name>
               <description>S1_Y[12:8] | Source 1 Window Upper-Left corner Y-coordinate</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -4257,7 +4264,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>DESTINATION_IMAGE_WIDTH</name>
+              <name>DESTINATION_X</name>
               <description>DT_X[7:0] | Destination Window Upper-Left corner X-coordinate</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -4273,7 +4280,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>DESTINATION_IMAGE_WIDTH</name>
+              <name>DESTINATION_X</name>
               <description>DT_X[12:8] | Destination Window Upper-Left corner X-coordinate</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -4289,7 +4296,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>DESTINATION_IMAGE_WIDTH</name>
+              <name>DESTINATION_Y</name>
               <description>DT_Y[7:0] | Destination Window Upper-Left corner Y-coordinate</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -4305,7 +4312,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>DESTINATION_IMAGE_WIDTH</name>
+              <name>DESTINATION_Y</name>
               <description>DT_Y[12:8] | Destination Window Upper-Left corner Y-coordinate</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -4353,8 +4360,8 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>BTE_WINDOW_WIDTH</name>
-              <description>BTE_WTH[7:0] | BTE Window Height Setting</description>
+              <name>BTE_WINDOW_HEIGHT</name>
+              <description>BTE_HIG[7:0] | BTE Window Height Setting</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -4369,8 +4376,8 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>BTE_WINDOW_WIDTH</name>
-              <description>BTE_WTH[12:8] | BTE Window Height Setting</description>
+              <name>BTE_WINDOW_HEIGHT</name>
+              <description>BTE_HIG[12:8] | BTE Window Height Setting</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
@@ -4540,7 +4547,7 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>MODE</name>
+              <name>SPI_MODE</name>
               <description>SPI operation mode</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
@@ -4687,7 +4694,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>DMA_DESTINATION_WINDOW_UPPER_LEFT_X</name>
+              <name>DMA_DESTINATION_X</name>
               <description>DMA Destination Window Upper-Left corner X-coordinates on Canvas area</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -4710,7 +4717,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>DMA_DESTINATION_WINDOW_UPPER_LEFT_X</name>
+              <name>DMA_DESTINATION_X</name>
               <description>DMA Destination Window Upper-Left corner X-coordinates on Canvas area</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -4733,7 +4740,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>DMA_DESTINATION_WINDOW_UPPER_LEFT_Y</name>
+              <name>DMA_DESTINATION_Y</name>
               <description>DMA Destination Window Upper-Left corner Y-coordinates on Canvas area</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -4756,7 +4763,7 @@
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>DMA_DESTINATION_WINDOW_UPPER_LEFT_Y</name>
+              <name>DMA_DESTINATION_Y</name>
               <description>DMA Destination Window Upper-Left corner Y-coordinates on Canvas area</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
