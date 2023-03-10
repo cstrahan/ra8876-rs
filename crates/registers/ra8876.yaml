@@ -2964,10 +2964,6 @@ _add:
                 access: read-write
                 resetValue: 0
                 fields:
-                    #TODO: for now I'm not specifying enumeratedValues for this,
-                    # as most 5bit values are *not* valid choices, so it's not
-                    # practical right now.
-                    # Maybe tweak codegen to allow for a "catchall" constructor (maybe UNKNOWN(u8)).
                     GT_CHARACTER_SET:
                         description: Character set
                         bitOffset: 3
@@ -4078,7 +4074,7 @@ FAKE_PERIPHERAL:
             BLUE: [0b00, "Gamma table for Blue"]
             GREEN: [0b01, "Gamma table for Green"]
             RED: [0b10, "Gamma table for Red"]
-            NA4: [0b11, "NA"]
+            # NA4: [0b11, "NA"]
     AW_COLOR:
         CANVAS_ADDRESSING_MODE:
             _write_constraint: "enum"
@@ -4166,12 +4162,12 @@ FAKE_PERIPHERAL:
             INTERNAL: [0b00, "Internal CGROM Character"]
             EXTERNAL: [0b01, "External CGROM Character (e.g. Genitop serial flash)"]
             USER_DEFINED: [0b10, "External CGROM Character (e.g. Genitop serial flash)"]
-            NA4: [0b11, "NA"]
+            # NA4: [0b11, "NA"]
         CHARACTER_HEIGHT:
             HEIGHT_16: [0b00, "16 (ex. 8x16 / 16x16 / variable character width x 16)"]
             HEIGHT_24: [0b01, "24 (ex. 12x24 / 24x24 / variable character width x 24)"]
             HEIGHT_32: [0b10, "32 (ex. 16x32 / 32x32 / variable character width x 32)"]
-            NA4: [0b11, "NA"]
+            # NA4: [0b11, "NA"]
         INTERNAL_CHARACTER_SET:
             ISO_8859_1: [0b00, "ISO-8859-1"]
             ISO_8859_2: [0b01, "ISO-8859-2"]
@@ -4200,37 +4196,36 @@ FAKE_PERIPHERAL:
             GT30L32S4W: [0b100, "GT30L32S4W"]
             GT20L24F6Y: [0b101, "GT20L24F6Y"]
             GT21L24S1W: [0b110, "GT21L24S1W"]
-            NA7: [0b111, "NA"]
-    # see earlier note on GTFNT_CR
-    # GTFNT_CR:
-    #     GT_CHARACTER_SET:
-    #         # one-byte char encodings
-    #         ASCII: [0b00100, "ASCII only"]
-    #         ISO_8859_1: [0b10001, "ISO-8859-1 + ASCII code"]
-    #         ISO_8859_2: [0b10010, "ISO-8859-2 + ASCII code"]
-    #         ISO_8859_3: [0b10011, "ISO-8859-3 + ASCII code"]
-    #         ISO_8859_4: [0b10100, "ISO-8859-4 + ASCII code"]
-    #         ISO_8859_5: [0b10101, "ISO-8859-5 + ASCII code"]
-    #         ISO_8859_7: [0b10110, "ISO-8859-7 + ASCII code"]
-    #         ISO_8859_8: [0b10111, "ISO-8859-8 + ASCII code"]
-    #         ISO_8859_9: [0b11000, "ISO-8859-9 + ASCII code"]
-    #         ISO_8859_10: [0b11001, "ISO-8859-10 + ASCII code"]
-    #         ISO_8859_11: [0b11010, "ISO-8859-11 + ASCII code"]
-    #         ISO_8859_13: [0b11011, "ISO-8859-13 + ASCII code"]
-    #         ISO_8859_14: [0b11100, "ISO-8859-14 + ASCII code"]
-    #         ISO_8859_15: [0b11101, "ISO-8859-15 + ASCII code"]
-    #         ISO_8859_16: [0b11110, "ISO-8859-16 + ASCII code"]
-    #         # two-byte char encodings
-    #         GB2312:                                   [0b00000, "GB2312"]
-    #         GB12345_GB18030:                          [0b00001, "GB12345/GB18030"]
-    #         BIG5:                                     [0b00010, "BIG5"]
-    #         UNICODE:                                  [0b00011, "UNICODE"]
-    #         UNI_JAPANESE:                             [0b00101, "UNI-Japanese"]
-    #         JIS0208:                                  [0b00110, "JIS0208"]
-    #         LATIN_GREEK_CYRILLIC_ARABIC_THAI_HEBREW:  [0b00111, "Latin / Greek / Cyrillic / Arabic / Thai / Hebrew"]   
+            # NA7: [0b111, "NA"]
+    GTFNT_CR:
+        GT_CHARACTER_SET:
+             # one-byte char encodings
+            ASCII: [0b00100, "ASCII only"]
+            ISO_8859_1: [0b10001, "ISO-8859-1 + ASCII code"]
+            ISO_8859_2: [0b10010, "ISO-8859-2 + ASCII code"]
+            ISO_8859_3: [0b10011, "ISO-8859-3 + ASCII code"]
+            ISO_8859_4: [0b10100, "ISO-8859-4 + ASCII code"]
+            ISO_8859_5: [0b10101, "ISO-8859-5 + ASCII code"]
+            ISO_8859_7: [0b10110, "ISO-8859-7 + ASCII code"]
+            ISO_8859_8: [0b10111, "ISO-8859-8 + ASCII code"]
+            ISO_8859_9: [0b11000, "ISO-8859-9 + ASCII code"]
+            ISO_8859_10: [0b11001, "ISO-8859-10 + ASCII code"]
+            ISO_8859_11: [0b11010, "ISO-8859-11 + ASCII code"]
+            ISO_8859_13: [0b11011, "ISO-8859-13 + ASCII code"]
+            ISO_8859_14: [0b11100, "ISO-8859-14 + ASCII code"]
+            ISO_8859_15: [0b11101, "ISO-8859-15 + ASCII code"]
+            ISO_8859_16: [0b11110, "ISO-8859-16 + ASCII code"]
+            # two-byte char encodings
+            GB2312:                                   [0b00000, "GB2312"]
+            GB12345_GB18030:                          [0b00001, "GB12345/GB18030"]
+            BIG5:                                     [0b00010, "BIG5"]
+            UNICODE:                                  [0b00011, "UNICODE"]
+            UNI_JAPANESE:                             [0b00101, "UNI-Japanese"]
+            JIS0208:                                  [0b00110, "JIS0208"]
+            LATIN_GREEK_CYRILLIC_ARABIC_THAI_HEBREW:  [0b00111, "Latin / Greek / Cyrillic / Arabic / Thai / Hebrew"]   
     PMU:
         POWER_SAVING_MODE:
-            NA: [0b00, "NA"]
+            # NA: [0b00, "NA"]
             STANDBY: [0b01, "CCLK & PCLK will stop, MCLK keep MPLL clock"]
             SUSPEND: [0b10, "CCLK & PCLK will stop, MCLK switch to OSC clock"]
             SLEEP: [0b11, "All clock & PLL will stop"]

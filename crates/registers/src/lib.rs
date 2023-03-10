@@ -10165,8 +10165,6 @@ pub mod gtccr {
         GREEN = 1,
         #[doc = "2: Gamma table for Red"]
         RED = 2,
-        #[doc = "3: NA"]
-        NA4 = 3,
     }
     impl From<GAMMA_TABLE_A> for u8 {
         #[inline(always)]
@@ -10177,13 +10175,12 @@ pub mod gtccr {
     impl GAMMA_TABLE_R {
         #[doc = "Get enumerated values variant"]
         #[inline(always)]
-        pub fn variant(&self) -> GAMMA_TABLE_A {
+        pub fn variant(&self) -> Option<GAMMA_TABLE_A> {
             match self.bits {
-                0 => GAMMA_TABLE_A::BLUE,
-                1 => GAMMA_TABLE_A::GREEN,
-                2 => GAMMA_TABLE_A::RED,
-                3 => GAMMA_TABLE_A::NA4,
-                _ => unreachable!(),
+                0 => Some(GAMMA_TABLE_A::BLUE),
+                1 => Some(GAMMA_TABLE_A::GREEN),
+                2 => Some(GAMMA_TABLE_A::RED),
+                _ => None,
             }
         }
         #[doc = "Checks if the value of the field is `BLUE`"]
@@ -10201,15 +10198,10 @@ pub mod gtccr {
         pub fn is_red(&self) -> bool {
             *self == GAMMA_TABLE_A::RED
         }
-        #[doc = "Checks if the value of the field is `NA4`"]
-        #[inline(always)]
-        pub fn is_na4(&self) -> bool {
-            *self == GAMMA_TABLE_A::NA4
-        }
     }
     #[doc = "Field `GAMMA_TABLE` writer - Gamma table select for MPU write gamma data"]
     pub type GAMMA_TABLE_W<'a, const O: u8> =
-        crate::FieldWriterSafe<'a, GTCCR, u8, GAMMA_TABLE_A, 2, O>;
+        crate::FieldWriter<'a, GTCCR, u8, GAMMA_TABLE_A, 2, O>;
     impl<'a, const O: u8> GAMMA_TABLE_W<'a, O> {
         #[doc = "Gamma table for Blue"]
         #[inline(always)]
@@ -10225,11 +10217,6 @@ pub mod gtccr {
         #[inline(always)]
         pub fn red(self) -> &'a mut W {
             self.variant(GAMMA_TABLE_A::RED)
-        }
-        #[doc = "NA"]
-        #[inline(always)]
-        pub fn na4(self) -> &'a mut W {
-            self.variant(GAMMA_TABLE_A::NA4)
         }
     }
     #[doc = "Field `GAMMA_CORRECTION_ENABLE` reader - Gamma correction Enable"]
@@ -26232,8 +26219,6 @@ pub mod ccr0 {
         HEIGHT_24 = 1,
         #[doc = "2: 32 (ex. 16x32 / 32x32 / variable character width x 32)"]
         HEIGHT_32 = 2,
-        #[doc = "3: NA"]
-        NA4 = 3,
     }
     impl From<CHARACTER_HEIGHT_A> for u8 {
         #[inline(always)]
@@ -26244,13 +26229,12 @@ pub mod ccr0 {
     impl CHARACTER_HEIGHT_R {
         #[doc = "Get enumerated values variant"]
         #[inline(always)]
-        pub fn variant(&self) -> CHARACTER_HEIGHT_A {
+        pub fn variant(&self) -> Option<CHARACTER_HEIGHT_A> {
             match self.bits {
-                0 => CHARACTER_HEIGHT_A::HEIGHT_16,
-                1 => CHARACTER_HEIGHT_A::HEIGHT_24,
-                2 => CHARACTER_HEIGHT_A::HEIGHT_32,
-                3 => CHARACTER_HEIGHT_A::NA4,
-                _ => unreachable!(),
+                0 => Some(CHARACTER_HEIGHT_A::HEIGHT_16),
+                1 => Some(CHARACTER_HEIGHT_A::HEIGHT_24),
+                2 => Some(CHARACTER_HEIGHT_A::HEIGHT_32),
+                _ => None,
             }
         }
         #[doc = "Checks if the value of the field is `HEIGHT_16`"]
@@ -26268,15 +26252,10 @@ pub mod ccr0 {
         pub fn is_height_32(&self) -> bool {
             *self == CHARACTER_HEIGHT_A::HEIGHT_32
         }
-        #[doc = "Checks if the value of the field is `NA4`"]
-        #[inline(always)]
-        pub fn is_na4(&self) -> bool {
-            *self == CHARACTER_HEIGHT_A::NA4
-        }
     }
     #[doc = "Field `CHARACTER_HEIGHT` writer - Character Height Setting"]
     pub type CHARACTER_HEIGHT_W<'a, const O: u8> =
-        crate::FieldWriterSafe<'a, CCR0, u8, CHARACTER_HEIGHT_A, 2, O>;
+        crate::FieldWriter<'a, CCR0, u8, CHARACTER_HEIGHT_A, 2, O>;
     impl<'a, const O: u8> CHARACTER_HEIGHT_W<'a, O> {
         #[doc = "16 (ex. 8x16 / 16x16 / variable character width x 16)"]
         #[inline(always)]
@@ -26293,11 +26272,6 @@ pub mod ccr0 {
         pub fn height_32(self) -> &'a mut W {
             self.variant(CHARACTER_HEIGHT_A::HEIGHT_32)
         }
-        #[doc = "NA"]
-        #[inline(always)]
-        pub fn na4(self) -> &'a mut W {
-            self.variant(CHARACTER_HEIGHT_A::NA4)
-        }
     }
     #[doc = "Field `CHARACTER_SOURCE` reader - Character source selection"]
     pub type CHARACTER_SOURCE_R = crate::FieldReader<CHARACTER_SOURCE_A>;
@@ -26311,8 +26285,6 @@ pub mod ccr0 {
         EXTERNAL = 1,
         #[doc = "2: External CGROM Character (e.g. Genitop serial flash)"]
         USER_DEFINED = 2,
-        #[doc = "3: NA"]
-        NA4 = 3,
     }
     impl From<CHARACTER_SOURCE_A> for u8 {
         #[inline(always)]
@@ -26323,13 +26295,12 @@ pub mod ccr0 {
     impl CHARACTER_SOURCE_R {
         #[doc = "Get enumerated values variant"]
         #[inline(always)]
-        pub fn variant(&self) -> CHARACTER_SOURCE_A {
+        pub fn variant(&self) -> Option<CHARACTER_SOURCE_A> {
             match self.bits {
-                0 => CHARACTER_SOURCE_A::INTERNAL,
-                1 => CHARACTER_SOURCE_A::EXTERNAL,
-                2 => CHARACTER_SOURCE_A::USER_DEFINED,
-                3 => CHARACTER_SOURCE_A::NA4,
-                _ => unreachable!(),
+                0 => Some(CHARACTER_SOURCE_A::INTERNAL),
+                1 => Some(CHARACTER_SOURCE_A::EXTERNAL),
+                2 => Some(CHARACTER_SOURCE_A::USER_DEFINED),
+                _ => None,
             }
         }
         #[doc = "Checks if the value of the field is `INTERNAL`"]
@@ -26347,15 +26318,10 @@ pub mod ccr0 {
         pub fn is_user_defined(&self) -> bool {
             *self == CHARACTER_SOURCE_A::USER_DEFINED
         }
-        #[doc = "Checks if the value of the field is `NA4`"]
-        #[inline(always)]
-        pub fn is_na4(&self) -> bool {
-            *self == CHARACTER_SOURCE_A::NA4
-        }
     }
     #[doc = "Field `CHARACTER_SOURCE` writer - Character source selection"]
     pub type CHARACTER_SOURCE_W<'a, const O: u8> =
-        crate::FieldWriterSafe<'a, CCR0, u8, CHARACTER_SOURCE_A, 2, O>;
+        crate::FieldWriter<'a, CCR0, u8, CHARACTER_SOURCE_A, 2, O>;
     impl<'a, const O: u8> CHARACTER_SOURCE_W<'a, O> {
         #[doc = "Internal CGROM Character"]
         #[inline(always)]
@@ -26371,11 +26337,6 @@ pub mod ccr0 {
         #[inline(always)]
         pub fn user_defined(self) -> &'a mut W {
             self.variant(CHARACTER_SOURCE_A::USER_DEFINED)
-        }
-        #[doc = "NA"]
-        #[inline(always)]
-        pub fn na4(self) -> &'a mut W {
-            self.variant(CHARACTER_SOURCE_A::NA4)
         }
     }
     impl R {
@@ -26893,8 +26854,6 @@ pub mod gtfnt_sel {
         GT20L24F6Y = 5,
         #[doc = "6: GT21L24S1W"]
         GT21L24S1W = 6,
-        #[doc = "7: NA"]
-        NA7 = 7,
     }
     impl From<GT_SERIAL_CHARACTER_ROM_A> for u8 {
         #[inline(always)]
@@ -26905,17 +26864,16 @@ pub mod gtfnt_sel {
     impl GT_SERIAL_CHARACTER_ROM_R {
         #[doc = "Get enumerated values variant"]
         #[inline(always)]
-        pub fn variant(&self) -> GT_SERIAL_CHARACTER_ROM_A {
+        pub fn variant(&self) -> Option<GT_SERIAL_CHARACTER_ROM_A> {
             match self.bits {
-                0 => GT_SERIAL_CHARACTER_ROM_A::GT21L16T1W,
-                1 => GT_SERIAL_CHARACTER_ROM_A::GT30L16U2W,
-                2 => GT_SERIAL_CHARACTER_ROM_A::GT30L24T3Y,
-                3 => GT_SERIAL_CHARACTER_ROM_A::GT30L24M1Z,
-                4 => GT_SERIAL_CHARACTER_ROM_A::GT30L32S4W,
-                5 => GT_SERIAL_CHARACTER_ROM_A::GT20L24F6Y,
-                6 => GT_SERIAL_CHARACTER_ROM_A::GT21L24S1W,
-                7 => GT_SERIAL_CHARACTER_ROM_A::NA7,
-                _ => unreachable!(),
+                0 => Some(GT_SERIAL_CHARACTER_ROM_A::GT21L16T1W),
+                1 => Some(GT_SERIAL_CHARACTER_ROM_A::GT30L16U2W),
+                2 => Some(GT_SERIAL_CHARACTER_ROM_A::GT30L24T3Y),
+                3 => Some(GT_SERIAL_CHARACTER_ROM_A::GT30L24M1Z),
+                4 => Some(GT_SERIAL_CHARACTER_ROM_A::GT30L32S4W),
+                5 => Some(GT_SERIAL_CHARACTER_ROM_A::GT20L24F6Y),
+                6 => Some(GT_SERIAL_CHARACTER_ROM_A::GT21L24S1W),
+                _ => None,
             }
         }
         #[doc = "Checks if the value of the field is `GT21L16T1W`"]
@@ -26953,15 +26911,10 @@ pub mod gtfnt_sel {
         pub fn is_gt21l24s1w(&self) -> bool {
             *self == GT_SERIAL_CHARACTER_ROM_A::GT21L24S1W
         }
-        #[doc = "Checks if the value of the field is `NA7`"]
-        #[inline(always)]
-        pub fn is_na7(&self) -> bool {
-            *self == GT_SERIAL_CHARACTER_ROM_A::NA7
-        }
     }
     #[doc = "Field `GT_SERIAL_CHARACTER_ROM` writer - GT Serial Character ROM Select"]
     pub type GT_SERIAL_CHARACTER_ROM_W<'a, const O: u8> =
-        crate::FieldWriterSafe<'a, GTFNT_SEL, u8, GT_SERIAL_CHARACTER_ROM_A, 3, O>;
+        crate::FieldWriter<'a, GTFNT_SEL, u8, GT_SERIAL_CHARACTER_ROM_A, 3, O>;
     impl<'a, const O: u8> GT_SERIAL_CHARACTER_ROM_W<'a, O> {
         #[doc = "GT21L16T1W"]
         #[inline(always)]
@@ -26997,11 +26950,6 @@ pub mod gtfnt_sel {
         #[inline(always)]
         pub fn gt21l24s1w(self) -> &'a mut W {
             self.variant(GT_SERIAL_CHARACTER_ROM_A::GT21L24S1W)
-        }
-        #[doc = "NA"]
-        #[inline(always)]
-        pub fn na7(self) -> &'a mut W {
-            self.variant(GT_SERIAL_CHARACTER_ROM_A::NA7)
         }
     }
     impl R {
@@ -27115,9 +27063,318 @@ pub mod gtfnt_cr {
     #[doc = "Field `GT_CHARACTER_WIDTH` writer - GT Character width setting"]
     pub type GT_CHARACTER_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, GTFNT_CR, u8, u8, 2, O>;
     #[doc = "Field `GT_CHARACTER_SET` reader - Character set"]
-    pub type GT_CHARACTER_SET_R = crate::FieldReader<u8>;
+    pub type GT_CHARACTER_SET_R = crate::FieldReader<GT_CHARACTER_SET_A>;
+    #[doc = "Character set\n\nValue on reset: 0"]
+    #[derive(Clone, Copy, Debug, PartialEq, Eq)]
+    #[repr(u8)]
+    pub enum GT_CHARACTER_SET_A {
+        #[doc = "4: ASCII only"]
+        ASCII = 4,
+        #[doc = "17: ISO-8859-1 + ASCII code"]
+        ISO_8859_1 = 17,
+        #[doc = "18: ISO-8859-2 + ASCII code"]
+        ISO_8859_2 = 18,
+        #[doc = "19: ISO-8859-3 + ASCII code"]
+        ISO_8859_3 = 19,
+        #[doc = "20: ISO-8859-4 + ASCII code"]
+        ISO_8859_4 = 20,
+        #[doc = "21: ISO-8859-5 + ASCII code"]
+        ISO_8859_5 = 21,
+        #[doc = "22: ISO-8859-7 + ASCII code"]
+        ISO_8859_7 = 22,
+        #[doc = "23: ISO-8859-8 + ASCII code"]
+        ISO_8859_8 = 23,
+        #[doc = "24: ISO-8859-9 + ASCII code"]
+        ISO_8859_9 = 24,
+        #[doc = "25: ISO-8859-10 + ASCII code"]
+        ISO_8859_10 = 25,
+        #[doc = "26: ISO-8859-11 + ASCII code"]
+        ISO_8859_11 = 26,
+        #[doc = "27: ISO-8859-13 + ASCII code"]
+        ISO_8859_13 = 27,
+        #[doc = "28: ISO-8859-14 + ASCII code"]
+        ISO_8859_14 = 28,
+        #[doc = "29: ISO-8859-15 + ASCII code"]
+        ISO_8859_15 = 29,
+        #[doc = "30: ISO-8859-16 + ASCII code"]
+        ISO_8859_16 = 30,
+        #[doc = "0: GB2312"]
+        GB2312 = 0,
+        #[doc = "1: GB12345/GB18030"]
+        GB12345_GB18030 = 1,
+        #[doc = "2: BIG5"]
+        BIG5 = 2,
+        #[doc = "3: UNICODE"]
+        UNICODE = 3,
+        #[doc = "5: UNI-Japanese"]
+        UNI_JAPANESE = 5,
+        #[doc = "6: JIS0208"]
+        JIS0208 = 6,
+        #[doc = "7: Latin / Greek / Cyrillic / Arabic / Thai / Hebrew"]
+        LATIN_GREEK_CYRILLIC_ARABIC_THAI_HEBREW = 7,
+    }
+    impl From<GT_CHARACTER_SET_A> for u8 {
+        #[inline(always)]
+        fn from(variant: GT_CHARACTER_SET_A) -> Self {
+            variant as _
+        }
+    }
+    impl GT_CHARACTER_SET_R {
+        #[doc = "Get enumerated values variant"]
+        #[inline(always)]
+        pub fn variant(&self) -> Option<GT_CHARACTER_SET_A> {
+            match self.bits {
+                4 => Some(GT_CHARACTER_SET_A::ASCII),
+                17 => Some(GT_CHARACTER_SET_A::ISO_8859_1),
+                18 => Some(GT_CHARACTER_SET_A::ISO_8859_2),
+                19 => Some(GT_CHARACTER_SET_A::ISO_8859_3),
+                20 => Some(GT_CHARACTER_SET_A::ISO_8859_4),
+                21 => Some(GT_CHARACTER_SET_A::ISO_8859_5),
+                22 => Some(GT_CHARACTER_SET_A::ISO_8859_7),
+                23 => Some(GT_CHARACTER_SET_A::ISO_8859_8),
+                24 => Some(GT_CHARACTER_SET_A::ISO_8859_9),
+                25 => Some(GT_CHARACTER_SET_A::ISO_8859_10),
+                26 => Some(GT_CHARACTER_SET_A::ISO_8859_11),
+                27 => Some(GT_CHARACTER_SET_A::ISO_8859_13),
+                28 => Some(GT_CHARACTER_SET_A::ISO_8859_14),
+                29 => Some(GT_CHARACTER_SET_A::ISO_8859_15),
+                30 => Some(GT_CHARACTER_SET_A::ISO_8859_16),
+                0 => Some(GT_CHARACTER_SET_A::GB2312),
+                1 => Some(GT_CHARACTER_SET_A::GB12345_GB18030),
+                2 => Some(GT_CHARACTER_SET_A::BIG5),
+                3 => Some(GT_CHARACTER_SET_A::UNICODE),
+                5 => Some(GT_CHARACTER_SET_A::UNI_JAPANESE),
+                6 => Some(GT_CHARACTER_SET_A::JIS0208),
+                7 => Some(GT_CHARACTER_SET_A::LATIN_GREEK_CYRILLIC_ARABIC_THAI_HEBREW),
+                _ => None,
+            }
+        }
+        #[doc = "Checks if the value of the field is `ASCII`"]
+        #[inline(always)]
+        pub fn is_ascii(&self) -> bool {
+            *self == GT_CHARACTER_SET_A::ASCII
+        }
+        #[doc = "Checks if the value of the field is `ISO_8859_1`"]
+        #[inline(always)]
+        pub fn is_iso_8859_1(&self) -> bool {
+            *self == GT_CHARACTER_SET_A::ISO_8859_1
+        }
+        #[doc = "Checks if the value of the field is `ISO_8859_2`"]
+        #[inline(always)]
+        pub fn is_iso_8859_2(&self) -> bool {
+            *self == GT_CHARACTER_SET_A::ISO_8859_2
+        }
+        #[doc = "Checks if the value of the field is `ISO_8859_3`"]
+        #[inline(always)]
+        pub fn is_iso_8859_3(&self) -> bool {
+            *self == GT_CHARACTER_SET_A::ISO_8859_3
+        }
+        #[doc = "Checks if the value of the field is `ISO_8859_4`"]
+        #[inline(always)]
+        pub fn is_iso_8859_4(&self) -> bool {
+            *self == GT_CHARACTER_SET_A::ISO_8859_4
+        }
+        #[doc = "Checks if the value of the field is `ISO_8859_5`"]
+        #[inline(always)]
+        pub fn is_iso_8859_5(&self) -> bool {
+            *self == GT_CHARACTER_SET_A::ISO_8859_5
+        }
+        #[doc = "Checks if the value of the field is `ISO_8859_7`"]
+        #[inline(always)]
+        pub fn is_iso_8859_7(&self) -> bool {
+            *self == GT_CHARACTER_SET_A::ISO_8859_7
+        }
+        #[doc = "Checks if the value of the field is `ISO_8859_8`"]
+        #[inline(always)]
+        pub fn is_iso_8859_8(&self) -> bool {
+            *self == GT_CHARACTER_SET_A::ISO_8859_8
+        }
+        #[doc = "Checks if the value of the field is `ISO_8859_9`"]
+        #[inline(always)]
+        pub fn is_iso_8859_9(&self) -> bool {
+            *self == GT_CHARACTER_SET_A::ISO_8859_9
+        }
+        #[doc = "Checks if the value of the field is `ISO_8859_10`"]
+        #[inline(always)]
+        pub fn is_iso_8859_10(&self) -> bool {
+            *self == GT_CHARACTER_SET_A::ISO_8859_10
+        }
+        #[doc = "Checks if the value of the field is `ISO_8859_11`"]
+        #[inline(always)]
+        pub fn is_iso_8859_11(&self) -> bool {
+            *self == GT_CHARACTER_SET_A::ISO_8859_11
+        }
+        #[doc = "Checks if the value of the field is `ISO_8859_13`"]
+        #[inline(always)]
+        pub fn is_iso_8859_13(&self) -> bool {
+            *self == GT_CHARACTER_SET_A::ISO_8859_13
+        }
+        #[doc = "Checks if the value of the field is `ISO_8859_14`"]
+        #[inline(always)]
+        pub fn is_iso_8859_14(&self) -> bool {
+            *self == GT_CHARACTER_SET_A::ISO_8859_14
+        }
+        #[doc = "Checks if the value of the field is `ISO_8859_15`"]
+        #[inline(always)]
+        pub fn is_iso_8859_15(&self) -> bool {
+            *self == GT_CHARACTER_SET_A::ISO_8859_15
+        }
+        #[doc = "Checks if the value of the field is `ISO_8859_16`"]
+        #[inline(always)]
+        pub fn is_iso_8859_16(&self) -> bool {
+            *self == GT_CHARACTER_SET_A::ISO_8859_16
+        }
+        #[doc = "Checks if the value of the field is `GB2312`"]
+        #[inline(always)]
+        pub fn is_gb2312(&self) -> bool {
+            *self == GT_CHARACTER_SET_A::GB2312
+        }
+        #[doc = "Checks if the value of the field is `GB12345_GB18030`"]
+        #[inline(always)]
+        pub fn is_gb12345_gb18030(&self) -> bool {
+            *self == GT_CHARACTER_SET_A::GB12345_GB18030
+        }
+        #[doc = "Checks if the value of the field is `BIG5`"]
+        #[inline(always)]
+        pub fn is_big5(&self) -> bool {
+            *self == GT_CHARACTER_SET_A::BIG5
+        }
+        #[doc = "Checks if the value of the field is `UNICODE`"]
+        #[inline(always)]
+        pub fn is_unicode(&self) -> bool {
+            *self == GT_CHARACTER_SET_A::UNICODE
+        }
+        #[doc = "Checks if the value of the field is `UNI_JAPANESE`"]
+        #[inline(always)]
+        pub fn is_uni_japanese(&self) -> bool {
+            *self == GT_CHARACTER_SET_A::UNI_JAPANESE
+        }
+        #[doc = "Checks if the value of the field is `JIS0208`"]
+        #[inline(always)]
+        pub fn is_jis0208(&self) -> bool {
+            *self == GT_CHARACTER_SET_A::JIS0208
+        }
+        #[doc = "Checks if the value of the field is `LATIN_GREEK_CYRILLIC_ARABIC_THAI_HEBREW`"]
+        #[inline(always)]
+        pub fn is_latin_greek_cyrillic_arabic_thai_hebrew(&self) -> bool {
+            *self == GT_CHARACTER_SET_A::LATIN_GREEK_CYRILLIC_ARABIC_THAI_HEBREW
+        }
+    }
     #[doc = "Field `GT_CHARACTER_SET` writer - Character set"]
-    pub type GT_CHARACTER_SET_W<'a, const O: u8> = crate::FieldWriter<'a, GTFNT_CR, u8, u8, 5, O>;
+    pub type GT_CHARACTER_SET_W<'a, const O: u8> =
+        crate::FieldWriter<'a, GTFNT_CR, u8, GT_CHARACTER_SET_A, 5, O>;
+    impl<'a, const O: u8> GT_CHARACTER_SET_W<'a, O> {
+        #[doc = "ASCII only"]
+        #[inline(always)]
+        pub fn ascii(self) -> &'a mut W {
+            self.variant(GT_CHARACTER_SET_A::ASCII)
+        }
+        #[doc = "ISO-8859-1 + ASCII code"]
+        #[inline(always)]
+        pub fn iso_8859_1(self) -> &'a mut W {
+            self.variant(GT_CHARACTER_SET_A::ISO_8859_1)
+        }
+        #[doc = "ISO-8859-2 + ASCII code"]
+        #[inline(always)]
+        pub fn iso_8859_2(self) -> &'a mut W {
+            self.variant(GT_CHARACTER_SET_A::ISO_8859_2)
+        }
+        #[doc = "ISO-8859-3 + ASCII code"]
+        #[inline(always)]
+        pub fn iso_8859_3(self) -> &'a mut W {
+            self.variant(GT_CHARACTER_SET_A::ISO_8859_3)
+        }
+        #[doc = "ISO-8859-4 + ASCII code"]
+        #[inline(always)]
+        pub fn iso_8859_4(self) -> &'a mut W {
+            self.variant(GT_CHARACTER_SET_A::ISO_8859_4)
+        }
+        #[doc = "ISO-8859-5 + ASCII code"]
+        #[inline(always)]
+        pub fn iso_8859_5(self) -> &'a mut W {
+            self.variant(GT_CHARACTER_SET_A::ISO_8859_5)
+        }
+        #[doc = "ISO-8859-7 + ASCII code"]
+        #[inline(always)]
+        pub fn iso_8859_7(self) -> &'a mut W {
+            self.variant(GT_CHARACTER_SET_A::ISO_8859_7)
+        }
+        #[doc = "ISO-8859-8 + ASCII code"]
+        #[inline(always)]
+        pub fn iso_8859_8(self) -> &'a mut W {
+            self.variant(GT_CHARACTER_SET_A::ISO_8859_8)
+        }
+        #[doc = "ISO-8859-9 + ASCII code"]
+        #[inline(always)]
+        pub fn iso_8859_9(self) -> &'a mut W {
+            self.variant(GT_CHARACTER_SET_A::ISO_8859_9)
+        }
+        #[doc = "ISO-8859-10 + ASCII code"]
+        #[inline(always)]
+        pub fn iso_8859_10(self) -> &'a mut W {
+            self.variant(GT_CHARACTER_SET_A::ISO_8859_10)
+        }
+        #[doc = "ISO-8859-11 + ASCII code"]
+        #[inline(always)]
+        pub fn iso_8859_11(self) -> &'a mut W {
+            self.variant(GT_CHARACTER_SET_A::ISO_8859_11)
+        }
+        #[doc = "ISO-8859-13 + ASCII code"]
+        #[inline(always)]
+        pub fn iso_8859_13(self) -> &'a mut W {
+            self.variant(GT_CHARACTER_SET_A::ISO_8859_13)
+        }
+        #[doc = "ISO-8859-14 + ASCII code"]
+        #[inline(always)]
+        pub fn iso_8859_14(self) -> &'a mut W {
+            self.variant(GT_CHARACTER_SET_A::ISO_8859_14)
+        }
+        #[doc = "ISO-8859-15 + ASCII code"]
+        #[inline(always)]
+        pub fn iso_8859_15(self) -> &'a mut W {
+            self.variant(GT_CHARACTER_SET_A::ISO_8859_15)
+        }
+        #[doc = "ISO-8859-16 + ASCII code"]
+        #[inline(always)]
+        pub fn iso_8859_16(self) -> &'a mut W {
+            self.variant(GT_CHARACTER_SET_A::ISO_8859_16)
+        }
+        #[doc = "GB2312"]
+        #[inline(always)]
+        pub fn gb2312(self) -> &'a mut W {
+            self.variant(GT_CHARACTER_SET_A::GB2312)
+        }
+        #[doc = "GB12345/GB18030"]
+        #[inline(always)]
+        pub fn gb12345_gb18030(self) -> &'a mut W {
+            self.variant(GT_CHARACTER_SET_A::GB12345_GB18030)
+        }
+        #[doc = "BIG5"]
+        #[inline(always)]
+        pub fn big5(self) -> &'a mut W {
+            self.variant(GT_CHARACTER_SET_A::BIG5)
+        }
+        #[doc = "UNICODE"]
+        #[inline(always)]
+        pub fn unicode(self) -> &'a mut W {
+            self.variant(GT_CHARACTER_SET_A::UNICODE)
+        }
+        #[doc = "UNI-Japanese"]
+        #[inline(always)]
+        pub fn uni_japanese(self) -> &'a mut W {
+            self.variant(GT_CHARACTER_SET_A::UNI_JAPANESE)
+        }
+        #[doc = "JIS0208"]
+        #[inline(always)]
+        pub fn jis0208(self) -> &'a mut W {
+            self.variant(GT_CHARACTER_SET_A::JIS0208)
+        }
+        #[doc = "Latin / Greek / Cyrillic / Arabic / Thai / Hebrew"]
+        #[inline(always)]
+        pub fn latin_greek_cyrillic_arabic_thai_hebrew(self) -> &'a mut W {
+            self.variant(GT_CHARACTER_SET_A::LATIN_GREEK_CYRILLIC_ARABIC_THAI_HEBREW)
+        }
+    }
     impl R {
         #[doc = "Bits 0:1 - GT Character width setting"]
         #[inline(always)]
@@ -28236,8 +28493,6 @@ pub mod pmu {
     #[derive(Clone, Copy, Debug, PartialEq, Eq)]
     #[repr(u8)]
     pub enum POWER_SAVING_MODE_A {
-        #[doc = "0: NA"]
-        NA = 0,
         #[doc = "1: CCLK &amp; PCLK will stop, MCLK keep MPLL clock"]
         STANDBY = 1,
         #[doc = "2: CCLK &amp; PCLK will stop, MCLK switch to OSC clock"]
@@ -28254,19 +28509,13 @@ pub mod pmu {
     impl POWER_SAVING_MODE_R {
         #[doc = "Get enumerated values variant"]
         #[inline(always)]
-        pub fn variant(&self) -> POWER_SAVING_MODE_A {
+        pub fn variant(&self) -> Option<POWER_SAVING_MODE_A> {
             match self.bits {
-                0 => POWER_SAVING_MODE_A::NA,
-                1 => POWER_SAVING_MODE_A::STANDBY,
-                2 => POWER_SAVING_MODE_A::SUSPEND,
-                3 => POWER_SAVING_MODE_A::SLEEP,
-                _ => unreachable!(),
+                1 => Some(POWER_SAVING_MODE_A::STANDBY),
+                2 => Some(POWER_SAVING_MODE_A::SUSPEND),
+                3 => Some(POWER_SAVING_MODE_A::SLEEP),
+                _ => None,
             }
-        }
-        #[doc = "Checks if the value of the field is `NA`"]
-        #[inline(always)]
-        pub fn is_na(&self) -> bool {
-            *self == POWER_SAVING_MODE_A::NA
         }
         #[doc = "Checks if the value of the field is `STANDBY`"]
         #[inline(always)]
@@ -28286,13 +28535,8 @@ pub mod pmu {
     }
     #[doc = "Field `POWER_SAVING_MODE` writer - Power saving Mode"]
     pub type POWER_SAVING_MODE_W<'a, const O: u8> =
-        crate::FieldWriterSafe<'a, PMU, u8, POWER_SAVING_MODE_A, 2, O>;
+        crate::FieldWriter<'a, PMU, u8, POWER_SAVING_MODE_A, 2, O>;
     impl<'a, const O: u8> POWER_SAVING_MODE_W<'a, O> {
-        #[doc = "NA"]
-        #[inline(always)]
-        pub fn na(self) -> &'a mut W {
-            self.variant(POWER_SAVING_MODE_A::NA)
-        }
         #[doc = "CCLK &amp; PCLK will stop, MCLK keep MPLL clock"]
         #[inline(always)]
         pub fn standby(self) -> &'a mut W {

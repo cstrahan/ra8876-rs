@@ -2068,11 +2068,6 @@
                   <description>Gamma table for Red</description>
                   <value>2</value>
                 </enumeratedValue>
-                <enumeratedValue>
-                  <name>NA4</name>
-                  <description>NA</description>
-                  <value>3</value>
-                </enumeratedValue>
               </enumeratedValues>
             </field>
             <field>
@@ -4807,11 +4802,6 @@
                   <description>External CGROM Character (e.g. Genitop serial flash)</description>
                   <value>2</value>
                 </enumeratedValue>
-                <enumeratedValue>
-                  <name>NA4</name>
-                  <description>NA</description>
-                  <value>3</value>
-                </enumeratedValue>
               </enumeratedValues>
             </field>
             <field>
@@ -4837,11 +4827,6 @@
                   <name>HEIGHT_32</name>
                   <description>32 (ex. 16x32 / 32x32 / variable character width x 32)</description>
                   <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>NA4</name>
-                  <description>NA</description>
-                  <value>3</value>
                 </enumeratedValue>
               </enumeratedValues>
             </field>
@@ -5035,11 +5020,6 @@
                   <description>GT21L24S1W</description>
                   <value>6</value>
                 </enumeratedValue>
-                <enumeratedValue>
-                  <name>NA7</name>
-                  <description>NA</description>
-                  <value>7</value>
-                </enumeratedValue>
               </enumeratedValues>
             </field>
           </fields>
@@ -5057,6 +5037,120 @@
               <bitOffset>3</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
+              <enumeratedValues>
+                <name>GT_CHARACTER_SET</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>ASCII</name>
+                  <description>ASCII only</description>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ISO_8859_1</name>
+                  <description>ISO-8859-1 + ASCII code</description>
+                  <value>17</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ISO_8859_2</name>
+                  <description>ISO-8859-2 + ASCII code</description>
+                  <value>18</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ISO_8859_3</name>
+                  <description>ISO-8859-3 + ASCII code</description>
+                  <value>19</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ISO_8859_4</name>
+                  <description>ISO-8859-4 + ASCII code</description>
+                  <value>20</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ISO_8859_5</name>
+                  <description>ISO-8859-5 + ASCII code</description>
+                  <value>21</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ISO_8859_7</name>
+                  <description>ISO-8859-7 + ASCII code</description>
+                  <value>22</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ISO_8859_8</name>
+                  <description>ISO-8859-8 + ASCII code</description>
+                  <value>23</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ISO_8859_9</name>
+                  <description>ISO-8859-9 + ASCII code</description>
+                  <value>24</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ISO_8859_10</name>
+                  <description>ISO-8859-10 + ASCII code</description>
+                  <value>25</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ISO_8859_11</name>
+                  <description>ISO-8859-11 + ASCII code</description>
+                  <value>26</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ISO_8859_13</name>
+                  <description>ISO-8859-13 + ASCII code</description>
+                  <value>27</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ISO_8859_14</name>
+                  <description>ISO-8859-14 + ASCII code</description>
+                  <value>28</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ISO_8859_15</name>
+                  <description>ISO-8859-15 + ASCII code</description>
+                  <value>29</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>ISO_8859_16</name>
+                  <description>ISO-8859-16 + ASCII code</description>
+                  <value>30</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>GB2312</name>
+                  <description>GB2312</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>GB12345_GB18030</name>
+                  <description>GB12345/GB18030</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>BIG5</name>
+                  <description>BIG5</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>UNICODE</name>
+                  <description>UNICODE</description>
+                  <value>3</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>UNI_JAPANESE</name>
+                  <description>UNI-Japanese</description>
+                  <value>5</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>JIS0208</name>
+                  <description>JIS0208</description>
+                  <value>6</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>LATIN_GREEK_CYRILLIC_ARABIC_THAI_HEBREW</name>
+                  <description>Latin / Greek / Cyrillic / Arabic / Thai / Hebrew</description>
+                  <value>7</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>GT_CHARACTER_WIDTH</name>
@@ -5234,11 +5328,6 @@
               <enumeratedValues>
                 <name>POWER_SAVING_MODE</name>
                 <usage>read-write</usage>
-                <enumeratedValue>
-                  <name>NA</name>
-                  <description>NA</description>
-                  <value>0</value>
-                </enumeratedValue>
                 <enumeratedValue>
                   <name>STANDBY</name>
                   <description>CCLK &amp; PCLK will stop, MCLK keep MPLL clock</description>
