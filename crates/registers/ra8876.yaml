@@ -743,7 +743,7 @@ _add:
                 resetValue: 0xDF
                 fields:
                     VERTICAL_DISPLAY_HEIGHT:
-                        description: VDHR[7:0] | Vertical Display Height (Line) = VDHR + 1
+                        description: Vertical Display Height (Line) = VDHR + 1
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -759,7 +759,7 @@ _add:
                     #     bitWidth: 5
                     #     access: read-only
                     VERTICAL_DISPLAY_HEIGHT:
-                        description: VDHR[10:8] | Vertical Display Height (Line) = VDHR + 1
+                        description: Vertical Display Height (Line) = VDHR + 1
                         bitOffset: 0
                         bitWidth: 3
                         access: read-write
@@ -770,7 +770,7 @@ _add:
                 resetValue: 0x15
                 fields:
                     VERTICAL_DISPLAY_HEIGHT:
-                        description: VNDR[7:0] | Vertical Non-Display Period (Line) = VNDR + 1
+                        description: Vertical Non-Display Period (Line) = VNDR + 1
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -786,7 +786,7 @@ _add:
                     #     bitWidth: 6
                     #     access: read-only
                     VERTICAL_DISPLAY_HEIGHT:
-                        description: VNDR[9:8] | Vertical Non-Display Period (Line) = VNDR + 1
+                        description: Vertical Non-Display Period (Line) = VNDR + 1
                         bitOffset: 0
                         bitWidth: 2
                         access: read-write
@@ -824,7 +824,7 @@ _add:
                 resetValue: 0
                 fields:
                     MAIN_IMAGE_START_ADDRESS:
-                        description: MISA[7:0] | Main Image Start Address
+                        description: Main Image Start Address
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -835,7 +835,7 @@ _add:
                 resetValue: 0
                 fields:
                     MAIN_IMAGE_START_ADDRESS:
-                        description: MISA[15:8] | Main Image Start Address
+                        description: Main Image Start Address
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -846,7 +846,7 @@ _add:
                 resetValue: 0
                 fields:
                     MAIN_IMAGE_START_ADDRESS:
-                        description: MISA[23:16] | Main Image Start Address
+                        description: Main Image Start Address
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -857,7 +857,7 @@ _add:
                 resetValue: 0
                 fields:
                     MAIN_IMAGE_START_ADDRESS:
-                        description: MISA[31:24] | Main Image Start Address
+                        description: Main Image Start Address
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -868,7 +868,7 @@ _add:
                 resetValue: 0
                 fields:
                     MAIN_IMAGE_WIDTH:
-                        description: MIW[7:0] | Main Image Width
+                        description: Main Image Width
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -884,7 +884,7 @@ _add:
                     #     bitWidth: 3
                     #     access: read-only
                     MAIN_IMAGE_WIDTH:
-                        description: MIW[12:8] | Main Image Width
+                        description: Main Image Width
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -895,7 +895,7 @@ _add:
                 resetValue: 0
                 fields:
                     MAIN_WINDOW_X:
-                        description: MWULX[7:0] | Main Window Upper-Left corner X-coordinates
+                        description: Main Window Upper-Left corner X-coordinates
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -911,7 +911,7 @@ _add:
                     #     bitWidth: 3
                     #     access: read-only
                     MAIN_WINDOW_X:
-                        description: MWULX[12:8] | Main Window Upper-Left corner X-coordinates
+                        description: Main Window Upper-Left corner X-coordinates
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -922,7 +922,7 @@ _add:
                 resetValue: 0
                 fields:
                     MAIN_WINDOW_Y:
-                        description: MWULY[7:0] | Main Window Upper-Left corner Y-coordinates
+                        description: Main Window Upper-Left corner Y-coordinates
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -938,7 +938,7 @@ _add:
                     #     bitWidth: 3
                     #     access: read-only
                     MAIN_WINDOW_Y:
-                        description: MWULY[12:8] | Main Window Upper-Left corner Y-coordinates
+                        description: Main Window Upper-Left corner Y-coordinates
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -949,7 +949,7 @@ _add:
                 resetValue: 0
                 fields:
                     PIP_WINDOW_DISPLAY_X:
-                        description: PWDULX[7:0] | PIP Window Display Upper-Left corner X-coordinates
+                        description: PIP Window Display Upper-Left corner X-coordinates
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -965,7 +965,7 @@ _add:
                     #     bitWidth: 3
                     #     access: read-only
                     PIP_WINDOW_DISPLAY_X:
-                        description: PWDULX[12:8] | PIP Window Display Upper-Left corner X-coordinates
+                        description: PIP Window Display Upper-Left corner X-coordinates
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -976,7 +976,7 @@ _add:
                 resetValue: 0
                 fields:
                     PIP_WINDOW_DISPLAY_Y:
-                        description: PWDULY[7:0] | PIP Window Display Upper-Left corner Y-coordinates
+                        description: PIP Window Display Upper-Left corner Y-coordinates
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -992,7 +992,7 @@ _add:
                     #     bitWidth: 3
                     #     access: read-only
                     PIP_WINDOW_DISPLAY_Y:
-                        description: PWDULY[12:8] | PIP Window Display Upper-Left corner Y-coordinates
+                        description: PIP Window Display Upper-Left corner Y-coordinates
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -1003,7 +1003,7 @@ _add:
                 resetValue: 0
                 fields:
                     PIP_IMAGE_START_ADDRESS:
-                        description: PISA[7:0] | PIP Image Start Address
+                        description: PIP Image Start Address
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1014,7 +1014,7 @@ _add:
                 resetValue: 0
                 fields:
                     PIP_IMAGE_START_ADDRESS:
-                        description: PISA[15:8] | PIP Image Start Address
+                        description: PIP Image Start Address
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1025,7 +1025,7 @@ _add:
                 resetValue: 0
                 fields:
                     PIP_IMAGE_START_ADDRESS:
-                        description: PISA[23:16] | PIP Image Start Address
+                        description: PIP Image Start Address
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1036,7 +1036,7 @@ _add:
                 resetValue: 0
                 fields:
                     PIP_IMAGE_START_ADDRESS:
-                        description: PISA[31:24] | PIP Image Start Address
+                        description: PIP Image Start Address
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1047,7 +1047,7 @@ _add:
                 resetValue: 0
                 fields:
                     PIP_IMAGE_WIDTH:
-                        description: PIW[7:0] | PIP Image Width
+                        description: PIP Image Width
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1063,7 +1063,7 @@ _add:
                     #     bitWidth: 3
                     #     access: read-only
                     PIP_IMAGE_WIDTH:
-                        description: PIW[12:8] | PIP Image Width
+                        description: PIP Image Width
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -1074,7 +1074,7 @@ _add:
                 resetValue: 0
                 fields:
                     PIP_WINDOW_IMAGE_X:
-                        description: PWIULX[7:0] | PIP Window Image Upper-Left corner X-coordinates
+                        description: PIP Window Image Upper-Left corner X-coordinates
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1090,7 +1090,7 @@ _add:
                     #     bitWidth: 3
                     #     access: read-only
                     PIP_WINDOW_IMAGE_X:
-                        description: PWIULX[12:8] | PIP Window Image Upper-Left corner X-coordinates
+                        description: PIP Window Image Upper-Left corner X-coordinates
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -1101,7 +1101,7 @@ _add:
                 resetValue: 0
                 fields:
                     PIP_WINDOW_IMAGE_Y:
-                        description: PWIULY[7:0] | PIP Window Image Upper-Left corner Y-coordinates
+                        description: PIP Window Image Upper-Left corner Y-coordinates
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1117,7 +1117,7 @@ _add:
                     #     bitWidth: 3
                     #     access: read-only
                     PIP_WINDOW_IMAGE_Y:
-                        description: PWIULY[12:8] | PIP Window Image Upper-Left corner Y-coordinates
+                        description: PIP Window Image Upper-Left corner Y-coordinates
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -1128,7 +1128,7 @@ _add:
                 resetValue: 0
                 fields:
                     PIP_WINDOW_WIDTH:
-                        description: PWW[7:0] | PIP Image Width
+                        description: PIP Image Width
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1144,7 +1144,7 @@ _add:
                     #     bitWidth: 5
                     #     access: read-only
                     PIP_WINDOW_WIDTH:
-                        description: PWW[10:8] | PIP Image Width
+                        description: PIP Image Width
                         bitOffset: 0
                         bitWidth: 3
                         access: read-write
@@ -1155,7 +1155,7 @@ _add:
                 resetValue: 0
                 fields:
                     PIP_WINDOW_HEIGHT:
-                        description: PWH[7:0] | PIP Image Width
+                        description: PIP Image Width
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1171,7 +1171,7 @@ _add:
                     #     bitWidth: 5
                     #     access: read-only
                     PIP_WINDOW_HEIGHT:
-                        description: PWH[10:8] | PIP Image Width
+                        description: PIP Image Width
                         bitOffset: 0
                         bitWidth: 3
                         access: read-write
@@ -1261,7 +1261,7 @@ _add:
                 resetValue: 0
                 fields:
                     GRAPHIC_CURSOR_HORIZONTAL_LOCATION:
-                        description: GCHP[7:0] | Graphic Cursor Horizontal Location
+                        description: Graphic Cursor Horizontal Location
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1277,7 +1277,7 @@ _add:
                     #     bitWidth: 3
                     #     access: read-write
                     GRAPHIC_CURSOR_HORIZONTAL_LOCATION:
-                        description: GCHP[12:8] | Graphic Cursor Horizontal Location
+                        description: Graphic Cursor Horizontal Location
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -1288,7 +1288,7 @@ _add:
                 resetValue: 0
                 fields:
                     GRAPHIC_CURSOR_VERTICAL_LOCATION:
-                        description: GCVP[7:0] | Graphic Cursor Vertical Location
+                        description: Graphic Cursor Vertical Location
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1304,7 +1304,7 @@ _add:
                     #     bitWidth: 3
                     #     access: read-write
                     GRAPHIC_CURSOR_VERTICAL_LOCATION:
-                        description: GCVP[12:8] | Graphic Cursor Vertical Location
+                        description: Graphic Cursor Vertical Location
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -1337,13 +1337,13 @@ _add:
                 resetValue: 0
                 fields:
                     CANVAS_START_ADDRESS:
-                        description: CVSSA[7:0] | Start address of Canvas
+                        description: Start address of Canvas
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
                     # TODO: per the manual, this is how it should be specified:
                     # GRAPHIC_CURSOR_COLOR_0:
-                    #     description: CVSSA[7:2] | Start address of Canvas
+                    #     description: Start address of Canvas
                     #     bitOffset: 2
                     #     bitWidth: 6
                     #     access: read-write
@@ -1360,7 +1360,7 @@ _add:
                 resetValue: 0
                 fields:
                     CANVAS_START_ADDRESS:
-                        description: CVSSA[15:8] | Start address of Canvas
+                        description: Start address of Canvas
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1371,7 +1371,7 @@ _add:
                 resetValue: 0
                 fields:
                     CANVAS_START_ADDRESS:
-                        description: CVSSA[23:16] | Start address of Canvas
+                        description: Start address of Canvas
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1382,7 +1382,7 @@ _add:
                 resetValue: 0
                 fields:
                     CANVAS_START_ADDRESS:
-                        description: CVSSA[31:24] | Start address of Canvas
+                        description: Start address of Canvas
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1393,7 +1393,7 @@ _add:
                 resetValue: 0
                 fields:
                     CANVAS_IMAGE_WIDTH:
-                        description: CVS_IMWTH[7:0] | Canvas image width
+                        description: Canvas image width
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1409,7 +1409,7 @@ _add:
                     #     bitWidth: 3
                     #     access: read-only
                     CANVAS_IMAGE_WIDTH:
-                        description: CVS_IMWTH[12:8] | Canvas image width
+                        description: Canvas image width
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -1420,7 +1420,7 @@ _add:
                 resetValue: 0
                 fields:
                     ACTIVE_WINDOW_X:
-                        description: AWUL_X[7:0] | Active Window Upper-Left corner X-coordinates
+                        description: Active Window Upper-Left corner X-coordinates
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1436,7 +1436,7 @@ _add:
                     #     bitWidth: 3
                     #     access: read-only
                     ACTIVE_WINDOW_X:
-                        description: AWUL_X[12:8] | Active Window Upper-Left corner X-coordinates
+                        description: Active Window Upper-Left corner X-coordinates
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -1447,7 +1447,7 @@ _add:
                 resetValue: 0
                 fields:
                     ACTIVE_WINDOW_Y:
-                        description: AWUL_Y[7:0] | Active Window Upper-Left corner Y-coordinates
+                        description: Active Window Upper-Left corner Y-coordinates
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1463,7 +1463,7 @@ _add:
                     #     bitWidth: 3
                     #     access: read-only
                     ACTIVE_WINDOW_Y:
-                        description: AWUL_Y[12:8] | Active Window Upper-Left corner Y-coordinates
+                        description: Active Window Upper-Left corner Y-coordinates
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -1474,7 +1474,7 @@ _add:
                 resetValue: 0
                 fields:
                     ACTIVE_WINDOW_WIDTH:
-                        description: AW_WTH[7:0] | Active Window Width
+                        description: Active Window Width
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1490,7 +1490,7 @@ _add:
                     #     bitWidth: 3
                     #     access: read-only
                     ACTIVE_WINDOW_WIDTH:
-                        description: AW_WTH[12:8] | Active Window Width
+                        description: Active Window Width
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -1501,7 +1501,7 @@ _add:
                 resetValue: 0
                 fields:
                     ACTIVE_WINDOW_HEIGHT:
-                        description: AW_HT[7:0] | Active Window Height
+                        description: Active Window Height
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1517,7 +1517,7 @@ _add:
                     #     bitWidth: 3
                     #     access: read-only
                     ACTIVE_WINDOW_HEIGHT:
-                        description: AW_HT[12:8] | Active Window Height
+                        description: Active Window Height
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -1549,12 +1549,12 @@ _add:
                 resetValue: 0
                 fields:
                     MEMORY_READ_WRITE_ADDRESS:
-                        description: CURH[7:0] | Memory Read/Write Linear mode address [7:0]
+                        description: Memory Read/Write Linear mode address [7:0]
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
                     GRAPHIC_READ_WRITE_HORIZONTAL_POSITION:
-                        description: CURH[7:0] | Graphic Read/Write Block mode horizontal position
+                        description: Graphic Read/Write Block mode horizontal position
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1565,12 +1565,12 @@ _add:
                 resetValue: 0
                 fields:
                     MEMORY_READ_WRITE_ADDRESS:
-                        description: CURH[15:8] | Memory Read/Write Linear mode address [15:8]
+                        description: Memory Read/Write Linear mode address [15:8]
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
                     GRAPHIC_READ_WRITE_HORIZONTAL_POSITION:
-                        description: CURH[12:8] | Graphic Read/Write Block mode horizontal position
+                        description: Graphic Read/Write Block mode horizontal position
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -1581,12 +1581,12 @@ _add:
                 resetValue: 0
                 fields:
                     MEMORY_READ_WRITE_ADDRESS:
-                        description: CURV[7:0] | Memory Read/Write Linear mode address [23:16]
+                        description: Memory Read/Write Linear mode address [23:16]
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
                     GRAPHIC_READ_WRITE_VERTICAL_POSITION:
-                        description: CURV[7:0] | Graphic Read/Write Block mode vertical position
+                        description: Graphic Read/Write Block mode vertical position
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1597,12 +1597,12 @@ _add:
                 resetValue: 0
                 fields:
                     MEMORY_READ_WRITE_ADDRESS:
-                        description: CURV[15:8] | Memory Read/Write Linear mode address [31:24]
+                        description: Memory Read/Write Linear mode address [31:24]
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
                     GRAPHIC_READ_WRITE_VERTICAL_POSITION:
-                        description: CURV[12:8] | Graphic Read/Write Block mode vertical position
+                        description: Graphic Read/Write Block mode vertical position
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -1613,7 +1613,7 @@ _add:
                 resetValue: 0
                 fields:
                     TEXT_WRITE_X:
-                        description: F_CURX[7:0] | Text Write X-coordinates
+                        description: Text Write X-coordinates
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1624,7 +1624,7 @@ _add:
                 resetValue: 0
                 fields:
                     TEXT_WRITE_X:
-                        description: F_CURX[12:8] | Text Write X-coordinates
+                        description: Text Write X-coordinates
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -1635,7 +1635,7 @@ _add:
                 resetValue: 0
                 fields:
                     TEXT_WRITE_Y:
-                        description: F_CURY[7:0] | Text Write Y-coordinates
+                        description: Text Write Y-coordinates
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1646,7 +1646,7 @@ _add:
                 resetValue: 0
                 fields:
                     TEXT_WRITE_Y:
-                        description: F_CURY[12:8] | Text Write Y-coordinates
+                        description: Text Write Y-coordinates
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -1678,7 +1678,7 @@ _add:
                 resetValue: 0
                 fields:
                     DRAW_POINT_1_X:
-                        description: DLHSR[7:0] | Draw Point 1 X-coordinate
+                        description: Draw Point 1 X-coordinate
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1689,7 +1689,7 @@ _add:
                 resetValue: 0
                 fields:
                     DRAW_POINT_1_X:
-                        description: DLHSR[12:8] | Draw Point 1 X-coordinate
+                        description: Draw Point 1 X-coordinate
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -1700,7 +1700,7 @@ _add:
                 resetValue: 0
                 fields:
                     DRAW_POINT_1_Y:
-                        description: DLVSR[7:0] | Draw Point 1 Y-coordinate
+                        description: Draw Point 1 Y-coordinate
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1711,7 +1711,7 @@ _add:
                 resetValue: 0
                 fields:
                     DRAW_POINT_1_Y:
-                        description: DLVSR[12:8] | Draw Point 1 Y-coordinate
+                        description: Draw Point 1 Y-coordinate
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -1722,7 +1722,7 @@ _add:
                 resetValue: 0
                 fields:
                     DRAW_POINT_2_X:
-                        description: DLHER[7:0] | Draw Point 2 X-coordinate
+                        description: Draw Point 2 X-coordinate
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1733,7 +1733,7 @@ _add:
                 resetValue: 0
                 fields:
                     DRAW_POINT_2_X:
-                        description: DLHER[12:8] | Draw Point 2 X-coordinate
+                        description: Draw Point 2 X-coordinate
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -1744,7 +1744,7 @@ _add:
                 resetValue: 0
                 fields:
                     DRAW_POINT_2_Y:
-                        description: DLVER[7:0] | Draw Point 2 Y-coordinate
+                        description: Draw Point 2 Y-coordinate
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1755,7 +1755,7 @@ _add:
                 resetValue: 0
                 fields:
                     DRAW_POINT_2_Y:
-                        description: DLVER[12:8] | Draw Point 2 Y-coordinate
+                        description: Draw Point 2 Y-coordinate
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -1766,7 +1766,7 @@ _add:
                 resetValue: 0
                 fields:
                     DRAW_POINT_3_X:
-                        description: DTPH[7:0] | Draw Triangle Point 3 X-coordinate
+                        description: Draw Triangle Point 3 X-coordinate
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1777,7 +1777,7 @@ _add:
                 resetValue: 0
                 fields:
                     DRAW_POINT_3_X:
-                        description: DTPH[12:8] | Draw Triangle Point 3 X-coordinate
+                        description: Draw Triangle Point 3 X-coordinate
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -1788,7 +1788,7 @@ _add:
                 resetValue: 0
                 fields:
                     DRAW_POINT_3_Y:
-                        description: DTPV[7:0] | Draw Triangle Point 3 Y-coordinate
+                        description: Draw Triangle Point 3 Y-coordinate
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1799,7 +1799,7 @@ _add:
                 resetValue: 0
                 fields:
                     DRAW_POINT_3_Y:
-                        description: DTPV[12:8] | Draw Triangle Point 3 Y-coordinate
+                        description: Draw Triangle Point 3 Y-coordinate
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -1836,7 +1836,7 @@ _add:
                 resetValue: 0
                 fields:
                     MAJOR_RADIUS:
-                        description: ELL_A[7:0] | Draw Circle/Ellipse/Circle Square Major radius
+                        description: Draw Circle/Ellipse/Circle Square Major radius
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1847,7 +1847,7 @@ _add:
                 resetValue: 0
                 fields:
                     MAJOR_RADIUS:
-                        description: ELL_A[12:8] | Draw Circle/Ellipse/Circle Square Major radius
+                        description: Draw Circle/Ellipse/Circle Square Major radius
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -1858,7 +1858,7 @@ _add:
                 resetValue: 0
                 fields:
                     MINOR_RADIUS:
-                        description: ELL_B[7:0] | Draw Circle/Ellipse/Circle Square Minor radius
+                        description: Draw Circle/Ellipse/Circle Square Minor radius
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1869,7 +1869,7 @@ _add:
                 resetValue: 0
                 fields:
                     MINOR_RADIUS:
-                        description: ELL_B[12:8] | Draw Circle/Ellipse/Circle Square Minor radius
+                        description: Draw Circle/Ellipse/Circle Square Minor radius
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -1880,7 +1880,7 @@ _add:
                 resetValue: 0
                 fields:
                     CENTER_X:
-                        description: DEHR[7:0] | Draw Circle/Ellipse/Circle Square Center X-coordinate
+                        description: Draw Circle/Ellipse/Circle Square Center X-coordinate
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1891,7 +1891,7 @@ _add:
                 resetValue: 0
                 fields:
                     CENTER_X:
-                        description: DEHR[12:8] | Draw Circle/Ellipse/Circle Square Center X-coordinate
+                        description: Draw Circle/Ellipse/Circle Square Center X-coordinate
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -1902,7 +1902,7 @@ _add:
                 resetValue: 0
                 fields:
                     CENTER_Y:
-                        description: DEVR[7:0] | Draw Circle/Ellipse/Circle Square Center Y-coordinate
+                        description: Draw Circle/Ellipse/Circle Square Center Y-coordinate
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -1913,7 +1913,7 @@ _add:
                 resetValue: 0
                 fields:
                     CENTER_Y:
-                        description: DEVR[12:8] | Draw Circle/Ellipse/Circle Square Center Y-coordinate
+                        description: Draw Circle/Ellipse/Circle Square Center Y-coordinate
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -2187,7 +2187,7 @@ _add:
                 resetValue: 0
                 fields:
                     SOURCE0_START_ADDRESS:
-                        description: S0_STR[7:0] | Source 0 memory start address
+                        description: Source 0 memory start address
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -2198,7 +2198,7 @@ _add:
                 resetValue: 0
                 fields:
                     SOURCE0_START_ADDRESS:
-                        description: S0_STR[15:8] | Source 0 memory start address
+                        description: Source 0 memory start address
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -2209,7 +2209,7 @@ _add:
                 resetValue: 0
                 fields:
                     SOURCE0_START_ADDRESS:
-                        description: S0_STR[23:16] | Source 0 memory start address
+                        description: Source 0 memory start address
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -2220,7 +2220,7 @@ _add:
                 resetValue: 0
                 fields:
                     SOURCE0_START_ADDRESS:
-                        description: S0_STR[31:24] | Source 0 memory start address
+                        description: Source 0 memory start address
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -2231,7 +2231,7 @@ _add:
                 resetValue: 0
                 fields:
                     SOURCE0_IMAGE_WIDTH:
-                        description: S0_WTH[7:0] | Source 0 image width
+                        description: Source 0 image width
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -2242,7 +2242,7 @@ _add:
                 resetValue: 0
                 fields:
                     SOURCE0_IMAGE_WIDTH:
-                        description: S0_WTH[12:8] | Source 0 image width
+                        description: Source 0 image width
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -2253,7 +2253,7 @@ _add:
                 resetValue: 0
                 fields:
                     SOURCE0_X:
-                        description: S0_X[7:0] | Source 0 Window Upper-Left corner X-coordinate
+                        description: Source 0 Window Upper-Left corner X-coordinate
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -2264,7 +2264,7 @@ _add:
                 resetValue: 0
                 fields:
                     SOURCE0_X:
-                        description: S0_X[12:8] | Source 0 Window Upper-Left corner X-coordinate
+                        description: Source 0 Window Upper-Left corner X-coordinate
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -2275,7 +2275,7 @@ _add:
                 resetValue: 0
                 fields:
                     SOURCE0_Y:
-                        description: S0_Y[7:0] | Source 0 Window Upper-Left corner Y-coordinate
+                        description: Source 0 Window Upper-Left corner Y-coordinate
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -2286,7 +2286,7 @@ _add:
                 resetValue: 0
                 fields:
                     SOURCE0_Y:
-                        description: S0_Y[12:8] | Source 0 Window Upper-Left corner Y-coordinate
+                        description: Source 0 Window Upper-Left corner Y-coordinate
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -2297,7 +2297,7 @@ _add:
                 resetValue: 0
                 fields:
                     SOURCE1_START_ADDRESS:
-                        description: S1_STR[7:0] | Source 1 memory start address
+                        description: Source 1 memory start address
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -2308,7 +2308,7 @@ _add:
                 resetValue: 0
                 fields:
                     SOURCE1_START_ADDRESS:
-                        description: S1_STR[15:8] | Source 1 memory start address
+                        description: Source 1 memory start address
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -2319,7 +2319,7 @@ _add:
                 resetValue: 0
                 fields:
                     SOURCE1_START_ADDRESS:
-                        description: S1_STR[23:16] | Source 1 memory start address
+                        description: Source 1 memory start address
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -2330,7 +2330,7 @@ _add:
                 resetValue: 0
                 fields:
                     SOURCE1_START_ADDRESS:
-                        description: S1_STR[31:24] | Source 1 memory start address
+                        description: Source 1 memory start address
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -2341,7 +2341,7 @@ _add:
                 resetValue: 0
                 fields:
                     SOURCE1_IMAGE_WIDTH:
-                        description: S1_WTH[7:0] | Source 1 image width
+                        description: Source 1 image width
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -2352,7 +2352,7 @@ _add:
                 resetValue: 0
                 fields:
                     SOURCE1_IMAGE_WIDTH:
-                        description: S1_WTH[12:8] | Source 1 image width
+                        description: Source 1 image width
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -2363,7 +2363,7 @@ _add:
                 resetValue: 0
                 fields:
                     SOURCE1_X:
-                        description: S1_X[7:0] | Source 1 Window Upper-Left corner X-coordinate
+                        description: Source 1 Window Upper-Left corner X-coordinate
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -2374,7 +2374,7 @@ _add:
                 resetValue: 0
                 fields:
                     SOURCE1_X:
-                        description: S1_X[12:8] | Source 1 Window Upper-Left corner X-coordinate
+                        description: Source 1 Window Upper-Left corner X-coordinate
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -2385,7 +2385,7 @@ _add:
                 resetValue: 0
                 fields:
                     SOURCE1_Y:
-                        description: S1_Y[7:0] | Source 1 Window Upper-Left corner Y-coordinate
+                        description: Source 1 Window Upper-Left corner Y-coordinate
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -2396,7 +2396,7 @@ _add:
                 resetValue: 0
                 fields:
                     SOURCE1_Y:
-                        description: S1_Y[12:8] | Source 1 Window Upper-Left corner Y-coordinate
+                        description: Source 1 Window Upper-Left corner Y-coordinate
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -2407,7 +2407,7 @@ _add:
                 resetValue: 0
                 fields:
                     DESTINATION_START_ADDRESS:
-                        description: DT_STR[7:0] | Destination memory start address
+                        description: Destination memory start address
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -2418,7 +2418,7 @@ _add:
                 resetValue: 0
                 fields:
                     DESTINATION_START_ADDRESS:
-                        description: DT_STR[15:8] | Destination memory start address
+                        description: Destination memory start address
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -2429,7 +2429,7 @@ _add:
                 resetValue: 0
                 fields:
                     DESTINATION_START_ADDRESS:
-                        description: DT_STR[23:16] | Destination memory start address
+                        description: Destination memory start address
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -2440,7 +2440,7 @@ _add:
                 resetValue: 0
                 fields:
                     DESTINATION_START_ADDRESS:
-                        description: DT_STR[31:24] | Destination memory start address
+                        description: Destination memory start address
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -2451,7 +2451,7 @@ _add:
                 resetValue: 0
                 fields:
                     DESTINATION_IMAGE_WIDTH:
-                        description: DT_WTH[7:0] | Destination image width
+                        description: Destination image width
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -2462,7 +2462,7 @@ _add:
                 resetValue: 0
                 fields:
                     DESTINATION_IMAGE_WIDTH:
-                        description: DT_WTH[12:8] | Destination image width
+                        description: Destination image width
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -2473,7 +2473,7 @@ _add:
                 resetValue: 0
                 fields:
                     DESTINATION_X:
-                        description: DT_X[7:0] | Destination Window Upper-Left corner X-coordinate
+                        description: Destination Window Upper-Left corner X-coordinate
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -2484,7 +2484,7 @@ _add:
                 resetValue: 0
                 fields:
                     DESTINATION_X:
-                        description: DT_X[12:8] | Destination Window Upper-Left corner X-coordinate
+                        description: Destination Window Upper-Left corner X-coordinate
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -2495,7 +2495,7 @@ _add:
                 resetValue: 0
                 fields:
                     DESTINATION_Y:
-                        description: DT_Y[7:0] | Destination Window Upper-Left corner Y-coordinate
+                        description: Destination Window Upper-Left corner Y-coordinate
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -2506,7 +2506,7 @@ _add:
                 resetValue: 0
                 fields:
                     DESTINATION_Y:
-                        description: DT_Y[12:8] | Destination Window Upper-Left corner Y-coordinate
+                        description: Destination Window Upper-Left corner Y-coordinate
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -2517,7 +2517,7 @@ _add:
                 resetValue: 0
                 fields:
                     BTE_WINDOW_WIDTH:
-                        description: BTE_WTH[7:0] | BTE Window Width Setting
+                        description: BTE Window Width Setting
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -2528,7 +2528,7 @@ _add:
                 resetValue: 0
                 fields:
                     BTE_WINDOW_WIDTH:
-                        description: BTE_WTH[12:8] | BTE Window Width Setting
+                        description: BTE Window Width Setting
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
@@ -2539,7 +2539,7 @@ _add:
                 resetValue: 0
                 fields:
                     BTE_WINDOW_HEIGHT:
-                        description: BTE_HIG[7:0] | BTE Window Height Setting
+                        description: BTE Window Height Setting
                         bitOffset: 0
                         bitWidth: 8
                         access: read-write
@@ -2550,7 +2550,7 @@ _add:
                 resetValue: 0
                 fields:
                     BTE_WINDOW_HEIGHT:
-                        description: BTE_HIG[12:8] | BTE Window Height Setting
+                        description: BTE Window Height Setting
                         bitOffset: 0
                         bitWidth: 5
                         access: read-write
