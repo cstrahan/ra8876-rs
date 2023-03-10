@@ -6381,24 +6381,20 @@ pub mod vdhr0 {
             W(writer)
         }
     }
-    #[doc = "Field `VERTICAL_DISPLAY_HEIGHT` reader - VDHR\\[7:0\\]
-| Vertical Display Height (Line) = VDHR + 1"]
+    #[doc = "Field `VERTICAL_DISPLAY_HEIGHT` reader - Vertical Display Height (Line) = VDHR + 1"]
     pub type VERTICAL_DISPLAY_HEIGHT_R = crate::FieldReader<u8>;
-    #[doc = "Field `VERTICAL_DISPLAY_HEIGHT` writer - VDHR\\[7:0\\]
-| Vertical Display Height (Line) = VDHR + 1"]
+    #[doc = "Field `VERTICAL_DISPLAY_HEIGHT` writer - Vertical Display Height (Line) = VDHR + 1"]
     pub type VERTICAL_DISPLAY_HEIGHT_W<'a, const O: u8> =
         crate::FieldWriter<'a, VDHR0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - VDHR\\[7:0\\]
-| Vertical Display Height (Line) = VDHR + 1"]
+        #[doc = "Bits 0:7 - Vertical Display Height (Line) = VDHR + 1"]
         #[inline(always)]
         pub fn vertical_display_height(&self) -> VERTICAL_DISPLAY_HEIGHT_R {
             VERTICAL_DISPLAY_HEIGHT_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - VDHR\\[7:0\\]
-| Vertical Display Height (Line) = VDHR + 1"]
+        #[doc = "Bits 0:7 - Vertical Display Height (Line) = VDHR + 1"]
         #[inline(always)]
         #[must_use]
         pub fn vertical_display_height(&mut self) -> VERTICAL_DISPLAY_HEIGHT_W<0> {
@@ -6496,24 +6492,20 @@ pub mod vdhr1 {
             W(writer)
         }
     }
-    #[doc = "Field `VERTICAL_DISPLAY_HEIGHT` reader - VDHR\\[10:8\\]
-| Vertical Display Height (Line) = VDHR + 1"]
+    #[doc = "Field `VERTICAL_DISPLAY_HEIGHT` reader - Vertical Display Height (Line) = VDHR + 1"]
     pub type VERTICAL_DISPLAY_HEIGHT_R = crate::FieldReader<u8>;
-    #[doc = "Field `VERTICAL_DISPLAY_HEIGHT` writer - VDHR\\[10:8\\]
-| Vertical Display Height (Line) = VDHR + 1"]
+    #[doc = "Field `VERTICAL_DISPLAY_HEIGHT` writer - Vertical Display Height (Line) = VDHR + 1"]
     pub type VERTICAL_DISPLAY_HEIGHT_W<'a, const O: u8> =
         crate::FieldWriter<'a, VDHR1, u8, u8, 3, O>;
     impl R {
-        #[doc = "Bits 0:2 - VDHR\\[10:8\\]
-| Vertical Display Height (Line) = VDHR + 1"]
+        #[doc = "Bits 0:2 - Vertical Display Height (Line) = VDHR + 1"]
         #[inline(always)]
         pub fn vertical_display_height(&self) -> VERTICAL_DISPLAY_HEIGHT_R {
             VERTICAL_DISPLAY_HEIGHT_R::new(self.bits & 7)
         }
     }
     impl W {
-        #[doc = "Bits 0:2 - VDHR\\[10:8\\]
-| Vertical Display Height (Line) = VDHR + 1"]
+        #[doc = "Bits 0:2 - Vertical Display Height (Line) = VDHR + 1"]
         #[inline(always)]
         #[must_use]
         pub fn vertical_display_height(&mut self) -> VERTICAL_DISPLAY_HEIGHT_W<0> {
@@ -6611,24 +6603,20 @@ pub mod vndr0 {
             W(writer)
         }
     }
-    #[doc = "Field `VERTICAL_DISPLAY_HEIGHT` reader - VNDR\\[7:0\\]
-| Vertical Non-Display Period (Line) = VNDR + 1"]
+    #[doc = "Field `VERTICAL_DISPLAY_HEIGHT` reader - Vertical Non-Display Period (Line) = VNDR + 1"]
     pub type VERTICAL_DISPLAY_HEIGHT_R = crate::FieldReader<u8>;
-    #[doc = "Field `VERTICAL_DISPLAY_HEIGHT` writer - VNDR\\[7:0\\]
-| Vertical Non-Display Period (Line) = VNDR + 1"]
+    #[doc = "Field `VERTICAL_DISPLAY_HEIGHT` writer - Vertical Non-Display Period (Line) = VNDR + 1"]
     pub type VERTICAL_DISPLAY_HEIGHT_W<'a, const O: u8> =
         crate::FieldWriter<'a, VNDR0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - VNDR\\[7:0\\]
-| Vertical Non-Display Period (Line) = VNDR + 1"]
+        #[doc = "Bits 0:7 - Vertical Non-Display Period (Line) = VNDR + 1"]
         #[inline(always)]
         pub fn vertical_display_height(&self) -> VERTICAL_DISPLAY_HEIGHT_R {
             VERTICAL_DISPLAY_HEIGHT_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - VNDR\\[7:0\\]
-| Vertical Non-Display Period (Line) = VNDR + 1"]
+        #[doc = "Bits 0:7 - Vertical Non-Display Period (Line) = VNDR + 1"]
         #[inline(always)]
         #[must_use]
         pub fn vertical_display_height(&mut self) -> VERTICAL_DISPLAY_HEIGHT_W<0> {
@@ -6726,24 +6714,20 @@ pub mod vndr1 {
             W(writer)
         }
     }
-    #[doc = "Field `VERTICAL_DISPLAY_HEIGHT` reader - VNDR\\[9:8\\]
-| Vertical Non-Display Period (Line) = VNDR + 1"]
+    #[doc = "Field `VERTICAL_DISPLAY_HEIGHT` reader - Vertical Non-Display Period (Line) = VNDR + 1"]
     pub type VERTICAL_DISPLAY_HEIGHT_R = crate::FieldReader<u8>;
-    #[doc = "Field `VERTICAL_DISPLAY_HEIGHT` writer - VNDR\\[9:8\\]
-| Vertical Non-Display Period (Line) = VNDR + 1"]
+    #[doc = "Field `VERTICAL_DISPLAY_HEIGHT` writer - Vertical Non-Display Period (Line) = VNDR + 1"]
     pub type VERTICAL_DISPLAY_HEIGHT_W<'a, const O: u8> =
         crate::FieldWriter<'a, VNDR1, u8, u8, 2, O>;
     impl R {
-        #[doc = "Bits 0:1 - VNDR\\[9:8\\]
-| Vertical Non-Display Period (Line) = VNDR + 1"]
+        #[doc = "Bits 0:1 - Vertical Non-Display Period (Line) = VNDR + 1"]
         #[inline(always)]
         pub fn vertical_display_height(&self) -> VERTICAL_DISPLAY_HEIGHT_R {
             VERTICAL_DISPLAY_HEIGHT_R::new(self.bits & 3)
         }
     }
     impl W {
-        #[doc = "Bits 0:1 - VNDR\\[9:8\\]
-| Vertical Non-Display Period (Line) = VNDR + 1"]
+        #[doc = "Bits 0:1 - Vertical Non-Display Period (Line) = VNDR + 1"]
         #[inline(always)]
         #[must_use]
         pub fn vertical_display_height(&mut self) -> VERTICAL_DISPLAY_HEIGHT_W<0> {
@@ -7061,24 +7045,20 @@ pub mod misa0 {
             W(writer)
         }
     }
-    #[doc = "Field `MAIN_IMAGE_START_ADDRESS` reader - MISA\\[7:0\\]
-| Main Image Start Address"]
+    #[doc = "Field `MAIN_IMAGE_START_ADDRESS` reader - Main Image Start Address"]
     pub type MAIN_IMAGE_START_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `MAIN_IMAGE_START_ADDRESS` writer - MISA\\[7:0\\]
-| Main Image Start Address"]
+    #[doc = "Field `MAIN_IMAGE_START_ADDRESS` writer - Main Image Start Address"]
     pub type MAIN_IMAGE_START_ADDRESS_W<'a, const O: u8> =
         crate::FieldWriter<'a, MISA0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - MISA\\[7:0\\]
-| Main Image Start Address"]
+        #[doc = "Bits 0:7 - Main Image Start Address"]
         #[inline(always)]
         pub fn main_image_start_address(&self) -> MAIN_IMAGE_START_ADDRESS_R {
             MAIN_IMAGE_START_ADDRESS_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - MISA\\[7:0\\]
-| Main Image Start Address"]
+        #[doc = "Bits 0:7 - Main Image Start Address"]
         #[inline(always)]
         #[must_use]
         pub fn main_image_start_address(&mut self) -> MAIN_IMAGE_START_ADDRESS_W<0> {
@@ -7176,24 +7156,20 @@ pub mod misa1 {
             W(writer)
         }
     }
-    #[doc = "Field `MAIN_IMAGE_START_ADDRESS` reader - MISA\\[15:8\\]
-| Main Image Start Address"]
+    #[doc = "Field `MAIN_IMAGE_START_ADDRESS` reader - Main Image Start Address"]
     pub type MAIN_IMAGE_START_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `MAIN_IMAGE_START_ADDRESS` writer - MISA\\[15:8\\]
-| Main Image Start Address"]
+    #[doc = "Field `MAIN_IMAGE_START_ADDRESS` writer - Main Image Start Address"]
     pub type MAIN_IMAGE_START_ADDRESS_W<'a, const O: u8> =
         crate::FieldWriter<'a, MISA1, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - MISA\\[15:8\\]
-| Main Image Start Address"]
+        #[doc = "Bits 0:7 - Main Image Start Address"]
         #[inline(always)]
         pub fn main_image_start_address(&self) -> MAIN_IMAGE_START_ADDRESS_R {
             MAIN_IMAGE_START_ADDRESS_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - MISA\\[15:8\\]
-| Main Image Start Address"]
+        #[doc = "Bits 0:7 - Main Image Start Address"]
         #[inline(always)]
         #[must_use]
         pub fn main_image_start_address(&mut self) -> MAIN_IMAGE_START_ADDRESS_W<0> {
@@ -7291,24 +7267,20 @@ pub mod misa2 {
             W(writer)
         }
     }
-    #[doc = "Field `MAIN_IMAGE_START_ADDRESS` reader - MISA\\[23:16\\]
-| Main Image Start Address"]
+    #[doc = "Field `MAIN_IMAGE_START_ADDRESS` reader - Main Image Start Address"]
     pub type MAIN_IMAGE_START_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `MAIN_IMAGE_START_ADDRESS` writer - MISA\\[23:16\\]
-| Main Image Start Address"]
+    #[doc = "Field `MAIN_IMAGE_START_ADDRESS` writer - Main Image Start Address"]
     pub type MAIN_IMAGE_START_ADDRESS_W<'a, const O: u8> =
         crate::FieldWriter<'a, MISA2, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - MISA\\[23:16\\]
-| Main Image Start Address"]
+        #[doc = "Bits 0:7 - Main Image Start Address"]
         #[inline(always)]
         pub fn main_image_start_address(&self) -> MAIN_IMAGE_START_ADDRESS_R {
             MAIN_IMAGE_START_ADDRESS_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - MISA\\[23:16\\]
-| Main Image Start Address"]
+        #[doc = "Bits 0:7 - Main Image Start Address"]
         #[inline(always)]
         #[must_use]
         pub fn main_image_start_address(&mut self) -> MAIN_IMAGE_START_ADDRESS_W<0> {
@@ -7406,24 +7378,20 @@ pub mod misa3 {
             W(writer)
         }
     }
-    #[doc = "Field `MAIN_IMAGE_START_ADDRESS` reader - MISA\\[31:24\\]
-| Main Image Start Address"]
+    #[doc = "Field `MAIN_IMAGE_START_ADDRESS` reader - Main Image Start Address"]
     pub type MAIN_IMAGE_START_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `MAIN_IMAGE_START_ADDRESS` writer - MISA\\[31:24\\]
-| Main Image Start Address"]
+    #[doc = "Field `MAIN_IMAGE_START_ADDRESS` writer - Main Image Start Address"]
     pub type MAIN_IMAGE_START_ADDRESS_W<'a, const O: u8> =
         crate::FieldWriter<'a, MISA3, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - MISA\\[31:24\\]
-| Main Image Start Address"]
+        #[doc = "Bits 0:7 - Main Image Start Address"]
         #[inline(always)]
         pub fn main_image_start_address(&self) -> MAIN_IMAGE_START_ADDRESS_R {
             MAIN_IMAGE_START_ADDRESS_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - MISA\\[31:24\\]
-| Main Image Start Address"]
+        #[doc = "Bits 0:7 - Main Image Start Address"]
         #[inline(always)]
         #[must_use]
         pub fn main_image_start_address(&mut self) -> MAIN_IMAGE_START_ADDRESS_W<0> {
@@ -7521,23 +7489,19 @@ pub mod miw0 {
             W(writer)
         }
     }
-    #[doc = "Field `MAIN_IMAGE_WIDTH` reader - MIW\\[7:0\\]
-| Main Image Width"]
+    #[doc = "Field `MAIN_IMAGE_WIDTH` reader - Main Image Width"]
     pub type MAIN_IMAGE_WIDTH_R = crate::FieldReader<u8>;
-    #[doc = "Field `MAIN_IMAGE_WIDTH` writer - MIW\\[7:0\\]
-| Main Image Width"]
+    #[doc = "Field `MAIN_IMAGE_WIDTH` writer - Main Image Width"]
     pub type MAIN_IMAGE_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, MIW0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - MIW\\[7:0\\]
-| Main Image Width"]
+        #[doc = "Bits 0:7 - Main Image Width"]
         #[inline(always)]
         pub fn main_image_width(&self) -> MAIN_IMAGE_WIDTH_R {
             MAIN_IMAGE_WIDTH_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - MIW\\[7:0\\]
-| Main Image Width"]
+        #[doc = "Bits 0:7 - Main Image Width"]
         #[inline(always)]
         #[must_use]
         pub fn main_image_width(&mut self) -> MAIN_IMAGE_WIDTH_W<0> {
@@ -7635,23 +7599,19 @@ pub mod miw1 {
             W(writer)
         }
     }
-    #[doc = "Field `MAIN_IMAGE_WIDTH` reader - MIW\\[12:8\\]
-| Main Image Width"]
+    #[doc = "Field `MAIN_IMAGE_WIDTH` reader - Main Image Width"]
     pub type MAIN_IMAGE_WIDTH_R = crate::FieldReader<u8>;
-    #[doc = "Field `MAIN_IMAGE_WIDTH` writer - MIW\\[12:8\\]
-| Main Image Width"]
+    #[doc = "Field `MAIN_IMAGE_WIDTH` writer - Main Image Width"]
     pub type MAIN_IMAGE_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, MIW1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - MIW\\[12:8\\]
-| Main Image Width"]
+        #[doc = "Bits 0:4 - Main Image Width"]
         #[inline(always)]
         pub fn main_image_width(&self) -> MAIN_IMAGE_WIDTH_R {
             MAIN_IMAGE_WIDTH_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - MIW\\[12:8\\]
-| Main Image Width"]
+        #[doc = "Bits 0:4 - Main Image Width"]
         #[inline(always)]
         #[must_use]
         pub fn main_image_width(&mut self) -> MAIN_IMAGE_WIDTH_W<0> {
@@ -7749,23 +7709,19 @@ pub mod mwulx0 {
             W(writer)
         }
     }
-    #[doc = "Field `MAIN_WINDOW_X` reader - MWULX\\[7:0\\]
-| Main Window Upper-Left corner X-coordinates"]
+    #[doc = "Field `MAIN_WINDOW_X` reader - Main Window Upper-Left corner X-coordinates"]
     pub type MAIN_WINDOW_X_R = crate::FieldReader<u8>;
-    #[doc = "Field `MAIN_WINDOW_X` writer - MWULX\\[7:0\\]
-| Main Window Upper-Left corner X-coordinates"]
+    #[doc = "Field `MAIN_WINDOW_X` writer - Main Window Upper-Left corner X-coordinates"]
     pub type MAIN_WINDOW_X_W<'a, const O: u8> = crate::FieldWriter<'a, MWULX0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - MWULX\\[7:0\\]
-| Main Window Upper-Left corner X-coordinates"]
+        #[doc = "Bits 0:7 - Main Window Upper-Left corner X-coordinates"]
         #[inline(always)]
         pub fn main_window_x(&self) -> MAIN_WINDOW_X_R {
             MAIN_WINDOW_X_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - MWULX\\[7:0\\]
-| Main Window Upper-Left corner X-coordinates"]
+        #[doc = "Bits 0:7 - Main Window Upper-Left corner X-coordinates"]
         #[inline(always)]
         #[must_use]
         pub fn main_window_x(&mut self) -> MAIN_WINDOW_X_W<0> {
@@ -7863,23 +7819,19 @@ pub mod mwulx1 {
             W(writer)
         }
     }
-    #[doc = "Field `MAIN_WINDOW_X` reader - MWULX\\[12:8\\]
-| Main Window Upper-Left corner X-coordinates"]
+    #[doc = "Field `MAIN_WINDOW_X` reader - Main Window Upper-Left corner X-coordinates"]
     pub type MAIN_WINDOW_X_R = crate::FieldReader<u8>;
-    #[doc = "Field `MAIN_WINDOW_X` writer - MWULX\\[12:8\\]
-| Main Window Upper-Left corner X-coordinates"]
+    #[doc = "Field `MAIN_WINDOW_X` writer - Main Window Upper-Left corner X-coordinates"]
     pub type MAIN_WINDOW_X_W<'a, const O: u8> = crate::FieldWriter<'a, MWULX1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - MWULX\\[12:8\\]
-| Main Window Upper-Left corner X-coordinates"]
+        #[doc = "Bits 0:4 - Main Window Upper-Left corner X-coordinates"]
         #[inline(always)]
         pub fn main_window_x(&self) -> MAIN_WINDOW_X_R {
             MAIN_WINDOW_X_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - MWULX\\[12:8\\]
-| Main Window Upper-Left corner X-coordinates"]
+        #[doc = "Bits 0:4 - Main Window Upper-Left corner X-coordinates"]
         #[inline(always)]
         #[must_use]
         pub fn main_window_x(&mut self) -> MAIN_WINDOW_X_W<0> {
@@ -7977,23 +7929,19 @@ pub mod mwuly0 {
             W(writer)
         }
     }
-    #[doc = "Field `MAIN_WINDOW_Y` reader - MWULY\\[7:0\\]
-| Main Window Upper-Left corner Y-coordinates"]
+    #[doc = "Field `MAIN_WINDOW_Y` reader - Main Window Upper-Left corner Y-coordinates"]
     pub type MAIN_WINDOW_Y_R = crate::FieldReader<u8>;
-    #[doc = "Field `MAIN_WINDOW_Y` writer - MWULY\\[7:0\\]
-| Main Window Upper-Left corner Y-coordinates"]
+    #[doc = "Field `MAIN_WINDOW_Y` writer - Main Window Upper-Left corner Y-coordinates"]
     pub type MAIN_WINDOW_Y_W<'a, const O: u8> = crate::FieldWriter<'a, MWULY0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - MWULY\\[7:0\\]
-| Main Window Upper-Left corner Y-coordinates"]
+        #[doc = "Bits 0:7 - Main Window Upper-Left corner Y-coordinates"]
         #[inline(always)]
         pub fn main_window_y(&self) -> MAIN_WINDOW_Y_R {
             MAIN_WINDOW_Y_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - MWULY\\[7:0\\]
-| Main Window Upper-Left corner Y-coordinates"]
+        #[doc = "Bits 0:7 - Main Window Upper-Left corner Y-coordinates"]
         #[inline(always)]
         #[must_use]
         pub fn main_window_y(&mut self) -> MAIN_WINDOW_Y_W<0> {
@@ -8091,23 +8039,19 @@ pub mod mwuly1 {
             W(writer)
         }
     }
-    #[doc = "Field `MAIN_WINDOW_Y` reader - MWULY\\[12:8\\]
-| Main Window Upper-Left corner Y-coordinates"]
+    #[doc = "Field `MAIN_WINDOW_Y` reader - Main Window Upper-Left corner Y-coordinates"]
     pub type MAIN_WINDOW_Y_R = crate::FieldReader<u8>;
-    #[doc = "Field `MAIN_WINDOW_Y` writer - MWULY\\[12:8\\]
-| Main Window Upper-Left corner Y-coordinates"]
+    #[doc = "Field `MAIN_WINDOW_Y` writer - Main Window Upper-Left corner Y-coordinates"]
     pub type MAIN_WINDOW_Y_W<'a, const O: u8> = crate::FieldWriter<'a, MWULY1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - MWULY\\[12:8\\]
-| Main Window Upper-Left corner Y-coordinates"]
+        #[doc = "Bits 0:4 - Main Window Upper-Left corner Y-coordinates"]
         #[inline(always)]
         pub fn main_window_y(&self) -> MAIN_WINDOW_Y_R {
             MAIN_WINDOW_Y_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - MWULY\\[12:8\\]
-| Main Window Upper-Left corner Y-coordinates"]
+        #[doc = "Bits 0:4 - Main Window Upper-Left corner Y-coordinates"]
         #[inline(always)]
         #[must_use]
         pub fn main_window_y(&mut self) -> MAIN_WINDOW_Y_W<0> {
@@ -8205,24 +8149,20 @@ pub mod pwdulx0 {
             W(writer)
         }
     }
-    #[doc = "Field `PIP_WINDOW_DISPLAY_X` reader - PWDULX\\[7:0\\]
-| PIP Window Display Upper-Left corner X-coordinates"]
+    #[doc = "Field `PIP_WINDOW_DISPLAY_X` reader - PIP Window Display Upper-Left corner X-coordinates"]
     pub type PIP_WINDOW_DISPLAY_X_R = crate::FieldReader<u8>;
-    #[doc = "Field `PIP_WINDOW_DISPLAY_X` writer - PWDULX\\[7:0\\]
-| PIP Window Display Upper-Left corner X-coordinates"]
+    #[doc = "Field `PIP_WINDOW_DISPLAY_X` writer - PIP Window Display Upper-Left corner X-coordinates"]
     pub type PIP_WINDOW_DISPLAY_X_W<'a, const O: u8> =
         crate::FieldWriter<'a, PWDULX0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - PWDULX\\[7:0\\]
-| PIP Window Display Upper-Left corner X-coordinates"]
+        #[doc = "Bits 0:7 - PIP Window Display Upper-Left corner X-coordinates"]
         #[inline(always)]
         pub fn pip_window_display_x(&self) -> PIP_WINDOW_DISPLAY_X_R {
             PIP_WINDOW_DISPLAY_X_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - PWDULX\\[7:0\\]
-| PIP Window Display Upper-Left corner X-coordinates"]
+        #[doc = "Bits 0:7 - PIP Window Display Upper-Left corner X-coordinates"]
         #[inline(always)]
         #[must_use]
         pub fn pip_window_display_x(&mut self) -> PIP_WINDOW_DISPLAY_X_W<0> {
@@ -8320,24 +8260,20 @@ pub mod pwdulx1 {
             W(writer)
         }
     }
-    #[doc = "Field `PIP_WINDOW_DISPLAY_X` reader - PWDULX\\[12:8\\]
-| PIP Window Display Upper-Left corner X-coordinates"]
+    #[doc = "Field `PIP_WINDOW_DISPLAY_X` reader - PIP Window Display Upper-Left corner X-coordinates"]
     pub type PIP_WINDOW_DISPLAY_X_R = crate::FieldReader<u8>;
-    #[doc = "Field `PIP_WINDOW_DISPLAY_X` writer - PWDULX\\[12:8\\]
-| PIP Window Display Upper-Left corner X-coordinates"]
+    #[doc = "Field `PIP_WINDOW_DISPLAY_X` writer - PIP Window Display Upper-Left corner X-coordinates"]
     pub type PIP_WINDOW_DISPLAY_X_W<'a, const O: u8> =
         crate::FieldWriter<'a, PWDULX1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - PWDULX\\[12:8\\]
-| PIP Window Display Upper-Left corner X-coordinates"]
+        #[doc = "Bits 0:4 - PIP Window Display Upper-Left corner X-coordinates"]
         #[inline(always)]
         pub fn pip_window_display_x(&self) -> PIP_WINDOW_DISPLAY_X_R {
             PIP_WINDOW_DISPLAY_X_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - PWDULX\\[12:8\\]
-| PIP Window Display Upper-Left corner X-coordinates"]
+        #[doc = "Bits 0:4 - PIP Window Display Upper-Left corner X-coordinates"]
         #[inline(always)]
         #[must_use]
         pub fn pip_window_display_x(&mut self) -> PIP_WINDOW_DISPLAY_X_W<0> {
@@ -8435,24 +8371,20 @@ pub mod pwduly0 {
             W(writer)
         }
     }
-    #[doc = "Field `PIP_WINDOW_DISPLAY_Y` reader - PWDULY\\[7:0\\]
-| PIP Window Display Upper-Left corner Y-coordinates"]
+    #[doc = "Field `PIP_WINDOW_DISPLAY_Y` reader - PIP Window Display Upper-Left corner Y-coordinates"]
     pub type PIP_WINDOW_DISPLAY_Y_R = crate::FieldReader<u8>;
-    #[doc = "Field `PIP_WINDOW_DISPLAY_Y` writer - PWDULY\\[7:0\\]
-| PIP Window Display Upper-Left corner Y-coordinates"]
+    #[doc = "Field `PIP_WINDOW_DISPLAY_Y` writer - PIP Window Display Upper-Left corner Y-coordinates"]
     pub type PIP_WINDOW_DISPLAY_Y_W<'a, const O: u8> =
         crate::FieldWriter<'a, PWDULY0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - PWDULY\\[7:0\\]
-| PIP Window Display Upper-Left corner Y-coordinates"]
+        #[doc = "Bits 0:7 - PIP Window Display Upper-Left corner Y-coordinates"]
         #[inline(always)]
         pub fn pip_window_display_y(&self) -> PIP_WINDOW_DISPLAY_Y_R {
             PIP_WINDOW_DISPLAY_Y_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - PWDULY\\[7:0\\]
-| PIP Window Display Upper-Left corner Y-coordinates"]
+        #[doc = "Bits 0:7 - PIP Window Display Upper-Left corner Y-coordinates"]
         #[inline(always)]
         #[must_use]
         pub fn pip_window_display_y(&mut self) -> PIP_WINDOW_DISPLAY_Y_W<0> {
@@ -8550,24 +8482,20 @@ pub mod pwduly1 {
             W(writer)
         }
     }
-    #[doc = "Field `PIP_WINDOW_DISPLAY_Y` reader - PWDULY\\[12:8\\]
-| PIP Window Display Upper-Left corner Y-coordinates"]
+    #[doc = "Field `PIP_WINDOW_DISPLAY_Y` reader - PIP Window Display Upper-Left corner Y-coordinates"]
     pub type PIP_WINDOW_DISPLAY_Y_R = crate::FieldReader<u8>;
-    #[doc = "Field `PIP_WINDOW_DISPLAY_Y` writer - PWDULY\\[12:8\\]
-| PIP Window Display Upper-Left corner Y-coordinates"]
+    #[doc = "Field `PIP_WINDOW_DISPLAY_Y` writer - PIP Window Display Upper-Left corner Y-coordinates"]
     pub type PIP_WINDOW_DISPLAY_Y_W<'a, const O: u8> =
         crate::FieldWriter<'a, PWDULY1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - PWDULY\\[12:8\\]
-| PIP Window Display Upper-Left corner Y-coordinates"]
+        #[doc = "Bits 0:4 - PIP Window Display Upper-Left corner Y-coordinates"]
         #[inline(always)]
         pub fn pip_window_display_y(&self) -> PIP_WINDOW_DISPLAY_Y_R {
             PIP_WINDOW_DISPLAY_Y_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - PWDULY\\[12:8\\]
-| PIP Window Display Upper-Left corner Y-coordinates"]
+        #[doc = "Bits 0:4 - PIP Window Display Upper-Left corner Y-coordinates"]
         #[inline(always)]
         #[must_use]
         pub fn pip_window_display_y(&mut self) -> PIP_WINDOW_DISPLAY_Y_W<0> {
@@ -8665,24 +8593,20 @@ pub mod pisa0 {
             W(writer)
         }
     }
-    #[doc = "Field `PIP_IMAGE_START_ADDRESS` reader - PISA\\[7:0\\]
-| PIP Image Start Address"]
+    #[doc = "Field `PIP_IMAGE_START_ADDRESS` reader - PIP Image Start Address"]
     pub type PIP_IMAGE_START_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `PIP_IMAGE_START_ADDRESS` writer - PISA\\[7:0\\]
-| PIP Image Start Address"]
+    #[doc = "Field `PIP_IMAGE_START_ADDRESS` writer - PIP Image Start Address"]
     pub type PIP_IMAGE_START_ADDRESS_W<'a, const O: u8> =
         crate::FieldWriter<'a, PISA0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - PISA\\[7:0\\]
-| PIP Image Start Address"]
+        #[doc = "Bits 0:7 - PIP Image Start Address"]
         #[inline(always)]
         pub fn pip_image_start_address(&self) -> PIP_IMAGE_START_ADDRESS_R {
             PIP_IMAGE_START_ADDRESS_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - PISA\\[7:0\\]
-| PIP Image Start Address"]
+        #[doc = "Bits 0:7 - PIP Image Start Address"]
         #[inline(always)]
         #[must_use]
         pub fn pip_image_start_address(&mut self) -> PIP_IMAGE_START_ADDRESS_W<0> {
@@ -8780,24 +8704,20 @@ pub mod pisa1 {
             W(writer)
         }
     }
-    #[doc = "Field `PIP_IMAGE_START_ADDRESS` reader - PISA\\[15:8\\]
-| PIP Image Start Address"]
+    #[doc = "Field `PIP_IMAGE_START_ADDRESS` reader - PIP Image Start Address"]
     pub type PIP_IMAGE_START_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `PIP_IMAGE_START_ADDRESS` writer - PISA\\[15:8\\]
-| PIP Image Start Address"]
+    #[doc = "Field `PIP_IMAGE_START_ADDRESS` writer - PIP Image Start Address"]
     pub type PIP_IMAGE_START_ADDRESS_W<'a, const O: u8> =
         crate::FieldWriter<'a, PISA1, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - PISA\\[15:8\\]
-| PIP Image Start Address"]
+        #[doc = "Bits 0:7 - PIP Image Start Address"]
         #[inline(always)]
         pub fn pip_image_start_address(&self) -> PIP_IMAGE_START_ADDRESS_R {
             PIP_IMAGE_START_ADDRESS_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - PISA\\[15:8\\]
-| PIP Image Start Address"]
+        #[doc = "Bits 0:7 - PIP Image Start Address"]
         #[inline(always)]
         #[must_use]
         pub fn pip_image_start_address(&mut self) -> PIP_IMAGE_START_ADDRESS_W<0> {
@@ -8895,24 +8815,20 @@ pub mod pisa2 {
             W(writer)
         }
     }
-    #[doc = "Field `PIP_IMAGE_START_ADDRESS` reader - PISA\\[23:16\\]
-| PIP Image Start Address"]
+    #[doc = "Field `PIP_IMAGE_START_ADDRESS` reader - PIP Image Start Address"]
     pub type PIP_IMAGE_START_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `PIP_IMAGE_START_ADDRESS` writer - PISA\\[23:16\\]
-| PIP Image Start Address"]
+    #[doc = "Field `PIP_IMAGE_START_ADDRESS` writer - PIP Image Start Address"]
     pub type PIP_IMAGE_START_ADDRESS_W<'a, const O: u8> =
         crate::FieldWriter<'a, PISA2, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - PISA\\[23:16\\]
-| PIP Image Start Address"]
+        #[doc = "Bits 0:7 - PIP Image Start Address"]
         #[inline(always)]
         pub fn pip_image_start_address(&self) -> PIP_IMAGE_START_ADDRESS_R {
             PIP_IMAGE_START_ADDRESS_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - PISA\\[23:16\\]
-| PIP Image Start Address"]
+        #[doc = "Bits 0:7 - PIP Image Start Address"]
         #[inline(always)]
         #[must_use]
         pub fn pip_image_start_address(&mut self) -> PIP_IMAGE_START_ADDRESS_W<0> {
@@ -9010,24 +8926,20 @@ pub mod pisa3 {
             W(writer)
         }
     }
-    #[doc = "Field `PIP_IMAGE_START_ADDRESS` reader - PISA\\[31:24\\]
-| PIP Image Start Address"]
+    #[doc = "Field `PIP_IMAGE_START_ADDRESS` reader - PIP Image Start Address"]
     pub type PIP_IMAGE_START_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `PIP_IMAGE_START_ADDRESS` writer - PISA\\[31:24\\]
-| PIP Image Start Address"]
+    #[doc = "Field `PIP_IMAGE_START_ADDRESS` writer - PIP Image Start Address"]
     pub type PIP_IMAGE_START_ADDRESS_W<'a, const O: u8> =
         crate::FieldWriter<'a, PISA3, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - PISA\\[31:24\\]
-| PIP Image Start Address"]
+        #[doc = "Bits 0:7 - PIP Image Start Address"]
         #[inline(always)]
         pub fn pip_image_start_address(&self) -> PIP_IMAGE_START_ADDRESS_R {
             PIP_IMAGE_START_ADDRESS_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - PISA\\[31:24\\]
-| PIP Image Start Address"]
+        #[doc = "Bits 0:7 - PIP Image Start Address"]
         #[inline(always)]
         #[must_use]
         pub fn pip_image_start_address(&mut self) -> PIP_IMAGE_START_ADDRESS_W<0> {
@@ -9125,23 +9037,19 @@ pub mod piw0 {
             W(writer)
         }
     }
-    #[doc = "Field `PIP_IMAGE_WIDTH` reader - PIW\\[7:0\\]
-| PIP Image Width"]
+    #[doc = "Field `PIP_IMAGE_WIDTH` reader - PIP Image Width"]
     pub type PIP_IMAGE_WIDTH_R = crate::FieldReader<u8>;
-    #[doc = "Field `PIP_IMAGE_WIDTH` writer - PIW\\[7:0\\]
-| PIP Image Width"]
+    #[doc = "Field `PIP_IMAGE_WIDTH` writer - PIP Image Width"]
     pub type PIP_IMAGE_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, PIW0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - PIW\\[7:0\\]
-| PIP Image Width"]
+        #[doc = "Bits 0:7 - PIP Image Width"]
         #[inline(always)]
         pub fn pip_image_width(&self) -> PIP_IMAGE_WIDTH_R {
             PIP_IMAGE_WIDTH_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - PIW\\[7:0\\]
-| PIP Image Width"]
+        #[doc = "Bits 0:7 - PIP Image Width"]
         #[inline(always)]
         #[must_use]
         pub fn pip_image_width(&mut self) -> PIP_IMAGE_WIDTH_W<0> {
@@ -9239,23 +9147,19 @@ pub mod piw1 {
             W(writer)
         }
     }
-    #[doc = "Field `PIP_IMAGE_WIDTH` reader - PIW\\[12:8\\]
-| PIP Image Width"]
+    #[doc = "Field `PIP_IMAGE_WIDTH` reader - PIP Image Width"]
     pub type PIP_IMAGE_WIDTH_R = crate::FieldReader<u8>;
-    #[doc = "Field `PIP_IMAGE_WIDTH` writer - PIW\\[12:8\\]
-| PIP Image Width"]
+    #[doc = "Field `PIP_IMAGE_WIDTH` writer - PIP Image Width"]
     pub type PIP_IMAGE_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, PIW1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - PIW\\[12:8\\]
-| PIP Image Width"]
+        #[doc = "Bits 0:4 - PIP Image Width"]
         #[inline(always)]
         pub fn pip_image_width(&self) -> PIP_IMAGE_WIDTH_R {
             PIP_IMAGE_WIDTH_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - PIW\\[12:8\\]
-| PIP Image Width"]
+        #[doc = "Bits 0:4 - PIP Image Width"]
         #[inline(always)]
         #[must_use]
         pub fn pip_image_width(&mut self) -> PIP_IMAGE_WIDTH_W<0> {
@@ -9353,23 +9257,19 @@ pub mod pwiulx0 {
             W(writer)
         }
     }
-    #[doc = "Field `PIP_WINDOW_IMAGE_X` reader - PWIULX\\[7:0\\]
-| PIP Window Image Upper-Left corner X-coordinates"]
+    #[doc = "Field `PIP_WINDOW_IMAGE_X` reader - PIP Window Image Upper-Left corner X-coordinates"]
     pub type PIP_WINDOW_IMAGE_X_R = crate::FieldReader<u8>;
-    #[doc = "Field `PIP_WINDOW_IMAGE_X` writer - PWIULX\\[7:0\\]
-| PIP Window Image Upper-Left corner X-coordinates"]
+    #[doc = "Field `PIP_WINDOW_IMAGE_X` writer - PIP Window Image Upper-Left corner X-coordinates"]
     pub type PIP_WINDOW_IMAGE_X_W<'a, const O: u8> = crate::FieldWriter<'a, PWIULX0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - PWIULX\\[7:0\\]
-| PIP Window Image Upper-Left corner X-coordinates"]
+        #[doc = "Bits 0:7 - PIP Window Image Upper-Left corner X-coordinates"]
         #[inline(always)]
         pub fn pip_window_image_x(&self) -> PIP_WINDOW_IMAGE_X_R {
             PIP_WINDOW_IMAGE_X_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - PWIULX\\[7:0\\]
-| PIP Window Image Upper-Left corner X-coordinates"]
+        #[doc = "Bits 0:7 - PIP Window Image Upper-Left corner X-coordinates"]
         #[inline(always)]
         #[must_use]
         pub fn pip_window_image_x(&mut self) -> PIP_WINDOW_IMAGE_X_W<0> {
@@ -9467,23 +9367,19 @@ pub mod pwiulx1 {
             W(writer)
         }
     }
-    #[doc = "Field `PIP_WINDOW_IMAGE_X` reader - PWIULX\\[12:8\\]
-| PIP Window Image Upper-Left corner X-coordinates"]
+    #[doc = "Field `PIP_WINDOW_IMAGE_X` reader - PIP Window Image Upper-Left corner X-coordinates"]
     pub type PIP_WINDOW_IMAGE_X_R = crate::FieldReader<u8>;
-    #[doc = "Field `PIP_WINDOW_IMAGE_X` writer - PWIULX\\[12:8\\]
-| PIP Window Image Upper-Left corner X-coordinates"]
+    #[doc = "Field `PIP_WINDOW_IMAGE_X` writer - PIP Window Image Upper-Left corner X-coordinates"]
     pub type PIP_WINDOW_IMAGE_X_W<'a, const O: u8> = crate::FieldWriter<'a, PWIULX1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - PWIULX\\[12:8\\]
-| PIP Window Image Upper-Left corner X-coordinates"]
+        #[doc = "Bits 0:4 - PIP Window Image Upper-Left corner X-coordinates"]
         #[inline(always)]
         pub fn pip_window_image_x(&self) -> PIP_WINDOW_IMAGE_X_R {
             PIP_WINDOW_IMAGE_X_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - PWIULX\\[12:8\\]
-| PIP Window Image Upper-Left corner X-coordinates"]
+        #[doc = "Bits 0:4 - PIP Window Image Upper-Left corner X-coordinates"]
         #[inline(always)]
         #[must_use]
         pub fn pip_window_image_x(&mut self) -> PIP_WINDOW_IMAGE_X_W<0> {
@@ -9581,23 +9477,19 @@ pub mod pwiuly0 {
             W(writer)
         }
     }
-    #[doc = "Field `PIP_WINDOW_IMAGE_Y` reader - PWIULY\\[7:0\\]
-| PIP Window Image Upper-Left corner Y-coordinates"]
+    #[doc = "Field `PIP_WINDOW_IMAGE_Y` reader - PIP Window Image Upper-Left corner Y-coordinates"]
     pub type PIP_WINDOW_IMAGE_Y_R = crate::FieldReader<u8>;
-    #[doc = "Field `PIP_WINDOW_IMAGE_Y` writer - PWIULY\\[7:0\\]
-| PIP Window Image Upper-Left corner Y-coordinates"]
+    #[doc = "Field `PIP_WINDOW_IMAGE_Y` writer - PIP Window Image Upper-Left corner Y-coordinates"]
     pub type PIP_WINDOW_IMAGE_Y_W<'a, const O: u8> = crate::FieldWriter<'a, PWIULY0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - PWIULY\\[7:0\\]
-| PIP Window Image Upper-Left corner Y-coordinates"]
+        #[doc = "Bits 0:7 - PIP Window Image Upper-Left corner Y-coordinates"]
         #[inline(always)]
         pub fn pip_window_image_y(&self) -> PIP_WINDOW_IMAGE_Y_R {
             PIP_WINDOW_IMAGE_Y_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - PWIULY\\[7:0\\]
-| PIP Window Image Upper-Left corner Y-coordinates"]
+        #[doc = "Bits 0:7 - PIP Window Image Upper-Left corner Y-coordinates"]
         #[inline(always)]
         #[must_use]
         pub fn pip_window_image_y(&mut self) -> PIP_WINDOW_IMAGE_Y_W<0> {
@@ -9695,23 +9587,19 @@ pub mod pwiuly1 {
             W(writer)
         }
     }
-    #[doc = "Field `PIP_WINDOW_IMAGE_Y` reader - PWIULY\\[12:8\\]
-| PIP Window Image Upper-Left corner Y-coordinates"]
+    #[doc = "Field `PIP_WINDOW_IMAGE_Y` reader - PIP Window Image Upper-Left corner Y-coordinates"]
     pub type PIP_WINDOW_IMAGE_Y_R = crate::FieldReader<u8>;
-    #[doc = "Field `PIP_WINDOW_IMAGE_Y` writer - PWIULY\\[12:8\\]
-| PIP Window Image Upper-Left corner Y-coordinates"]
+    #[doc = "Field `PIP_WINDOW_IMAGE_Y` writer - PIP Window Image Upper-Left corner Y-coordinates"]
     pub type PIP_WINDOW_IMAGE_Y_W<'a, const O: u8> = crate::FieldWriter<'a, PWIULY1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - PWIULY\\[12:8\\]
-| PIP Window Image Upper-Left corner Y-coordinates"]
+        #[doc = "Bits 0:4 - PIP Window Image Upper-Left corner Y-coordinates"]
         #[inline(always)]
         pub fn pip_window_image_y(&self) -> PIP_WINDOW_IMAGE_Y_R {
             PIP_WINDOW_IMAGE_Y_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - PWIULY\\[12:8\\]
-| PIP Window Image Upper-Left corner Y-coordinates"]
+        #[doc = "Bits 0:4 - PIP Window Image Upper-Left corner Y-coordinates"]
         #[inline(always)]
         #[must_use]
         pub fn pip_window_image_y(&mut self) -> PIP_WINDOW_IMAGE_Y_W<0> {
@@ -9809,23 +9697,19 @@ pub mod pww0 {
             W(writer)
         }
     }
-    #[doc = "Field `PIP_WINDOW_WIDTH` reader - PWW\\[7:0\\]
-| PIP Image Width"]
+    #[doc = "Field `PIP_WINDOW_WIDTH` reader - PIP Image Width"]
     pub type PIP_WINDOW_WIDTH_R = crate::FieldReader<u8>;
-    #[doc = "Field `PIP_WINDOW_WIDTH` writer - PWW\\[7:0\\]
-| PIP Image Width"]
+    #[doc = "Field `PIP_WINDOW_WIDTH` writer - PIP Image Width"]
     pub type PIP_WINDOW_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, PWW0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - PWW\\[7:0\\]
-| PIP Image Width"]
+        #[doc = "Bits 0:7 - PIP Image Width"]
         #[inline(always)]
         pub fn pip_window_width(&self) -> PIP_WINDOW_WIDTH_R {
             PIP_WINDOW_WIDTH_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - PWW\\[7:0\\]
-| PIP Image Width"]
+        #[doc = "Bits 0:7 - PIP Image Width"]
         #[inline(always)]
         #[must_use]
         pub fn pip_window_width(&mut self) -> PIP_WINDOW_WIDTH_W<0> {
@@ -9923,23 +9807,19 @@ pub mod pww1 {
             W(writer)
         }
     }
-    #[doc = "Field `PIP_WINDOW_WIDTH` reader - PWW\\[10:8\\]
-| PIP Image Width"]
+    #[doc = "Field `PIP_WINDOW_WIDTH` reader - PIP Image Width"]
     pub type PIP_WINDOW_WIDTH_R = crate::FieldReader<u8>;
-    #[doc = "Field `PIP_WINDOW_WIDTH` writer - PWW\\[10:8\\]
-| PIP Image Width"]
+    #[doc = "Field `PIP_WINDOW_WIDTH` writer - PIP Image Width"]
     pub type PIP_WINDOW_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, PWW1, u8, u8, 3, O>;
     impl R {
-        #[doc = "Bits 0:2 - PWW\\[10:8\\]
-| PIP Image Width"]
+        #[doc = "Bits 0:2 - PIP Image Width"]
         #[inline(always)]
         pub fn pip_window_width(&self) -> PIP_WINDOW_WIDTH_R {
             PIP_WINDOW_WIDTH_R::new(self.bits & 7)
         }
     }
     impl W {
-        #[doc = "Bits 0:2 - PWW\\[10:8\\]
-| PIP Image Width"]
+        #[doc = "Bits 0:2 - PIP Image Width"]
         #[inline(always)]
         #[must_use]
         pub fn pip_window_width(&mut self) -> PIP_WINDOW_WIDTH_W<0> {
@@ -10037,23 +9917,19 @@ pub mod pwh0 {
             W(writer)
         }
     }
-    #[doc = "Field `PIP_WINDOW_HEIGHT` reader - PWH\\[7:0\\]
-| PIP Image Width"]
+    #[doc = "Field `PIP_WINDOW_HEIGHT` reader - PIP Image Width"]
     pub type PIP_WINDOW_HEIGHT_R = crate::FieldReader<u8>;
-    #[doc = "Field `PIP_WINDOW_HEIGHT` writer - PWH\\[7:0\\]
-| PIP Image Width"]
+    #[doc = "Field `PIP_WINDOW_HEIGHT` writer - PIP Image Width"]
     pub type PIP_WINDOW_HEIGHT_W<'a, const O: u8> = crate::FieldWriter<'a, PWH0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - PWH\\[7:0\\]
-| PIP Image Width"]
+        #[doc = "Bits 0:7 - PIP Image Width"]
         #[inline(always)]
         pub fn pip_window_height(&self) -> PIP_WINDOW_HEIGHT_R {
             PIP_WINDOW_HEIGHT_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - PWH\\[7:0\\]
-| PIP Image Width"]
+        #[doc = "Bits 0:7 - PIP Image Width"]
         #[inline(always)]
         #[must_use]
         pub fn pip_window_height(&mut self) -> PIP_WINDOW_HEIGHT_W<0> {
@@ -10151,23 +10027,19 @@ pub mod pwh1 {
             W(writer)
         }
     }
-    #[doc = "Field `PIP_WINDOW_HEIGHT` reader - PWH\\[10:8\\]
-| PIP Image Width"]
+    #[doc = "Field `PIP_WINDOW_HEIGHT` reader - PIP Image Width"]
     pub type PIP_WINDOW_HEIGHT_R = crate::FieldReader<u8>;
-    #[doc = "Field `PIP_WINDOW_HEIGHT` writer - PWH\\[10:8\\]
-| PIP Image Width"]
+    #[doc = "Field `PIP_WINDOW_HEIGHT` writer - PIP Image Width"]
     pub type PIP_WINDOW_HEIGHT_W<'a, const O: u8> = crate::FieldWriter<'a, PWH1, u8, u8, 3, O>;
     impl R {
-        #[doc = "Bits 0:2 - PWH\\[10:8\\]
-| PIP Image Width"]
+        #[doc = "Bits 0:2 - PIP Image Width"]
         #[inline(always)]
         pub fn pip_window_height(&self) -> PIP_WINDOW_HEIGHT_R {
             PIP_WINDOW_HEIGHT_R::new(self.bits & 7)
         }
     }
     impl W {
-        #[doc = "Bits 0:2 - PWH\\[10:8\\]
-| PIP Image Width"]
+        #[doc = "Bits 0:2 - PIP Image Width"]
         #[inline(always)]
         #[must_use]
         pub fn pip_window_height(&mut self) -> PIP_WINDOW_HEIGHT_W<0> {
@@ -10857,24 +10729,20 @@ pub mod gchp0 {
             W(writer)
         }
     }
-    #[doc = "Field `GRAPHIC_CURSOR_HORIZONTAL_LOCATION` reader - GCHP\\[7:0\\]
-| Graphic Cursor Horizontal Location"]
+    #[doc = "Field `GRAPHIC_CURSOR_HORIZONTAL_LOCATION` reader - Graphic Cursor Horizontal Location"]
     pub type GRAPHIC_CURSOR_HORIZONTAL_LOCATION_R = crate::FieldReader<u8>;
-    #[doc = "Field `GRAPHIC_CURSOR_HORIZONTAL_LOCATION` writer - GCHP\\[7:0\\]
-| Graphic Cursor Horizontal Location"]
+    #[doc = "Field `GRAPHIC_CURSOR_HORIZONTAL_LOCATION` writer - Graphic Cursor Horizontal Location"]
     pub type GRAPHIC_CURSOR_HORIZONTAL_LOCATION_W<'a, const O: u8> =
         crate::FieldWriter<'a, GCHP0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - GCHP\\[7:0\\]
-| Graphic Cursor Horizontal Location"]
+        #[doc = "Bits 0:7 - Graphic Cursor Horizontal Location"]
         #[inline(always)]
         pub fn graphic_cursor_horizontal_location(&self) -> GRAPHIC_CURSOR_HORIZONTAL_LOCATION_R {
             GRAPHIC_CURSOR_HORIZONTAL_LOCATION_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - GCHP\\[7:0\\]
-| Graphic Cursor Horizontal Location"]
+        #[doc = "Bits 0:7 - Graphic Cursor Horizontal Location"]
         #[inline(always)]
         #[must_use]
         pub fn graphic_cursor_horizontal_location(
@@ -10974,24 +10842,20 @@ pub mod gchp1 {
             W(writer)
         }
     }
-    #[doc = "Field `GRAPHIC_CURSOR_HORIZONTAL_LOCATION` reader - GCHP\\[12:8\\]
-| Graphic Cursor Horizontal Location"]
+    #[doc = "Field `GRAPHIC_CURSOR_HORIZONTAL_LOCATION` reader - Graphic Cursor Horizontal Location"]
     pub type GRAPHIC_CURSOR_HORIZONTAL_LOCATION_R = crate::FieldReader<u8>;
-    #[doc = "Field `GRAPHIC_CURSOR_HORIZONTAL_LOCATION` writer - GCHP\\[12:8\\]
-| Graphic Cursor Horizontal Location"]
+    #[doc = "Field `GRAPHIC_CURSOR_HORIZONTAL_LOCATION` writer - Graphic Cursor Horizontal Location"]
     pub type GRAPHIC_CURSOR_HORIZONTAL_LOCATION_W<'a, const O: u8> =
         crate::FieldWriter<'a, GCHP1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - GCHP\\[12:8\\]
-| Graphic Cursor Horizontal Location"]
+        #[doc = "Bits 0:4 - Graphic Cursor Horizontal Location"]
         #[inline(always)]
         pub fn graphic_cursor_horizontal_location(&self) -> GRAPHIC_CURSOR_HORIZONTAL_LOCATION_R {
             GRAPHIC_CURSOR_HORIZONTAL_LOCATION_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - GCHP\\[12:8\\]
-| Graphic Cursor Horizontal Location"]
+        #[doc = "Bits 0:4 - Graphic Cursor Horizontal Location"]
         #[inline(always)]
         #[must_use]
         pub fn graphic_cursor_horizontal_location(
@@ -11091,24 +10955,20 @@ pub mod gcvp0 {
             W(writer)
         }
     }
-    #[doc = "Field `GRAPHIC_CURSOR_VERTICAL_LOCATION` reader - GCVP\\[7:0\\]
-| Graphic Cursor Vertical Location"]
+    #[doc = "Field `GRAPHIC_CURSOR_VERTICAL_LOCATION` reader - Graphic Cursor Vertical Location"]
     pub type GRAPHIC_CURSOR_VERTICAL_LOCATION_R = crate::FieldReader<u8>;
-    #[doc = "Field `GRAPHIC_CURSOR_VERTICAL_LOCATION` writer - GCVP\\[7:0\\]
-| Graphic Cursor Vertical Location"]
+    #[doc = "Field `GRAPHIC_CURSOR_VERTICAL_LOCATION` writer - Graphic Cursor Vertical Location"]
     pub type GRAPHIC_CURSOR_VERTICAL_LOCATION_W<'a, const O: u8> =
         crate::FieldWriter<'a, GCVP0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - GCVP\\[7:0\\]
-| Graphic Cursor Vertical Location"]
+        #[doc = "Bits 0:7 - Graphic Cursor Vertical Location"]
         #[inline(always)]
         pub fn graphic_cursor_vertical_location(&self) -> GRAPHIC_CURSOR_VERTICAL_LOCATION_R {
             GRAPHIC_CURSOR_VERTICAL_LOCATION_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - GCVP\\[7:0\\]
-| Graphic Cursor Vertical Location"]
+        #[doc = "Bits 0:7 - Graphic Cursor Vertical Location"]
         #[inline(always)]
         #[must_use]
         pub fn graphic_cursor_vertical_location(
@@ -11208,24 +11068,20 @@ pub mod gcvp1 {
             W(writer)
         }
     }
-    #[doc = "Field `GRAPHIC_CURSOR_VERTICAL_LOCATION` reader - GCVP\\[12:8\\]
-| Graphic Cursor Vertical Location"]
+    #[doc = "Field `GRAPHIC_CURSOR_VERTICAL_LOCATION` reader - Graphic Cursor Vertical Location"]
     pub type GRAPHIC_CURSOR_VERTICAL_LOCATION_R = crate::FieldReader<u8>;
-    #[doc = "Field `GRAPHIC_CURSOR_VERTICAL_LOCATION` writer - GCVP\\[12:8\\]
-| Graphic Cursor Vertical Location"]
+    #[doc = "Field `GRAPHIC_CURSOR_VERTICAL_LOCATION` writer - Graphic Cursor Vertical Location"]
     pub type GRAPHIC_CURSOR_VERTICAL_LOCATION_W<'a, const O: u8> =
         crate::FieldWriter<'a, GCVP1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - GCVP\\[12:8\\]
-| Graphic Cursor Vertical Location"]
+        #[doc = "Bits 0:4 - Graphic Cursor Vertical Location"]
         #[inline(always)]
         pub fn graphic_cursor_vertical_location(&self) -> GRAPHIC_CURSOR_VERTICAL_LOCATION_R {
             GRAPHIC_CURSOR_VERTICAL_LOCATION_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - GCVP\\[12:8\\]
-| Graphic Cursor Vertical Location"]
+        #[doc = "Bits 0:4 - Graphic Cursor Vertical Location"]
         #[inline(always)]
         #[must_use]
         pub fn graphic_cursor_vertical_location(
@@ -11553,23 +11409,19 @@ pub mod cvssa0 {
             W(writer)
         }
     }
-    #[doc = "Field `CANVAS_START_ADDRESS` reader - CVSSA\\[7:0\\]
-| Start address of Canvas"]
+    #[doc = "Field `CANVAS_START_ADDRESS` reader - Start address of Canvas"]
     pub type CANVAS_START_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `CANVAS_START_ADDRESS` writer - CVSSA\\[7:0\\]
-| Start address of Canvas"]
+    #[doc = "Field `CANVAS_START_ADDRESS` writer - Start address of Canvas"]
     pub type CANVAS_START_ADDRESS_W<'a, const O: u8> = crate::FieldWriter<'a, CVSSA0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - CVSSA\\[7:0\\]
-| Start address of Canvas"]
+        #[doc = "Bits 0:7 - Start address of Canvas"]
         #[inline(always)]
         pub fn canvas_start_address(&self) -> CANVAS_START_ADDRESS_R {
             CANVAS_START_ADDRESS_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - CVSSA\\[7:0\\]
-| Start address of Canvas"]
+        #[doc = "Bits 0:7 - Start address of Canvas"]
         #[inline(always)]
         #[must_use]
         pub fn canvas_start_address(&mut self) -> CANVAS_START_ADDRESS_W<0> {
@@ -11667,23 +11519,19 @@ pub mod cvssa1 {
             W(writer)
         }
     }
-    #[doc = "Field `CANVAS_START_ADDRESS` reader - CVSSA\\[15:8\\]
-| Start address of Canvas"]
+    #[doc = "Field `CANVAS_START_ADDRESS` reader - Start address of Canvas"]
     pub type CANVAS_START_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `CANVAS_START_ADDRESS` writer - CVSSA\\[15:8\\]
-| Start address of Canvas"]
+    #[doc = "Field `CANVAS_START_ADDRESS` writer - Start address of Canvas"]
     pub type CANVAS_START_ADDRESS_W<'a, const O: u8> = crate::FieldWriter<'a, CVSSA1, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - CVSSA\\[15:8\\]
-| Start address of Canvas"]
+        #[doc = "Bits 0:7 - Start address of Canvas"]
         #[inline(always)]
         pub fn canvas_start_address(&self) -> CANVAS_START_ADDRESS_R {
             CANVAS_START_ADDRESS_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - CVSSA\\[15:8\\]
-| Start address of Canvas"]
+        #[doc = "Bits 0:7 - Start address of Canvas"]
         #[inline(always)]
         #[must_use]
         pub fn canvas_start_address(&mut self) -> CANVAS_START_ADDRESS_W<0> {
@@ -11781,23 +11629,19 @@ pub mod cvssa2 {
             W(writer)
         }
     }
-    #[doc = "Field `CANVAS_START_ADDRESS` reader - CVSSA\\[23:16\\]
-| Start address of Canvas"]
+    #[doc = "Field `CANVAS_START_ADDRESS` reader - Start address of Canvas"]
     pub type CANVAS_START_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `CANVAS_START_ADDRESS` writer - CVSSA\\[23:16\\]
-| Start address of Canvas"]
+    #[doc = "Field `CANVAS_START_ADDRESS` writer - Start address of Canvas"]
     pub type CANVAS_START_ADDRESS_W<'a, const O: u8> = crate::FieldWriter<'a, CVSSA2, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - CVSSA\\[23:16\\]
-| Start address of Canvas"]
+        #[doc = "Bits 0:7 - Start address of Canvas"]
         #[inline(always)]
         pub fn canvas_start_address(&self) -> CANVAS_START_ADDRESS_R {
             CANVAS_START_ADDRESS_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - CVSSA\\[23:16\\]
-| Start address of Canvas"]
+        #[doc = "Bits 0:7 - Start address of Canvas"]
         #[inline(always)]
         #[must_use]
         pub fn canvas_start_address(&mut self) -> CANVAS_START_ADDRESS_W<0> {
@@ -11895,23 +11739,19 @@ pub mod cvssa3 {
             W(writer)
         }
     }
-    #[doc = "Field `CANVAS_START_ADDRESS` reader - CVSSA\\[31:24\\]
-| Start address of Canvas"]
+    #[doc = "Field `CANVAS_START_ADDRESS` reader - Start address of Canvas"]
     pub type CANVAS_START_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `CANVAS_START_ADDRESS` writer - CVSSA\\[31:24\\]
-| Start address of Canvas"]
+    #[doc = "Field `CANVAS_START_ADDRESS` writer - Start address of Canvas"]
     pub type CANVAS_START_ADDRESS_W<'a, const O: u8> = crate::FieldWriter<'a, CVSSA3, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - CVSSA\\[31:24\\]
-| Start address of Canvas"]
+        #[doc = "Bits 0:7 - Start address of Canvas"]
         #[inline(always)]
         pub fn canvas_start_address(&self) -> CANVAS_START_ADDRESS_R {
             CANVAS_START_ADDRESS_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - CVSSA\\[31:24\\]
-| Start address of Canvas"]
+        #[doc = "Bits 0:7 - Start address of Canvas"]
         #[inline(always)]
         #[must_use]
         pub fn canvas_start_address(&mut self) -> CANVAS_START_ADDRESS_W<0> {
@@ -12009,24 +11849,20 @@ pub mod cvs_imwth0 {
             W(writer)
         }
     }
-    #[doc = "Field `CANVAS_IMAGE_WIDTH` reader - CVS_IMWTH\\[7:0\\]
-| Canvas image width"]
+    #[doc = "Field `CANVAS_IMAGE_WIDTH` reader - Canvas image width"]
     pub type CANVAS_IMAGE_WIDTH_R = crate::FieldReader<u8>;
-    #[doc = "Field `CANVAS_IMAGE_WIDTH` writer - CVS_IMWTH\\[7:0\\]
-| Canvas image width"]
+    #[doc = "Field `CANVAS_IMAGE_WIDTH` writer - Canvas image width"]
     pub type CANVAS_IMAGE_WIDTH_W<'a, const O: u8> =
         crate::FieldWriter<'a, CVS_IMWTH0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - CVS_IMWTH\\[7:0\\]
-| Canvas image width"]
+        #[doc = "Bits 0:7 - Canvas image width"]
         #[inline(always)]
         pub fn canvas_image_width(&self) -> CANVAS_IMAGE_WIDTH_R {
             CANVAS_IMAGE_WIDTH_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - CVS_IMWTH\\[7:0\\]
-| Canvas image width"]
+        #[doc = "Bits 0:7 - Canvas image width"]
         #[inline(always)]
         #[must_use]
         pub fn canvas_image_width(&mut self) -> CANVAS_IMAGE_WIDTH_W<0> {
@@ -12124,24 +11960,20 @@ pub mod cvs_imwth1 {
             W(writer)
         }
     }
-    #[doc = "Field `CANVAS_IMAGE_WIDTH` reader - CVS_IMWTH\\[12:8\\]
-| Canvas image width"]
+    #[doc = "Field `CANVAS_IMAGE_WIDTH` reader - Canvas image width"]
     pub type CANVAS_IMAGE_WIDTH_R = crate::FieldReader<u8>;
-    #[doc = "Field `CANVAS_IMAGE_WIDTH` writer - CVS_IMWTH\\[12:8\\]
-| Canvas image width"]
+    #[doc = "Field `CANVAS_IMAGE_WIDTH` writer - Canvas image width"]
     pub type CANVAS_IMAGE_WIDTH_W<'a, const O: u8> =
         crate::FieldWriter<'a, CVS_IMWTH1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - CVS_IMWTH\\[12:8\\]
-| Canvas image width"]
+        #[doc = "Bits 0:4 - Canvas image width"]
         #[inline(always)]
         pub fn canvas_image_width(&self) -> CANVAS_IMAGE_WIDTH_R {
             CANVAS_IMAGE_WIDTH_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - CVS_IMWTH\\[12:8\\]
-| Canvas image width"]
+        #[doc = "Bits 0:4 - Canvas image width"]
         #[inline(always)]
         #[must_use]
         pub fn canvas_image_width(&mut self) -> CANVAS_IMAGE_WIDTH_W<0> {
@@ -12239,23 +12071,19 @@ pub mod awul_x0 {
             W(writer)
         }
     }
-    #[doc = "Field `ACTIVE_WINDOW_X` reader - AWUL_X\\[7:0\\]
-| Active Window Upper-Left corner X-coordinates"]
+    #[doc = "Field `ACTIVE_WINDOW_X` reader - Active Window Upper-Left corner X-coordinates"]
     pub type ACTIVE_WINDOW_X_R = crate::FieldReader<u8>;
-    #[doc = "Field `ACTIVE_WINDOW_X` writer - AWUL_X\\[7:0\\]
-| Active Window Upper-Left corner X-coordinates"]
+    #[doc = "Field `ACTIVE_WINDOW_X` writer - Active Window Upper-Left corner X-coordinates"]
     pub type ACTIVE_WINDOW_X_W<'a, const O: u8> = crate::FieldWriter<'a, AWUL_X0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - AWUL_X\\[7:0\\]
-| Active Window Upper-Left corner X-coordinates"]
+        #[doc = "Bits 0:7 - Active Window Upper-Left corner X-coordinates"]
         #[inline(always)]
         pub fn active_window_x(&self) -> ACTIVE_WINDOW_X_R {
             ACTIVE_WINDOW_X_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - AWUL_X\\[7:0\\]
-| Active Window Upper-Left corner X-coordinates"]
+        #[doc = "Bits 0:7 - Active Window Upper-Left corner X-coordinates"]
         #[inline(always)]
         #[must_use]
         pub fn active_window_x(&mut self) -> ACTIVE_WINDOW_X_W<0> {
@@ -12353,23 +12181,19 @@ pub mod awul_x1 {
             W(writer)
         }
     }
-    #[doc = "Field `ACTIVE_WINDOW_X` reader - AWUL_X\\[12:8\\]
-| Active Window Upper-Left corner X-coordinates"]
+    #[doc = "Field `ACTIVE_WINDOW_X` reader - Active Window Upper-Left corner X-coordinates"]
     pub type ACTIVE_WINDOW_X_R = crate::FieldReader<u8>;
-    #[doc = "Field `ACTIVE_WINDOW_X` writer - AWUL_X\\[12:8\\]
-| Active Window Upper-Left corner X-coordinates"]
+    #[doc = "Field `ACTIVE_WINDOW_X` writer - Active Window Upper-Left corner X-coordinates"]
     pub type ACTIVE_WINDOW_X_W<'a, const O: u8> = crate::FieldWriter<'a, AWUL_X1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - AWUL_X\\[12:8\\]
-| Active Window Upper-Left corner X-coordinates"]
+        #[doc = "Bits 0:4 - Active Window Upper-Left corner X-coordinates"]
         #[inline(always)]
         pub fn active_window_x(&self) -> ACTIVE_WINDOW_X_R {
             ACTIVE_WINDOW_X_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - AWUL_X\\[12:8\\]
-| Active Window Upper-Left corner X-coordinates"]
+        #[doc = "Bits 0:4 - Active Window Upper-Left corner X-coordinates"]
         #[inline(always)]
         #[must_use]
         pub fn active_window_x(&mut self) -> ACTIVE_WINDOW_X_W<0> {
@@ -12467,23 +12291,19 @@ pub mod awul_y0 {
             W(writer)
         }
     }
-    #[doc = "Field `ACTIVE_WINDOW_Y` reader - AWUL_Y\\[7:0\\]
-| Active Window Upper-Left corner Y-coordinates"]
+    #[doc = "Field `ACTIVE_WINDOW_Y` reader - Active Window Upper-Left corner Y-coordinates"]
     pub type ACTIVE_WINDOW_Y_R = crate::FieldReader<u8>;
-    #[doc = "Field `ACTIVE_WINDOW_Y` writer - AWUL_Y\\[7:0\\]
-| Active Window Upper-Left corner Y-coordinates"]
+    #[doc = "Field `ACTIVE_WINDOW_Y` writer - Active Window Upper-Left corner Y-coordinates"]
     pub type ACTIVE_WINDOW_Y_W<'a, const O: u8> = crate::FieldWriter<'a, AWUL_Y0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - AWUL_Y\\[7:0\\]
-| Active Window Upper-Left corner Y-coordinates"]
+        #[doc = "Bits 0:7 - Active Window Upper-Left corner Y-coordinates"]
         #[inline(always)]
         pub fn active_window_y(&self) -> ACTIVE_WINDOW_Y_R {
             ACTIVE_WINDOW_Y_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - AWUL_Y\\[7:0\\]
-| Active Window Upper-Left corner Y-coordinates"]
+        #[doc = "Bits 0:7 - Active Window Upper-Left corner Y-coordinates"]
         #[inline(always)]
         #[must_use]
         pub fn active_window_y(&mut self) -> ACTIVE_WINDOW_Y_W<0> {
@@ -12581,23 +12401,19 @@ pub mod awul_y1 {
             W(writer)
         }
     }
-    #[doc = "Field `ACTIVE_WINDOW_Y` reader - AWUL_Y\\[12:8\\]
-| Active Window Upper-Left corner Y-coordinates"]
+    #[doc = "Field `ACTIVE_WINDOW_Y` reader - Active Window Upper-Left corner Y-coordinates"]
     pub type ACTIVE_WINDOW_Y_R = crate::FieldReader<u8>;
-    #[doc = "Field `ACTIVE_WINDOW_Y` writer - AWUL_Y\\[12:8\\]
-| Active Window Upper-Left corner Y-coordinates"]
+    #[doc = "Field `ACTIVE_WINDOW_Y` writer - Active Window Upper-Left corner Y-coordinates"]
     pub type ACTIVE_WINDOW_Y_W<'a, const O: u8> = crate::FieldWriter<'a, AWUL_Y1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - AWUL_Y\\[12:8\\]
-| Active Window Upper-Left corner Y-coordinates"]
+        #[doc = "Bits 0:4 - Active Window Upper-Left corner Y-coordinates"]
         #[inline(always)]
         pub fn active_window_y(&self) -> ACTIVE_WINDOW_Y_R {
             ACTIVE_WINDOW_Y_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - AWUL_Y\\[12:8\\]
-| Active Window Upper-Left corner Y-coordinates"]
+        #[doc = "Bits 0:4 - Active Window Upper-Left corner Y-coordinates"]
         #[inline(always)]
         #[must_use]
         pub fn active_window_y(&mut self) -> ACTIVE_WINDOW_Y_W<0> {
@@ -12695,23 +12511,19 @@ pub mod aw_wth0 {
             W(writer)
         }
     }
-    #[doc = "Field `ACTIVE_WINDOW_WIDTH` reader - AW_WTH\\[7:0\\]
-| Active Window Width"]
+    #[doc = "Field `ACTIVE_WINDOW_WIDTH` reader - Active Window Width"]
     pub type ACTIVE_WINDOW_WIDTH_R = crate::FieldReader<u8>;
-    #[doc = "Field `ACTIVE_WINDOW_WIDTH` writer - AW_WTH\\[7:0\\]
-| Active Window Width"]
+    #[doc = "Field `ACTIVE_WINDOW_WIDTH` writer - Active Window Width"]
     pub type ACTIVE_WINDOW_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, AW_WTH0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - AW_WTH\\[7:0\\]
-| Active Window Width"]
+        #[doc = "Bits 0:7 - Active Window Width"]
         #[inline(always)]
         pub fn active_window_width(&self) -> ACTIVE_WINDOW_WIDTH_R {
             ACTIVE_WINDOW_WIDTH_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - AW_WTH\\[7:0\\]
-| Active Window Width"]
+        #[doc = "Bits 0:7 - Active Window Width"]
         #[inline(always)]
         #[must_use]
         pub fn active_window_width(&mut self) -> ACTIVE_WINDOW_WIDTH_W<0> {
@@ -12809,23 +12621,19 @@ pub mod aw_wth1 {
             W(writer)
         }
     }
-    #[doc = "Field `ACTIVE_WINDOW_WIDTH` reader - AW_WTH\\[12:8\\]
-| Active Window Width"]
+    #[doc = "Field `ACTIVE_WINDOW_WIDTH` reader - Active Window Width"]
     pub type ACTIVE_WINDOW_WIDTH_R = crate::FieldReader<u8>;
-    #[doc = "Field `ACTIVE_WINDOW_WIDTH` writer - AW_WTH\\[12:8\\]
-| Active Window Width"]
+    #[doc = "Field `ACTIVE_WINDOW_WIDTH` writer - Active Window Width"]
     pub type ACTIVE_WINDOW_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, AW_WTH1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - AW_WTH\\[12:8\\]
-| Active Window Width"]
+        #[doc = "Bits 0:4 - Active Window Width"]
         #[inline(always)]
         pub fn active_window_width(&self) -> ACTIVE_WINDOW_WIDTH_R {
             ACTIVE_WINDOW_WIDTH_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - AW_WTH\\[12:8\\]
-| Active Window Width"]
+        #[doc = "Bits 0:4 - Active Window Width"]
         #[inline(always)]
         #[must_use]
         pub fn active_window_width(&mut self) -> ACTIVE_WINDOW_WIDTH_W<0> {
@@ -12923,23 +12731,19 @@ pub mod aw_ht0 {
             W(writer)
         }
     }
-    #[doc = "Field `ACTIVE_WINDOW_HEIGHT` reader - AW_HT\\[7:0\\]
-| Active Window Height"]
+    #[doc = "Field `ACTIVE_WINDOW_HEIGHT` reader - Active Window Height"]
     pub type ACTIVE_WINDOW_HEIGHT_R = crate::FieldReader<u8>;
-    #[doc = "Field `ACTIVE_WINDOW_HEIGHT` writer - AW_HT\\[7:0\\]
-| Active Window Height"]
+    #[doc = "Field `ACTIVE_WINDOW_HEIGHT` writer - Active Window Height"]
     pub type ACTIVE_WINDOW_HEIGHT_W<'a, const O: u8> = crate::FieldWriter<'a, AW_HT0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - AW_HT\\[7:0\\]
-| Active Window Height"]
+        #[doc = "Bits 0:7 - Active Window Height"]
         #[inline(always)]
         pub fn active_window_height(&self) -> ACTIVE_WINDOW_HEIGHT_R {
             ACTIVE_WINDOW_HEIGHT_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - AW_HT\\[7:0\\]
-| Active Window Height"]
+        #[doc = "Bits 0:7 - Active Window Height"]
         #[inline(always)]
         #[must_use]
         pub fn active_window_height(&mut self) -> ACTIVE_WINDOW_HEIGHT_W<0> {
@@ -13037,23 +12841,19 @@ pub mod aw_ht1 {
             W(writer)
         }
     }
-    #[doc = "Field `ACTIVE_WINDOW_HEIGHT` reader - AW_HT\\[12:8\\]
-| Active Window Height"]
+    #[doc = "Field `ACTIVE_WINDOW_HEIGHT` reader - Active Window Height"]
     pub type ACTIVE_WINDOW_HEIGHT_R = crate::FieldReader<u8>;
-    #[doc = "Field `ACTIVE_WINDOW_HEIGHT` writer - AW_HT\\[12:8\\]
-| Active Window Height"]
+    #[doc = "Field `ACTIVE_WINDOW_HEIGHT` writer - Active Window Height"]
     pub type ACTIVE_WINDOW_HEIGHT_W<'a, const O: u8> = crate::FieldWriter<'a, AW_HT1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - AW_HT\\[12:8\\]
-| Active Window Height"]
+        #[doc = "Bits 0:4 - Active Window Height"]
         #[inline(always)]
         pub fn active_window_height(&self) -> ACTIVE_WINDOW_HEIGHT_R {
             ACTIVE_WINDOW_HEIGHT_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - AW_HT\\[12:8\\]
-| Active Window Height"]
+        #[doc = "Bits 0:4 - Active Window Height"]
         #[inline(always)]
         #[must_use]
         pub fn active_window_height(&mut self) -> ACTIVE_WINDOW_HEIGHT_W<0> {
@@ -13453,29 +13253,23 @@ pub mod curh0 {
             W(writer)
         }
     }
-    #[doc = "Field `MEMORY_READ_WRITE_ADDRESS` reader - CURH\\[7:0\\]
-| Memory Read/Write Linear mode address \\[7:0\\]"]
+    #[doc = "Field `MEMORY_READ_WRITE_ADDRESS` reader - Memory Read/Write Linear mode address \\[7:0\\]"]
     pub type MEMORY_READ_WRITE_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `MEMORY_READ_WRITE_ADDRESS` writer - CURH\\[7:0\\]
-| Memory Read/Write Linear mode address \\[7:0\\]"]
+    #[doc = "Field `MEMORY_READ_WRITE_ADDRESS` writer - Memory Read/Write Linear mode address \\[7:0\\]"]
     pub type MEMORY_READ_WRITE_ADDRESS_W<'a, const O: u8> =
         crate::FieldWriter<'a, CURH0, u8, u8, 8, O>;
-    #[doc = "Field `GRAPHIC_READ_WRITE_HORIZONTAL_POSITION` reader - CURH\\[7:0\\]
-| Graphic Read/Write Block mode horizontal position"]
+    #[doc = "Field `GRAPHIC_READ_WRITE_HORIZONTAL_POSITION` reader - Graphic Read/Write Block mode horizontal position"]
     pub type GRAPHIC_READ_WRITE_HORIZONTAL_POSITION_R = crate::FieldReader<u8>;
-    #[doc = "Field `GRAPHIC_READ_WRITE_HORIZONTAL_POSITION` writer - CURH\\[7:0\\]
-| Graphic Read/Write Block mode horizontal position"]
+    #[doc = "Field `GRAPHIC_READ_WRITE_HORIZONTAL_POSITION` writer - Graphic Read/Write Block mode horizontal position"]
     pub type GRAPHIC_READ_WRITE_HORIZONTAL_POSITION_W<'a, const O: u8> =
         crate::FieldWriter<'a, CURH0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - CURH\\[7:0\\]
-| Memory Read/Write Linear mode address \\[7:0\\]"]
+        #[doc = "Bits 0:7 - Memory Read/Write Linear mode address \\[7:0\\]"]
         #[inline(always)]
         pub fn memory_read_write_address(&self) -> MEMORY_READ_WRITE_ADDRESS_R {
             MEMORY_READ_WRITE_ADDRESS_R::new(self.bits)
         }
-        #[doc = "Bits 0:7 - CURH\\[7:0\\]
-| Graphic Read/Write Block mode horizontal position"]
+        #[doc = "Bits 0:7 - Graphic Read/Write Block mode horizontal position"]
         #[inline(always)]
         pub fn graphic_read_write_horizontal_position(
             &self,
@@ -13484,15 +13278,13 @@ pub mod curh0 {
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - CURH\\[7:0\\]
-| Memory Read/Write Linear mode address \\[7:0\\]"]
+        #[doc = "Bits 0:7 - Memory Read/Write Linear mode address \\[7:0\\]"]
         #[inline(always)]
         #[must_use]
         pub fn memory_read_write_address(&mut self) -> MEMORY_READ_WRITE_ADDRESS_W<0> {
             MEMORY_READ_WRITE_ADDRESS_W::new(self)
         }
-        #[doc = "Bits 0:7 - CURH\\[7:0\\]
-| Graphic Read/Write Block mode horizontal position"]
+        #[doc = "Bits 0:7 - Graphic Read/Write Block mode horizontal position"]
         #[inline(always)]
         #[must_use]
         pub fn graphic_read_write_horizontal_position(
@@ -13592,29 +13384,23 @@ pub mod curh1 {
             W(writer)
         }
     }
-    #[doc = "Field `MEMORY_READ_WRITE_ADDRESS` reader - CURH\\[15:8\\]
-| Memory Read/Write Linear mode address \\[15:8\\]"]
+    #[doc = "Field `MEMORY_READ_WRITE_ADDRESS` reader - Memory Read/Write Linear mode address \\[15:8\\]"]
     pub type MEMORY_READ_WRITE_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `MEMORY_READ_WRITE_ADDRESS` writer - CURH\\[15:8\\]
-| Memory Read/Write Linear mode address \\[15:8\\]"]
+    #[doc = "Field `MEMORY_READ_WRITE_ADDRESS` writer - Memory Read/Write Linear mode address \\[15:8\\]"]
     pub type MEMORY_READ_WRITE_ADDRESS_W<'a, const O: u8> =
         crate::FieldWriter<'a, CURH1, u8, u8, 8, O>;
-    #[doc = "Field `GRAPHIC_READ_WRITE_HORIZONTAL_POSITION` reader - CURH\\[12:8\\]
-| Graphic Read/Write Block mode horizontal position"]
+    #[doc = "Field `GRAPHIC_READ_WRITE_HORIZONTAL_POSITION` reader - Graphic Read/Write Block mode horizontal position"]
     pub type GRAPHIC_READ_WRITE_HORIZONTAL_POSITION_R = crate::FieldReader<u8>;
-    #[doc = "Field `GRAPHIC_READ_WRITE_HORIZONTAL_POSITION` writer - CURH\\[12:8\\]
-| Graphic Read/Write Block mode horizontal position"]
+    #[doc = "Field `GRAPHIC_READ_WRITE_HORIZONTAL_POSITION` writer - Graphic Read/Write Block mode horizontal position"]
     pub type GRAPHIC_READ_WRITE_HORIZONTAL_POSITION_W<'a, const O: u8> =
         crate::FieldWriter<'a, CURH1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:7 - CURH\\[15:8\\]
-| Memory Read/Write Linear mode address \\[15:8\\]"]
+        #[doc = "Bits 0:7 - Memory Read/Write Linear mode address \\[15:8\\]"]
         #[inline(always)]
         pub fn memory_read_write_address(&self) -> MEMORY_READ_WRITE_ADDRESS_R {
             MEMORY_READ_WRITE_ADDRESS_R::new(self.bits)
         }
-        #[doc = "Bits 0:4 - CURH\\[12:8\\]
-| Graphic Read/Write Block mode horizontal position"]
+        #[doc = "Bits 0:4 - Graphic Read/Write Block mode horizontal position"]
         #[inline(always)]
         pub fn graphic_read_write_horizontal_position(
             &self,
@@ -13623,15 +13409,13 @@ pub mod curh1 {
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - CURH\\[15:8\\]
-| Memory Read/Write Linear mode address \\[15:8\\]"]
+        #[doc = "Bits 0:7 - Memory Read/Write Linear mode address \\[15:8\\]"]
         #[inline(always)]
         #[must_use]
         pub fn memory_read_write_address(&mut self) -> MEMORY_READ_WRITE_ADDRESS_W<0> {
             MEMORY_READ_WRITE_ADDRESS_W::new(self)
         }
-        #[doc = "Bits 0:4 - CURH\\[12:8\\]
-| Graphic Read/Write Block mode horizontal position"]
+        #[doc = "Bits 0:4 - Graphic Read/Write Block mode horizontal position"]
         #[inline(always)]
         #[must_use]
         pub fn graphic_read_write_horizontal_position(
@@ -13731,29 +13515,23 @@ pub mod curv0 {
             W(writer)
         }
     }
-    #[doc = "Field `MEMORY_READ_WRITE_ADDRESS` reader - CURV\\[7:0\\]
-| Memory Read/Write Linear mode address \\[23:16\\]"]
+    #[doc = "Field `MEMORY_READ_WRITE_ADDRESS` reader - Memory Read/Write Linear mode address \\[23:16\\]"]
     pub type MEMORY_READ_WRITE_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `MEMORY_READ_WRITE_ADDRESS` writer - CURV\\[7:0\\]
-| Memory Read/Write Linear mode address \\[23:16\\]"]
+    #[doc = "Field `MEMORY_READ_WRITE_ADDRESS` writer - Memory Read/Write Linear mode address \\[23:16\\]"]
     pub type MEMORY_READ_WRITE_ADDRESS_W<'a, const O: u8> =
         crate::FieldWriter<'a, CURV0, u8, u8, 8, O>;
-    #[doc = "Field `GRAPHIC_READ_WRITE_VERTICAL_POSITION` reader - CURV\\[7:0\\]
-| Graphic Read/Write Block mode vertical position"]
+    #[doc = "Field `GRAPHIC_READ_WRITE_VERTICAL_POSITION` reader - Graphic Read/Write Block mode vertical position"]
     pub type GRAPHIC_READ_WRITE_VERTICAL_POSITION_R = crate::FieldReader<u8>;
-    #[doc = "Field `GRAPHIC_READ_WRITE_VERTICAL_POSITION` writer - CURV\\[7:0\\]
-| Graphic Read/Write Block mode vertical position"]
+    #[doc = "Field `GRAPHIC_READ_WRITE_VERTICAL_POSITION` writer - Graphic Read/Write Block mode vertical position"]
     pub type GRAPHIC_READ_WRITE_VERTICAL_POSITION_W<'a, const O: u8> =
         crate::FieldWriter<'a, CURV0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - CURV\\[7:0\\]
-| Memory Read/Write Linear mode address \\[23:16\\]"]
+        #[doc = "Bits 0:7 - Memory Read/Write Linear mode address \\[23:16\\]"]
         #[inline(always)]
         pub fn memory_read_write_address(&self) -> MEMORY_READ_WRITE_ADDRESS_R {
             MEMORY_READ_WRITE_ADDRESS_R::new(self.bits)
         }
-        #[doc = "Bits 0:7 - CURV\\[7:0\\]
-| Graphic Read/Write Block mode vertical position"]
+        #[doc = "Bits 0:7 - Graphic Read/Write Block mode vertical position"]
         #[inline(always)]
         pub fn graphic_read_write_vertical_position(
             &self,
@@ -13762,15 +13540,13 @@ pub mod curv0 {
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - CURV\\[7:0\\]
-| Memory Read/Write Linear mode address \\[23:16\\]"]
+        #[doc = "Bits 0:7 - Memory Read/Write Linear mode address \\[23:16\\]"]
         #[inline(always)]
         #[must_use]
         pub fn memory_read_write_address(&mut self) -> MEMORY_READ_WRITE_ADDRESS_W<0> {
             MEMORY_READ_WRITE_ADDRESS_W::new(self)
         }
-        #[doc = "Bits 0:7 - CURV\\[7:0\\]
-| Graphic Read/Write Block mode vertical position"]
+        #[doc = "Bits 0:7 - Graphic Read/Write Block mode vertical position"]
         #[inline(always)]
         #[must_use]
         pub fn graphic_read_write_vertical_position(
@@ -13870,29 +13646,23 @@ pub mod curv1 {
             W(writer)
         }
     }
-    #[doc = "Field `MEMORY_READ_WRITE_ADDRESS` reader - CURV\\[15:8\\]
-| Memory Read/Write Linear mode address \\[31:24\\]"]
+    #[doc = "Field `MEMORY_READ_WRITE_ADDRESS` reader - Memory Read/Write Linear mode address \\[31:24\\]"]
     pub type MEMORY_READ_WRITE_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `MEMORY_READ_WRITE_ADDRESS` writer - CURV\\[15:8\\]
-| Memory Read/Write Linear mode address \\[31:24\\]"]
+    #[doc = "Field `MEMORY_READ_WRITE_ADDRESS` writer - Memory Read/Write Linear mode address \\[31:24\\]"]
     pub type MEMORY_READ_WRITE_ADDRESS_W<'a, const O: u8> =
         crate::FieldWriter<'a, CURV1, u8, u8, 8, O>;
-    #[doc = "Field `GRAPHIC_READ_WRITE_VERTICAL_POSITION` reader - CURV\\[12:8\\]
-| Graphic Read/Write Block mode vertical position"]
+    #[doc = "Field `GRAPHIC_READ_WRITE_VERTICAL_POSITION` reader - Graphic Read/Write Block mode vertical position"]
     pub type GRAPHIC_READ_WRITE_VERTICAL_POSITION_R = crate::FieldReader<u8>;
-    #[doc = "Field `GRAPHIC_READ_WRITE_VERTICAL_POSITION` writer - CURV\\[12:8\\]
-| Graphic Read/Write Block mode vertical position"]
+    #[doc = "Field `GRAPHIC_READ_WRITE_VERTICAL_POSITION` writer - Graphic Read/Write Block mode vertical position"]
     pub type GRAPHIC_READ_WRITE_VERTICAL_POSITION_W<'a, const O: u8> =
         crate::FieldWriter<'a, CURV1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:7 - CURV\\[15:8\\]
-| Memory Read/Write Linear mode address \\[31:24\\]"]
+        #[doc = "Bits 0:7 - Memory Read/Write Linear mode address \\[31:24\\]"]
         #[inline(always)]
         pub fn memory_read_write_address(&self) -> MEMORY_READ_WRITE_ADDRESS_R {
             MEMORY_READ_WRITE_ADDRESS_R::new(self.bits)
         }
-        #[doc = "Bits 0:4 - CURV\\[12:8\\]
-| Graphic Read/Write Block mode vertical position"]
+        #[doc = "Bits 0:4 - Graphic Read/Write Block mode vertical position"]
         #[inline(always)]
         pub fn graphic_read_write_vertical_position(
             &self,
@@ -13901,15 +13671,13 @@ pub mod curv1 {
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - CURV\\[15:8\\]
-| Memory Read/Write Linear mode address \\[31:24\\]"]
+        #[doc = "Bits 0:7 - Memory Read/Write Linear mode address \\[31:24\\]"]
         #[inline(always)]
         #[must_use]
         pub fn memory_read_write_address(&mut self) -> MEMORY_READ_WRITE_ADDRESS_W<0> {
             MEMORY_READ_WRITE_ADDRESS_W::new(self)
         }
-        #[doc = "Bits 0:4 - CURV\\[12:8\\]
-| Graphic Read/Write Block mode vertical position"]
+        #[doc = "Bits 0:4 - Graphic Read/Write Block mode vertical position"]
         #[inline(always)]
         #[must_use]
         pub fn graphic_read_write_vertical_position(
@@ -14009,23 +13777,19 @@ pub mod f_curx0 {
             W(writer)
         }
     }
-    #[doc = "Field `TEXT_WRITE_X` reader - F_CURX\\[7:0\\]
-| Text Write X-coordinates"]
+    #[doc = "Field `TEXT_WRITE_X` reader - Text Write X-coordinates"]
     pub type TEXT_WRITE_X_R = crate::FieldReader<u8>;
-    #[doc = "Field `TEXT_WRITE_X` writer - F_CURX\\[7:0\\]
-| Text Write X-coordinates"]
+    #[doc = "Field `TEXT_WRITE_X` writer - Text Write X-coordinates"]
     pub type TEXT_WRITE_X_W<'a, const O: u8> = crate::FieldWriter<'a, F_CURX0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - F_CURX\\[7:0\\]
-| Text Write X-coordinates"]
+        #[doc = "Bits 0:7 - Text Write X-coordinates"]
         #[inline(always)]
         pub fn text_write_x(&self) -> TEXT_WRITE_X_R {
             TEXT_WRITE_X_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - F_CURX\\[7:0\\]
-| Text Write X-coordinates"]
+        #[doc = "Bits 0:7 - Text Write X-coordinates"]
         #[inline(always)]
         #[must_use]
         pub fn text_write_x(&mut self) -> TEXT_WRITE_X_W<0> {
@@ -14123,23 +13887,19 @@ pub mod f_curx1 {
             W(writer)
         }
     }
-    #[doc = "Field `TEXT_WRITE_X` reader - F_CURX\\[12:8\\]
-| Text Write X-coordinates"]
+    #[doc = "Field `TEXT_WRITE_X` reader - Text Write X-coordinates"]
     pub type TEXT_WRITE_X_R = crate::FieldReader<u8>;
-    #[doc = "Field `TEXT_WRITE_X` writer - F_CURX\\[12:8\\]
-| Text Write X-coordinates"]
+    #[doc = "Field `TEXT_WRITE_X` writer - Text Write X-coordinates"]
     pub type TEXT_WRITE_X_W<'a, const O: u8> = crate::FieldWriter<'a, F_CURX1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - F_CURX\\[12:8\\]
-| Text Write X-coordinates"]
+        #[doc = "Bits 0:4 - Text Write X-coordinates"]
         #[inline(always)]
         pub fn text_write_x(&self) -> TEXT_WRITE_X_R {
             TEXT_WRITE_X_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - F_CURX\\[12:8\\]
-| Text Write X-coordinates"]
+        #[doc = "Bits 0:4 - Text Write X-coordinates"]
         #[inline(always)]
         #[must_use]
         pub fn text_write_x(&mut self) -> TEXT_WRITE_X_W<0> {
@@ -14237,23 +13997,19 @@ pub mod f_cury0 {
             W(writer)
         }
     }
-    #[doc = "Field `TEXT_WRITE_Y` reader - F_CURY\\[7:0\\]
-| Text Write Y-coordinates"]
+    #[doc = "Field `TEXT_WRITE_Y` reader - Text Write Y-coordinates"]
     pub type TEXT_WRITE_Y_R = crate::FieldReader<u8>;
-    #[doc = "Field `TEXT_WRITE_Y` writer - F_CURY\\[7:0\\]
-| Text Write Y-coordinates"]
+    #[doc = "Field `TEXT_WRITE_Y` writer - Text Write Y-coordinates"]
     pub type TEXT_WRITE_Y_W<'a, const O: u8> = crate::FieldWriter<'a, F_CURY0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - F_CURY\\[7:0\\]
-| Text Write Y-coordinates"]
+        #[doc = "Bits 0:7 - Text Write Y-coordinates"]
         #[inline(always)]
         pub fn text_write_y(&self) -> TEXT_WRITE_Y_R {
             TEXT_WRITE_Y_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - F_CURY\\[7:0\\]
-| Text Write Y-coordinates"]
+        #[doc = "Bits 0:7 - Text Write Y-coordinates"]
         #[inline(always)]
         #[must_use]
         pub fn text_write_y(&mut self) -> TEXT_WRITE_Y_W<0> {
@@ -14351,23 +14107,19 @@ pub mod f_cury1 {
             W(writer)
         }
     }
-    #[doc = "Field `TEXT_WRITE_Y` reader - F_CURY\\[12:8\\]
-| Text Write Y-coordinates"]
+    #[doc = "Field `TEXT_WRITE_Y` reader - Text Write Y-coordinates"]
     pub type TEXT_WRITE_Y_R = crate::FieldReader<u8>;
-    #[doc = "Field `TEXT_WRITE_Y` writer - F_CURY\\[12:8\\]
-| Text Write Y-coordinates"]
+    #[doc = "Field `TEXT_WRITE_Y` writer - Text Write Y-coordinates"]
     pub type TEXT_WRITE_Y_W<'a, const O: u8> = crate::FieldWriter<'a, F_CURY1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - F_CURY\\[12:8\\]
-| Text Write Y-coordinates"]
+        #[doc = "Bits 0:4 - Text Write Y-coordinates"]
         #[inline(always)]
         pub fn text_write_y(&self) -> TEXT_WRITE_Y_R {
             TEXT_WRITE_Y_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - F_CURY\\[12:8\\]
-| Text Write Y-coordinates"]
+        #[doc = "Bits 0:4 - Text Write Y-coordinates"]
         #[inline(always)]
         #[must_use]
         pub fn text_write_y(&mut self) -> TEXT_WRITE_Y_W<0> {
@@ -14651,23 +14403,19 @@ pub mod dlhsr0 {
             W(writer)
         }
     }
-    #[doc = "Field `DRAW_POINT_1_X` reader - DLHSR\\[7:0\\]
-| Draw Point 1 X-coordinate"]
+    #[doc = "Field `DRAW_POINT_1_X` reader - Draw Point 1 X-coordinate"]
     pub type DRAW_POINT_1_X_R = crate::FieldReader<u8>;
-    #[doc = "Field `DRAW_POINT_1_X` writer - DLHSR\\[7:0\\]
-| Draw Point 1 X-coordinate"]
+    #[doc = "Field `DRAW_POINT_1_X` writer - Draw Point 1 X-coordinate"]
     pub type DRAW_POINT_1_X_W<'a, const O: u8> = crate::FieldWriter<'a, DLHSR0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - DLHSR\\[7:0\\]
-| Draw Point 1 X-coordinate"]
+        #[doc = "Bits 0:7 - Draw Point 1 X-coordinate"]
         #[inline(always)]
         pub fn draw_point_1_x(&self) -> DRAW_POINT_1_X_R {
             DRAW_POINT_1_X_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - DLHSR\\[7:0\\]
-| Draw Point 1 X-coordinate"]
+        #[doc = "Bits 0:7 - Draw Point 1 X-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn draw_point_1_x(&mut self) -> DRAW_POINT_1_X_W<0> {
@@ -14765,23 +14513,19 @@ pub mod dlhsr1 {
             W(writer)
         }
     }
-    #[doc = "Field `DRAW_POINT_1_X` reader - DLHSR\\[12:8\\]
-| Draw Point 1 X-coordinate"]
+    #[doc = "Field `DRAW_POINT_1_X` reader - Draw Point 1 X-coordinate"]
     pub type DRAW_POINT_1_X_R = crate::FieldReader<u8>;
-    #[doc = "Field `DRAW_POINT_1_X` writer - DLHSR\\[12:8\\]
-| Draw Point 1 X-coordinate"]
+    #[doc = "Field `DRAW_POINT_1_X` writer - Draw Point 1 X-coordinate"]
     pub type DRAW_POINT_1_X_W<'a, const O: u8> = crate::FieldWriter<'a, DLHSR1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - DLHSR\\[12:8\\]
-| Draw Point 1 X-coordinate"]
+        #[doc = "Bits 0:4 - Draw Point 1 X-coordinate"]
         #[inline(always)]
         pub fn draw_point_1_x(&self) -> DRAW_POINT_1_X_R {
             DRAW_POINT_1_X_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - DLHSR\\[12:8\\]
-| Draw Point 1 X-coordinate"]
+        #[doc = "Bits 0:4 - Draw Point 1 X-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn draw_point_1_x(&mut self) -> DRAW_POINT_1_X_W<0> {
@@ -14879,23 +14623,19 @@ pub mod dlvsr0 {
             W(writer)
         }
     }
-    #[doc = "Field `DRAW_POINT_1_Y` reader - DLVSR\\[7:0\\]
-| Draw Point 1 Y-coordinate"]
+    #[doc = "Field `DRAW_POINT_1_Y` reader - Draw Point 1 Y-coordinate"]
     pub type DRAW_POINT_1_Y_R = crate::FieldReader<u8>;
-    #[doc = "Field `DRAW_POINT_1_Y` writer - DLVSR\\[7:0\\]
-| Draw Point 1 Y-coordinate"]
+    #[doc = "Field `DRAW_POINT_1_Y` writer - Draw Point 1 Y-coordinate"]
     pub type DRAW_POINT_1_Y_W<'a, const O: u8> = crate::FieldWriter<'a, DLVSR0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - DLVSR\\[7:0\\]
-| Draw Point 1 Y-coordinate"]
+        #[doc = "Bits 0:7 - Draw Point 1 Y-coordinate"]
         #[inline(always)]
         pub fn draw_point_1_y(&self) -> DRAW_POINT_1_Y_R {
             DRAW_POINT_1_Y_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - DLVSR\\[7:0\\]
-| Draw Point 1 Y-coordinate"]
+        #[doc = "Bits 0:7 - Draw Point 1 Y-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn draw_point_1_y(&mut self) -> DRAW_POINT_1_Y_W<0> {
@@ -14993,23 +14733,19 @@ pub mod dlvsr1 {
             W(writer)
         }
     }
-    #[doc = "Field `DRAW_POINT_1_Y` reader - DLVSR\\[12:8\\]
-| Draw Point 1 Y-coordinate"]
+    #[doc = "Field `DRAW_POINT_1_Y` reader - Draw Point 1 Y-coordinate"]
     pub type DRAW_POINT_1_Y_R = crate::FieldReader<u8>;
-    #[doc = "Field `DRAW_POINT_1_Y` writer - DLVSR\\[12:8\\]
-| Draw Point 1 Y-coordinate"]
+    #[doc = "Field `DRAW_POINT_1_Y` writer - Draw Point 1 Y-coordinate"]
     pub type DRAW_POINT_1_Y_W<'a, const O: u8> = crate::FieldWriter<'a, DLVSR1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - DLVSR\\[12:8\\]
-| Draw Point 1 Y-coordinate"]
+        #[doc = "Bits 0:4 - Draw Point 1 Y-coordinate"]
         #[inline(always)]
         pub fn draw_point_1_y(&self) -> DRAW_POINT_1_Y_R {
             DRAW_POINT_1_Y_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - DLVSR\\[12:8\\]
-| Draw Point 1 Y-coordinate"]
+        #[doc = "Bits 0:4 - Draw Point 1 Y-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn draw_point_1_y(&mut self) -> DRAW_POINT_1_Y_W<0> {
@@ -15107,23 +14843,19 @@ pub mod dlher0 {
             W(writer)
         }
     }
-    #[doc = "Field `DRAW_POINT_2_X` reader - DLHER\\[7:0\\]
-| Draw Point 2 X-coordinate"]
+    #[doc = "Field `DRAW_POINT_2_X` reader - Draw Point 2 X-coordinate"]
     pub type DRAW_POINT_2_X_R = crate::FieldReader<u8>;
-    #[doc = "Field `DRAW_POINT_2_X` writer - DLHER\\[7:0\\]
-| Draw Point 2 X-coordinate"]
+    #[doc = "Field `DRAW_POINT_2_X` writer - Draw Point 2 X-coordinate"]
     pub type DRAW_POINT_2_X_W<'a, const O: u8> = crate::FieldWriter<'a, DLHER0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - DLHER\\[7:0\\]
-| Draw Point 2 X-coordinate"]
+        #[doc = "Bits 0:7 - Draw Point 2 X-coordinate"]
         #[inline(always)]
         pub fn draw_point_2_x(&self) -> DRAW_POINT_2_X_R {
             DRAW_POINT_2_X_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - DLHER\\[7:0\\]
-| Draw Point 2 X-coordinate"]
+        #[doc = "Bits 0:7 - Draw Point 2 X-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn draw_point_2_x(&mut self) -> DRAW_POINT_2_X_W<0> {
@@ -15221,23 +14953,19 @@ pub mod dlher1 {
             W(writer)
         }
     }
-    #[doc = "Field `DRAW_POINT_2_X` reader - DLHER\\[12:8\\]
-| Draw Point 2 X-coordinate"]
+    #[doc = "Field `DRAW_POINT_2_X` reader - Draw Point 2 X-coordinate"]
     pub type DRAW_POINT_2_X_R = crate::FieldReader<u8>;
-    #[doc = "Field `DRAW_POINT_2_X` writer - DLHER\\[12:8\\]
-| Draw Point 2 X-coordinate"]
+    #[doc = "Field `DRAW_POINT_2_X` writer - Draw Point 2 X-coordinate"]
     pub type DRAW_POINT_2_X_W<'a, const O: u8> = crate::FieldWriter<'a, DLHER1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - DLHER\\[12:8\\]
-| Draw Point 2 X-coordinate"]
+        #[doc = "Bits 0:4 - Draw Point 2 X-coordinate"]
         #[inline(always)]
         pub fn draw_point_2_x(&self) -> DRAW_POINT_2_X_R {
             DRAW_POINT_2_X_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - DLHER\\[12:8\\]
-| Draw Point 2 X-coordinate"]
+        #[doc = "Bits 0:4 - Draw Point 2 X-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn draw_point_2_x(&mut self) -> DRAW_POINT_2_X_W<0> {
@@ -15335,23 +15063,19 @@ pub mod dlver0 {
             W(writer)
         }
     }
-    #[doc = "Field `DRAW_POINT_2_Y` reader - DLVER\\[7:0\\]
-| Draw Point 2 Y-coordinate"]
+    #[doc = "Field `DRAW_POINT_2_Y` reader - Draw Point 2 Y-coordinate"]
     pub type DRAW_POINT_2_Y_R = crate::FieldReader<u8>;
-    #[doc = "Field `DRAW_POINT_2_Y` writer - DLVER\\[7:0\\]
-| Draw Point 2 Y-coordinate"]
+    #[doc = "Field `DRAW_POINT_2_Y` writer - Draw Point 2 Y-coordinate"]
     pub type DRAW_POINT_2_Y_W<'a, const O: u8> = crate::FieldWriter<'a, DLVER0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - DLVER\\[7:0\\]
-| Draw Point 2 Y-coordinate"]
+        #[doc = "Bits 0:7 - Draw Point 2 Y-coordinate"]
         #[inline(always)]
         pub fn draw_point_2_y(&self) -> DRAW_POINT_2_Y_R {
             DRAW_POINT_2_Y_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - DLVER\\[7:0\\]
-| Draw Point 2 Y-coordinate"]
+        #[doc = "Bits 0:7 - Draw Point 2 Y-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn draw_point_2_y(&mut self) -> DRAW_POINT_2_Y_W<0> {
@@ -15449,23 +15173,19 @@ pub mod dlver1 {
             W(writer)
         }
     }
-    #[doc = "Field `DRAW_POINT_2_Y` reader - DLVER\\[12:8\\]
-| Draw Point 2 Y-coordinate"]
+    #[doc = "Field `DRAW_POINT_2_Y` reader - Draw Point 2 Y-coordinate"]
     pub type DRAW_POINT_2_Y_R = crate::FieldReader<u8>;
-    #[doc = "Field `DRAW_POINT_2_Y` writer - DLVER\\[12:8\\]
-| Draw Point 2 Y-coordinate"]
+    #[doc = "Field `DRAW_POINT_2_Y` writer - Draw Point 2 Y-coordinate"]
     pub type DRAW_POINT_2_Y_W<'a, const O: u8> = crate::FieldWriter<'a, DLVER1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - DLVER\\[12:8\\]
-| Draw Point 2 Y-coordinate"]
+        #[doc = "Bits 0:4 - Draw Point 2 Y-coordinate"]
         #[inline(always)]
         pub fn draw_point_2_y(&self) -> DRAW_POINT_2_Y_R {
             DRAW_POINT_2_Y_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - DLVER\\[12:8\\]
-| Draw Point 2 Y-coordinate"]
+        #[doc = "Bits 0:4 - Draw Point 2 Y-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn draw_point_2_y(&mut self) -> DRAW_POINT_2_Y_W<0> {
@@ -15563,23 +15283,19 @@ pub mod dtph0 {
             W(writer)
         }
     }
-    #[doc = "Field `DRAW_POINT_3_X` reader - DTPH\\[7:0\\]
-| Draw Triangle Point 3 X-coordinate"]
+    #[doc = "Field `DRAW_POINT_3_X` reader - Draw Triangle Point 3 X-coordinate"]
     pub type DRAW_POINT_3_X_R = crate::FieldReader<u8>;
-    #[doc = "Field `DRAW_POINT_3_X` writer - DTPH\\[7:0\\]
-| Draw Triangle Point 3 X-coordinate"]
+    #[doc = "Field `DRAW_POINT_3_X` writer - Draw Triangle Point 3 X-coordinate"]
     pub type DRAW_POINT_3_X_W<'a, const O: u8> = crate::FieldWriter<'a, DTPH0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - DTPH\\[7:0\\]
-| Draw Triangle Point 3 X-coordinate"]
+        #[doc = "Bits 0:7 - Draw Triangle Point 3 X-coordinate"]
         #[inline(always)]
         pub fn draw_point_3_x(&self) -> DRAW_POINT_3_X_R {
             DRAW_POINT_3_X_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - DTPH\\[7:0\\]
-| Draw Triangle Point 3 X-coordinate"]
+        #[doc = "Bits 0:7 - Draw Triangle Point 3 X-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn draw_point_3_x(&mut self) -> DRAW_POINT_3_X_W<0> {
@@ -15677,23 +15393,19 @@ pub mod dtph1 {
             W(writer)
         }
     }
-    #[doc = "Field `DRAW_POINT_3_X` reader - DTPH\\[12:8\\]
-| Draw Triangle Point 3 X-coordinate"]
+    #[doc = "Field `DRAW_POINT_3_X` reader - Draw Triangle Point 3 X-coordinate"]
     pub type DRAW_POINT_3_X_R = crate::FieldReader<u8>;
-    #[doc = "Field `DRAW_POINT_3_X` writer - DTPH\\[12:8\\]
-| Draw Triangle Point 3 X-coordinate"]
+    #[doc = "Field `DRAW_POINT_3_X` writer - Draw Triangle Point 3 X-coordinate"]
     pub type DRAW_POINT_3_X_W<'a, const O: u8> = crate::FieldWriter<'a, DTPH1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - DTPH\\[12:8\\]
-| Draw Triangle Point 3 X-coordinate"]
+        #[doc = "Bits 0:4 - Draw Triangle Point 3 X-coordinate"]
         #[inline(always)]
         pub fn draw_point_3_x(&self) -> DRAW_POINT_3_X_R {
             DRAW_POINT_3_X_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - DTPH\\[12:8\\]
-| Draw Triangle Point 3 X-coordinate"]
+        #[doc = "Bits 0:4 - Draw Triangle Point 3 X-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn draw_point_3_x(&mut self) -> DRAW_POINT_3_X_W<0> {
@@ -15791,23 +15503,19 @@ pub mod dtpv0 {
             W(writer)
         }
     }
-    #[doc = "Field `DRAW_POINT_3_Y` reader - DTPV\\[7:0\\]
-| Draw Triangle Point 3 Y-coordinate"]
+    #[doc = "Field `DRAW_POINT_3_Y` reader - Draw Triangle Point 3 Y-coordinate"]
     pub type DRAW_POINT_3_Y_R = crate::FieldReader<u8>;
-    #[doc = "Field `DRAW_POINT_3_Y` writer - DTPV\\[7:0\\]
-| Draw Triangle Point 3 Y-coordinate"]
+    #[doc = "Field `DRAW_POINT_3_Y` writer - Draw Triangle Point 3 Y-coordinate"]
     pub type DRAW_POINT_3_Y_W<'a, const O: u8> = crate::FieldWriter<'a, DTPV0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - DTPV\\[7:0\\]
-| Draw Triangle Point 3 Y-coordinate"]
+        #[doc = "Bits 0:7 - Draw Triangle Point 3 Y-coordinate"]
         #[inline(always)]
         pub fn draw_point_3_y(&self) -> DRAW_POINT_3_Y_R {
             DRAW_POINT_3_Y_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - DTPV\\[7:0\\]
-| Draw Triangle Point 3 Y-coordinate"]
+        #[doc = "Bits 0:7 - Draw Triangle Point 3 Y-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn draw_point_3_y(&mut self) -> DRAW_POINT_3_Y_W<0> {
@@ -15905,23 +15613,19 @@ pub mod dtpv1 {
             W(writer)
         }
     }
-    #[doc = "Field `DRAW_POINT_3_Y` reader - DTPV\\[12:8\\]
-| Draw Triangle Point 3 Y-coordinate"]
+    #[doc = "Field `DRAW_POINT_3_Y` reader - Draw Triangle Point 3 Y-coordinate"]
     pub type DRAW_POINT_3_Y_R = crate::FieldReader<u8>;
-    #[doc = "Field `DRAW_POINT_3_Y` writer - DTPV\\[12:8\\]
-| Draw Triangle Point 3 Y-coordinate"]
+    #[doc = "Field `DRAW_POINT_3_Y` writer - Draw Triangle Point 3 Y-coordinate"]
     pub type DRAW_POINT_3_Y_W<'a, const O: u8> = crate::FieldWriter<'a, DTPV1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - DTPV\\[12:8\\]
-| Draw Triangle Point 3 Y-coordinate"]
+        #[doc = "Bits 0:4 - Draw Triangle Point 3 Y-coordinate"]
         #[inline(always)]
         pub fn draw_point_3_y(&self) -> DRAW_POINT_3_Y_R {
             DRAW_POINT_3_Y_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - DTPV\\[12:8\\]
-| Draw Triangle Point 3 Y-coordinate"]
+        #[doc = "Bits 0:4 - Draw Triangle Point 3 Y-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn draw_point_3_y(&mut self) -> DRAW_POINT_3_Y_W<0> {
@@ -16327,23 +16031,19 @@ pub mod ell_a0 {
             W(writer)
         }
     }
-    #[doc = "Field `MAJOR_RADIUS` reader - ELL_A\\[7:0\\]
-| Draw Circle/Ellipse/Circle Square Major radius"]
+    #[doc = "Field `MAJOR_RADIUS` reader - Draw Circle/Ellipse/Circle Square Major radius"]
     pub type MAJOR_RADIUS_R = crate::FieldReader<u8>;
-    #[doc = "Field `MAJOR_RADIUS` writer - ELL_A\\[7:0\\]
-| Draw Circle/Ellipse/Circle Square Major radius"]
+    #[doc = "Field `MAJOR_RADIUS` writer - Draw Circle/Ellipse/Circle Square Major radius"]
     pub type MAJOR_RADIUS_W<'a, const O: u8> = crate::FieldWriter<'a, ELL_A0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - ELL_A\\[7:0\\]
-| Draw Circle/Ellipse/Circle Square Major radius"]
+        #[doc = "Bits 0:7 - Draw Circle/Ellipse/Circle Square Major radius"]
         #[inline(always)]
         pub fn major_radius(&self) -> MAJOR_RADIUS_R {
             MAJOR_RADIUS_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - ELL_A\\[7:0\\]
-| Draw Circle/Ellipse/Circle Square Major radius"]
+        #[doc = "Bits 0:7 - Draw Circle/Ellipse/Circle Square Major radius"]
         #[inline(always)]
         #[must_use]
         pub fn major_radius(&mut self) -> MAJOR_RADIUS_W<0> {
@@ -16441,23 +16141,19 @@ pub mod ell_a1 {
             W(writer)
         }
     }
-    #[doc = "Field `MAJOR_RADIUS` reader - ELL_A\\[12:8\\]
-| Draw Circle/Ellipse/Circle Square Major radius"]
+    #[doc = "Field `MAJOR_RADIUS` reader - Draw Circle/Ellipse/Circle Square Major radius"]
     pub type MAJOR_RADIUS_R = crate::FieldReader<u8>;
-    #[doc = "Field `MAJOR_RADIUS` writer - ELL_A\\[12:8\\]
-| Draw Circle/Ellipse/Circle Square Major radius"]
+    #[doc = "Field `MAJOR_RADIUS` writer - Draw Circle/Ellipse/Circle Square Major radius"]
     pub type MAJOR_RADIUS_W<'a, const O: u8> = crate::FieldWriter<'a, ELL_A1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - ELL_A\\[12:8\\]
-| Draw Circle/Ellipse/Circle Square Major radius"]
+        #[doc = "Bits 0:4 - Draw Circle/Ellipse/Circle Square Major radius"]
         #[inline(always)]
         pub fn major_radius(&self) -> MAJOR_RADIUS_R {
             MAJOR_RADIUS_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - ELL_A\\[12:8\\]
-| Draw Circle/Ellipse/Circle Square Major radius"]
+        #[doc = "Bits 0:4 - Draw Circle/Ellipse/Circle Square Major radius"]
         #[inline(always)]
         #[must_use]
         pub fn major_radius(&mut self) -> MAJOR_RADIUS_W<0> {
@@ -16555,23 +16251,19 @@ pub mod ell_b0 {
             W(writer)
         }
     }
-    #[doc = "Field `MINOR_RADIUS` reader - ELL_B\\[7:0\\]
-| Draw Circle/Ellipse/Circle Square Minor radius"]
+    #[doc = "Field `MINOR_RADIUS` reader - Draw Circle/Ellipse/Circle Square Minor radius"]
     pub type MINOR_RADIUS_R = crate::FieldReader<u8>;
-    #[doc = "Field `MINOR_RADIUS` writer - ELL_B\\[7:0\\]
-| Draw Circle/Ellipse/Circle Square Minor radius"]
+    #[doc = "Field `MINOR_RADIUS` writer - Draw Circle/Ellipse/Circle Square Minor radius"]
     pub type MINOR_RADIUS_W<'a, const O: u8> = crate::FieldWriter<'a, ELL_B0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - ELL_B\\[7:0\\]
-| Draw Circle/Ellipse/Circle Square Minor radius"]
+        #[doc = "Bits 0:7 - Draw Circle/Ellipse/Circle Square Minor radius"]
         #[inline(always)]
         pub fn minor_radius(&self) -> MINOR_RADIUS_R {
             MINOR_RADIUS_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - ELL_B\\[7:0\\]
-| Draw Circle/Ellipse/Circle Square Minor radius"]
+        #[doc = "Bits 0:7 - Draw Circle/Ellipse/Circle Square Minor radius"]
         #[inline(always)]
         #[must_use]
         pub fn minor_radius(&mut self) -> MINOR_RADIUS_W<0> {
@@ -16669,23 +16361,19 @@ pub mod ell_b1 {
             W(writer)
         }
     }
-    #[doc = "Field `MINOR_RADIUS` reader - ELL_B\\[12:8\\]
-| Draw Circle/Ellipse/Circle Square Minor radius"]
+    #[doc = "Field `MINOR_RADIUS` reader - Draw Circle/Ellipse/Circle Square Minor radius"]
     pub type MINOR_RADIUS_R = crate::FieldReader<u8>;
-    #[doc = "Field `MINOR_RADIUS` writer - ELL_B\\[12:8\\]
-| Draw Circle/Ellipse/Circle Square Minor radius"]
+    #[doc = "Field `MINOR_RADIUS` writer - Draw Circle/Ellipse/Circle Square Minor radius"]
     pub type MINOR_RADIUS_W<'a, const O: u8> = crate::FieldWriter<'a, ELL_B1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - ELL_B\\[12:8\\]
-| Draw Circle/Ellipse/Circle Square Minor radius"]
+        #[doc = "Bits 0:4 - Draw Circle/Ellipse/Circle Square Minor radius"]
         #[inline(always)]
         pub fn minor_radius(&self) -> MINOR_RADIUS_R {
             MINOR_RADIUS_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - ELL_B\\[12:8\\]
-| Draw Circle/Ellipse/Circle Square Minor radius"]
+        #[doc = "Bits 0:4 - Draw Circle/Ellipse/Circle Square Minor radius"]
         #[inline(always)]
         #[must_use]
         pub fn minor_radius(&mut self) -> MINOR_RADIUS_W<0> {
@@ -16783,23 +16471,19 @@ pub mod dehr0 {
             W(writer)
         }
     }
-    #[doc = "Field `CENTER_X` reader - DEHR\\[7:0\\]
-| Draw Circle/Ellipse/Circle Square Center X-coordinate"]
+    #[doc = "Field `CENTER_X` reader - Draw Circle/Ellipse/Circle Square Center X-coordinate"]
     pub type CENTER_X_R = crate::FieldReader<u8>;
-    #[doc = "Field `CENTER_X` writer - DEHR\\[7:0\\]
-| Draw Circle/Ellipse/Circle Square Center X-coordinate"]
+    #[doc = "Field `CENTER_X` writer - Draw Circle/Ellipse/Circle Square Center X-coordinate"]
     pub type CENTER_X_W<'a, const O: u8> = crate::FieldWriter<'a, DEHR0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - DEHR\\[7:0\\]
-| Draw Circle/Ellipse/Circle Square Center X-coordinate"]
+        #[doc = "Bits 0:7 - Draw Circle/Ellipse/Circle Square Center X-coordinate"]
         #[inline(always)]
         pub fn center_x(&self) -> CENTER_X_R {
             CENTER_X_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - DEHR\\[7:0\\]
-| Draw Circle/Ellipse/Circle Square Center X-coordinate"]
+        #[doc = "Bits 0:7 - Draw Circle/Ellipse/Circle Square Center X-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn center_x(&mut self) -> CENTER_X_W<0> {
@@ -16897,23 +16581,19 @@ pub mod dehr1 {
             W(writer)
         }
     }
-    #[doc = "Field `CENTER_X` reader - DEHR\\[12:8\\]
-| Draw Circle/Ellipse/Circle Square Center X-coordinate"]
+    #[doc = "Field `CENTER_X` reader - Draw Circle/Ellipse/Circle Square Center X-coordinate"]
     pub type CENTER_X_R = crate::FieldReader<u8>;
-    #[doc = "Field `CENTER_X` writer - DEHR\\[12:8\\]
-| Draw Circle/Ellipse/Circle Square Center X-coordinate"]
+    #[doc = "Field `CENTER_X` writer - Draw Circle/Ellipse/Circle Square Center X-coordinate"]
     pub type CENTER_X_W<'a, const O: u8> = crate::FieldWriter<'a, DEHR1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - DEHR\\[12:8\\]
-| Draw Circle/Ellipse/Circle Square Center X-coordinate"]
+        #[doc = "Bits 0:4 - Draw Circle/Ellipse/Circle Square Center X-coordinate"]
         #[inline(always)]
         pub fn center_x(&self) -> CENTER_X_R {
             CENTER_X_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - DEHR\\[12:8\\]
-| Draw Circle/Ellipse/Circle Square Center X-coordinate"]
+        #[doc = "Bits 0:4 - Draw Circle/Ellipse/Circle Square Center X-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn center_x(&mut self) -> CENTER_X_W<0> {
@@ -17011,23 +16691,19 @@ pub mod devr0 {
             W(writer)
         }
     }
-    #[doc = "Field `CENTER_Y` reader - DEVR\\[7:0\\]
-| Draw Circle/Ellipse/Circle Square Center Y-coordinate"]
+    #[doc = "Field `CENTER_Y` reader - Draw Circle/Ellipse/Circle Square Center Y-coordinate"]
     pub type CENTER_Y_R = crate::FieldReader<u8>;
-    #[doc = "Field `CENTER_Y` writer - DEVR\\[7:0\\]
-| Draw Circle/Ellipse/Circle Square Center Y-coordinate"]
+    #[doc = "Field `CENTER_Y` writer - Draw Circle/Ellipse/Circle Square Center Y-coordinate"]
     pub type CENTER_Y_W<'a, const O: u8> = crate::FieldWriter<'a, DEVR0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - DEVR\\[7:0\\]
-| Draw Circle/Ellipse/Circle Square Center Y-coordinate"]
+        #[doc = "Bits 0:7 - Draw Circle/Ellipse/Circle Square Center Y-coordinate"]
         #[inline(always)]
         pub fn center_y(&self) -> CENTER_Y_R {
             CENTER_Y_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - DEVR\\[7:0\\]
-| Draw Circle/Ellipse/Circle Square Center Y-coordinate"]
+        #[doc = "Bits 0:7 - Draw Circle/Ellipse/Circle Square Center Y-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn center_y(&mut self) -> CENTER_Y_W<0> {
@@ -17125,23 +16801,19 @@ pub mod devr1 {
             W(writer)
         }
     }
-    #[doc = "Field `CENTER_Y` reader - DEVR\\[12:8\\]
-| Draw Circle/Ellipse/Circle Square Center Y-coordinate"]
+    #[doc = "Field `CENTER_Y` reader - Draw Circle/Ellipse/Circle Square Center Y-coordinate"]
     pub type CENTER_Y_R = crate::FieldReader<u8>;
-    #[doc = "Field `CENTER_Y` writer - DEVR\\[12:8\\]
-| Draw Circle/Ellipse/Circle Square Center Y-coordinate"]
+    #[doc = "Field `CENTER_Y` writer - Draw Circle/Ellipse/Circle Square Center Y-coordinate"]
     pub type CENTER_Y_W<'a, const O: u8> = crate::FieldWriter<'a, DEVR1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - DEVR\\[12:8\\]
-| Draw Circle/Ellipse/Circle Square Center Y-coordinate"]
+        #[doc = "Bits 0:4 - Draw Circle/Ellipse/Circle Square Center Y-coordinate"]
         #[inline(always)]
         pub fn center_y(&self) -> CENTER_Y_R {
             CENTER_Y_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - DEVR\\[12:8\\]
-| Draw Circle/Ellipse/Circle Square Center Y-coordinate"]
+        #[doc = "Bits 0:4 - Draw Circle/Ellipse/Circle Square Center Y-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn center_y(&mut self) -> CENTER_Y_W<0> {
@@ -19968,24 +19640,20 @@ pub mod s0_str0 {
             W(writer)
         }
     }
-    #[doc = "Field `SOURCE0_START_ADDRESS` reader - S0_STR\\[7:0\\]
-| Source 0 memory start address"]
+    #[doc = "Field `SOURCE0_START_ADDRESS` reader - Source 0 memory start address"]
     pub type SOURCE0_START_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `SOURCE0_START_ADDRESS` writer - S0_STR\\[7:0\\]
-| Source 0 memory start address"]
+    #[doc = "Field `SOURCE0_START_ADDRESS` writer - Source 0 memory start address"]
     pub type SOURCE0_START_ADDRESS_W<'a, const O: u8> =
         crate::FieldWriter<'a, S0_STR0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - S0_STR\\[7:0\\]
-| Source 0 memory start address"]
+        #[doc = "Bits 0:7 - Source 0 memory start address"]
         #[inline(always)]
         pub fn source0_start_address(&self) -> SOURCE0_START_ADDRESS_R {
             SOURCE0_START_ADDRESS_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - S0_STR\\[7:0\\]
-| Source 0 memory start address"]
+        #[doc = "Bits 0:7 - Source 0 memory start address"]
         #[inline(always)]
         #[must_use]
         pub fn source0_start_address(&mut self) -> SOURCE0_START_ADDRESS_W<0> {
@@ -20083,24 +19751,20 @@ pub mod s0_str1 {
             W(writer)
         }
     }
-    #[doc = "Field `SOURCE0_START_ADDRESS` reader - S0_STR\\[15:8\\]
-| Source 0 memory start address"]
+    #[doc = "Field `SOURCE0_START_ADDRESS` reader - Source 0 memory start address"]
     pub type SOURCE0_START_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `SOURCE0_START_ADDRESS` writer - S0_STR\\[15:8\\]
-| Source 0 memory start address"]
+    #[doc = "Field `SOURCE0_START_ADDRESS` writer - Source 0 memory start address"]
     pub type SOURCE0_START_ADDRESS_W<'a, const O: u8> =
         crate::FieldWriter<'a, S0_STR1, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - S0_STR\\[15:8\\]
-| Source 0 memory start address"]
+        #[doc = "Bits 0:7 - Source 0 memory start address"]
         #[inline(always)]
         pub fn source0_start_address(&self) -> SOURCE0_START_ADDRESS_R {
             SOURCE0_START_ADDRESS_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - S0_STR\\[15:8\\]
-| Source 0 memory start address"]
+        #[doc = "Bits 0:7 - Source 0 memory start address"]
         #[inline(always)]
         #[must_use]
         pub fn source0_start_address(&mut self) -> SOURCE0_START_ADDRESS_W<0> {
@@ -20198,24 +19862,20 @@ pub mod s0_str2 {
             W(writer)
         }
     }
-    #[doc = "Field `SOURCE0_START_ADDRESS` reader - S0_STR\\[23:16\\]
-| Source 0 memory start address"]
+    #[doc = "Field `SOURCE0_START_ADDRESS` reader - Source 0 memory start address"]
     pub type SOURCE0_START_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `SOURCE0_START_ADDRESS` writer - S0_STR\\[23:16\\]
-| Source 0 memory start address"]
+    #[doc = "Field `SOURCE0_START_ADDRESS` writer - Source 0 memory start address"]
     pub type SOURCE0_START_ADDRESS_W<'a, const O: u8> =
         crate::FieldWriter<'a, S0_STR2, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - S0_STR\\[23:16\\]
-| Source 0 memory start address"]
+        #[doc = "Bits 0:7 - Source 0 memory start address"]
         #[inline(always)]
         pub fn source0_start_address(&self) -> SOURCE0_START_ADDRESS_R {
             SOURCE0_START_ADDRESS_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - S0_STR\\[23:16\\]
-| Source 0 memory start address"]
+        #[doc = "Bits 0:7 - Source 0 memory start address"]
         #[inline(always)]
         #[must_use]
         pub fn source0_start_address(&mut self) -> SOURCE0_START_ADDRESS_W<0> {
@@ -20313,24 +19973,20 @@ pub mod s0_str3 {
             W(writer)
         }
     }
-    #[doc = "Field `SOURCE0_START_ADDRESS` reader - S0_STR\\[31:24\\]
-| Source 0 memory start address"]
+    #[doc = "Field `SOURCE0_START_ADDRESS` reader - Source 0 memory start address"]
     pub type SOURCE0_START_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `SOURCE0_START_ADDRESS` writer - S0_STR\\[31:24\\]
-| Source 0 memory start address"]
+    #[doc = "Field `SOURCE0_START_ADDRESS` writer - Source 0 memory start address"]
     pub type SOURCE0_START_ADDRESS_W<'a, const O: u8> =
         crate::FieldWriter<'a, S0_STR3, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - S0_STR\\[31:24\\]
-| Source 0 memory start address"]
+        #[doc = "Bits 0:7 - Source 0 memory start address"]
         #[inline(always)]
         pub fn source0_start_address(&self) -> SOURCE0_START_ADDRESS_R {
             SOURCE0_START_ADDRESS_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - S0_STR\\[31:24\\]
-| Source 0 memory start address"]
+        #[doc = "Bits 0:7 - Source 0 memory start address"]
         #[inline(always)]
         #[must_use]
         pub fn source0_start_address(&mut self) -> SOURCE0_START_ADDRESS_W<0> {
@@ -20428,23 +20084,19 @@ pub mod s0_wth0 {
             W(writer)
         }
     }
-    #[doc = "Field `SOURCE0_IMAGE_WIDTH` reader - S0_WTH\\[7:0\\]
-| Source 0 image width"]
+    #[doc = "Field `SOURCE0_IMAGE_WIDTH` reader - Source 0 image width"]
     pub type SOURCE0_IMAGE_WIDTH_R = crate::FieldReader<u8>;
-    #[doc = "Field `SOURCE0_IMAGE_WIDTH` writer - S0_WTH\\[7:0\\]
-| Source 0 image width"]
+    #[doc = "Field `SOURCE0_IMAGE_WIDTH` writer - Source 0 image width"]
     pub type SOURCE0_IMAGE_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, S0_WTH0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - S0_WTH\\[7:0\\]
-| Source 0 image width"]
+        #[doc = "Bits 0:7 - Source 0 image width"]
         #[inline(always)]
         pub fn source0_image_width(&self) -> SOURCE0_IMAGE_WIDTH_R {
             SOURCE0_IMAGE_WIDTH_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - S0_WTH\\[7:0\\]
-| Source 0 image width"]
+        #[doc = "Bits 0:7 - Source 0 image width"]
         #[inline(always)]
         #[must_use]
         pub fn source0_image_width(&mut self) -> SOURCE0_IMAGE_WIDTH_W<0> {
@@ -20542,23 +20194,19 @@ pub mod s0_wth1 {
             W(writer)
         }
     }
-    #[doc = "Field `SOURCE0_IMAGE_WIDTH` reader - S0_WTH\\[12:8\\]
-| Source 0 image width"]
+    #[doc = "Field `SOURCE0_IMAGE_WIDTH` reader - Source 0 image width"]
     pub type SOURCE0_IMAGE_WIDTH_R = crate::FieldReader<u8>;
-    #[doc = "Field `SOURCE0_IMAGE_WIDTH` writer - S0_WTH\\[12:8\\]
-| Source 0 image width"]
+    #[doc = "Field `SOURCE0_IMAGE_WIDTH` writer - Source 0 image width"]
     pub type SOURCE0_IMAGE_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, S0_WTH1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - S0_WTH\\[12:8\\]
-| Source 0 image width"]
+        #[doc = "Bits 0:4 - Source 0 image width"]
         #[inline(always)]
         pub fn source0_image_width(&self) -> SOURCE0_IMAGE_WIDTH_R {
             SOURCE0_IMAGE_WIDTH_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - S0_WTH\\[12:8\\]
-| Source 0 image width"]
+        #[doc = "Bits 0:4 - Source 0 image width"]
         #[inline(always)]
         #[must_use]
         pub fn source0_image_width(&mut self) -> SOURCE0_IMAGE_WIDTH_W<0> {
@@ -20656,23 +20304,19 @@ pub mod s0_x0 {
             W(writer)
         }
     }
-    #[doc = "Field `SOURCE0_X` reader - S0_X\\[7:0\\]
-| Source 0 Window Upper-Left corner X-coordinate"]
+    #[doc = "Field `SOURCE0_X` reader - Source 0 Window Upper-Left corner X-coordinate"]
     pub type SOURCE0_X_R = crate::FieldReader<u8>;
-    #[doc = "Field `SOURCE0_X` writer - S0_X\\[7:0\\]
-| Source 0 Window Upper-Left corner X-coordinate"]
+    #[doc = "Field `SOURCE0_X` writer - Source 0 Window Upper-Left corner X-coordinate"]
     pub type SOURCE0_X_W<'a, const O: u8> = crate::FieldWriter<'a, S0_X0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - S0_X\\[7:0\\]
-| Source 0 Window Upper-Left corner X-coordinate"]
+        #[doc = "Bits 0:7 - Source 0 Window Upper-Left corner X-coordinate"]
         #[inline(always)]
         pub fn source0_x(&self) -> SOURCE0_X_R {
             SOURCE0_X_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - S0_X\\[7:0\\]
-| Source 0 Window Upper-Left corner X-coordinate"]
+        #[doc = "Bits 0:7 - Source 0 Window Upper-Left corner X-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn source0_x(&mut self) -> SOURCE0_X_W<0> {
@@ -20770,23 +20414,19 @@ pub mod s0_x1 {
             W(writer)
         }
     }
-    #[doc = "Field `SOURCE0_X` reader - S0_X\\[12:8\\]
-| Source 0 Window Upper-Left corner X-coordinate"]
+    #[doc = "Field `SOURCE0_X` reader - Source 0 Window Upper-Left corner X-coordinate"]
     pub type SOURCE0_X_R = crate::FieldReader<u8>;
-    #[doc = "Field `SOURCE0_X` writer - S0_X\\[12:8\\]
-| Source 0 Window Upper-Left corner X-coordinate"]
+    #[doc = "Field `SOURCE0_X` writer - Source 0 Window Upper-Left corner X-coordinate"]
     pub type SOURCE0_X_W<'a, const O: u8> = crate::FieldWriter<'a, S0_X1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - S0_X\\[12:8\\]
-| Source 0 Window Upper-Left corner X-coordinate"]
+        #[doc = "Bits 0:4 - Source 0 Window Upper-Left corner X-coordinate"]
         #[inline(always)]
         pub fn source0_x(&self) -> SOURCE0_X_R {
             SOURCE0_X_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - S0_X\\[12:8\\]
-| Source 0 Window Upper-Left corner X-coordinate"]
+        #[doc = "Bits 0:4 - Source 0 Window Upper-Left corner X-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn source0_x(&mut self) -> SOURCE0_X_W<0> {
@@ -20884,23 +20524,19 @@ pub mod s0_y0 {
             W(writer)
         }
     }
-    #[doc = "Field `SOURCE0_Y` reader - S0_Y\\[7:0\\]
-| Source 0 Window Upper-Left corner Y-coordinate"]
+    #[doc = "Field `SOURCE0_Y` reader - Source 0 Window Upper-Left corner Y-coordinate"]
     pub type SOURCE0_Y_R = crate::FieldReader<u8>;
-    #[doc = "Field `SOURCE0_Y` writer - S0_Y\\[7:0\\]
-| Source 0 Window Upper-Left corner Y-coordinate"]
+    #[doc = "Field `SOURCE0_Y` writer - Source 0 Window Upper-Left corner Y-coordinate"]
     pub type SOURCE0_Y_W<'a, const O: u8> = crate::FieldWriter<'a, S0_Y0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - S0_Y\\[7:0\\]
-| Source 0 Window Upper-Left corner Y-coordinate"]
+        #[doc = "Bits 0:7 - Source 0 Window Upper-Left corner Y-coordinate"]
         #[inline(always)]
         pub fn source0_y(&self) -> SOURCE0_Y_R {
             SOURCE0_Y_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - S0_Y\\[7:0\\]
-| Source 0 Window Upper-Left corner Y-coordinate"]
+        #[doc = "Bits 0:7 - Source 0 Window Upper-Left corner Y-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn source0_y(&mut self) -> SOURCE0_Y_W<0> {
@@ -20998,23 +20634,19 @@ pub mod s0_y1 {
             W(writer)
         }
     }
-    #[doc = "Field `SOURCE0_Y` reader - S0_Y\\[12:8\\]
-| Source 0 Window Upper-Left corner Y-coordinate"]
+    #[doc = "Field `SOURCE0_Y` reader - Source 0 Window Upper-Left corner Y-coordinate"]
     pub type SOURCE0_Y_R = crate::FieldReader<u8>;
-    #[doc = "Field `SOURCE0_Y` writer - S0_Y\\[12:8\\]
-| Source 0 Window Upper-Left corner Y-coordinate"]
+    #[doc = "Field `SOURCE0_Y` writer - Source 0 Window Upper-Left corner Y-coordinate"]
     pub type SOURCE0_Y_W<'a, const O: u8> = crate::FieldWriter<'a, S0_Y1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - S0_Y\\[12:8\\]
-| Source 0 Window Upper-Left corner Y-coordinate"]
+        #[doc = "Bits 0:4 - Source 0 Window Upper-Left corner Y-coordinate"]
         #[inline(always)]
         pub fn source0_y(&self) -> SOURCE0_Y_R {
             SOURCE0_Y_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - S0_Y\\[12:8\\]
-| Source 0 Window Upper-Left corner Y-coordinate"]
+        #[doc = "Bits 0:4 - Source 0 Window Upper-Left corner Y-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn source0_y(&mut self) -> SOURCE0_Y_W<0> {
@@ -21112,24 +20744,20 @@ pub mod s1_str0 {
             W(writer)
         }
     }
-    #[doc = "Field `SOURCE1_START_ADDRESS` reader - S1_STR\\[7:0\\]
-| Source 1 memory start address"]
+    #[doc = "Field `SOURCE1_START_ADDRESS` reader - Source 1 memory start address"]
     pub type SOURCE1_START_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `SOURCE1_START_ADDRESS` writer - S1_STR\\[7:0\\]
-| Source 1 memory start address"]
+    #[doc = "Field `SOURCE1_START_ADDRESS` writer - Source 1 memory start address"]
     pub type SOURCE1_START_ADDRESS_W<'a, const O: u8> =
         crate::FieldWriter<'a, S1_STR0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - S1_STR\\[7:0\\]
-| Source 1 memory start address"]
+        #[doc = "Bits 0:7 - Source 1 memory start address"]
         #[inline(always)]
         pub fn source1_start_address(&self) -> SOURCE1_START_ADDRESS_R {
             SOURCE1_START_ADDRESS_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - S1_STR\\[7:0\\]
-| Source 1 memory start address"]
+        #[doc = "Bits 0:7 - Source 1 memory start address"]
         #[inline(always)]
         #[must_use]
         pub fn source1_start_address(&mut self) -> SOURCE1_START_ADDRESS_W<0> {
@@ -21227,24 +20855,20 @@ pub mod s1_str1 {
             W(writer)
         }
     }
-    #[doc = "Field `SOURCE1_START_ADDRESS` reader - S1_STR\\[15:8\\]
-| Source 1 memory start address"]
+    #[doc = "Field `SOURCE1_START_ADDRESS` reader - Source 1 memory start address"]
     pub type SOURCE1_START_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `SOURCE1_START_ADDRESS` writer - S1_STR\\[15:8\\]
-| Source 1 memory start address"]
+    #[doc = "Field `SOURCE1_START_ADDRESS` writer - Source 1 memory start address"]
     pub type SOURCE1_START_ADDRESS_W<'a, const O: u8> =
         crate::FieldWriter<'a, S1_STR1, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - S1_STR\\[15:8\\]
-| Source 1 memory start address"]
+        #[doc = "Bits 0:7 - Source 1 memory start address"]
         #[inline(always)]
         pub fn source1_start_address(&self) -> SOURCE1_START_ADDRESS_R {
             SOURCE1_START_ADDRESS_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - S1_STR\\[15:8\\]
-| Source 1 memory start address"]
+        #[doc = "Bits 0:7 - Source 1 memory start address"]
         #[inline(always)]
         #[must_use]
         pub fn source1_start_address(&mut self) -> SOURCE1_START_ADDRESS_W<0> {
@@ -21342,24 +20966,20 @@ pub mod s1_str2 {
             W(writer)
         }
     }
-    #[doc = "Field `SOURCE1_START_ADDRESS` reader - S1_STR\\[23:16\\]
-| Source 1 memory start address"]
+    #[doc = "Field `SOURCE1_START_ADDRESS` reader - Source 1 memory start address"]
     pub type SOURCE1_START_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `SOURCE1_START_ADDRESS` writer - S1_STR\\[23:16\\]
-| Source 1 memory start address"]
+    #[doc = "Field `SOURCE1_START_ADDRESS` writer - Source 1 memory start address"]
     pub type SOURCE1_START_ADDRESS_W<'a, const O: u8> =
         crate::FieldWriter<'a, S1_STR2, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - S1_STR\\[23:16\\]
-| Source 1 memory start address"]
+        #[doc = "Bits 0:7 - Source 1 memory start address"]
         #[inline(always)]
         pub fn source1_start_address(&self) -> SOURCE1_START_ADDRESS_R {
             SOURCE1_START_ADDRESS_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - S1_STR\\[23:16\\]
-| Source 1 memory start address"]
+        #[doc = "Bits 0:7 - Source 1 memory start address"]
         #[inline(always)]
         #[must_use]
         pub fn source1_start_address(&mut self) -> SOURCE1_START_ADDRESS_W<0> {
@@ -21457,24 +21077,20 @@ pub mod s1_str3 {
             W(writer)
         }
     }
-    #[doc = "Field `SOURCE1_START_ADDRESS` reader - S1_STR\\[31:24\\]
-| Source 1 memory start address"]
+    #[doc = "Field `SOURCE1_START_ADDRESS` reader - Source 1 memory start address"]
     pub type SOURCE1_START_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `SOURCE1_START_ADDRESS` writer - S1_STR\\[31:24\\]
-| Source 1 memory start address"]
+    #[doc = "Field `SOURCE1_START_ADDRESS` writer - Source 1 memory start address"]
     pub type SOURCE1_START_ADDRESS_W<'a, const O: u8> =
         crate::FieldWriter<'a, S1_STR3, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - S1_STR\\[31:24\\]
-| Source 1 memory start address"]
+        #[doc = "Bits 0:7 - Source 1 memory start address"]
         #[inline(always)]
         pub fn source1_start_address(&self) -> SOURCE1_START_ADDRESS_R {
             SOURCE1_START_ADDRESS_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - S1_STR\\[31:24\\]
-| Source 1 memory start address"]
+        #[doc = "Bits 0:7 - Source 1 memory start address"]
         #[inline(always)]
         #[must_use]
         pub fn source1_start_address(&mut self) -> SOURCE1_START_ADDRESS_W<0> {
@@ -21572,23 +21188,19 @@ pub mod s1_wth0 {
             W(writer)
         }
     }
-    #[doc = "Field `SOURCE1_IMAGE_WIDTH` reader - S1_WTH\\[7:0\\]
-| Source 1 image width"]
+    #[doc = "Field `SOURCE1_IMAGE_WIDTH` reader - Source 1 image width"]
     pub type SOURCE1_IMAGE_WIDTH_R = crate::FieldReader<u8>;
-    #[doc = "Field `SOURCE1_IMAGE_WIDTH` writer - S1_WTH\\[7:0\\]
-| Source 1 image width"]
+    #[doc = "Field `SOURCE1_IMAGE_WIDTH` writer - Source 1 image width"]
     pub type SOURCE1_IMAGE_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, S1_WTH0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - S1_WTH\\[7:0\\]
-| Source 1 image width"]
+        #[doc = "Bits 0:7 - Source 1 image width"]
         #[inline(always)]
         pub fn source1_image_width(&self) -> SOURCE1_IMAGE_WIDTH_R {
             SOURCE1_IMAGE_WIDTH_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - S1_WTH\\[7:0\\]
-| Source 1 image width"]
+        #[doc = "Bits 0:7 - Source 1 image width"]
         #[inline(always)]
         #[must_use]
         pub fn source1_image_width(&mut self) -> SOURCE1_IMAGE_WIDTH_W<0> {
@@ -21686,23 +21298,19 @@ pub mod s1_wth1 {
             W(writer)
         }
     }
-    #[doc = "Field `SOURCE1_IMAGE_WIDTH` reader - S1_WTH\\[12:8\\]
-| Source 1 image width"]
+    #[doc = "Field `SOURCE1_IMAGE_WIDTH` reader - Source 1 image width"]
     pub type SOURCE1_IMAGE_WIDTH_R = crate::FieldReader<u8>;
-    #[doc = "Field `SOURCE1_IMAGE_WIDTH` writer - S1_WTH\\[12:8\\]
-| Source 1 image width"]
+    #[doc = "Field `SOURCE1_IMAGE_WIDTH` writer - Source 1 image width"]
     pub type SOURCE1_IMAGE_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, S1_WTH1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - S1_WTH\\[12:8\\]
-| Source 1 image width"]
+        #[doc = "Bits 0:4 - Source 1 image width"]
         #[inline(always)]
         pub fn source1_image_width(&self) -> SOURCE1_IMAGE_WIDTH_R {
             SOURCE1_IMAGE_WIDTH_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - S1_WTH\\[12:8\\]
-| Source 1 image width"]
+        #[doc = "Bits 0:4 - Source 1 image width"]
         #[inline(always)]
         #[must_use]
         pub fn source1_image_width(&mut self) -> SOURCE1_IMAGE_WIDTH_W<0> {
@@ -21800,23 +21408,19 @@ pub mod s1_x0 {
             W(writer)
         }
     }
-    #[doc = "Field `SOURCE1_X` reader - S1_X\\[7:0\\]
-| Source 1 Window Upper-Left corner X-coordinate"]
+    #[doc = "Field `SOURCE1_X` reader - Source 1 Window Upper-Left corner X-coordinate"]
     pub type SOURCE1_X_R = crate::FieldReader<u8>;
-    #[doc = "Field `SOURCE1_X` writer - S1_X\\[7:0\\]
-| Source 1 Window Upper-Left corner X-coordinate"]
+    #[doc = "Field `SOURCE1_X` writer - Source 1 Window Upper-Left corner X-coordinate"]
     pub type SOURCE1_X_W<'a, const O: u8> = crate::FieldWriter<'a, S1_X0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - S1_X\\[7:0\\]
-| Source 1 Window Upper-Left corner X-coordinate"]
+        #[doc = "Bits 0:7 - Source 1 Window Upper-Left corner X-coordinate"]
         #[inline(always)]
         pub fn source1_x(&self) -> SOURCE1_X_R {
             SOURCE1_X_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - S1_X\\[7:0\\]
-| Source 1 Window Upper-Left corner X-coordinate"]
+        #[doc = "Bits 0:7 - Source 1 Window Upper-Left corner X-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn source1_x(&mut self) -> SOURCE1_X_W<0> {
@@ -21914,23 +21518,19 @@ pub mod s1_x1 {
             W(writer)
         }
     }
-    #[doc = "Field `SOURCE1_X` reader - S1_X\\[12:8\\]
-| Source 1 Window Upper-Left corner X-coordinate"]
+    #[doc = "Field `SOURCE1_X` reader - Source 1 Window Upper-Left corner X-coordinate"]
     pub type SOURCE1_X_R = crate::FieldReader<u8>;
-    #[doc = "Field `SOURCE1_X` writer - S1_X\\[12:8\\]
-| Source 1 Window Upper-Left corner X-coordinate"]
+    #[doc = "Field `SOURCE1_X` writer - Source 1 Window Upper-Left corner X-coordinate"]
     pub type SOURCE1_X_W<'a, const O: u8> = crate::FieldWriter<'a, S1_X1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - S1_X\\[12:8\\]
-| Source 1 Window Upper-Left corner X-coordinate"]
+        #[doc = "Bits 0:4 - Source 1 Window Upper-Left corner X-coordinate"]
         #[inline(always)]
         pub fn source1_x(&self) -> SOURCE1_X_R {
             SOURCE1_X_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - S1_X\\[12:8\\]
-| Source 1 Window Upper-Left corner X-coordinate"]
+        #[doc = "Bits 0:4 - Source 1 Window Upper-Left corner X-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn source1_x(&mut self) -> SOURCE1_X_W<0> {
@@ -22028,23 +21628,19 @@ pub mod s1_y0 {
             W(writer)
         }
     }
-    #[doc = "Field `SOURCE1_Y` reader - S1_Y\\[7:0\\]
-| Source 1 Window Upper-Left corner Y-coordinate"]
+    #[doc = "Field `SOURCE1_Y` reader - Source 1 Window Upper-Left corner Y-coordinate"]
     pub type SOURCE1_Y_R = crate::FieldReader<u8>;
-    #[doc = "Field `SOURCE1_Y` writer - S1_Y\\[7:0\\]
-| Source 1 Window Upper-Left corner Y-coordinate"]
+    #[doc = "Field `SOURCE1_Y` writer - Source 1 Window Upper-Left corner Y-coordinate"]
     pub type SOURCE1_Y_W<'a, const O: u8> = crate::FieldWriter<'a, S1_Y0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - S1_Y\\[7:0\\]
-| Source 1 Window Upper-Left corner Y-coordinate"]
+        #[doc = "Bits 0:7 - Source 1 Window Upper-Left corner Y-coordinate"]
         #[inline(always)]
         pub fn source1_y(&self) -> SOURCE1_Y_R {
             SOURCE1_Y_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - S1_Y\\[7:0\\]
-| Source 1 Window Upper-Left corner Y-coordinate"]
+        #[doc = "Bits 0:7 - Source 1 Window Upper-Left corner Y-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn source1_y(&mut self) -> SOURCE1_Y_W<0> {
@@ -22142,23 +21738,19 @@ pub mod s1_y1 {
             W(writer)
         }
     }
-    #[doc = "Field `SOURCE1_Y` reader - S1_Y\\[12:8\\]
-| Source 1 Window Upper-Left corner Y-coordinate"]
+    #[doc = "Field `SOURCE1_Y` reader - Source 1 Window Upper-Left corner Y-coordinate"]
     pub type SOURCE1_Y_R = crate::FieldReader<u8>;
-    #[doc = "Field `SOURCE1_Y` writer - S1_Y\\[12:8\\]
-| Source 1 Window Upper-Left corner Y-coordinate"]
+    #[doc = "Field `SOURCE1_Y` writer - Source 1 Window Upper-Left corner Y-coordinate"]
     pub type SOURCE1_Y_W<'a, const O: u8> = crate::FieldWriter<'a, S1_Y1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - S1_Y\\[12:8\\]
-| Source 1 Window Upper-Left corner Y-coordinate"]
+        #[doc = "Bits 0:4 - Source 1 Window Upper-Left corner Y-coordinate"]
         #[inline(always)]
         pub fn source1_y(&self) -> SOURCE1_Y_R {
             SOURCE1_Y_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - S1_Y\\[12:8\\]
-| Source 1 Window Upper-Left corner Y-coordinate"]
+        #[doc = "Bits 0:4 - Source 1 Window Upper-Left corner Y-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn source1_y(&mut self) -> SOURCE1_Y_W<0> {
@@ -22256,24 +21848,20 @@ pub mod dt_str0 {
             W(writer)
         }
     }
-    #[doc = "Field `DESTINATION_START_ADDRESS` reader - DT_STR\\[7:0\\]
-| Destination memory start address"]
+    #[doc = "Field `DESTINATION_START_ADDRESS` reader - Destination memory start address"]
     pub type DESTINATION_START_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `DESTINATION_START_ADDRESS` writer - DT_STR\\[7:0\\]
-| Destination memory start address"]
+    #[doc = "Field `DESTINATION_START_ADDRESS` writer - Destination memory start address"]
     pub type DESTINATION_START_ADDRESS_W<'a, const O: u8> =
         crate::FieldWriter<'a, DT_STR0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - DT_STR\\[7:0\\]
-| Destination memory start address"]
+        #[doc = "Bits 0:7 - Destination memory start address"]
         #[inline(always)]
         pub fn destination_start_address(&self) -> DESTINATION_START_ADDRESS_R {
             DESTINATION_START_ADDRESS_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - DT_STR\\[7:0\\]
-| Destination memory start address"]
+        #[doc = "Bits 0:7 - Destination memory start address"]
         #[inline(always)]
         #[must_use]
         pub fn destination_start_address(&mut self) -> DESTINATION_START_ADDRESS_W<0> {
@@ -22371,24 +21959,20 @@ pub mod dt_str1 {
             W(writer)
         }
     }
-    #[doc = "Field `DESTINATION_START_ADDRESS` reader - DT_STR\\[15:8\\]
-| Destination memory start address"]
+    #[doc = "Field `DESTINATION_START_ADDRESS` reader - Destination memory start address"]
     pub type DESTINATION_START_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `DESTINATION_START_ADDRESS` writer - DT_STR\\[15:8\\]
-| Destination memory start address"]
+    #[doc = "Field `DESTINATION_START_ADDRESS` writer - Destination memory start address"]
     pub type DESTINATION_START_ADDRESS_W<'a, const O: u8> =
         crate::FieldWriter<'a, DT_STR1, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - DT_STR\\[15:8\\]
-| Destination memory start address"]
+        #[doc = "Bits 0:7 - Destination memory start address"]
         #[inline(always)]
         pub fn destination_start_address(&self) -> DESTINATION_START_ADDRESS_R {
             DESTINATION_START_ADDRESS_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - DT_STR\\[15:8\\]
-| Destination memory start address"]
+        #[doc = "Bits 0:7 - Destination memory start address"]
         #[inline(always)]
         #[must_use]
         pub fn destination_start_address(&mut self) -> DESTINATION_START_ADDRESS_W<0> {
@@ -22486,24 +22070,20 @@ pub mod dt_str2 {
             W(writer)
         }
     }
-    #[doc = "Field `DESTINATION_START_ADDRESS` reader - DT_STR\\[23:16\\]
-| Destination memory start address"]
+    #[doc = "Field `DESTINATION_START_ADDRESS` reader - Destination memory start address"]
     pub type DESTINATION_START_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `DESTINATION_START_ADDRESS` writer - DT_STR\\[23:16\\]
-| Destination memory start address"]
+    #[doc = "Field `DESTINATION_START_ADDRESS` writer - Destination memory start address"]
     pub type DESTINATION_START_ADDRESS_W<'a, const O: u8> =
         crate::FieldWriter<'a, DT_STR2, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - DT_STR\\[23:16\\]
-| Destination memory start address"]
+        #[doc = "Bits 0:7 - Destination memory start address"]
         #[inline(always)]
         pub fn destination_start_address(&self) -> DESTINATION_START_ADDRESS_R {
             DESTINATION_START_ADDRESS_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - DT_STR\\[23:16\\]
-| Destination memory start address"]
+        #[doc = "Bits 0:7 - Destination memory start address"]
         #[inline(always)]
         #[must_use]
         pub fn destination_start_address(&mut self) -> DESTINATION_START_ADDRESS_W<0> {
@@ -22601,24 +22181,20 @@ pub mod dt_str3 {
             W(writer)
         }
     }
-    #[doc = "Field `DESTINATION_START_ADDRESS` reader - DT_STR\\[31:24\\]
-| Destination memory start address"]
+    #[doc = "Field `DESTINATION_START_ADDRESS` reader - Destination memory start address"]
     pub type DESTINATION_START_ADDRESS_R = crate::FieldReader<u8>;
-    #[doc = "Field `DESTINATION_START_ADDRESS` writer - DT_STR\\[31:24\\]
-| Destination memory start address"]
+    #[doc = "Field `DESTINATION_START_ADDRESS` writer - Destination memory start address"]
     pub type DESTINATION_START_ADDRESS_W<'a, const O: u8> =
         crate::FieldWriter<'a, DT_STR3, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - DT_STR\\[31:24\\]
-| Destination memory start address"]
+        #[doc = "Bits 0:7 - Destination memory start address"]
         #[inline(always)]
         pub fn destination_start_address(&self) -> DESTINATION_START_ADDRESS_R {
             DESTINATION_START_ADDRESS_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - DT_STR\\[31:24\\]
-| Destination memory start address"]
+        #[doc = "Bits 0:7 - Destination memory start address"]
         #[inline(always)]
         #[must_use]
         pub fn destination_start_address(&mut self) -> DESTINATION_START_ADDRESS_W<0> {
@@ -22716,24 +22292,20 @@ pub mod dt_wth0 {
             W(writer)
         }
     }
-    #[doc = "Field `DESTINATION_IMAGE_WIDTH` reader - DT_WTH\\[7:0\\]
-| Destination image width"]
+    #[doc = "Field `DESTINATION_IMAGE_WIDTH` reader - Destination image width"]
     pub type DESTINATION_IMAGE_WIDTH_R = crate::FieldReader<u8>;
-    #[doc = "Field `DESTINATION_IMAGE_WIDTH` writer - DT_WTH\\[7:0\\]
-| Destination image width"]
+    #[doc = "Field `DESTINATION_IMAGE_WIDTH` writer - Destination image width"]
     pub type DESTINATION_IMAGE_WIDTH_W<'a, const O: u8> =
         crate::FieldWriter<'a, DT_WTH0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - DT_WTH\\[7:0\\]
-| Destination image width"]
+        #[doc = "Bits 0:7 - Destination image width"]
         #[inline(always)]
         pub fn destination_image_width(&self) -> DESTINATION_IMAGE_WIDTH_R {
             DESTINATION_IMAGE_WIDTH_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - DT_WTH\\[7:0\\]
-| Destination image width"]
+        #[doc = "Bits 0:7 - Destination image width"]
         #[inline(always)]
         #[must_use]
         pub fn destination_image_width(&mut self) -> DESTINATION_IMAGE_WIDTH_W<0> {
@@ -22831,24 +22403,20 @@ pub mod dt_wth1 {
             W(writer)
         }
     }
-    #[doc = "Field `DESTINATION_IMAGE_WIDTH` reader - DT_WTH\\[12:8\\]
-| Destination image width"]
+    #[doc = "Field `DESTINATION_IMAGE_WIDTH` reader - Destination image width"]
     pub type DESTINATION_IMAGE_WIDTH_R = crate::FieldReader<u8>;
-    #[doc = "Field `DESTINATION_IMAGE_WIDTH` writer - DT_WTH\\[12:8\\]
-| Destination image width"]
+    #[doc = "Field `DESTINATION_IMAGE_WIDTH` writer - Destination image width"]
     pub type DESTINATION_IMAGE_WIDTH_W<'a, const O: u8> =
         crate::FieldWriter<'a, DT_WTH1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - DT_WTH\\[12:8\\]
-| Destination image width"]
+        #[doc = "Bits 0:4 - Destination image width"]
         #[inline(always)]
         pub fn destination_image_width(&self) -> DESTINATION_IMAGE_WIDTH_R {
             DESTINATION_IMAGE_WIDTH_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - DT_WTH\\[12:8\\]
-| Destination image width"]
+        #[doc = "Bits 0:4 - Destination image width"]
         #[inline(always)]
         #[must_use]
         pub fn destination_image_width(&mut self) -> DESTINATION_IMAGE_WIDTH_W<0> {
@@ -22946,23 +22514,19 @@ pub mod dt_x0 {
             W(writer)
         }
     }
-    #[doc = "Field `DESTINATION_X` reader - DT_X\\[7:0\\]
-| Destination Window Upper-Left corner X-coordinate"]
+    #[doc = "Field `DESTINATION_X` reader - Destination Window Upper-Left corner X-coordinate"]
     pub type DESTINATION_X_R = crate::FieldReader<u8>;
-    #[doc = "Field `DESTINATION_X` writer - DT_X\\[7:0\\]
-| Destination Window Upper-Left corner X-coordinate"]
+    #[doc = "Field `DESTINATION_X` writer - Destination Window Upper-Left corner X-coordinate"]
     pub type DESTINATION_X_W<'a, const O: u8> = crate::FieldWriter<'a, DT_X0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - DT_X\\[7:0\\]
-| Destination Window Upper-Left corner X-coordinate"]
+        #[doc = "Bits 0:7 - Destination Window Upper-Left corner X-coordinate"]
         #[inline(always)]
         pub fn destination_x(&self) -> DESTINATION_X_R {
             DESTINATION_X_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - DT_X\\[7:0\\]
-| Destination Window Upper-Left corner X-coordinate"]
+        #[doc = "Bits 0:7 - Destination Window Upper-Left corner X-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn destination_x(&mut self) -> DESTINATION_X_W<0> {
@@ -23060,23 +22624,19 @@ pub mod dt_x1 {
             W(writer)
         }
     }
-    #[doc = "Field `DESTINATION_X` reader - DT_X\\[12:8\\]
-| Destination Window Upper-Left corner X-coordinate"]
+    #[doc = "Field `DESTINATION_X` reader - Destination Window Upper-Left corner X-coordinate"]
     pub type DESTINATION_X_R = crate::FieldReader<u8>;
-    #[doc = "Field `DESTINATION_X` writer - DT_X\\[12:8\\]
-| Destination Window Upper-Left corner X-coordinate"]
+    #[doc = "Field `DESTINATION_X` writer - Destination Window Upper-Left corner X-coordinate"]
     pub type DESTINATION_X_W<'a, const O: u8> = crate::FieldWriter<'a, DT_X1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - DT_X\\[12:8\\]
-| Destination Window Upper-Left corner X-coordinate"]
+        #[doc = "Bits 0:4 - Destination Window Upper-Left corner X-coordinate"]
         #[inline(always)]
         pub fn destination_x(&self) -> DESTINATION_X_R {
             DESTINATION_X_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - DT_X\\[12:8\\]
-| Destination Window Upper-Left corner X-coordinate"]
+        #[doc = "Bits 0:4 - Destination Window Upper-Left corner X-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn destination_x(&mut self) -> DESTINATION_X_W<0> {
@@ -23174,23 +22734,19 @@ pub mod dt_y0 {
             W(writer)
         }
     }
-    #[doc = "Field `DESTINATION_Y` reader - DT_Y\\[7:0\\]
-| Destination Window Upper-Left corner Y-coordinate"]
+    #[doc = "Field `DESTINATION_Y` reader - Destination Window Upper-Left corner Y-coordinate"]
     pub type DESTINATION_Y_R = crate::FieldReader<u8>;
-    #[doc = "Field `DESTINATION_Y` writer - DT_Y\\[7:0\\]
-| Destination Window Upper-Left corner Y-coordinate"]
+    #[doc = "Field `DESTINATION_Y` writer - Destination Window Upper-Left corner Y-coordinate"]
     pub type DESTINATION_Y_W<'a, const O: u8> = crate::FieldWriter<'a, DT_Y0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - DT_Y\\[7:0\\]
-| Destination Window Upper-Left corner Y-coordinate"]
+        #[doc = "Bits 0:7 - Destination Window Upper-Left corner Y-coordinate"]
         #[inline(always)]
         pub fn destination_y(&self) -> DESTINATION_Y_R {
             DESTINATION_Y_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - DT_Y\\[7:0\\]
-| Destination Window Upper-Left corner Y-coordinate"]
+        #[doc = "Bits 0:7 - Destination Window Upper-Left corner Y-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn destination_y(&mut self) -> DESTINATION_Y_W<0> {
@@ -23288,23 +22844,19 @@ pub mod dt_y1 {
             W(writer)
         }
     }
-    #[doc = "Field `DESTINATION_Y` reader - DT_Y\\[12:8\\]
-| Destination Window Upper-Left corner Y-coordinate"]
+    #[doc = "Field `DESTINATION_Y` reader - Destination Window Upper-Left corner Y-coordinate"]
     pub type DESTINATION_Y_R = crate::FieldReader<u8>;
-    #[doc = "Field `DESTINATION_Y` writer - DT_Y\\[12:8\\]
-| Destination Window Upper-Left corner Y-coordinate"]
+    #[doc = "Field `DESTINATION_Y` writer - Destination Window Upper-Left corner Y-coordinate"]
     pub type DESTINATION_Y_W<'a, const O: u8> = crate::FieldWriter<'a, DT_Y1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - DT_Y\\[12:8\\]
-| Destination Window Upper-Left corner Y-coordinate"]
+        #[doc = "Bits 0:4 - Destination Window Upper-Left corner Y-coordinate"]
         #[inline(always)]
         pub fn destination_y(&self) -> DESTINATION_Y_R {
             DESTINATION_Y_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - DT_Y\\[12:8\\]
-| Destination Window Upper-Left corner Y-coordinate"]
+        #[doc = "Bits 0:4 - Destination Window Upper-Left corner Y-coordinate"]
         #[inline(always)]
         #[must_use]
         pub fn destination_y(&mut self) -> DESTINATION_Y_W<0> {
@@ -23402,23 +22954,19 @@ pub mod bte_wth0 {
             W(writer)
         }
     }
-    #[doc = "Field `BTE_WINDOW_WIDTH` reader - BTE_WTH\\[7:0\\]
-| BTE Window Width Setting"]
+    #[doc = "Field `BTE_WINDOW_WIDTH` reader - BTE Window Width Setting"]
     pub type BTE_WINDOW_WIDTH_R = crate::FieldReader<u8>;
-    #[doc = "Field `BTE_WINDOW_WIDTH` writer - BTE_WTH\\[7:0\\]
-| BTE Window Width Setting"]
+    #[doc = "Field `BTE_WINDOW_WIDTH` writer - BTE Window Width Setting"]
     pub type BTE_WINDOW_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, BTE_WTH0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - BTE_WTH\\[7:0\\]
-| BTE Window Width Setting"]
+        #[doc = "Bits 0:7 - BTE Window Width Setting"]
         #[inline(always)]
         pub fn bte_window_width(&self) -> BTE_WINDOW_WIDTH_R {
             BTE_WINDOW_WIDTH_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - BTE_WTH\\[7:0\\]
-| BTE Window Width Setting"]
+        #[doc = "Bits 0:7 - BTE Window Width Setting"]
         #[inline(always)]
         #[must_use]
         pub fn bte_window_width(&mut self) -> BTE_WINDOW_WIDTH_W<0> {
@@ -23516,23 +23064,19 @@ pub mod bte_wth1 {
             W(writer)
         }
     }
-    #[doc = "Field `BTE_WINDOW_WIDTH` reader - BTE_WTH\\[12:8\\]
-| BTE Window Width Setting"]
+    #[doc = "Field `BTE_WINDOW_WIDTH` reader - BTE Window Width Setting"]
     pub type BTE_WINDOW_WIDTH_R = crate::FieldReader<u8>;
-    #[doc = "Field `BTE_WINDOW_WIDTH` writer - BTE_WTH\\[12:8\\]
-| BTE Window Width Setting"]
+    #[doc = "Field `BTE_WINDOW_WIDTH` writer - BTE Window Width Setting"]
     pub type BTE_WINDOW_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, BTE_WTH1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - BTE_WTH\\[12:8\\]
-| BTE Window Width Setting"]
+        #[doc = "Bits 0:4 - BTE Window Width Setting"]
         #[inline(always)]
         pub fn bte_window_width(&self) -> BTE_WINDOW_WIDTH_R {
             BTE_WINDOW_WIDTH_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - BTE_WTH\\[12:8\\]
-| BTE Window Width Setting"]
+        #[doc = "Bits 0:4 - BTE Window Width Setting"]
         #[inline(always)]
         #[must_use]
         pub fn bte_window_width(&mut self) -> BTE_WINDOW_WIDTH_W<0> {
@@ -23630,23 +23174,19 @@ pub mod bte_hig0 {
             W(writer)
         }
     }
-    #[doc = "Field `BTE_WINDOW_HEIGHT` reader - BTE_HIG\\[7:0\\]
-| BTE Window Height Setting"]
+    #[doc = "Field `BTE_WINDOW_HEIGHT` reader - BTE Window Height Setting"]
     pub type BTE_WINDOW_HEIGHT_R = crate::FieldReader<u8>;
-    #[doc = "Field `BTE_WINDOW_HEIGHT` writer - BTE_HIG\\[7:0\\]
-| BTE Window Height Setting"]
+    #[doc = "Field `BTE_WINDOW_HEIGHT` writer - BTE Window Height Setting"]
     pub type BTE_WINDOW_HEIGHT_W<'a, const O: u8> = crate::FieldWriter<'a, BTE_HIG0, u8, u8, 8, O>;
     impl R {
-        #[doc = "Bits 0:7 - BTE_HIG\\[7:0\\]
-| BTE Window Height Setting"]
+        #[doc = "Bits 0:7 - BTE Window Height Setting"]
         #[inline(always)]
         pub fn bte_window_height(&self) -> BTE_WINDOW_HEIGHT_R {
             BTE_WINDOW_HEIGHT_R::new(self.bits)
         }
     }
     impl W {
-        #[doc = "Bits 0:7 - BTE_HIG\\[7:0\\]
-| BTE Window Height Setting"]
+        #[doc = "Bits 0:7 - BTE Window Height Setting"]
         #[inline(always)]
         #[must_use]
         pub fn bte_window_height(&mut self) -> BTE_WINDOW_HEIGHT_W<0> {
@@ -23744,23 +23284,19 @@ pub mod bte_hig1 {
             W(writer)
         }
     }
-    #[doc = "Field `BTE_WINDOW_HEIGHT` reader - BTE_HIG\\[12:8\\]
-| BTE Window Height Setting"]
+    #[doc = "Field `BTE_WINDOW_HEIGHT` reader - BTE Window Height Setting"]
     pub type BTE_WINDOW_HEIGHT_R = crate::FieldReader<u8>;
-    #[doc = "Field `BTE_WINDOW_HEIGHT` writer - BTE_HIG\\[12:8\\]
-| BTE Window Height Setting"]
+    #[doc = "Field `BTE_WINDOW_HEIGHT` writer - BTE Window Height Setting"]
     pub type BTE_WINDOW_HEIGHT_W<'a, const O: u8> = crate::FieldWriter<'a, BTE_HIG1, u8, u8, 5, O>;
     impl R {
-        #[doc = "Bits 0:4 - BTE_HIG\\[12:8\\]
-| BTE Window Height Setting"]
+        #[doc = "Bits 0:4 - BTE Window Height Setting"]
         #[inline(always)]
         pub fn bte_window_height(&self) -> BTE_WINDOW_HEIGHT_R {
             BTE_WINDOW_HEIGHT_R::new(self.bits & 0x1f)
         }
     }
     impl W {
-        #[doc = "Bits 0:4 - BTE_HIG\\[12:8\\]
-| BTE Window Height Setting"]
+        #[doc = "Bits 0:4 - BTE Window Height Setting"]
         #[inline(always)]
         #[must_use]
         pub fn bte_window_height(&mut self) -> BTE_WINDOW_HEIGHT_W<0> {
