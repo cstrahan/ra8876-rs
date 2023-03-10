@@ -1,3 +1,9 @@
+# I'm abusing (a modified version of) svd2rust as a means
+# to generate an abstraction layer for the RA8876 registers.
+#
+# I use svdtools to generate the SVD from this file.
+
+# A mostly empty SVD file:
 _svd: "ra8876.svd"
 
 _add:

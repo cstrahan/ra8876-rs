@@ -60,34 +60,6 @@
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
-              <enumeratedValues>
-                <name>RECONFIGURE_PLL_FREQUENCYR</name>
-                <usage>read</usage>
-                <enumeratedValue>
-                  <name>UNCONFIGURED</name>
-                  <description>PLL clock NOT configured/ready</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CONFIGURED</name>
-                  <description>PLL clock configured/ready</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-              <enumeratedValues>
-                <name>RECONFIGURE_PLL_FREQUENCYW</name>
-                <usage>write</usage>
-                <enumeratedValue>
-                  <name>DISABLED</name>
-                  <description>PLL (re)configure NOT requested</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>ENABLED</name>
-                  <description>PLL (re)configure requested</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
             </field>
             <field>
               <name>MASK_WAIT_ON_CS_DEASSERT</name>
@@ -95,20 +67,6 @@
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
-              <enumeratedValues>
-                <name>MASK_WAIT_ON_CS_DEASSERT</name>
-                <usage>read-write</usage>
-                <enumeratedValue>
-                  <name>DISABLED</name>
-                  <description>No mask</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>ENABLED</name>
-                  <description>Mask</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
             </field>
             <field>
               <name>KEY_SCAN_ENABLE</name>
@@ -116,20 +74,6 @@
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
-              <enumeratedValues>
-                <name>KEY_SCAN_ENABLE</name>
-                <usage>read-write</usage>
-                <enumeratedValue>
-                  <name>DISABLED</name>
-                  <description>Disabled</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>ENABLED</name>
-                  <description>Enabled</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
             </field>
             <field>
               <name>TFT_PANEL_IF_OUTPUT_PIN_SETTING</name>
@@ -168,20 +112,6 @@
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
-              <enumeratedValues>
-                <name>I2C_MASTER_INTERFACE_ENABLE</name>
-                <usage>read-write</usage>
-                <enumeratedValue>
-                  <name>DISABLED</name>
-                  <description>Disabled</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>ENABLED</name>
-                  <description>Enabled</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
             </field>
             <field>
               <name>SERIAL_FLASH_OR_SPI_INTERFACE_ENABLE</name>
@@ -189,20 +119,6 @@
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
-              <enumeratedValues>
-                <name>SERIAL_FLASH_OR_SPI_INTERFACE_ENABLE</name>
-                <usage>read-write</usage>
-                <enumeratedValue>
-                  <name>DISABLED</name>
-                  <description>Disabled</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>ENABLED</name>
-                  <description>Enabled</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
             </field>
             <field>
               <name>HOST_DATA_BUS_WIDTH</name>
@@ -3247,22 +3163,8 @@
           <resetValue>255</resetValue>
           <fields>
             <field>
-              <name>FOREGROUND_COLOR_RED_8BPP</name>
-              <description>FGCR[7:5] | Foreground Color Red Component (3 bits)</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FOREGROUND_COLOR_RED_16BPP</name>
-              <description>FGCR[7:3] | Foreground Color Red Component (5 bits)</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>5</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FOREGROUND_COLOR_RED_24BPP</name>
-              <description>FGCR[7:0] | Foreground Color Red Component (8 bits)</description>
+              <name>FOREGROUND_COLOR_RED</name>
+              <description>Foreground Color Red Component</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -3278,21 +3180,7 @@
           <fields>
             <field>
               <name>FOREGROUND_COLOR_GREEN_8BPP</name>
-              <description>FGCG[7:5] | Foreground Color Green Component (3 bits)</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FOREGROUND_COLOR_GREEN_16BPP</name>
-              <description>FGCG[7:2] | Foreground Color Green Component (6 bits)</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>6</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FOREGROUND_COLOR_GREEN_24BPP</name>
-              <description>FGCG[7:0] | Foreground Color Green Component (8 bits)</description>
+              <description>Foreground Color Green Component</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -3308,21 +3196,7 @@
           <fields>
             <field>
               <name>FOREGROUND_COLOR_BLUE_8BPP</name>
-              <description>FGCB[7:6] | Foreground Color Blue Component (2 bits)</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FOREGROUND_COLOR_BLUE_16BPP</name>
-              <description>FGCB[7:3] | Foreground Color Blue Component (5 bits)</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>5</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FOREGROUND_COLOR_BLUE_24BPP</name>
-              <description>FGCB[7:0] | Foreground Color Blue Component (8 bits)</description>
+              <description>Foreground Color Blue Component</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -4533,14 +4407,14 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>FIFO_OVERFLOW_INTERRUPT_MASK_ENABLE</name>
+              <name>MASK_FIFO_OVERFLOW_INTERRUPT</name>
               <description>Mask interrupt for FIFO overflow error</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>TX_FIFO_EMPTY_AND_SPI_ENGINE_IDLE_INTERRUPT_MASK_ENABLE</name>
+              <name>MASK_TX_FIFO_EMPTY_AND_SPI_ENGINE_IDLE_INTERRUPT</name>
               <description>Mask interrupt for while Tx FIFO empty &amp; SPI engine/FSM idle</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
@@ -4567,28 +4441,28 @@
               <description>Tx FIFO empty flag</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
             <field>
               <name>TX_FIFO_FULL_FLAG</name>
               <description>Tx FIFO full flag</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
             <field>
               <name>RX_FIFO_EMPTY_FLAG</name>
               <description>Rx FIFO empty flag</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
             <field>
               <name>RX_FIFO_FULL_FLAG</name>
               <description>Rx FIFO full flag</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
             <field>
               <name>OVERFLOW_INTERRUPT_FLAG</name>
@@ -5120,8 +4994,8 @@
             <field>
               <name>GT_SERIAL_CHARACTER_ROM</name>
               <description>GT Serial Character ROM Select</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>8</bitWidth>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
                 <name>GT_SERIAL_CHARACTER_ROM</name>
@@ -5195,7 +5069,7 @@
         </register>
         <register>
           <name>FLDR</name>
-          <description>GT Character ROM Control register</description>
+          <description>Character Line gap Setting Register</description>
           <addressOffset>208</addressOffset>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -5228,27 +5102,13 @@
         <register>
           <name>BGCR</name>
           <description>Background Color Register - Red</description>
-          <addressOffset>210</addressOffset>
+          <addressOffset>213</addressOffset>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>BACKGROUND_COLOR_RED_8BPP</name>
-              <description>BGCR[7:5] | Background Color Red Component (3 bits)</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>BACKGROUND_COLOR_RED_16BPP</name>
-              <description>BGCR[7:3] | Background Color Red Component (5 bits)</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>5</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>BACKGROUND_COLOR_RED_24BPP</name>
-              <description>BGCR[7:0] | Background Color Red Component (8 bits)</description>
+              <name>BACKGROUND_COLOR_RED</name>
+              <description>Background Color Red Component</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -5258,27 +5118,13 @@
         <register>
           <name>BGCG</name>
           <description>Background Color Register - Green</description>
-          <addressOffset>211</addressOffset>
+          <addressOffset>214</addressOffset>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>BACKGROUND_COLOR_GREEN_8BPP</name>
-              <description>BGCG[7:5] | Background Color Green Component (3 bits)</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>BACKGROUND_COLOR_GREEN_16BPP</name>
-              <description>BGCG[7:2] | Background Color Green Component (6 bits)</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>6</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>BACKGROUND_COLOR_GREEN_24BPP</name>
-              <description>BGCG[7:0] | Background Color Green Component (8 bits)</description>
+              <name>BACKGROUND_COLOR_GREEN</name>
+              <description>Background Color Green Component</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -5288,27 +5134,13 @@
         <register>
           <name>BGCB</name>
           <description>Background Color Register - Blue</description>
-          <addressOffset>212</addressOffset>
+          <addressOffset>215</addressOffset>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <fields>
             <field>
-              <name>BACKGROUND_COLOR_BLUE_8BPP</name>
-              <description>BGCB[7:6] | Background Color Blue Component (2 bits)</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>BACKGROUND_COLOR_BLUE_16BPP</name>
-              <description>BGCB[7:3] | Background Color Blue Component (5 bits)</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>5</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>BACKGROUND_COLOR_BLUE_24BPP</name>
-              <description>BGCB[7:0] | Background Color Blue Component (8 bits)</description>
+              <name>BACKGROUND_COLOR_BLUE</name>
+              <description>Background Color Blue Component</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -5384,7 +5216,7 @@
           <description>Power Management register</description>
           <addressOffset>223</addressOffset>
           <access>read-write</access>
-          <resetValue>0</resetValue>
+          <resetValue>3</resetValue>
           <fields>
             <field>
               <name>POWER_SAVING_ENABLE</name>
@@ -5431,7 +5263,7 @@
           <description>SDRAM attribute register</description>
           <addressOffset>224</addressOffset>
           <access>read-write</access>
-          <resetValue>0</resetValue>
+          <resetValue>40</resetValue>
           <fields>
             <field>
               <name>SDRAM_POWER_SAVING_TYPE</name>
@@ -5484,14 +5316,14 @@
             </field>
             <field>
               <name>SDRAM_ROW_ADDRESSING</name>
-              <description>SDRAM Bank number</description>
+              <description>SDRAM Row addressing</description>
               <bitOffset>3</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>SDRAM_COLUMN_ADDRESSING</name>
-              <description>SDRAM Bank number</description>
+              <description>SDRAM Column addressing</description>
               <bitOffset>0</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
@@ -5503,7 +5335,7 @@
           <description>SDRAM mode register &amp; extended mode register</description>
           <addressOffset>225</addressOffset>
           <access>read-write</access>
-          <resetValue>0</resetValue>
+          <resetValue>3</resetValue>
           <fields>
             <field>
               <name>PARTIAL_ARRAY_SELF_REFRESH</name>
@@ -5514,7 +5346,7 @@
             </field>
             <field>
               <name>DQ_DRIVE_STRENGTH</name>
-              <description>Partial-Array Self Refresh</description>
+              <description>To select the driver strength of the DQ outputs (sdr_drv)</description>
               <bitOffset>3</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
@@ -5565,11 +5397,11 @@
           <description>SDRAM Control register</description>
           <addressOffset>228</addressOffset>
           <access>read-write</access>
-          <resetValue>0</resetValue>
+          <resetValue>16</resetValue>
           <fields>
             <field>
               <name>LENGTH_TO_BREAK_BURST_TRANSFER</name>
-              <description>Refresh interval</description>
+              <description>Length to break a burst transfer</description>
               <bitOffset>6</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
@@ -5628,6 +5460,38 @@
               <description>Start SDRAM initialization procedure</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2CMCPR0</name>
+          <description>I2C Master Clock Pre-scale Register 0</description>
+          <addressOffset>229</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>I2C_MASTER_CLOCK_PRESCALER</name>
+              <description>I2C Master Clock Pre-scale</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2CMCPR1</name>
+          <description>I2C Master Clock Pre-scale Register 1</description>
+          <addressOffset>230</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>I2C_MASTER_CLOCK_PRESCALER</name>
+              <description>I2C Master Clock Pre-scale</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
           </fields>
